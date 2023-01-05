@@ -11,14 +11,14 @@
       data-scroll
       data-scroll-speed="1.2"
     >
-      <h2
-        data-scroll
-        data-scroll-call="_drawAbout"
-        class="text-4xl dark:text-white text-black font-bold about"
-      >
+      <h2 class="text-4xl dark:text-white text-black font-bold opacity-0 about">
         About me.
       </h2>
-      <div class="h-16 w-0.5 bg-gray-200 my-6 mx-auto md:m-6 line opacity-0">
+      <div
+        data-scroll
+        data-scroll-call="_drawAbout"
+        class="h-16 w-0.5 bg-gray-200 my-6 mx-auto md:m-6 line opacity-0"
+      >
       </div>
     </article>
   </div>
@@ -27,7 +27,7 @@
   import { gsap } from "gsap";
 
   const colors = { light: "white", dark: "black" };
-  const alphaValues = { dark: 0.8, light: 0.5 };
+  const alphaValues = { dark: 0.9, light: 0.7 };
 
   let isDarkMode =
     window.matchMedia &&
@@ -45,23 +45,23 @@
   window["_drawAbout"] = function () {
     gsap.to(".line", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      delay: 0.3,
+      delay: .5,
       duration: 1,
       ease: "power4.out",
     });
     gsap.to(".about", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      delay: 0.3,
+      delay: .5,
       duration: 1,
       ease: "power4.out",
     });
   };
 
   function _initialize() {
-    gsap.set(".line", {
+    gsap.from(".line", {
       opacity: 0,
     });
-    gsap.set(".about", {
+    gsap.from(".about", {
       opacity: 0,
     });
 
