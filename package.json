@@ -8,11 +8,29 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "release": "release-it"
   },
   "dependencies": {
     "@astrojs/tailwind": "^2.1.3",
     "astro": "^1.9.0",
     "tailwindcss": "^3.2.4"
+  },
+  "release-it": {
+    "github": {
+      "release": true,
+      "releaseName": "Release ${version}",
+      "preRelease": false,
+      "draft": false
+    },
+    "git": {
+      "requireCleanWorkingDir": true,
+      "commitMessage": "Release ${version}",
+      "tagName": "v${version}",
+      "tag": true
+    }
+  },
+  "devDependencies": {
+    "release-it": "^15.6.0"
   }
 }
