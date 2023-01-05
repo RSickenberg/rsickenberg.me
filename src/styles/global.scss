@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    overflow: auto;
+}
+
+.c-scrollbar {
+    @apply m-1;
+}
+
+.c-scrollbar_thumb {
+  left: 0;
+  background-color: #fff;
+}
+
+.cursor--highlight {
+  opacity: 0.2;
+}

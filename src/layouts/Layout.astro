@@ -1,6 +1,7 @@
 ---
 import Navbar from "components/Navbar.astro";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import "styles/global.scss";
 
 export interface Props {
   title: string;
@@ -17,10 +18,10 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-	<meta name="theme-color" content="#fff" />
+    <meta name="theme-color" content="#fff" />
     <title>{title}</title>
-    
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap"
@@ -28,36 +29,46 @@ const { title } = Astro.props;
     />
   </head>
   <body class="dark:bg-black bg-white">
-	<Navbar />
+    <Navbar />
 
-	<div data-scroll-container>
-    	<slot />
-	</div>
+    <div class="container">
+      <slot />
+    </div>
   </body>
 </html>
+
+<style is:global lang="scss">
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
+        pointer-events: none;
+      }
+</style>
 
 <script>
   import LocomotiveScroll from "locomotive-scroll";
   import { setState, getState } from "utils/getCurrentSection";
+
   const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
+    el: document.querySelector(".container"),
     smooth: true,
     lerp: 0.05,
     multiplier: 0.5,
     smartphone: {
       smooth: true,
-      lerp: 0.3,
-      multiplier: 50,
+      direction: "horizontal",
     },
     tablet: {
       smooth: true,
-      lerp: 0.3,
-      multiplier: 50,
+      direction: "horizontal",
     },
   });
- 
-  const sections = ["", "about", "projects", "contact"];
+
+  const sections = ["", "about"];
   window["locomotiveScroll"] = scroll;
+  scroll.start();
   scroll.on("scroll", (args) => {
     sections.forEach((sect) => {
       const container = args.currentElements[sect];
@@ -65,5 +76,9 @@ const { title } = Astro.props;
       if (exists && container.inView && getState().activeSection != sect)
         setState({ activeSection: sect ? `${sect}.` : "" });
     });
+    scroll.on('call', (func) => {
+      // tslint:disable-next-line: Type 'string[]' cannot be used as an index type.
+      window[func]();
+    })
   });
 </script>

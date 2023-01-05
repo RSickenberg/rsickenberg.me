@@ -1,10 +1,81 @@
 <section
-    class="min-h-screen flex justify-center items-center"
-    id="about-section"
-    data-scroll
-    data-scroll-offset="75%"
-    data-scroll-id="about-section"
+  class="min-h-screen flex justify-center items-center"
+  id="about"
+  data-scroll-section
+  data-scroll-offset="75%"
+  data-scroll-id="about"
 >
-    <div class="grid grid-cols-1 sm:grid-cols-2 w-[90%] mx-auto gap-10"></div>
-
+  <div class="grid grid-cols-1 sm:grid-cols-2 w-[90%] mx-auto gap-10">
+    <article
+      class="py-6 px-8 text-center sm:text-left"
+      data-scroll
+      data-scroll-speed="1.2"
+    >
+      <h2
+        data-scroll
+        data-scroll-call="_drawAbout"
+        class="text-4xl dark:text-white text-black font-bold about"
+      >
+        About me.
+      </h2>
+      <div class="h-16 w-0.5 bg-gray-200 my-6 mx-auto md:m-6 line opacity-0">
+      </div>
+    </article>
+  </div>
 </section>
+<script>
+  import { gsap } from "gsap";
+
+  const colors = { light: "white", dark: "black" };
+  const alphaValues = { dark: 0.8, light: 0.5 };
+
+  let isDarkMode =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  _initialize();
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      isDarkMode = e.matches;
+      _setColors();
+    });
+
+  window["_drawAbout"] = function () {
+    gsap.to(".line", {
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+      delay: 0.3,
+      duration: 1,
+      ease: "power4.out",
+    });
+    gsap.to(".about", {
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+      delay: 0.3,
+      duration: 1,
+      ease: "power4.out",
+    });
+  };
+
+  function _initialize() {
+    gsap.set(".line", {
+      opacity: 0,
+    });
+    gsap.set(".about", {
+      opacity: 0,
+    });
+
+    _setColors();
+  }
+
+  function _setColors() {
+    gsap.set(".line", {
+      color: isDarkMode ? colors.light : colors.dark,
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+    });
+    gsap.set(".about", {
+      color: isDarkMode ? colors.light : colors.dark,
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+    });
+  }
+</script>

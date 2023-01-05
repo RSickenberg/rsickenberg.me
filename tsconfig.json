@@ -11,6 +11,7 @@
     "types": ["astro/client"],
     "allowSyntheticDefaultImports": true,
 
-    "baseUrl": "./src"
-  }
+    "baseUrl": "./src",
+    "suppressImplicitAnyIndexErrors": true,
+  },
 }

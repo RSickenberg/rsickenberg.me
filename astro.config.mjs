@@ -16,5 +16,4 @@ import preact from "@astrojs/preact";
 export default defineConfig({ 
     integrations: [tailwind(), image(), preact({compat: true})],
     site: 'https://next.rsickenberg.me',
-    base : '/rsickenberg.me-next',
 });
