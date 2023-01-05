@@ -1,5 +1,5 @@
 <section
-  class="h-screen flex flex-col justify-center w-[70%] mr-[10%] ml-[10%] py-16 relative"
+  class="h-screen flex flex-col justify-center w-[90%] mx-auto py-16 relative"
   data-scroll
   data-scroll-speed="1.2"
   data-scroll-id
@@ -14,16 +14,23 @@
 <script>
   import { gsap } from "gsap";
 
-  //   gsap.from(".title", {
-  //     opacity: 0,
-  //     duration: 1,
-  //     ease: "power4.out",
-  //     delay: 2.5,
-  //   });
-
   let isDarkMode =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  gsap.from(".title", {
+    opacity: 0,
+    duration: 1,
+    ease: "power4.out",
+    delay: 2.5,
+  });
+  gsap.to(".title", {
+    opacity: isDarkMode ? 0.8 : 0.5,
+    duration: 1,
+    ease: "power4.out",
+    delay: 2.5,
+  });
+
   gsap.from(".slogan", {
     y: 100,
     opacity: 0,
@@ -33,7 +40,7 @@
   });
 
   gsap.to(".slogan", {
-    opacity: isDarkMode ? .8 : 0.5,
+    opacity: isDarkMode ? 0.8 : 0.5,
     duration: 1,
     delay: 1,
     ease: "power4.out",
@@ -63,12 +70,18 @@
         span.removeAttribute("style");
       });
       // Change opacity of the slogan.
-        gsap.to(".slogan", {
-            opacity: isDarkMode ? .8 : 0.5,
-            duration: 1,
-            delay: 0,
-            ease: "power4.out",
-        });
+      gsap.to(".slogan", {
+        opacity: isDarkMode ? 0.8 : 0.5,
+        duration: 1,
+        delay: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".title", {
+        opacity: isDarkMode ? 0.8 : 0.5,
+        duration: 1,
+        delay: 0,
+        ease: "power4.out",
+      });
     });
   lettersSpans.forEach((span) => {
     span.addEventListener("mouseenter", (e) => {
