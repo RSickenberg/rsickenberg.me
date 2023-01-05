@@ -1,0 +1,93 @@
+<section
+  class="h-screen flex flex-col justify-center w-[70%] mr-[10%] ml-[10%] py-16 relative"
+  data-scroll
+  data-scroll-speed="1.2"
+  data-scroll-id
+>
+  <h1
+    class="text-2xl sm:text-[8vw] text-black dark:text-white font-bold !leading-tight slogan relative dark:opacity-80 opacity-50"
+  >
+    Romain Sickenberg. Backend Developer.
+  </h1>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+
+  //   gsap.from(".title", {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: "power4.out",
+  //     delay: 2.5,
+  //   });
+
+  let isDarkMode =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  gsap.from(".slogan", {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    delay: 1,
+    ease: "power4.out",
+  });
+
+  gsap.to(".slogan", {
+    opacity: isDarkMode ? .8 : 0.5,
+    duration: 1,
+    delay: 1,
+    ease: "power4.out",
+  });
+
+  // @ts-ignore: Object is possibly 'null'.
+  const title: Element = document.querySelector(".slogan");
+  // Separate each letters in a span.
+  // @ts-ignore: Object is possibly 'null'.
+  const letters = title.textContent.split("");
+  title.textContent = "";
+
+  letters.forEach((letter) => {
+    const span = document.createElement("span");
+    span.textContent = letter;
+    span.classList.add("letter");
+    title.append(span);
+  });
+
+  const lettersSpans = document.querySelectorAll(".letter");
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      isDarkMode = e.matches;
+      lettersSpans.forEach((span) => {
+        // Remove all style from the span.
+        span.removeAttribute("style");
+      });
+      // Change opacity of the slogan.
+        gsap.to(".slogan", {
+            opacity: isDarkMode ? .8 : 0.5,
+            duration: 1,
+            delay: 0,
+            ease: "power4.out",
+        });
+    });
+  lettersSpans.forEach((span) => {
+    span.addEventListener("mouseenter", (e) => {
+      gsap.to(e.target, {
+        duration: 0.5,
+        color: isDarkMode ? "black" : "white",
+        backgroundColor: isDarkMode ? "white" : "black",
+        ease: "power4.out",
+      });
+    });
+
+    span.addEventListener("mouseleave", (e) => {
+      gsap.to(e.target, {
+        duration: 0.5,
+        color: isDarkMode ? "white" : "black",
+        backgroundColor: "transparent",
+        ease: "power4.out",
+        delay: 0.5,
+      });
+    });
+  });
+</script>
