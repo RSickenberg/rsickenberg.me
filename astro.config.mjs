@@ -15,6 +15,6 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({ 
     integrations: [tailwind(), image(), preact({compat: true})],
-    site: 'https://staging.rsickenberg.me',
+    site: 'https://next.rsickenberg.me',
     base : '/rsickenberg.me-next',
 });
