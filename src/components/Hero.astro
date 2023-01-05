@@ -14,37 +14,13 @@
 <script>
   import { gsap } from "gsap";
 
+  const alphaValues = {dark: 0.8, light: 0.5};
+
   let isDarkMode =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-  gsap.from(".title", {
-    opacity: 0,
-    duration: 1,
-    ease: "power4.out",
-    delay: 2.5,
-  });
-  gsap.to(".title", {
-    opacity: isDarkMode ? 0.8 : 0.5,
-    duration: 1,
-    ease: "power4.out",
-    delay: 2.5,
-  });
-
-  gsap.from(".slogan", {
-    y: 100,
-    opacity: 0,
-    duration: 1,
-    delay: 1,
-    ease: "power4.out",
-  });
-
-  gsap.to(".slogan", {
-    opacity: isDarkMode ? 0.8 : 0.5,
-    duration: 1,
-    delay: 1,
-    ease: "power4.out",
-  });
+  _buildGSAPAnimations();
 
   // @ts-ignore: Object is possibly 'null'.
   const title: Element = document.querySelector(".slogan");
@@ -70,18 +46,7 @@
         span.removeAttribute("style");
       });
       // Change opacity of the slogan.
-      gsap.to(".slogan", {
-        opacity: isDarkMode ? 0.8 : 0.5,
-        duration: 1,
-        delay: 0,
-        ease: "power4.out",
-      });
-      gsap.to(".title", {
-        opacity: isDarkMode ? 0.8 : 0.5,
-        duration: 1,
-        delay: 0,
-        ease: "power4.out",
-      });
+      _endAnimations(0.3);
     });
   lettersSpans.forEach((span) => {
     span.addEventListener("mouseenter", (e) => {
@@ -103,4 +68,41 @@
       });
     });
   });
+
+  function _buildGSAPAnimations() {
+    _startAnimations();
+    _endAnimations();
+  }
+
+  function _startAnimations(delay: number = 1) {
+    gsap.from(".title", {
+      opacity: 0,
+      duration: 1,
+      ease: "power4.out",
+      delay: delay,
+    });
+    gsap.from(".slogan", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      delay: delay,
+      ease: "power4.out",
+    });
+  }
+
+  function _endAnimations(delay: number = 1) {
+    gsap.to(".title", {
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+      duration: 1,
+      ease: "power4.out",
+      delay: delay,
+    });
+
+    gsap.to(".slogan", {
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+      duration: 1,
+      delay: delay,
+      ease: "power4.out",
+    });
+  }
 </script>
