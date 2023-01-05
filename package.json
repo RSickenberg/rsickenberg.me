@@ -27,14 +27,15 @@
       "draft": false
     },
     "git": {
-      "requireCleanWorkingDir": true,
+      "requireCleanWorkingDir": false,
       "commitMessage": "Release ${version}",
       "tagName": "v${version}",
       "tag": true
     },
     "plugins": {
       "@release-it/keep-a-changelog": {
-        "filename": "CHANGELOG.md"
+        "filename": "CHANGELOG.md",
+        "strictLatest" : false
       }
     }
   },
