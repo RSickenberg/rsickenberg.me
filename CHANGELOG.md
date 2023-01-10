@@ -7,3 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - release-it changelog versioning
+
+### Added
+- Technology list
+
+### Fixed
+- Few issues on dark mode and event listner
