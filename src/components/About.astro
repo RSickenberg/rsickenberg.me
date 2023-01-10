@@ -1,3 +1,4 @@
+<!-- https://github.com/stylessh/stylessh-v2/blob/main/src/components/About.astro -->
 <section
   class="min-h-screen flex justify-center items-center"
   id="about"
@@ -25,20 +26,13 @@
 </section>
 <script>
   import { gsap } from "gsap";
-
-  const colors = { light: "white", dark: "black" };
-  const alphaValues = { dark: 0.9, light: 0.7 };
-
-  let isDarkMode =
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  import { colors, alphaValues, isDarkMode } from "utils/getColors";
 
   _initialize();
 
   window
     .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      isDarkMode = e.matches;
+    .addEventListener("change", () => {
       _setColors();
     });
 
