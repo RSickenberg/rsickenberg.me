@@ -1,3 +1,6 @@
+---
+import Tech from "./Tech.astro";
+---
 <!-- https://github.com/stylessh/stylessh-v2/blob/main/src/components/About.astro -->
 <section
   class="min-h-screen flex justify-center items-center"
@@ -24,17 +27,23 @@
       </div>
       <div class="opacity-0 about-subtitle">
         <div class="text-black dark:text-white space-y-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta
-          porttitor lectus, at scelerisque massa ornare congue. Nunc purus
-          lacus, venenatis at aliquet nec, maximus nec eros. Suspendisse
-          sollicitudin ligula odio, molestie facilisis sem aliquet sed. Vivamus
-          semper elit ac mollis consectetur. Aenean fringilla vitae massa id
-          suscipit. Praesent laoreet finibus interdum. Proin nec cursus diam.
-          Sed malesuada neque vitae ultrices auctor. Suspendisse nunc nisi,
-          luctus ut massa id, dapibus interdum nisl. Etiam congue faucibus augue
-          vitae feugiat. Maecenas volutpat rhoncus tristique. Nam pharetra nisi
-          id ligula placerat, eu sagittis eros condimentum. Cras gravida nibh et
-          leo placerat egestas.
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta
+            porttitor lectus, at scelerisque massa ornare congue.
+          </p>
+          <p>
+            Nunc purus lacus, venenatis at aliquet nec, maximus nec eros.
+            Suspendisse sollicitudin ligula odio, molestie facilisis sem aliquet
+            sed. Vivamus semper elit ac mollis consectetur.
+          </p>
+        </div>
+      </div>
+      <div class="opacity-0 mt-6 about-tech">
+        <div class="text-black dark:text-white">
+          <h3 class="text-xl">Here are my main technologies:</h3>
+          <div class="mt-5">
+            <Tech />
+          </div>
         </div>
       </div>
     </article>
@@ -71,6 +80,12 @@
       duration: 1,
       ease: "power4.out",
     });
+    gsap.to(".about-tech", {
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+      delay: 0.7,
+      duration: 1,
+      ease: "power4.out",
+    });
   };
 
   function _initialize() {
@@ -78,6 +93,12 @@
       opacity: 0,
     });
     gsap.from(".about", {
+      opacity: 0,
+    });
+    gsap.from(".about-subtitle", {
+      opacity: 0,
+    });
+    gsap.from(".about-tech", {
       opacity: 0,
     });
 
@@ -94,6 +115,9 @@
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
     });
     gsap.set(".about-subtitle", {
+      color: isDarkMode ? colors.light : colors.dark,
+    });
+    gsap.set(".about-tech", {
       color: isDarkMode ? colors.light : colors.dark,
     });
   }

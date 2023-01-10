@@ -1,0 +1,9 @@
+---
+import techs from '../data/techs.json';
+import Card from './Card.astro';
+---
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-5 sm:gap-8 auto-rows-auto">
+    {techs.map(tech => (
+        <Card tech={tech} />
+    ))}
+</div>

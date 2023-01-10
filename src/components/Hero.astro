@@ -86,7 +86,6 @@
   }
 
   function _endAnimations(delay: number = 1) {
-    console.log("isDarkMode", isDarkMode);
     gsap.to(".title", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
       duration: 1,

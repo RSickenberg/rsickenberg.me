@@ -1,0 +1,66 @@
+[
+    {
+        "name": "PHP",
+        "imagePath": "./images/techs/php.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "order": 0
+    },
+    {
+        "name": "Symfony",
+        "imagePath": "./images/techs/symfony.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "invertOnDark": true,
+        "order": 1
+    },
+    {
+        "name": "Laravel",
+        "imagePath": "./images/techs/laravel.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "order": 2
+    },
+    {
+        "name": "Swift",
+        "imagePath": "./images/techs/swift.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "order": 3
+    },
+    {
+        "name": "C#",
+        "imagePath": "./images/techs/csharp.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "order": 5
+    },
+    {
+        "name": "Java",
+        "imagePath": "./images/techs/java.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "order": 6
+    },
+    {
+        "name": "Python",
+        "imagePath": "./images/techs/python.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "order": 7
+    },
+    {
+        "name": "Django",
+        "imagePath": "./images/techs/django.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "order": 8
+    },
+    {
+        "name": "JavaScript",
+        "imagePath": "./images/techs/javascript.png",
+        "imageHeight": 128,
+        "imageWidth": 128,
+        "order": 9
+    }
+]
