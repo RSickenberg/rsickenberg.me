@@ -63,12 +63,6 @@ const { title } = Astro.props;
   });
 
   // @ts-ignore
-  lenis.on("call", (func) => {
-    // @ts-ignore
-    window[func]();
-  })
-
-  // @ts-ignore
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);

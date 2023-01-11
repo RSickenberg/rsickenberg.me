@@ -1,4 +1,4 @@
-const alphaValues = { dark: 0.9, light: 0.7 };
+const alphaValues = { dark: 0.9, light: 0.8 };
 const colors = { light: "white", dark: "black" };
 
 let isDarkMode =

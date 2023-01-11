@@ -3,16 +3,12 @@ const { tech } = Astro.props;
 import { Image } from "@astrojs/image/components";
 
 let imgClass = "w-[50%] sm:w-[35%] h-auto self-center sm:self-left m-3";
-imgClass = tech.invertOnDark
-  ? imgClass + " dark:invert"
-  : imgClass;
+imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;
 ---
-
+<card-tech class="hidden" data-techId={tech.order}></card-tech>
 <div
   id={"tech-card-" + tech.order}
-  class="card flex flex-col justify-around border-2 rounded-xl border-black dark:border-white space-y-6 min-w-[130px] min-h-[200px]"
-  data-scroll
-  data-scroll-call="_drawCards"
+  class="card flex flex-col justify-around border-2 rounded-xl border-black dark:border-white space-y-6 min-w-[170px] min-h-[200px]"
 >
   <pre
     class="self-left ml-2 text-black dark:text-white opacity-40">#{tech.order}</pre>
@@ -30,7 +26,34 @@ imgClass = tech.invertOnDark
 </div>
 
 <script>
-  window['_drawCards'] = function () {
-    console.log('draw cards');
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  class CardTech extends HTMLElement {
+    constructor() {
+      super();
+
+      const tech = this.dataset.techid;
+
+      const _drawCards = () => {
+        const card = document.getElementById(`tech-card-${tech}`);
+        gsap.set(card, { opacity: 0 });
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: card,
+            start: "top 100%",
+            end: "bottom 70%",
+            scrub: 1,
+            toggleActions: "play none none reverse",
+          },
+        });
+        tl.to(card, { opacity: 1, duration: 0.5 });
+      };
+
+      _drawCards();
+    }
   }
+
+  customElements.define("card-tech", CardTech);
 </script>
