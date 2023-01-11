@@ -8,7 +8,7 @@ imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;
 <card-tech class="hidden" data-techId={tech.order}></card-tech>
 <div
   id={"tech-card-" + tech.order}
-  class="card flex flex-col justify-around border-2 rounded-xl border-black dark:border-white space-y-6 min-w-[170px] min-h-[200px]"
+  class="card flex flex-col justify-around border-2 rounded-xl border-black dark:border-white space-y-6 sm:min-w-[170px] sm:min-h-[200px]"
 >
   <pre
     class="self-left ml-2 text-black dark:text-white opacity-40">#{tech.order}</pre>
@@ -43,7 +43,7 @@ imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;
           scrollTrigger: {
             trigger: card,
             start: "top 100%",
-            end: "bottom 70%",
+            end: "bottom 95%",
             scrub: 1,
             toggleActions: "play none none reverse",
           },
