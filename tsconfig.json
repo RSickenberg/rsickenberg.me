@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["astro/client"],
+    "types": ["astro/client", "@astrojs/image/client"],
     "allowSyntheticDefaultImports": true,
 
     "baseUrl": "./src",

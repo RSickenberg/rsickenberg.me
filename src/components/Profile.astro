@@ -1,0 +1,55 @@
+---
+import { Picture } from "@astrojs/image/components";
+---
+
+<article class="flex justify-center lg:justify-end items-center relative mt-10">
+  <Picture
+    src={"/images/profile/antistatique_romain-31-web.jpg"}
+    widths={[400, 800, 1200]}
+    aspectRatio={0.666}
+    formats={["webp"]}
+    id={"picture"}
+    class={"w-[400px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-10"}
+  />
+  <div
+    id="picture-bg-border"
+    class="mt-10 lg:mt-0 absolute w-[400px] rounded-2xl aspect-square bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+  >
+  </div>
+</article>
+
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Make the picture fade in and out.
+    gsap.set("#picture", { opacity: 0 });
+    gsap.set("#picture-bg-border", { opacity: 0 });
+
+    gsap.to("#picture", {
+      scrollTrigger: {
+        trigger: "#picture",
+        start: "top 80%",
+        end: "bottom 100%",
+        scrub: true,
+      },
+      opacity: 1,
+      delay: 0.5,
+      duration: 0.5,
+      y: -100,
+    });
+    gsap.to('#picture-bg-border', {
+      scrollTrigger: {
+        trigger: "#picture",
+        start: "top 100%",
+        end: "bottom 100%",
+        scrub: true,
+      },
+      opacity: 1,
+      delay: 0.2,
+      duration: 0.2,
+      y: -250,
+      x: -100
+    })
+</script>
