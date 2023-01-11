@@ -3,6 +3,10 @@
   "type": "module",
   "version": "0.0.3",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RSickenberg/rsickenberg.me-next"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -43,7 +47,9 @@
     "plugins": {
       "@release-it/keep-a-changelog": {
         "filename": "CHANGELOG.md",
-        "strictLatest": false
+        "strictLatest": true,
+        "addUnreleased": true,
+        "addVersionUrl": true,
       }
     }
   },
