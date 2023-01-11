@@ -1,27 +1,16 @@
 ---
 import Tech from "./Tech.astro";
 ---
+
 <!-- https://github.com/stylessh/stylessh-v2/blob/main/src/components/About.astro -->
-<section
-  class="min-h-screen flex justify-center items-center"
-  id="about"
-  data-scroll-section
-  data-scroll-offset="75%"
-  data-scroll-id="about"
->
+<section class="min-h-screen flex justify-center items-center">
   <div class="grid grid-cols-1 sm:grid-cols-2 w-[90%] mx-auto gap-10">
-    <article
-      class="py-6 px-8 text-center sm:text-left"
-      data-scroll
-      data-scroll-speed="1.2"
-    >
+    <article class="py-6 px-8 text-center sm:text-left">
       <h2 class="text-4xl dark:text-white text-black font-bold opacity-0 about">
         About me.
       </h2>
       <!-- Line -->
       <div
-        data-scroll
-        data-scroll-call="_drawAbout"
         class="h-16 w-0.5 bg-gray-200 my-6 mx-auto md:m-6 line opacity-0"
       >
       </div>
@@ -50,9 +39,11 @@ import Tech from "./Tech.astro";
   </div>
 </section>
 <script>
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { gsap } from "gsap";
   import { colors, alphaValues, isDarkMode } from "utils/getColors";
 
+  gsap.registerPlugin(ScrollTrigger);
   _initialize();
 
   window
@@ -61,48 +52,71 @@ import Tech from "./Tech.astro";
       _setColors();
     });
 
-  window["_drawAbout"] = function () {
+  function _renderTo() {
     gsap.to(".about", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
       delay: 0.3,
       duration: 1,
       ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 100%",
+        scrub: 1,
+        //markers: { startColor: "green", endColor: "red", fontSize: "12px" },
+      },
     });
     gsap.to(".line", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
       delay: 0.4,
       duration: 1,
       ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 100%",
+        scrub: 1,
+      },
     });
     gsap.to(".about-subtitle", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
       delay: 0.5,
       duration: 1,
       ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 100%",
+        scrub: 1,
+      },
     });
     gsap.to(".about-tech", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
       delay: 0.7,
       duration: 1,
       ease: "power4.out",
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 100%",
+        scrub: 1,
+      },
     });
-  };
+  }
 
   function _initialize() {
-    gsap.from(".line", {
+    _setColors();
+
+    gsap.set(".line", {
       opacity: 0,
     });
-    gsap.from(".about", {
+    gsap.set(".about", {
       opacity: 0,
     });
-    gsap.from(".about-subtitle", {
+    gsap.set(".about-subtitle", {
       opacity: 0,
     });
-    gsap.from(".about-tech", {
+    gsap.set(".about-tech", {
       opacity: 0,
     });
 
-    _setColors();
+    _renderTo();
   }
 
   function _setColors() {

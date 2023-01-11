@@ -38,47 +38,43 @@ const { title } = Astro.props;
 </html>
 
 <style is:global lang="scss">
-      canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -10;
-        pointer-events: none;
-      }
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    pointer-events: none;
+  }
 </style>
 
 <script>
-  import LocomotiveScroll from "locomotive-scroll";
-  import { setState, getState } from "utils/getCurrentSection";
+  import Lenis from "@studio-freight/lenis";
 
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector(".container"),
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+    direction: "vertical",
+    gestureDirection: "vertical",
     smooth: true,
-    lerp: 0.05,
-    multiplier: 0.5,
-    smartphone: {
-      smooth: false,
-      direction: "vertical",
-    },
-    tablet: {
-      smooth: false,
-      direction: "vertical",
-    },
+    mouseMultiplier: 1,
+    smoothTouch: false,
+    infinite: false,
+    content: document.querySelector(".container"),
   });
 
-  const sections = ["", "about"];
-  window["locomotiveScroll"] = scroll;
-  scroll.start();
-  scroll.on("scroll", (args) => {
-    sections.forEach((sect) => {
-      const container = args.currentElements[sect];
-      const exists = typeof container != "undefined";
-      if (exists && container.inView && getState().activeSection != sect)
-        setState({ activeSection: sect ? `${sect}.` : "" });
-    });
-    scroll.on('call', (func) => {
-      // tslint:disable-next-line: Type 'string[]' cannot be used as an index type.
-      window[func]();
-    })
-  });
+  // @ts-ignore
+  lenis.on("call", (func) => {
+    // @ts-ignore
+    window[func]();
+  })
+
+  // @ts-ignore
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  window["lenis"] = lenis;
 </script>
