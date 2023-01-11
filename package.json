@@ -54,7 +54,6 @@
   },
   "devDependencies": {
     "@release-it/keep-a-changelog": "^3.1.0",
-    "@types/locomotive-scroll": "^4.1.0",
     "dotenv-cli": "^6.0.0",
     "release-it": "^15.6.0",
     "sass": "^1.57.1"
