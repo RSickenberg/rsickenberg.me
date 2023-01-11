@@ -23,7 +23,6 @@
     "@tailwindcss/typography": "^0.5.8",
     "astro": "^1.9.0",
     "gsap": "^3.11.4",
-    "locomotive-scroll": "^4.1.4",
     "preact": "^10.11.3",
     "tailwindcss": "^3.2.4",
     "zustand": "^4.2.0"
@@ -49,7 +48,7 @@
         "filename": "CHANGELOG.md",
         "strictLatest": true,
         "addUnreleased": true,
-        "addVersionUrl": true,
+        "addVersionUrl": true
       }
     }
   },
