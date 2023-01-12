@@ -11,11 +11,12 @@ import { Picture } from "@astrojs/image/components";
     id={"picture"}
     loading={"lazy"}
     decoding={"async"}
-    class={"w-[400px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5"}
+    alt="Romain, a developer."
+    class={"w-[500px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5"}
   />
   <div
     id="picture-bg-border"
-    class="mt-5 lg:mt-0 absolute w-[400px] rounded-2xl aspect-square bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+    class="mt-5 lg:mt-0 absolute w-[400px] sm:w-[500px] rounded-2xl aspect-square bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
   >
   </div>
 </article>
@@ -53,7 +54,7 @@ import { Picture } from "@astrojs/image/components";
       delay: 0.2,
       duration: 0.2,
       y: -250,
-      x: -100,
+      x: -200,
       ease: "power1.out",
     })
 </script>
