@@ -12,11 +12,11 @@ import { Picture } from "@astrojs/image/components";
     loading={"lazy"}
     decoding={"async"}
     alt="Romain, a developer."
-    class={"w-[500px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5"}
+    class={"w-[500px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5 will-change-transform"}
   />
   <div
     id="picture-bg-border"
-    class="mt-5 lg:mt-0 absolute w-[400px] sm:w-[500px] rounded-2xl aspect-square bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+    class="will-change-transform first-letter:mt-5 lg:mt-0 absolute w-[400px] sm:w-[500px] rounded-2xl aspect-square bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
   >
   </div>
 </article>
