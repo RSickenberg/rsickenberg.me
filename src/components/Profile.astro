@@ -24,6 +24,7 @@ import { Picture } from "@astrojs/image/components";
 <script>
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import { isMinimalWidth } from "../utils/getColors";
     gsap.registerPlugin(ScrollTrigger);
 
     // Make the picture fade in and out.
@@ -53,8 +54,8 @@ import { Picture } from "@astrojs/image/components";
       opacity: 1,
       delay: 0.2,
       duration: 0.2,
-      y: -250,
-      x: -200,
+      y: isMinimalWidth ? -250 : -120,
+      x: isMinimalWidth ? -200 : -20,
       ease: "power1.out",
     })
 </script>

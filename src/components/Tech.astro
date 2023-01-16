@@ -2,7 +2,7 @@
 import techs from '../data/techs.json';
 import Card from './CardTech.astro';
 ---
-<div class="grid grid-cols-2 xl:grid-cols-4 gap-4 md:gap-12 lg:gap-16 mb-10">
+<div class="grid grid-cols-2 2xl:grid-cols-4 gap-2 2xl:gap-16 mb-10">
     {techs.sort((a, b) => a.order - b.order).map(tech => (
         <Card tech={tech} data-tech={tech} />
     ))}

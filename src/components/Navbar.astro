@@ -13,26 +13,4 @@ import Logo from "ui/Logo.astro";
       RSickenberg
     </p>
   </div>
-
-  <div class="flex items-center space-x-6 text-sm md:text-base">
-    <span class="currentSection"></span>
-  </div>
 </nav>
-
-<script>
-  import { getState, subscribe } from "utils/getCurrentSection";
-
-  const curentSection = document.querySelector(".currentSection");
-
-  const setCurrentSection = (section: string) => {
-    curentSection.innerHTML = section;
-  };
-
-  const initialState = getState();
-
-  setCurrentSection(initialState.activeSection);
-
-  subscribe((state) => {
-    setCurrentSection(state.activeSection);
-  });
-</script>
