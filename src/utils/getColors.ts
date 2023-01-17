@@ -1,6 +1,6 @@
 const alphaValues = { dark: 0.9, light: 0.8 };
 const colors = { light: "white", dark: "black" };
-const minValuableWidht = 1240;
+const minValuableWidht = 1265;
 
 let isDarkMode =
   window.matchMedia &&
@@ -13,5 +13,7 @@ window
   });
 
 let isMinimalWidth = window.innerWidth >= minValuableWidht;
+let isMd = window.innerWidth <= minValuableWidht && window.innerWidth >= 768;
+let isSm = window.innerWidth < 1025;
 
-export { colors, alphaValues, isDarkMode, isMinimalWidth };
+export { colors, alphaValues, isDarkMode, isMinimalWidth, isMd, isSm };
