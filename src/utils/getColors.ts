@@ -12,8 +12,9 @@ window
     isDarkMode = e.matches;
   });
 
+let isXl = window.innerWidth >= minValuableWidht;
 let isMinimalWidth = window.innerWidth >= minValuableWidht;
 let isMd = window.innerWidth <= minValuableWidht && window.innerWidth >= 768;
 let isSm = window.innerWidth < 1025;
 
-export { colors, alphaValues, isDarkMode, isMinimalWidth, isMd, isSm };
+export { colors, alphaValues, isDarkMode, isXl, isMinimalWidth, isMd, isSm };

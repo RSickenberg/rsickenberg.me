@@ -16,64 +16,68 @@ import { Picture } from "@astrojs/image/components";
   />
   <div
     id="picture-bg-border"
-    class="will-change-transform first-letter:mt-5 lg:mt-0 absolute w-[400px] 2xl:w-[500px] rounded-2xl aspect-square bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+    class="will-change-transform lg:mt-0 absolute w-[380px] sm:w-[450px] 2xl:w-[650px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
   >
   </div>
 </article>
 
 <script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-    import { isMinimalWidth, isMd, isSm } from "../utils/getColors";
-    gsap.registerPlugin(ScrollTrigger);
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { isMinimalWidth, isMd, isSm, isXl } from "../utils/getColors";
+  gsap.registerPlugin(ScrollTrigger);
 
-    // Make the picture fade in and out.
-    gsap.set("#picture", { opacity: 0 });
-    gsap.set("#picture-bg-border", { opacity: 0 });
+  // Make the picture fade in and out.
+  gsap.set("#picture", { opacity: 0 });
+  gsap.set("#picture-bg-border", { opacity: 0 });
 
-    let getXDisplacement = () => {
-      if (isMinimalWidth) {
-        return -200;
-      } else {
-        return -40;
-      }
+  let getXDisplacement = () => {
+    if (isXl) {
+      return -100;
+    } else if (isMinimalWidth && !isMd) {
+      return -80;
+    } else if (isMd && !isSm) {
+      return 45;
+    } else {
+      return 0;
     }
+  };
 
-    let getYDisplacement = () => {
-      if (isMinimalWidth) {
-        return -550;
-      } else if (isMd && !isSm) {
-        return -120;
-      } else {
-        return -320;
-      }
+  let getYDisplacement = () => {
+    if (isMinimalWidth) {
+      return -350;
+    } else if (isMd && !isSm) {
+      return -120;
+    } else {
+      return -320;
     }
+  };
 
-    gsap.to("#picture", {
-      scrollTrigger: {
-        trigger: "#picture",
-        start: "top 110%",
-        end: "bottom 110%",
-        scrub: true,
-      },
-      opacity: 1,
-      delay: 0.5,
-      duration: 2,
-      y: -100,
-      ease: "power3.out",
-    });
-    gsap.to('#picture-bg-border', {
-      scrollTrigger: {
-        trigger: "#picture",
-        start: "top 100%",
-        end: "bottom 70%",
-        scrub: true,
-      },
-      opacity: 1,
-      delay: 0.2,
-      duration: 0.2,
-      y: getYDisplacement(),
-      x: getXDisplacement(),
-      ease: "power1.out",
-    })
+  gsap.to("#picture", {
+    scrollTrigger: {
+      trigger: "#picture",
+      start: "top 100%",
+      end: "bottom 100%",
+      scrub: true,
+    },
+    opacity: 1,
+    delay: 0.2,
+    duration: 0.2,
+    y: -100,
+    ease: "power3.out",
+  });
+  gsap.to("#picture-bg-border", {
+    scrollTrigger: {
+      trigger: "#picture",
+      start: "top 100%",
+      end: "bottom 70%",
+      scrub: true,
+    },
+    opacity: 1,
+    delay: 0.2,
+    duration: 0.8,
+    y: getYDisplacement(),
+    x: getXDisplacement(),
+    ease: "power1.out",
+  });
 </script>
