@@ -12,11 +12,11 @@ import { Picture } from "@astrojs/image/components";
     loading={"lazy"}
     decoding={"async"}
     alt="Romain, a developer."
-    class={"w-[400px] 2xl:w-[600px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5 will-change-transform"}
+    class={"w-[400px] 2xl:w-[600px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5 will-change-[opacity,transform]"}
   />
   <div
     id="picture-bg-border"
-    class="will-change-transform lg:mt-0 absolute w-[380px] sm:w-[450px] 2xl:w-[650px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+    class="will-change-[opacity,transform] lg:mt-0 absolute w-[380px] sm:w-[450px] 2xl:w-[650px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
   >
   </div>
 </article>
@@ -58,7 +58,10 @@ import { Picture } from "@astrojs/image/components";
       trigger: "#picture",
       start: "top 100%",
       end: "bottom 100%",
-      scrub: true,
+      scrub: 1,
+      toggleActions: "play none none reverse",
+      invalidateOnRefresh: true,
+      preventOverlaps: "picture"
     },
     opacity: 1,
     delay: 0.2,
@@ -71,13 +74,16 @@ import { Picture } from "@astrojs/image/components";
       trigger: "#picture",
       start: "top 100%",
       end: "bottom 70%",
-      scrub: true,
+      scrub: 2,
+      toggleActions: "play none none reverse",
+      invalidateOnRefresh: true,
+      preventOverlaps: "picture-bg"
     },
     opacity: 1,
     delay: 0.2,
     duration: 0.8,
     y: getYDisplacement(),
     x: getXDisplacement(),
-    ease: "power1.out",
+    //ease: "power1.out",
   });
 </script>
