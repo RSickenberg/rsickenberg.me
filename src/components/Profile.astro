@@ -16,7 +16,7 @@ import { Picture } from "@astrojs/image/components";
   />
   <div
     id="picture-bg-border"
-    class="will-change-[opacity,transform] lg:mt-0 absolute w-[400px] 2xl:w-[500px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+    class="will-change-[opacity,transform] lg:mt-0 absolute w-[410px] 2xl:w-[500px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
   >
   </div>
 </article>
@@ -57,14 +57,12 @@ import { Picture } from "@astrojs/image/components";
     scrollTrigger: {
       trigger: "#picture",
       start: "top 100%",
-      end: "bottom 100%",
+      end: "bottom 130%",
       scrub: 1,
       invalidateOnRefresh: true,
       preventOverlaps: "picture",
     },
     opacity: 1,
-    delay: 0.2,
-    duration: 0.2,
     y: -100,
     ease: "power3.out",
   });
@@ -72,14 +70,12 @@ import { Picture } from "@astrojs/image/components";
     scrollTrigger: {
       trigger: "#picture",
       start: "top 100%",
-      end: "bottom 70%",
+      end: "bottom 80%",
       scrub: 0.5,
       invalidateOnRefresh: true,
       preventOverlaps: "picture-bg",
     },
     opacity: 1,
-    delay: 0.2,
-    duration: 0.8,
     y: getYDisplacement(),
     x: getXDisplacement(),
     ease: "power1.out",
