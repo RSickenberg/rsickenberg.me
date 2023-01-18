@@ -12,11 +12,11 @@ import { Picture } from "@astrojs/image/components";
     loading={"lazy"}
     decoding={"async"}
     alt="Romain, a developer."
-    class={"w-[400px] 2xl:w-[600px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5 will-change-[opacity,transform]"}
+    class={"w-[400px] 2xl:w-[500px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5 will-change-[opacity,transform]"}
   />
   <div
     id="picture-bg-border"
-    class="will-change-[opacity,transform] lg:mt-0 absolute w-[380px] sm:w-[450px] 2xl:w-[650px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+    class="will-change-[opacity,transform] lg:mt-0 absolute w-[400px] 2xl:w-[500px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
   >
   </div>
 </article>
@@ -37,7 +37,7 @@ import { Picture } from "@astrojs/image/components";
     } else if (isMinimalWidth && !isMd) {
       return -80;
     } else if (isMd && !isSm) {
-      return 45;
+      return -45;
     } else {
       return 0;
     }
@@ -47,7 +47,7 @@ import { Picture } from "@astrojs/image/components";
     if (isMinimalWidth) {
       return -350;
     } else if (isMd && !isSm) {
-      return -120;
+      return -250;
     } else {
       return -320;
     }
@@ -59,7 +59,6 @@ import { Picture } from "@astrojs/image/components";
       start: "top 100%",
       end: "bottom 100%",
       scrub: 1,
-      toggleActions: "play none none reverse",
       invalidateOnRefresh: true,
       preventOverlaps: "picture",
     },
@@ -75,7 +74,6 @@ import { Picture } from "@astrojs/image/components";
       start: "top 100%",
       end: "bottom 70%",
       scrub: 0.5,
-      toggleActions: "play none none reverse",
       invalidateOnRefresh: true,
       preventOverlaps: "picture-bg",
     },
