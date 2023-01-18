@@ -57,8 +57,6 @@ import Profile from "./Profile.astro";
   function _renderTo() {
     gsap.to(".about", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      delay: 0.3,
-      duration: 1,
       ease: "power4.out",
       scrollTrigger: {
         trigger: ".about",
@@ -69,8 +67,6 @@ import Profile from "./Profile.astro";
     });
     gsap.to(".line", {
       opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      delay: 0.4,
-      duration: 1,
       ease: "power4.out",
       scrollTrigger: {
         trigger: ".about",
