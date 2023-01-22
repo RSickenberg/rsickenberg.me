@@ -1,0 +1,73 @@
+---
+import ProjectList from "ui/ProjectList";
+---
+
+<section class="min-h-screen overflow-hidden" id="projects">
+  <header class="my-12 text-center">
+    <h2
+      class="text-black dark:text-white text-2xl font-bold project-title opacity-0"
+    >
+      Selected projects.
+    </h2>
+    <div class="h-16 w-0.5 dark:bg-gray-200 bg-gray-700 m-6 mx-auto opacity-0 project-line"></div>
+  </header>
+  <ProjectList client:visible/>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { colors, alphaValues, isDarkMode } from "utils/getColors";
+  gsap.registerPlugin(ScrollTrigger);
+
+  function _init() {
+    gsap.set(".project-title", {
+      opacity: 0,
+    });
+    gsap.set(".project-line", {
+      opacity: 0,
+    });
+
+    _renderTo();
+    _setColors();
+  }
+
+  function _renderTo() {
+    gsap.to(".project-title", {
+      scrollTrigger: {
+        trigger: ".project-title",
+        start: "top 100%",
+        end: "bottom 90%",
+        scrub: 2,
+      },
+      opacity: 1,
+    });
+    gsap.to(".project-line", {
+      scrollTrigger: {
+        trigger: ".project-title",
+        start: "top 80%",
+        end: "bottom 100%",
+        scrub: 2,
+      },
+      opacity: 1,
+    });
+  }
+
+  function _setColors() {
+    gsap.set(".project-line", {
+      color: isDarkMode ? colors.light : colors.dark,
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+    });
+    gsap.set(".project-title", {
+      color: isDarkMode ? colors.light : colors.dark,
+      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+    });
+  }
+
+  _init();
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", () => {
+      _setColors();
+    });
+</script>

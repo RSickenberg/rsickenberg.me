@@ -1,0 +1,10 @@
+[
+    {
+        "id": 0,
+        "name": "Companion for Tesla",
+        "url": "https://teslacompanion.app",
+        "roles": ["Mobile Developer", "Designer"],
+        "media": "/images/projects/tesla/composer_black_bg.jpg",
+        "accent": {"black": "#DFDDDE", "light": "#C4C3BF"}
+    }
+]

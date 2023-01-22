@@ -16,7 +16,7 @@ import { Picture } from "@astrojs/image/components";
   />
   <div
     id="picture-bg-border"
-    class="will-change-[opacity,transform] lg:mt-0 absolute w-[410px] 2xl:w-[500px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+    class="will-change-[opacity,transform] lg:mt-0 absolute w-[420px] 2xl:w-[500px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
   >
   </div>
 </article>
@@ -33,7 +33,7 @@ import { Picture } from "@astrojs/image/components";
 
   let getXDisplacement = () => {
     if (isXl) {
-      return -100;
+      return -150;
     } else if (isMinimalWidth && !isMd) {
       return -80;
     } else if (isMd && !isSm) {
