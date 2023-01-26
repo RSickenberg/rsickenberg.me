@@ -26,6 +26,9 @@ export default function ProjectList() {
     setMousePos({ x: e.clientX, y: e.clientY });
   };
 
+  // This code adds an event listener to the window that listens for mouse moves.
+  // It also returns a function that removes the event listener after the component
+  // unmounts.
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
 
@@ -37,24 +40,21 @@ export default function ProjectList() {
   const handleMouseEnter = (index: number) => {
     // When the mouse enters an item, the index of that item is set as the active index.
     setActiveIndex(index);
-    console.log("mouse enter project");
     const isDarkMode = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
+    console.log(isDarkMode);
     const matchedColor = isDarkMode
       ? projects[index]?.accent.black
       : projects[index]?.accent.light;
     const returnValue = isDarkMode
       ? "rgba(0, 0, 0, 0)"
       : "rgba(255, 255, 255, 0)";
-    gsap.to(
-      ".layer",
-      {
-        duration: 0.5,
-        backgroundColor: matchedColor || returnValue,
-        ease: "Cubic.easeOut",
-      }
-    );
+    gsap.to(".layer", {
+      duration: 0.5,
+      backgroundColor: matchedColor || returnValue,
+      ease: "Cubic.easeOut",
+    });
   };
 
   return (
@@ -95,10 +95,11 @@ export default function ProjectList() {
             gsap.set(el, {
               x: mousePos.x - el.offsetWidth / 2,
               y: mousePos.y - el.offsetHeight / 2,
+              foce3D: true,
               duration: 0.2,
             });
         }}
-        className="absolute hidden md:block top-0 left-0 w-full h-full z-10"
+        className="relative hidden md:block top-0 left-0 w-full h-full z-10"
       >
         {photos.map((photo: string, index: number) => {
           const isActive = index === activeIndex;
@@ -106,7 +107,7 @@ export default function ProjectList() {
           return (
             <img
               src={photo}
-              className={`absolute scale-75 pointer-events-none select-none rounded-md transition-opacity ${
+              className={`absolute scale-75 transform-gpu pointer-events-none select-none rounded-xl transition-[opacity,transform] ${
                 isActive ? "opacity-100" : "opacity-0"
               }`}
               key={index}
