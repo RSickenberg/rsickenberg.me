@@ -22,8 +22,7 @@ import { Picture } from "@astrojs/image/components";
 </article>
 
 <script>
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { gsap, ScrollTrigger } from "gsap/all";
   import { isMinimalWidth, isMd, isSm, isXl } from "../utils/getColors";
   gsap.registerPlugin(ScrollTrigger);
 

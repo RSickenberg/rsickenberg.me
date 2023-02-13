@@ -41,8 +41,7 @@ import Profile from "./Profile.astro";
   </div>
 </section>
 <script>
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import { gsap } from "gsap";
+  import { gsap, ScrollTrigger } from "gsap/all";
   import { colors, alphaValues, isDarkMode } from "utils/getColors";
 
   gsap.registerPlugin(ScrollTrigger);
