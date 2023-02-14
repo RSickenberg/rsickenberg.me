@@ -21,7 +21,7 @@
     "@astrojs/tailwind": "^3.0.1",
     "@studio-freight/lenis": "^0.2.28",
     "@tailwindcss/typography": "^0.5.9",
-    "astro": "^2.0.10",
+    "astro": "^2.0.11",
     "gsap": "^3.11.4",
     "preact": "^10.12.1",
     "tailwindcss": "^3.2.6",
