@@ -16,7 +16,7 @@
     "release": "dotenv release-it"
   },
   "dependencies": {
-    "@astrojs/image": "^0.14.1",
+    "@astrojs/image": "^0.15.0",
     "@astrojs/preact": "^2.0.3",
     "@astrojs/tailwind": "^3.0.1",
     "@studio-freight/lenis": "^0.2.28",
