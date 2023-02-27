@@ -25,7 +25,7 @@
     "gsap": "^3.11.4",
     "preact": "^10.12.1",
     "tailwindcss": "^3.2.6",
-    "zustand": "^4.3.3"
+    "zustand": "^4.3.4"
   },
   "devDependencies": {
     "@release-it/keep-a-changelog": "^3.1.0",
