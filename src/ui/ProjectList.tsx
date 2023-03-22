@@ -3,19 +3,33 @@ import { gsap } from "gsap";
 
 import projects from "../data/projects.json";
 
+export interface IMediaSizes {
+  height: number;
+  width: number;
+}
+
 export interface IProject {
   id: number;
   name: string;
   roles: string[];
   url: string;
   media: string;
+  mediaSizes: IMediaSizes;
 }
 
-const photos = projects.map((p) => p.media);
+interface IPhotos {
+  media: string,
+  sizes: IMediaSizes,
+}
+
+const photos: IPhotos[] = projects.map((p) => {
+  return {media: p.media, sizes: p.mediaSizes};
+});
+console.log(photos);
 
 export default function ProjectList() {
   // This state variable keeps track of which item in the dropdown is currently active.
-  // This is used to show which item is currently active.
+  // This is used to show that item is currently active.
   // The default value is -1 because the first item in the array is at index 0.
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -43,7 +57,6 @@ export default function ProjectList() {
     const isDarkMode = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
-    console.log(isDarkMode);
     const matchedColor = isDarkMode
       ? projects[index]?.accent.black
       : projects[index]?.accent.light;
@@ -77,7 +90,7 @@ export default function ProjectList() {
           <img
             src={project.media}
             alt={project.name}
-            class="block md:hidden my-4 w-full object-cover"
+            class="block md:hidden my-4 w-full object-cover rounded-2xl"
           />
 
           <div class="flex items-center space-x-2 md:space-x-4">
@@ -93,24 +106,26 @@ export default function ProjectList() {
         ref={(el: HTMLDivElement) => {
           if (el)
             gsap.set(el, {
-              x: mousePos.x - el.offsetWidth / 2,
-              y: mousePos.y - el.offsetHeight / 2,
-              foce3D: true,
+              x: mousePos.x - el.offsetLeft,
+              y: mousePos.y - 500,
               duration: 0.2,
             });
         }}
-        className="relative hidden md:block top-0 left-0 w-full h-full z-10"
+        className="relative hidden md:block top-0 left-0 w-auto h-auto z-10"
       >
-        {photos.map((photo: string, index: number) => {
+        {photos.map((photo: IPhotos, index: number) => {
           const isActive = index === activeIndex;
 
           return (
             <img
-              src={photo}
-              className={`absolute scale-75 transform-gpu pointer-events-none select-none rounded-xl transition-[opacity,transform] ${
-                isActive ? "opacity-100" : "opacity-0"
-              }`}
+              alt="A project picture"
+              src={photo.media}
+              className={`absolute scale-50 transform-gpu pointer-events-none select-none rounded-xl transition-[opacity,transform] ${
+                isActive ? "opacity-100" : "opacity-10"
+              } right-1/2`}
               key={index}
+              width={photo.sizes.width}
+              height={photo.sizes.height}
               loading="lazy"
             />
           );
