@@ -5,7 +5,7 @@ updates:
     versioning-strategy: increase-if-necessary
     open-pull-requests-limit: 0
     allow:
-      - dependency-type: all
+      - dependency-type: direct
     schedule:
       interval: weekly
   - package-ecosystem: github-actions
