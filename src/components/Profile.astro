@@ -12,11 +12,11 @@ import { Picture } from "@astrojs/image/components";
     loading={"lazy"}
     decoding={"async"}
     alt="Romain, a developer."
-    class={"w-[400px] 2xl:w-[500px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5 will-change-[opacity,transform]"}
+    class={"w-[400px] 2xl:w-[500px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5 will-change-[opacity,transform] z-[2]"}
   />
   <div
     id="picture-bg-border"
-    class="will-change-[opacity,transform] lg:mt-0 absolute w-[420px] 2xl:w-[500px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[-1]"
+    class="will-change-[opacity,transform] lg:mt-0 absolute w-[420px] 2xl:w-[500px] aspect-square rounded-2xl bg-transparent border-2 border-black dark:border-white top-[55%] lg:-right-[35%] transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-[1]"
   >
   </div>
 </article>
@@ -70,7 +70,7 @@ import { Picture } from "@astrojs/image/components";
       trigger: "#picture",
       start: "top 100%",
       end: "bottom 80%",
-      scrub: 0.5,
+      scrub: 1,
       invalidateOnRefresh: true,
       preventOverlaps: "picture-bg",
     },
