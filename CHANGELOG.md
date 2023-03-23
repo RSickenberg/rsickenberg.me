@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed an issue when the navbar was flashing before the first animations
 
+### Security
+- Upgrade latest packages
+
 ## [0.0.5] - 2023-03-12
 ### Security
 - Upgrade latest packages
