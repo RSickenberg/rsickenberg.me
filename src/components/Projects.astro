@@ -1,5 +1,5 @@
 ---
-import ProjectList from "ui/ProjectList";
+import ProjectList from "../ui/ProjectList";
 ---
 
 <section class="min-h-screen overflow-hidden" id="projects">
@@ -16,7 +16,7 @@ import ProjectList from "ui/ProjectList";
 
 <script>
   import { gsap, ScrollTrigger } from "gsap/all";
-  import { colors, alphaValues, isDarkMode } from "utils/getColors";
+  import { colors, alphaValues, isDarkMode } from "../utils/getColors";
   gsap.registerPlugin(ScrollTrigger);
 
   function _init() {
