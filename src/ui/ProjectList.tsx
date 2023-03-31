@@ -25,7 +25,6 @@ interface IPhotos {
 const photos: IPhotos[] = projects.map((p) => {
   return {media: p.media, sizes: p.mediaSizes};
 });
-console.log(photos);
 
 export default function ProjectList() {
   // This state variable keeps track of which item in the dropdown is currently active.
@@ -33,6 +32,8 @@ export default function ProjectList() {
   // The default value is -1 because the first item in the array is at index 0.
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const _offsetY = 500;
 
   // This function is called when the mouse moves.
   const handleMouseMove = (e: MouseEvent) => {
@@ -76,7 +77,6 @@ export default function ProjectList() {
         <a
           href={project.url}
           target="_blank"
-          role={"item"}
           key={project.id}
           class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black py-16"
           onMouseEnter={() => handleMouseEnter(index)}
@@ -104,12 +104,22 @@ export default function ProjectList() {
       {/* Floating images on hover */}
       <div
         ref={(el: HTMLDivElement) => {
-          if (el)
-            gsap.set(el, {
-              x: mousePos.x - el.offsetLeft,
-              y: mousePos.y - 500,
+          if (el && activeIndex >= 0) {
+            const offsetY = -1000;
+            const offsetX = -50;
+            const aRect = el.getBoundingClientRect();
+            const aTop = aRect.top + window.scrollY;
+            const diffY = Math.abs(mousePos.y - aTop);
+            const y = aTop + ((mousePos.y > aTop) ? (diffY + offsetY) : (-diffY - offsetY));
+            const x = mousePos.x + offsetX;
+
+            gsap.to(el, {
               duration: 0.2,
+              x: x,
+              y: y,
+              ease: "power3.out"
             });
+          }
         }}
         className="relative hidden md:block top-0 left-0 w-auto h-auto z-10"
       >
