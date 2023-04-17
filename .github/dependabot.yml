@@ -2,12 +2,11 @@ version: 2
 updates:
   - package-ecosystem: npm
     directory: "/"
-    versioning-strategy: increase-if-necessary
-    open-pull-requests-limit: 0
     allow:
-      - dependency-type: direct
+      - dependency-type: all
+    version-strategy: auto
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
