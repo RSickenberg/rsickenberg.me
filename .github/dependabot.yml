@@ -4,7 +4,7 @@ updates:
     directory: "/"
     allow:
       - dependency-type: all
-    version-strategy: auto
+    versioning-strategy: auto
     schedule:
       interval: daily
   - package-ecosystem: github-actions
