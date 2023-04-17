@@ -3,8 +3,9 @@ updates:
   - package-ecosystem: npm
     directory: "/"
     allow:
-      - dependency-type: all
+      - dependency-type: direct
     versioning-strategy: auto
+    open-pull-requests-limit: 0
     schedule:
       interval: daily
   - package-ecosystem: github-actions
