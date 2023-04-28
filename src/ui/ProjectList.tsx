@@ -81,6 +81,7 @@ export default function ProjectList() {
           class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black py-16"
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={() => handleMouseEnter(-1)}
+          rel="noreferrer"
         >
           <div class="flex flex-col md:flex-row items-center md:space-x-8">
             <p>{`0${index + 1} / 0${projects.length}`}</p>
