@@ -106,20 +106,10 @@ export default function ProjectList() {
       <div
         ref={(el: HTMLDivElement) => {
           if (el && activeIndex >= 0) {
-            const offsetY = -1000;
-            const offsetX = -50;
-            const aRect = el.getBoundingClientRect();
-            const aTop = aRect.top + window.scrollY;
-            const diffY = Math.abs(mousePos.y - aTop);
-            const y = aTop + ((mousePos.y > aTop) ? (diffY + offsetY) : (-diffY - offsetY));
-            const x = mousePos.x + offsetX;
-
-            gsap.to(el, {
-              duration: 0.2,
-              x: x,
-              y: y,
-              ease: "power3.out"
-            });
+            // @ts-ignore
+            const img: HTMLImageElement = document.getElementById(el.children.item(0).id)
+            img.style.setProperty("--img-x", `${mousePos.x - img.width / 2}px`);
+            img.style.setProperty("--img-y", `${mousePos.y - 80}px`);
           }
         }}
         className="relative hidden md:block top-0 left-0 w-auto h-auto z-10"
@@ -129,15 +119,17 @@ export default function ProjectList() {
 
           return (
             <img
+              id={index}
               alt="A project picture"
               src={photo.media}
-              className={`absolute scale-50 transform-gpu pointer-events-none select-none rounded-xl transition-[opacity,transform] ${
-                isActive ? "opacity-100" : "opacity-10"
-              } right-1/2`}
+              className={`fixed scale-50 pointer-events-none select-none rounded-2xl transition-opacity ${
+                isActive ? "opacity-100" : "opacity-0"
+              }`}
               key={index}
               width={photo.sizes.width}
               height={photo.sizes.height}
               loading="lazy"
+              style="top: var(--img-y); left: var(--img-x);"
             />
           );
         })}
