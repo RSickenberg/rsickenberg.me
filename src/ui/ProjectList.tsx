@@ -32,8 +32,7 @@ export default function ProjectList() {
     // The default value is -1 because the first item in the array is at index 0.
     const [activeIndex, setActiveIndex] = useState<number>(-1);
     const [mousePos, setMousePos] = useState({x: 0, y: 0});
-
-    const _offsetY = 500;
+    const imageYOffset = 80;
 
     // This function is called when the mouse moves.
     const handleMouseMove = (e: MouseEvent) => {
@@ -108,9 +107,13 @@ export default function ProjectList() {
                 ref={(el: HTMLDivElement) => {
                     if (el && activeIndex >= 0) {
                         // @ts-ignore
-                        const img: HTMLImageElement = document.getElementById(el.children.item(0).id)
+                        const img: Nullable<HTMLImageElement> = document.getElementById(el.children.item(activeIndex).id);
+                        if (!img) {
+                            return
+                        }
+
                         img.style.setProperty("--img-x", `${mousePos.x - img.width / 2}px`);
-                        img.style.setProperty("--img-y", `${mousePos.y - 80}px`);
+                        img.style.setProperty("--img-y", `${mousePos.y - imageYOffset}px`);
                     }
                 }}
                 className="relative hidden md:block top-0 left-0 w-auto h-auto z-10"
@@ -120,7 +123,8 @@ export default function ProjectList() {
 
                     return (
                         <img
-                            id={`index`}
+                            // @ts-ignore TS2322
+                            id={index}
                             alt="A project picture"
                             src={photo.media}
                             className={`fixed scale-50 pointer-events-none select-none rounded-2xl transition-opacity ${
