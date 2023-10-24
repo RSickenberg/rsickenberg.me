@@ -1,6 +1,6 @@
 ---
 const { tech } = Astro.props;
-import { Image } from "@astrojs/image/components";
+import { Image } from 'astro:assets'
 
 let imgClass = "w-[50%] sm:w-[35%] h-auto self-center sm:self-left m-3";
 imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;

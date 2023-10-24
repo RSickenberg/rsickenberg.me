@@ -1,12 +1,12 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Picture } from 'astro:assets'
+import profileImage from '../../public/images/profile/antistatique_romain-31-web.jpg'
 ---
 
 <article class="flex justify-center lg:justify-end items-center relative mt-10">
   <Picture
-    src={"/images/profile/antistatique_romain-31-web.jpg"}
+    src={profileImage}
     widths={[400, 800, 1200]}
-    aspectRatio={0.666}
     formats={["webp"]}
     id={"picture"}
     loading={"lazy"}
