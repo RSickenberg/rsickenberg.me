@@ -1,0 +1,127 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<section class="min-h-screen flex justify-center items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 w-[90%] mx-auto gap-10">
+        <article class="py-6 px-8 text-center sm:text-left">
+            <h2 class="text-4xl dark:text-white text-black font-bold opacity-0 contact-me">Say Hello!</h2>
+            <!-- Line -->
+            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-6 mx-auto md:m-6 line opacity-0" />
+            <div class="opacity-0 text-center sm:text-left contact-me-methods">
+                <p>
+                    Here are few ways to learn more of me!<br> If you have a project, an idea or a coffee to share, be free to contact me!<br>
+                    I'll try my best to make it for you.
+                </p>
+
+                <div class="grid grid-cols-5 gap-4">
+                    <a
+                            href="mailto:r.sickenberg@gmail.com"
+                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
+                    >
+                        <Icon name="arcticons:mail" size="45" class="gray-800 dark:gray-100"/>
+                    </a>
+                    <a
+                            href="https://github.com/RSickenberg"
+                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
+                    >
+                        <Icon name="arcticons:github" size="45" class="gray-800 dark:gray-100" />
+                    </a>
+                    <a
+                            href="https://www.linkedin.com/in/romain-sickenberg"
+                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
+                    >
+                        <Icon name="arcticons:linkedin" size="45" class="gray-800 dark:gray-100" />
+                    </a>
+                    <a
+                            href="https://twitter.com/haux49"
+                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
+                    >
+                        <Icon name="arcticons:x-twitter" size="45" class="gray-800 dark:gray-100" />
+                    </a>
+                    <a
+                            href="/assets/pdf/onepage.pdf"
+                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
+                    >
+                        <Icon name="arcticons:document-viewer" size="45" class="gray-800 dark:gray-100" />
+                    </a>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+
+<script>
+    import {gsap, ScrollTrigger} from "gsap/all";
+    import {colors, alphaValues, isDarkMode} from "../utils/getColors";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    _initialize();
+
+    window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", () => {
+            _setColors();
+        })
+
+    function _initialize() {
+        _setColors();
+        gsap.set(".line", {
+            opacity: 0
+        });
+        gsap.set(".contact-me", {
+            opacity: 0
+        });
+        gsap.set(".contact-me-methods", {
+            opacity: 0
+        });
+
+        _renderTo();
+    }
+
+    function _renderTo() {
+        gsap.to(".contact-me", {
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: ".contact-me",
+                start: "top 100%",
+                scrub: 1,
+            }
+        });
+        gsap.to(".line", {
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: ".contact-me",
+                start: "top 100%",
+                scrub: 1,
+            }
+        });
+        gsap.to(".contact-me-methods", {
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: ".contact-me-methods",
+                start: "top 90%",
+                scrub: 2,
+            }
+        })
+    }
+
+    function _setColors() {
+        gsap.set(".line", {
+            color: isDarkMode ? colors.light : colors.dark,
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+        });
+        gsap.set(".contact-me", {
+            color: isDarkMode ? colors.light : colors.dark,
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+        });
+        gsap.set(".contact-me-methods", {
+            color: isDarkMode ? colors.light : colors.dark,
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+        });
+    }
+</script>
