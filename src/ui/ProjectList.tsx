@@ -32,7 +32,7 @@ export default function ProjectList() {
     // The default value is -1 because the first item in the array is at index 0.
     const [activeIndex, setActiveIndex] = useState<number>(-1);
     const [mousePos, setMousePos] = useState({x: 0, y: 0});
-    const imageYOffset = 80;
+    const imageYOffset = 150;
 
     // This function is called when the mouse moves.
     const handleMouseMove = (e: MouseEvent) => {
@@ -127,7 +127,7 @@ export default function ProjectList() {
                             id={index}
                             alt="A project picture"
                             src={photo.media}
-                            className={`fixed scale-50 pointer-events-none select-none rounded-2xl transition-opacity ${
+                            className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-transform ${
                                 isActive ? "opacity-100" : "opacity-0"
                             }`}
                             key={index}

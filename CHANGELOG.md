@@ -10,9 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed few bugs and glitches in the UI and tweaked some animations.
+- Fixed contact on mobile
 
 ### Security
 - Upgrade latest packages
+
+### Changed
+- Few changes on the gap about technologies
 
 ## [0.0.8] - 2023-06-24
 ### Security
