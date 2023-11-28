@@ -2,16 +2,16 @@
 const { tech } = Astro.props;
 import { Image } from 'astro:assets'
 
-let imgClass = "w-[50%] sm:w-[35%] h-auto self-center sm:self-left m-3";
+let imgClass = "w-[35%] lg:w-[45%] h-auto self-center sm:self-left sm:m-3";
 imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;
 ---
 <card-tech class="hidden" data-techId={tech.order}></card-tech>
 <div
   id={"tech-card-" + tech.order}
-  class="card flex flex-col justify-around border-2 rounded-xl border-black dark:border-white space-y-6 md:min-w-[170px] md:min-h-[200px] will-change-[opacity]"
+  class="card flex flex-col py-3 lg:py-0 md:justify-center border-2 rounded-xl border-black dark:border-white space-y-4 sm:space-y-7 md:min-w-[170px] md:min-h-[200px] will-change-[opacity]"
 >
   <pre
-    class="self-left ml-2 text-black dark:text-white opacity-40">#{tech.order}</pre>
+    class="ml-0 sm:ml-3 text-sm md:text-base text-black dark:text-white opacity-40">#{tech.order}</pre>
   <Image
     src={tech.imagePath}
     width={tech.imageWidth}
@@ -20,9 +20,7 @@ imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;
     format="webp"
     class={imgClass}
   />
-  <h2 class="self-center text-xl sm:text-2xl text-black dark:text-white">
-    {tech.name}
-  </h2>
+  <h2 class="self-center text-xl sm:text-2xl text-black dark:text-white">{tech.name}</h2>
 </div>
 
 <script>
