@@ -41,14 +41,18 @@
     "github": {
       "release": true,
       "releaseName": "Release ${version}",
-      "preRelease": false,
+      "preRelease": true,
       "draft": false
     },
     "git": {
       "requireCleanWorkingDir": false,
       "commitMessage": "Release ${version}",
       "tagName": "v${version}",
-      "tag": true
+      "tag": true,
+      "requiredBranch": "main"
+    },
+    "hooks": {
+      "after:git:release": "git rebase main dev"
     },
     "plugins": {
       "@release-it/keep-a-changelog": {
