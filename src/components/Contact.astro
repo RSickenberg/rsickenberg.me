@@ -51,7 +51,7 @@ const contactMediums: IContactMedium[] = [
                         class="underline decoration-2 decoration-gray-500 dark:decoration-gray-200">for you</a>.
                 </p>
 
-                <div class=`grid grid-cols-2 md:grid-cols-${contactMediums.length} gap-3 md:gap-4`>
+                <div class=`grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4`>
                     {contactMediums.map((medium => {
                         return <a href={medium.href} class={medium.class ?? baseContactClass}>
                             <Icon name={medium.iconName} size={medium.iconSize ?? baseIconSize}
