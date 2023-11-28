@@ -51,9 +51,6 @@
       "tag": true,
       "requiredBranch": "main"
     },
-    "hooks": {
-      "after:git:release": "git rebase main dev"
-    },
     "plugins": {
       "@release-it/keep-a-changelog": {
         "filename": "CHANGELOG.md",
