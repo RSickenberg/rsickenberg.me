@@ -1,5 +1,40 @@
 ---
-import { Icon } from 'astro-icon/components'
+import {Icon} from 'astro-icon/components'
+
+interface IContactMedium {
+    href: string,
+    iconName: string,
+    class?: string,
+    iconClass?: string,
+    iconSize?: number,
+}
+
+const baseContactClass = "mx-auto mt-8 rounded-xl border border-gray-800 dark:border-gray-200 py-4 px-8";
+const baseIconClass = "gray-800 dark:gray-100";
+const baseIconSize = 45;
+
+const contactMediums: IContactMedium[] = [
+    {
+        href: "mailto:r.sickenberg@gmail.com",
+        iconName: "arcticons:mail",
+    },
+    {
+        href: "https://github.com/RSickenberg",
+        iconName: "arcticons:github",
+    },
+    {
+        href: "https://www.linkedin.com/in/romain-sickenberg",
+        iconName: "arcticons:linkedin",
+    },
+    {
+        href: "https://twitter.com/haux49",
+        iconName: "arcticons:x-twitter",
+    },
+    {
+        href: "/assets/pdf/onepage.pdf",
+        iconName: "arcticons:document-viewer",
+    },
+];
 ---
 
 <section class="min-h-screen flex justify-center items-center">
@@ -7,44 +42,22 @@ import { Icon } from 'astro-icon/components'
         <article class="py-6 px-8 text-center sm:text-left">
             <h2 class="text-4xl dark:text-white text-black font-bold opacity-0 contact-me">Say Hello!</h2>
             <!-- Line -->
-            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-6 mx-auto md:m-6 line opacity-0" />
+            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-6 mx-auto md:m-6 line opacity-0"/>
             <div class="opacity-0 text-center sm:text-left contact-me-methods">
                 <p class="text-center md:text-justify">
-                    Here are few ways to learn more of me!<br> If you have a project, an idea or a coffee to share, be free to contact me!<br><br>
-                    I'll try my best to make it <a class="underline decoration-2 decoration-gray-500 dark:decoration-gray-200">for you</a>.
+                    Here are few ways to learn more of me!<br> If you have a project, an idea or a coffee to share, be
+                    free to contact me!<br><br>
+                    I'll try my best to make it <a
+                        class="underline decoration-2 decoration-gray-500 dark:decoration-gray-200">for you</a>.
                 </p>
 
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-3 md:gap-4">
-                    <a
-                            href="mailto:r.sickenberg@gmail.com"
-                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
-                    >
-                        <Icon name="arcticons:mail" size="45" class="gray-800 dark:gray-100"/>
-                    </a>
-                    <a
-                            href="https://github.com/RSickenberg"
-                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
-                    >
-                        <Icon name="arcticons:github" size="45" class="gray-800 dark:gray-100" />
-                    </a>
-                    <a
-                            href="https://www.linkedin.com/in/romain-sickenberg"
-                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
-                    >
-                        <Icon name="arcticons:linkedin" size="45" class="gray-800 dark:gray-100" />
-                    </a>
-                    <a
-                            href="https://twitter.com/haux49"
-                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
-                    >
-                        <Icon name="arcticons:x-twitter" size="45" class="gray-800 dark:gray-100" />
-                    </a>
-                    <a
-                            href="/assets/pdf/onepage.pdf"
-                            class="mx-auto mt-8 inline-flex border border-gray-800 dark:border-gray-200 py-4 px-8 items-center"
-                    >
-                        <Icon name="arcticons:document-viewer" size="45" class="gray-800 dark:gray-100" />
-                    </a>
+                <div class=`grid grid-cols-2 md:grid-cols-${contactMediums.length} gap-3 md:gap-4`>
+                    {contactMediums.map((medium => {
+                        return <a href={medium.href} class={medium.class ?? baseContactClass}>
+                            <Icon name={medium.iconName} size={medium.iconSize ?? baseIconSize}
+                                  class={medium.iconClass ?? baseIconClass}/>
+                        </a>
+                    }))}
                 </div>
             </div>
         </article>
