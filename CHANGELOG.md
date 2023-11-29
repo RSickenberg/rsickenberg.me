@@ -6,6 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2023-11-29
+### Fixed
+- Fixed few grammar issues
+
+### Security
+- Upgrade latest packages
+
+### Changed
+- Dependabot should check updates on a daily basis now
+- Some styles corrections with the grids and shadows
+
+### Added
+- Project show Fortnite Wiki but deprecated, now the title is over-lined
+
 ## [0.1.2] - 2023-11-29
 ### Fixed
 - Fixed a tailwind issue when used computed style class
@@ -87,7 +101,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listner
 
-[unreleased]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.8...v0.1.0
