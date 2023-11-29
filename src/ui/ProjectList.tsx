@@ -91,7 +91,7 @@ export default function ProjectList() {
                     <img
                         src={project.media}
                         alt={project.name}
-                        class="block md:hidden my-4 w-full object-cover rounded-2xl"
+                        class="block md:hidden my-4 w-full object-cover rounded-3xl border-2 border-gray-600 dark:border-gray-200 shadow-2xl"
                     />
 
                     <div class="flex items-center space-x-2 md:space-x-4">
@@ -128,7 +128,7 @@ export default function ProjectList() {
                             id={index}
                             alt="A project picture"
                             src={photo.media}
-                            className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-transform ${
+                            className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-transform border-2 border-gray-600 dark:border-gray-200 ${
                                 isActive ? "opacity-100" : "opacity-0"
                             }`}
                             key={index}
