@@ -10,5 +10,18 @@
             "height": 1920,
             "width": 1244
         }
+    },
+    {
+        "id": 1,
+        "name": "Fortnite Wiki",
+        "url": null,
+        "roles": ["Mobile Developer", "Designer"],
+        "media": "/images/projects/fortnite/composer_blur.jpg",
+        "accent": {"black": "#0c0527", "light": "#e6e1fb"},
+        "mediaSizes": {
+            "height": 1920,
+            "width": 1244
+        },
+        "deprecated": true
     }
 ]

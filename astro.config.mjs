@@ -15,7 +15,8 @@ export default defineConfig({
     integrations: [tailwind(), preact({compat: true}), icon({
         include: {
             arcticons: ['mail', 'github', 'linkedin', 'x-twitter', 'document-viewer']
-        }
+        },
     })],
     site: 'https://next.rsickenberg.me',
+    output: 'static',
 });

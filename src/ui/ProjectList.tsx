@@ -12,9 +12,10 @@ export interface IProject {
     id: number;
     name: string;
     roles: string[];
-    url: string;
+    url?: string | null;
     media: string;
     mediaSizes: IMediaSizes;
+    deprecated?: boolean
 }
 
 interface IPhotos {
@@ -83,8 +84,8 @@ export default function ProjectList() {
                     rel="noreferrer"
                 >
                     <div class="flex flex-col md:flex-row items-center md:space-x-8">
-                        <p>{`0${index + 1} / 0${projects.length}`}</p>
-                        <p class="font-bold text-2xl">{project.name}</p>
+                        <p>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
+                        <p class={`font-bold text-2xl ${project.deprecated ? 'line-through' : ''}`}>{project.name}</p>
                     </div>
 
                     <img
@@ -116,7 +117,7 @@ export default function ProjectList() {
                         img.style.setProperty("--img-y", `${mousePos.y - imageYOffset}px`);
                     }
                 }}
-                className="relative hidden md:block top-0 left-0 w-auto h-auto z-10"
+                className="relative hidden md:block top-0 left-0 w-auto h-auto z-10 aspect-auto"
             >
                 {photos.map((photo: IPhotos, index: number) => {
                     const isActive = index === activeIndex;
