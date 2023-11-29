@@ -5,7 +5,7 @@ export default function getScreenSize() {
   };
 
   document.addEventListener("resize", (e: Event) => {
-    console.log(e);
+    // console.log(e);
   });
 
   return size;

@@ -1,9 +1,20 @@
 ---
-const { tech } = Astro.props;
+interface ITech {
+  name: string,
+  imagePath: string,
+  imageHeight: number,
+  imageWidth: number,
+  invertOnDark?: boolean
+  order: number
+}
+
+const { tech, images }: { tech: ITech, images: [{key: string, value: Function}] } = Astro.props;
 import { Image } from 'astro:assets'
 
 let imgClass = "w-[35%] lg:w-[45%] h-auto self-center sm:self-left sm:m-3";
 imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;
+
+let image = images[tech.imagePath]()
 ---
 <card-tech class="hidden" data-techId={tech.order}></card-tech>
 <div
@@ -13,12 +24,11 @@ imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;
   <pre
     class="ml-0 sm:ml-3 text-sm md:text-base text-black dark:text-white opacity-40">#{tech.order}</pre>
   <Image
-    src={tech.imagePath}
-    width={tech.imageWidth}
-    height={tech.imageHeight}
+    src={image}
     alt={tech.name}
-    format="png"
+    format="webp"
     class={imgClass}
+    quality={'mid'}
   />
   <h2 class="self-center text-xl sm:text-2xl text-black dark:text-white">{tech.name}</h2>
 </div>
