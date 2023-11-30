@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Tech images are now builded and optimized for the different navigator sizes
 
+### Fixed
+- Fixed few gaps on projects
+
 ## [0.2.0] - 2023-11-29
 ### Fixed
 - Fixed few grammar issues

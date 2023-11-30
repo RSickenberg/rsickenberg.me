@@ -72,13 +72,13 @@ export default function ProjectList() {
     };
 
     return (
-        <ul class={"w-[90%] mx-auto py-10"} role="list">
+        <ul class={"w-[90%] mx-auto pb-10"} role="list">
             {projects.map((project: IProject, index: number) => (
                 <a
                     href={project.url}
                     target="_blank"
                     key={project.id}
-                    class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black py-16"
+                    class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black pb-24"
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={() => handleMouseEnter(-1)}
                     rel="noreferrer"
