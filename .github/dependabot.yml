@@ -6,6 +6,9 @@ updates:
       - dependency-type: direct
     versioning-strategy: increase-if-necessary
     open-pull-requests-limit: 10
+    target-branch: "dev"
+    reviewers:
+        - "RSickenberg"
     schedule:
       interval: daily
   - package-ecosystem: github-actions
