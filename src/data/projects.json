@@ -9,7 +9,8 @@
         "mediaSizes": {
             "height": 1920,
             "width": 1244
-        }
+        },
+        "deprecated": true
     },
     {
         "id": 1,

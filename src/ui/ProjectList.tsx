@@ -85,7 +85,7 @@ export default function ProjectList() {
                 >
                     <div class="flex flex-col md:flex-row items-center md:space-x-8">
                         <p>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
-                        <p class={`font-bold text-2xl ${project.deprecated ? 'line-through' : ''}`}>{project.name}</p>
+                        <p class={`font-bold text-2xl`}>{project.name}</p>
                     </div>
 
                     <img
