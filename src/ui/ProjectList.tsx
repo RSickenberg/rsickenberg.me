@@ -72,20 +72,20 @@ export default function ProjectList() {
     };
 
     return (
-        <ul class={"w-[90%] mx-auto py-10"} role="list">
+        <ul class={"w-[90%] mx-auto pb-10"} role="list">
             {projects.map((project: IProject, index: number) => (
                 <a
                     href={project.url}
                     target="_blank"
                     key={project.id}
-                    class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black py-16"
+                    class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black pb-24"
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={() => handleMouseEnter(-1)}
                     rel="noreferrer"
                 >
                     <div class="flex flex-col md:flex-row items-center md:space-x-8">
                         <p>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
-                        <p class={`font-bold text-2xl ${project.deprecated ? 'line-through' : ''}`}>{project.name}</p>
+                        <p class={`font-bold text-2xl`}>{project.name}</p>
                     </div>
 
                     <img

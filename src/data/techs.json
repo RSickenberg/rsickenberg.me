@@ -1,14 +1,14 @@
 [
     {
         "name": "PHP",
-        "imagePath": "/images/techs/php.png",
+        "imagePath": "/src/assets/techs/php.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 0
     },
     {
         "name": "Symfony",
-        "imagePath": "/images/techs/symfony.png",
+        "imagePath": "/src/assets/techs/symfony.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "invertOnDark": true,
@@ -16,56 +16,56 @@
     },
     {
         "name": "Laravel",
-        "imagePath": "/images/techs/laravel.png",
+        "imagePath": "/src/assets/techs/laravel.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 2
     },
     {
         "name": "Swift",
-        "imagePath": "/images/techs/swift.png",
+        "imagePath": "/src/assets/techs/swift.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 3
     },
     {
         "name": "JavaScript",
-        "imagePath": "/images/techs/javascript.png",
+        "imagePath": "/src/assets/techs/javascript.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 4
     },
     {
         "name": "Docker",
-        "imagePath": "/images/techs/docker.png",
+        "imagePath": "/src/assets/techs/docker.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 5
     },
     {
         "name": "Python",
-        "imagePath": "/images/techs/python.png",
+        "imagePath": "/src/assets/techs/python.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 6
     },
     {
         "name": "Django",
-        "imagePath": "/images/techs/django.png",
+        "imagePath": "/src/assets/techs/django.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 7
     },
     {
         "name": "C#",
-        "imagePath": "/images/techs/csharp.png",
+        "imagePath": "/src/assets/techs/csharp.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 8
     },
     {
         "name": "Java",
-        "imagePath": "/images/techs/java.png",
+        "imagePath": "/src/assets/techs/java.png",
         "imageHeight": 128,
         "imageWidth": 128,
         "order": 9

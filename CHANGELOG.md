@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2024-02-02
+### Added
+- Tech images are now builded and optimized for the different navigator sizes
+
+### Fixed
+- Fixed few gaps on projects
+
+### Security
+- Upgrade latest packages
+
 ## [0.2.0] - 2023-11-29
 ### Fixed
 - Fixed few grammar issues
@@ -101,7 +111,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listner
 
-[Unreleased]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.0...HEAD
+[unreleased]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.2...v0.2.1
 [0.2.0]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.2...v0.2.0
 [0.1.2]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.0...v0.1.1
