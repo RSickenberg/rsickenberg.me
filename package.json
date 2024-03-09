@@ -16,6 +16,7 @@
     "release": "dotenv release-it"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.0.4",
     "@astrojs/preact": "^3.0.1",
     "@astrojs/tailwind": "^5.0.2",
     "@iconify-json/arcticons": "^1.1.93",

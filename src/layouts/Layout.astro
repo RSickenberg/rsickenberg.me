@@ -3,38 +3,51 @@ import Navbar from "components/Navbar.astro";
 import "styles/global.scss";
 
 export interface Props {
-  title: string;
-  description?: string;
+    title: string;
+    description?: string;
 }
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#00000" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#FFFFF" media="(prefers-color-scheme: light)" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="theme-color" content="#00000" media="(prefers-color-scheme: dark)"/>
+    <meta name="theme-color" content="#FFFFF" media="(prefers-color-scheme: light)"/>
     <title>{title}</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap"
+            rel="stylesheet"
     />
-  </head>
-  <body class="dark:bg-black bg-white">
-    <Navbar />
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-JNMCN3PN6V"></script>
+    <script type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
 
-    <div class="container min-w-full">
-      <slot />
-    </div>
-  </body>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-JNMCN3PN6V');
+    </script>
+</head>
+<body class="dark:bg-black bg-white">
+<Navbar/>
+
+<div class="container min-w-full">
+    <slot/>
+</div>
+</body>
 </html>
 
 <style is:global lang="scss">
@@ -48,26 +61,26 @@ const { title } = Astro.props;
 </style>
 
 <script>
-  import Lenis from "@studio-freight/lenis";
+    import Lenis from "@studio-freight/lenis";
 
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-    orientation: "vertical",
-    gestureOrientation: "vertical",
-    smoothWheel: true,
-    wheelMultiplier: .8,
-    smoothTouch: false,
-    infinite: false,
-  });
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: true,
+        wheelMultiplier: .8,
+        smoothTouch: false,
+        infinite: false,
+    });
 
-  // @ts-ignore
-  function raf(time) {
-    lenis.raf(time);
+    // @ts-ignore
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
 
-  requestAnimationFrame(raf);
-
-  window["lenis"] = lenis;
+    window["lenis"] = lenis;
 </script>
