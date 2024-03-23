@@ -37,21 +37,21 @@ const contactMediums: IContactMedium[] = [
 ];
 ---
 
-<section class="min-h-screen flex justify-center items-center">
+<section class="flex items-center justify-center min-h-screen">
     <div class="grid grid-flow-col w-[90%] mx-auto gap-10">
-        <article class="py-6 px-8">
-            <h2 class="text-center md:text-left text-4xl dark:text-white text-black font-bold opacity-0 contact-me">Say Hello!</h2>
+        <article class="px-8 py-6">
+            <h2 class="text-4xl font-bold text-center text-black opacity-0 md:text-left dark:text-white contact-me">Say Hello!</h2>
             <!-- Line -->
-            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-6 mx-auto md:m-6 line opacity-0"/>
-            <div class="opacity-0 text-center sm:text-left contact-me-methods">
-                <p class="text-center md:text-justify">
+            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-8 mx-auto md:m-6 line opacity-0"/>
+            <div class="opacity-0 contact-me-methods">
+                <p class="mb-8 text-center md:text-xl sm:text-justify">
                     Here are few ways to learn more about me!<br> If you have a project, an idea or a coffee to share, be
                     free to contact me!<br><br>
                     I'll try my best to make it <a
                         class="underline decoration-2 decoration-gray-500 dark:decoration-gray-200">for you</a>.
                 </p>
 
-                <div class=`grid grid-flow-row grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4`>
+                <div class={'grid grid-flow-row grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4'}>
                     {contactMediums.map((medium => {
                         return <a href={medium.href} class={medium.class ?? baseContactClass}>
                             <Icon name={medium.iconName} size={medium.iconSize ?? baseIconSize}
