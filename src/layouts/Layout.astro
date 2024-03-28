@@ -21,12 +21,8 @@ const {title} = Astro.props;
     <meta name="theme-color" content="#FFFFF" media="(prefers-color-scheme: light)"/>
     <title>{title}</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap"
-            rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin/>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-JNMCN3PN6V"></script>
     <script type="text/partytown">
@@ -70,7 +66,6 @@ const {title} = Astro.props;
         gestureOrientation: "vertical",
         smoothWheel: true,
         wheelMultiplier: .8,
-        smoothTouch: false,
         infinite: false,
     });
 
@@ -82,5 +77,5 @@ const {title} = Astro.props;
 
     requestAnimationFrame(raf);
 
-    window["lenis"] = lenis;
+    window['lenis'] = lenis;
 </script>

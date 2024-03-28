@@ -83,9 +83,9 @@ export default function ProjectList() {
                     onMouseLeave={() => handleMouseEnter(-1)}
                     rel="noreferrer"
                 >
-                    <div class="flex flex-col md:flex-row items-center md:items-baseline md:space-x-8">
+                    <div class="flex flex-col md:flex-row items-center md:space-x-8">
                         <p class={'font-thin font-sans text-xl'}>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
-                        <p class={'font-black text-3xl'}>{project.name}</p>
+                        <p class={'font-semibold text-3xl'}>{project.name}</p>
                     </div>
 
                     <img

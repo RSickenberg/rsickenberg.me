@@ -1,106 +1,133 @@
 <section
-  class="min-h-screen flex flex-col justify-center w-[90%] mx-auto py-24 sm:pr-80 relative"
+        class="min-h-screen flex flex-col justify-center w-[90%] mx-auto py-24 sm:pr-80 relative"
 >
-  <h1
-    class="text-5xl sm:text-[8vw] text-black dark:text-white font-bold leading-relaxed sm:leading-tight slogan relative opacity-0"
-  >
-    Romain Sickenberg. Backend Developer.
-  </h1>
+    <h1
+            class="text-6xl sm:text-[8vw] text-black dark:text-white font-extrabold leading-relaxed sm:leading-tight slogan relative opacity-0"
+    >Romain Sickenberg. Backend Developer.</h1>
+    <div class='cta mt-5'>
+        <div class='scroll'></div>
+    </div>
 </section>
 
 <script>
-  import { gsap } from "gsap/all";
-  import { colors, alphaValues, isDarkMode } from "../utils/getColors";
+    import {gsap, ScrollTrigger} from "gsap/all";
+    import {colors, alphaValues, isDarkMode} from "../utils/getColors";
 
-  _buildGSAPAnimations();
+    gsap.registerPlugin(ScrollTrigger);
 
-  // @ts-ignore: Object is possibly 'null'.
-  const title: Element = document.querySelector(".slogan");
-  // Separate each letters in a span.
-  // @ts-ignore: Object is possibly 'null'.
-  const letters = title.textContent.split("");
-  title.textContent = "";
+    _buildGSAPAnimations();
 
-  letters.forEach((letter) => {
-    const span = document.createElement("span");
-    span.textContent = letter;
-    span.classList.add("letter");
-    title.append(span);
-  });
+    // @ts-ignore: Object is possibly 'null'.
+    const title: Element = document.querySelector(".slogan");
+    // Separate each letters in a span.
+    // @ts-ignore: Object is possibly 'null'.
+    const letters = title.textContent.split("");
+    title.textContent = "";
 
-  const lettersSpans = document.querySelectorAll(".letter");
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", () => {
-      lettersSpans.forEach((span) => {
-        // Remove all style from the span.
-        span.removeAttribute("style");
-      });
-      // Change opacity of the slogan.
-      _endAnimations(0.3);
-    });
-  lettersSpans.forEach((span) => {
-    span.addEventListener("mouseenter", (e) => {
-      gsap.to(e.target, {
-        duration: 0.5,
-        color: isDarkMode ? colors.dark : colors.light,
-        backgroundColor: isDarkMode ? colors.light : colors.dark,
-        ease: "power4.out",
-      });
+    letters.forEach((letter) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.classList.add("letter");
+        title.append(span);
     });
 
-    span.addEventListener("mouseleave", (e) => {
-      gsap.to(e.target, {
-        duration: 0.5,
-        color: isDarkMode ? colors.light : colors.dark,
-        backgroundColor: "transparent",
-        ease: "power4.out",
-        delay: 0.5,
-      });
-    });
-  });
+    const lettersSpans = document.querySelectorAll(".letter");
+    window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", () => {
+            lettersSpans.forEach((span) => {
+                // Remove all style from the span.
+                span.removeAttribute("style");
+            });
+            // Change opacity of the slogan.
+            _endAnimations(0.3);
+        });
+    lettersSpans.forEach((span) => {
+        span.addEventListener("mouseenter", (e) => {
+            gsap.to(e.target, {
+                duration: 0.5,
+                color: isDarkMode ? colors.dark : colors.light,
+                backgroundColor: isDarkMode ? colors.light : colors.dark,
+                ease: "power4.out",
+            });
+        });
 
-  function _buildGSAPAnimations() {
-    _startAnimations();
-    _endAnimations();
-  }
-
-  function _startAnimations(delay: number = 1) {
-    gsap.from(".title", {
-      opacity: 0,
-      duration: 1,
-      ease: "power4.out",
-      delay: delay,
-    });
-    gsap.from(".slogan", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      delay: delay,
-      ease: "power4.out",
-    });
-  }
-
-  function _endAnimations(delay: number = 1) {
-    gsap.to(".title", {
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      duration: 1,
-      ease: "power4.out",
-      delay: delay,
+        span.addEventListener("mouseleave", (e) => {
+            gsap.to(e.target, {
+                duration: 0.5,
+                color: isDarkMode ? colors.light : colors.dark,
+                backgroundColor: "transparent",
+                ease: "power4.out",
+                delay: 0.5,
+            });
+        });
     });
 
-    gsap.to(".slogan", {
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      duration: 1,
-      delay: delay,
-      ease: "power4.out",
-    });
+    function _buildGSAPAnimations() {
+        _startAnimations();
+        _endAnimations();
+        _tweenTimeLineOne();
+    }
 
-    gsap.to("#navbar", {
-      opacity: 1,
-      duration: 1,
-      ease: "power4.out",
-      delay: delay,
-    })
-  }
+    function _startAnimations(delay: number = 1) {
+        gsap.from(".title", {
+            opacity: 0,
+            duration: 1,
+            ease: "power4.out",
+            delay: delay,
+        });
+        gsap.from(".slogan", {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            delay: delay,
+            ease: "power4.out",
+        });
+    }
+
+    function _endAnimations(delay: number = 1) {
+        gsap.to(".title", {
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            duration: 1,
+            ease: "power4.out",
+            delay: delay,
+        });
+
+        gsap.to(".slogan", {
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            duration: 1,
+            delay: delay,
+            ease: "power4.out",
+        });
+
+        gsap.to("#navbar", {
+            opacity: 1,
+            duration: 1,
+            ease: "power4.out",
+            delay: delay,
+        });
+    }
+
+    function _tweenTimeLineOne() {
+        let tl = gsap.timeline({smoothChildTiming: true});
+
+        tl.set('.cta', {opacity: 0, autoAlpha: 1}, 0) // Start with 0 opacity, then:
+        tl.to('.cta', {
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            delay: 2,
+            duration: 2,
+        }, 0) // Set opacity delay
+        tl.to(".cta", {
+            opacity: 0,
+            delay: 0,
+            y: '-=60',
+            ease: 'power4.out',
+            scrollTrigger: {
+                trigger: '.title',
+                start: 'bottom top',
+                endTrigger: '.about',
+                scrub: 1,
+                once: true,
+            }}, 0)
+    }
 </script>
