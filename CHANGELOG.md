@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.2.8] - 2024-05-14
 ### Changed
 - Fixed twitter handle
 
@@ -138,7 +140,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[Unreleased]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.7...HEAD
+[unreleased]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.8...HEAD
+[0.2.8]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.7...v0.2.8
 [0.2.7]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.6...v0.2.7
 [0.2.6]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.5...v0.2.6
 [0.2.5]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.4...v0.2.5
