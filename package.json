@@ -1,7 +1,7 @@
 {
   "name": "@rsickenberg/portfolio-next",
   "type": "module",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "private": true,
   "repository": {
     "type": "git",
@@ -17,18 +17,18 @@
   },
   "dependencies": {
     "@astrojs/partytown": "^2.0.4",
-    "@astrojs/preact": "^3.0.1",
-    "@astrojs/tailwind": "^5.0.2",
-    "@iconify-json/arcticons": "^1.1.93",
-    "@sentry/astro": "^7.106.0",
-    "@studio-freight/lenis": "^1.0.27",
-    "@tailwindcss/typography": "^0.5.10",
-    "astro": "^4.0.4",
-    "astro-icon": "^1.0.4",
-    "gsap": "^3.12.2",
-    "preact": "^10.18.1",
-    "tailwindcss": "^3.3.3",
-    "zustand": "^4.4.4"
+    "@astrojs/preact": "^3.1.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@iconify-json/arcticons": "^1.1.98",
+    "@sentry/astro": "^8.0.0",
+    "@studio-freight/lenis": "^1.0.42",
+    "@tailwindcss/typography": "^0.5.12",
+    "astro": "^4.5.10",
+    "astro-icon": "^1.1.0",
+    "gsap": "^3.12.5",
+    "preact": "^10.20.1",
+    "tailwindcss": "^3.4.3",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@release-it/keep-a-changelog": "^5.0.0",
