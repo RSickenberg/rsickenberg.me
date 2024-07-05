@@ -1,9 +1,6 @@
-<section
-        class="min-h-screen flex flex-col justify-center w-[90%] mx-auto py-24 sm:pr-80 relative"
->
-    <h1
-            class="text-6xl sm:text-[8vw] text-black dark:text-white font-extrabold leading-relaxed sm:leading-tight slogan relative opacity-0"
-    >Romain Sickenberg. Backend Developer.</h1>
+<section class="min-h-screen flex flex-col justify-center w-[90%] mx-auto py-24 sm:pr-80 relative">
+    <h1 class="text-6xl sm:text-[8vw] text-black dark:text-white font-extrabold leading-relaxed sm:leading-tight slogan relative opacity-0">
+        Romain Sickenberg. Backend Developer.</h1>
     <div class='cta mt-5'>
         <div class='scroll'></div>
     </div>
@@ -70,12 +67,12 @@
     }
 
     function _startAnimations(delay: number = 1) {
-        gsap.from(".title", {
-            opacity: 0,
-            duration: 1,
-            ease: "power4.out",
-            delay: delay,
-        });
+        // gsap.from(".title", {
+        //     opacity: 0,
+        //     duration: 1,
+        //     ease: "power4.out",
+        //     delay: delay,
+        // });
         gsap.from(".slogan", {
             y: 100,
             opacity: 0,
@@ -86,12 +83,12 @@
     }
 
     function _endAnimations(delay: number = 1) {
-        gsap.to(".title", {
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-            duration: 1,
-            ease: "power4.out",
-            delay: delay,
-        });
+        // gsap.to(".title", {
+        //     opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+        //     duration: 1,
+        //     ease: "power4.out",
+        //     delay: delay,
+        // });
 
         gsap.to(".slogan", {
             opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
@@ -100,12 +97,12 @@
             ease: "power4.out",
         });
 
-        gsap.to("#navbar", {
-            opacity: 1,
-            duration: 1,
-            ease: "power4.out",
-            delay: delay,
-        });
+        // gsap.to("#navbar", {
+        //     opacity: 1,
+        //     duration: 1,
+        //     ease: "power4.out",
+        //     delay: delay,
+        // });
     }
 
     function _tweenTimeLineOne() {
@@ -123,11 +120,12 @@
             y: '-=60',
             ease: 'power4.out',
             scrollTrigger: {
-                trigger: '.title',
+                trigger: '.slogan',
                 start: 'bottom top',
                 endTrigger: '.about',
                 scrub: 1,
                 once: true,
-            }}, 0)
+            }
+        }, 0)
     }
 </script>

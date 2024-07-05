@@ -4,7 +4,7 @@ updates:
     directory: "/"
     allow:
       - dependency-type: direct
-    versioning-strategy: increase-if-necessary
+    versioning-strategy: increase
     target-branch: "dev"
     open-pull-requests-limit: 10
     schedule:

@@ -28,5 +28,5 @@ export default defineConfig({
     },
   })],
   site: 'https://next.rsickenberg.me',
-  output: 'static'
+  output: 'static',
 });

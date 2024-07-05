@@ -5,7 +5,8 @@ interface ITech {
   imageHeight: number,
   imageWidth: number,
   invertOnDark?: boolean
-  order: number
+  order: number,
+  parent?: number
 }
 
 const { tech, images }: { tech: ITech, images: [{key: string, value: Function}] } = Astro.props;
@@ -19,7 +20,7 @@ let image = images[tech.imagePath]()
 <card-tech class="hidden" data-techId={tech.order}></card-tech>
 <div
   id={"tech-card-" + tech.order}
-  class="card flex flex-col py-3 lg:py-0 md:justify-center border-2 rounded-xl border-black dark:border-white space-y-4 sm:space-y-7 md:min-w-[170px] md:min-h-[200px] will-change-[opacity] shadow"
+  class={"card flex flex-col py-3 lg:py-0 md:justify-center border-2 rounded-xl border-black dark:border-white space-y-4 sm:space-y-7 md:min-w-[170px] md:min-h-[200px] will-change-[opacity] md:shadow-xl"}
 >
   <pre
     class="ml-0 sm:ml-3 text-sm md:text-base text-black dark:text-white opacity-40">#{tech.order}</pre>

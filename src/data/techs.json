@@ -12,14 +12,16 @@
         "imageHeight": 128,
         "imageWidth": 128,
         "invertOnDark": true,
-        "order": 1
+        "order": 1,
+        "parent": 0
     },
     {
         "name": "Laravel",
         "imagePath": "/src/assets/techs/laravel.png",
         "imageHeight": 128,
         "imageWidth": 128,
-        "order": 2
+        "order": 2,
+        "parent": 0
     },
     {
         "name": "Swift",
@@ -54,7 +56,8 @@
         "imagePath": "/src/assets/techs/django.png",
         "imageHeight": 128,
         "imageWidth": 128,
-        "order": 7
+        "order": 7,
+        "parent": 6
     },
     {
         "name": "C#",
