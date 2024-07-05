@@ -9,6 +9,11 @@ updates:
     open-pull-requests-limit: 10
     schedule:
       interval: daily
+    groups:
+      dev-deps:
+        dependency-type: development
+      prod-deps:
+        dependency-type: production
   - package-ecosystem: github-actions
     directory: "/"
     target-branch: "dev"
