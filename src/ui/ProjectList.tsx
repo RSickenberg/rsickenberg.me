@@ -74,7 +74,7 @@ export default function ProjectList() {
     return (
         <ul class={"w-[90%] mx-auto pb-10"} role="list">
             {projects.map((project: IProject, index: number) => (
-                <a
+                <span
                     href={project.url}
                     target="_blank"
                     key={project.id}
@@ -99,7 +99,7 @@ export default function ProjectList() {
                             <p key={index}>{role}.</p>
                         ))}
                     </div>
-                </a>
+                </span>
             ))}
 
             {/* Floating images on hover */}
