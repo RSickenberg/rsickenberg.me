@@ -43,7 +43,7 @@
     "github": {
       "release": true,
       "releaseName": "Release ${version}",
-      "preRelease": true,
+      "preRelease": false,
       "draft": false
     },
     "git": {
