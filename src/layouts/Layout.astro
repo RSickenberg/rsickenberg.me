@@ -1,7 +1,7 @@
 ---
 import "styles/global.scss";
 import {SEO} from 'astro-seo';
-import profileImage from '../assets/profile/antistatique_romain-31-web.jpg'
+import profileImage from '../assets/profile/seo_picture.jpg'
 
 export interface Props {
     title: string;
@@ -20,12 +20,12 @@ const {title} = Astro.props;
         twitter={{creator: '@AKirbo320'}}
         openGraph={{
             basic: {
-                title: 'Romain Sickenberg - Full-Stack developer',
+                title: 'Romain Sickenberg - Full-Stack Developer',
                 type: 'profile',
                 image: profileImage.src,
             },
             image: {
-                alt: 'Romain, a developer.',
+                alt: 'Romain, a Developer.',
             },
         }}
         extend={{
