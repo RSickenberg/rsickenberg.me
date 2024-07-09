@@ -23,7 +23,7 @@ export default defineConfig({
   }), sentry({
     dsn: "https://b3cfcc72d00637196118bd93eeb135b4@o562906.ingest.us.sentry.io/4506882226323456",
     sourceMapsUploadOptions: {
-      project: "rsickenberg-next",
+      project: "rsickenberg-me",
       authToken: process.env.SENTRY_AUTH_TOKEN,
     },
   })],
