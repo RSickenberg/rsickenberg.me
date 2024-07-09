@@ -33,7 +33,7 @@
   "devDependencies": {
     "@release-it/keep-a-changelog": "^5.0.0",
     "dotenv-cli": "^7.4.2",
-    "release-it": "^17.4.1",
+    "release-it": "^17.5.0",
     "sass": "^1.77.6"
   },
   "release-it": {
