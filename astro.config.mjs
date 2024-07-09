@@ -27,6 +27,6 @@ export default defineConfig({
       authToken: process.env.SENTRY_AUTH_TOKEN,
     },
   })],
-  site: 'https://next.rsickenberg.me',
+  site: 'https://rsickenberg.me',
   output: 'static',
 });

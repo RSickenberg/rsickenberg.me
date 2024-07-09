@@ -1,7 +1,7 @@
-<section class="min-h-screen flex flex-col justify-center w-[90%] mx-auto py-24 sm:pr-80 relative">
+<section class="min-h-screen flex flex-col justify-start sm:justify-center w-[90%] mx-auto pt-24 sm:pt-10 sm:pr-80 relative">
     <h1 class="text-6xl sm:text-[8vw] text-black dark:text-white font-extrabold leading-relaxed sm:leading-tight slogan relative opacity-0">
         Romain Sickenberg. Backend Developer.</h1>
-    <div class='cta mt-5'>
+    <div class='cta sm:mt-5 mb-16 sm:mb-0'>
         <div class='scroll'></div>
     </div>
 </section>
@@ -111,7 +111,7 @@
         tl.set('.cta', {opacity: 0, autoAlpha: 1}, 0) // Start with 0 opacity, then:
         tl.to('.cta', {
             opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-            delay: 2,
+            delay: 1.2,
             duration: 2,
         }, 0) // Set opacity delay
         tl.to(".cta", {
@@ -127,5 +127,18 @@
                 once: true,
             }
         }, 0)
+        // If mobile.
+        if (window.navigator.maxTouchPoints > 1) {
+            tl.to(".slogan", {
+                y: '+=15',
+                scrollTrigger: {
+                    trigger: '.cta',
+                    start: 'bottom top',
+                    endTrigger: '.about',
+                    scrub: 1,
+                    once: true,
+                }
+            }, 0)
+        }
     }
 </script>

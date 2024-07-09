@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Few animations fixes
+
+### Changed
+- Mobile CTA behaviour is more visible
+
+### Added
+- Extra animation to change Y axis on headline when scrolled
 
 ## [1.0.0] - 2024-07-09
 ### Added
@@ -161,7 +169,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[unreleased]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.10...v1.0.0
 [0.2.10]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.9...v0.2.10
 [0.2.9]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.8...v0.2.9
