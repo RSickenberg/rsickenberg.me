@@ -20,7 +20,7 @@
     "@astrojs/preact": "^3.5.0",
     "@astrojs/tailwind": "^5.1.0",
     "@iconify-json/arcticons": "^1.1.106",
-    "@sentry/astro": "^8.16.0",
+    "@sentry/astro": "^8.17.0",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/typography": "^0.5.13",
     "astro": "^4.11.5",
