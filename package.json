@@ -28,7 +28,7 @@
     "astro-seo": "^0.8.4",
     "gsap": "^3.12.5",
     "preact": "^10.22.1",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^3.4.5",
     "zustand": "^4.5.4"
   },
   "devDependencies": {
