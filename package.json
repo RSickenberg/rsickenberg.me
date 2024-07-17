@@ -1,7 +1,7 @@
 {
   "name": "@rsickenberg/portfolio-next",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
   "repository": {
     "type": "git",
@@ -60,14 +60,38 @@
         "preset": {
           "name": "conventionalcommits",
           "types": [
-            {"type": "feat", "section": "Features"},
-            {"type": "fix", "section": "Bug Fixes"},
-            {"type": "chore", "section": "Chore"},
-            {"type": "docs", "section": "Docs"},
-            {"type": "style", "section": "Misc"},
-            {"type": "refactor", "section": "Refactoring"},
-            {"type": "perf", "section": "Optimisations"},
-            {"type": "test", "seciton": "Tests"}
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "chore",
+              "section": "Chore"
+            },
+            {
+              "type": "docs",
+              "section": "Docs"
+            },
+            {
+              "type": "style",
+              "section": "Misc"
+            },
+            {
+              "type": "refactor",
+              "section": "Refactoring"
+            },
+            {
+              "type": "perf",
+              "section": "Optimisations"
+            },
+            {
+              "type": "test",
+              "seciton": "Tests"
+            }
           ]
         },
         "infile": "CHANGELOG.md",
