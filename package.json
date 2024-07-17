@@ -32,7 +32,6 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^8.0.1",
     "@release-it/keep-a-changelog": "^5.0.0",
     "dotenv-cli": "^7.4.2",
     "release-it": "^17.6.0",
@@ -56,47 +55,6 @@
       "requiredBranch": "main"
     },
     "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": {
-          "name": "conventionalcommits",
-          "types": [
-            {
-              "type": "feat",
-              "section": "Features"
-            },
-            {
-              "type": "fix",
-              "section": "Bug Fixes"
-            },
-            {
-              "type": "chore",
-              "section": "Chore"
-            },
-            {
-              "type": "docs",
-              "section": "Docs"
-            },
-            {
-              "type": "style",
-              "section": "Misc"
-            },
-            {
-              "type": "refactor",
-              "section": "Refactoring"
-            },
-            {
-              "type": "perf",
-              "section": "Optimisations"
-            },
-            {
-              "type": "test",
-              "seciton": "Tests"
-            }
-          ]
-        },
-        "infile": "CHANGELOG.md",
-        "ignoreRecommendedBump": true
-      },
       "@release-it/keep-a-changelog": {
         "filename": "CHANGELOG.md",
         "strictLatest": true,
