@@ -19,7 +19,7 @@
     "@astrojs/partytown": "^2.1.1",
     "@astrojs/preact": "^3.5.1",
     "@astrojs/tailwind": "^5.1.0",
-    "@iconify-json/arcticons": "^1.1.107",
+    "@iconify-json/arcticons": "^1.1.108",
     "@sentry/astro": "^8.19.0",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/typography": "^0.5.13",
