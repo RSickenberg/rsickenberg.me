@@ -76,6 +76,7 @@ const {title} = Astro.props;
 
 <script>
     import Lenis from "@studio-freight/lenis";
+    import {ScrollTrigger} from "gsap/all";
 
     const lenis = new Lenis({
         duration: 1.2,
@@ -94,6 +95,8 @@ const {title} = Astro.props;
     }
 
     requestAnimationFrame(raf);
+
+    lenis.on('scroll', ScrollTrigger.update);
 
     window['lenis'] = lenis;
 </script>

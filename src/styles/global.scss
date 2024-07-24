@@ -1,10 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "misc";
 
 html {
   overflow: auto;
   scroll-behavior: initial;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
 
 .c-scrollbar {
@@ -18,36 +39,4 @@ html {
 
 .cursor--highlight {
   opacity: 0.2;
-}
-
-.cta {
-  position: absolute;
-  width: 22px;
-  height: 42px;
-  bottom: 40px;
-  left: 50%;
-  margin-left: -12px;
-  border-radius: 15px;
-  border: 2px solid #888;
-}
-
-.scroll {
-  display: block;
-  width: 3px;
-  height: 3px;
-  margin: 6px auto;
-  border-radius: 4px;
-  background: #888;
-  animation: finger 2s infinite;
-}
-
-@keyframes finger {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
 }

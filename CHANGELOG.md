@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Release-it rework
 
+### Security
+- Upgraded dependencies
+
+### Fixed
+- Fixed CTA beeing visible on first page draw
+
 ## [1.0.5] - 2024-07-17
 
 ## [1.0.4] - 2024-07-10
