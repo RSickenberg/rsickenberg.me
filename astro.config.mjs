@@ -14,7 +14,7 @@ export default defineConfig({
     compat: true
   }), icon({
     include: {
-      arcticons: ['mail', 'github', 'linkedin', 'x-twitter', 'document-viewer']
+      arcticons: ['mail', 'github', 'linkedin', 'x-twitter', 'pdf-file', 'instagram']
     }
   }), partytown({
     config: {
