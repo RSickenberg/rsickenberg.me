@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: 'media',
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: [
+		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+		'./node_modules/flowbite/**/*.js'
+	],
 	theme: {
 		fontFamily: {
 			sans: ['Satoshi', 'sans-serif'],
@@ -9,6 +12,7 @@ module.exports = {
 		extend: {},
 	},
 	plugins: [
-		require('@tailwindcss/typography')
+		require('@tailwindcss/typography'),
+		require('flowbite/plugin')
 	],
 }

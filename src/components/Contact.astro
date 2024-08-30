@@ -1,5 +1,6 @@
 ---
 import {Icon} from 'astro-icon/components'
+import ContactCard from './ContactCard.astro'
 
 interface IContactMedium {
     href: string,
@@ -7,6 +8,7 @@ interface IContactMedium {
     class?: string,
     iconClass?: string,
     iconSize?: number,
+    tooltip?: string
 }
 
 const baseContactClass = "mx-auto mt-8 rounded-xl outline outline-1 hover:outline-2 outline-gray-800 dark:outline-gray-200 py-4 px-8";
@@ -18,26 +20,32 @@ const contactMediums: IContactMedium[] = [
     {
         href: "mailto:r.sickenberg@gmail.com",
         iconName: "ph:envelope-thin",
+        tooltip: 'Email'
     },
     {
         href: "https://github.com/RSickenberg",
         iconName: "ph:github-logo-thin",
+        tooltip: 'GitHub'
     },
     {
         href: "https://www.linkedin.com/in/romain-sickenberg",
         iconName: "ph:linkedin-logo-thin",
+        tooltip: 'Linkedin'
     },
     {
         href: "https://www.instagram.com/romain.scknb/",
-        iconName: "ph:instagram-logo-thin"
+        iconName: "ph:instagram-logo-thin",
+        tooltip: 'Instagram'
     },
     {
         href: "/assets/pdf/onepage.pdf",
         iconName: "ph:file-pdf-thin",
+        tooltip: 'Curriculum Vitae'
     },
     {
         href: '/assets/pdf/mindset_en.pdf',
-        iconName: 'ph:head-circuit-thin'
+        iconName: 'ph:head-circuit-thin',
+        tooltip: 'Personality & Logic Tests'
     }
 ];
 ---
@@ -45,12 +53,14 @@ const contactMediums: IContactMedium[] = [
 <section class="flex items-center justify-center min-h-screen">
     <div class="grid grid-flow-col w-[90%] mx-auto gap-10">
         <article class="px-8 py-6">
-            <h2 class="text-4xl font-bold text-center text-black opacity-0 md:text-left dark:text-white contact-me">Say Hello!</h2>
+            <h2 class="text-4xl font-bold text-center text-black opacity-0 md:text-left dark:text-white contact-me">Say
+                Hello!</h2>
             <!-- Line -->
             <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-8 mx-auto md:m-6 line opacity-0"/>
             <div class="opacity-0 contact-me-methods">
                 <p class="mb-8 text-center md:text-xl sm:text-justify">
-                    Here are few ways to learn more about me.<br> If you have a project, an idea or a coffee to share, be
+                    Here are few ways to learn more about me.<br> If you have a project, an idea or a coffee to share,
+                    be
                     free to contact me!<br><br>
                     I'll try my best to make it <span
                         class="underline decoration-2 decoration-gray-500 dark:decoration-gray-200">for you</span>.
@@ -58,10 +68,12 @@ const contactMediums: IContactMedium[] = [
 
                 <div class={'grid grid-flow-row grid-cols-3 2xl:grid-cols-6 gap-3'}>
                     {contactMediums.map((medium => {
-                        return <a href={medium.href} class={medium.class ?? baseContactClass}>
-                            <Icon name={medium.iconName} size={medium.iconSize ?? baseIconSize}
-                                  class={medium.iconClass ?? baseIconClass}/>
-                        </a>
+                        return <ContactCard href={medium.href} className={medium.class ?? baseContactClass}
+                                             iconName={medium.iconName}
+                                             iconSize={medium.iconSize ?? baseIconSize}
+                                             iconClass={medium.iconClass ?? baseIconClass}
+                                             tooltip={medium.tooltip}
+                                />
                     }))}
                 </div>
             </div>

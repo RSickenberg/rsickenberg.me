@@ -14,7 +14,7 @@ export default defineConfig({
     compat: true
   }), icon({
     include: {
-      ph: ['head-circuit-thin', 'envelope-thin', 'github-logo-thin', 'linkedin-logo-thin', 'instagram-logo-thin', 'file-pdf-thin'],
+      ph: ['head-circuit-thin', 'envelope-thin', 'github-logo-thin', 'linkedin-logo-thin', 'instagram-logo-thin', 'file-pdf-thin', 'megaphone'],
     }
   }), partytown({
     config: {
