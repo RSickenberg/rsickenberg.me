@@ -24,7 +24,7 @@
     "@sentry/astro": "^8.27.0",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/typography": "^0.5.15",
-    "astro": "^4.14.6",
+    "astro": "^4.15.1",
     "astro-icon": "^1.1.1",
     "astro-seo": "^0.8.4",
     "gsap": "^3.12.5",
