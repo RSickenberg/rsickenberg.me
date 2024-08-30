@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Switched icons library
 
+### Fixed
+- Fixed tech cards on iPad Pro 13'' layout
+
 ## [1.0.10] - 2024-08-29
 ### Security
 - Upgraded dependencies
