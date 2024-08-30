@@ -4,7 +4,7 @@ import {Icon} from "astro-icon/components";
 import dayjs from 'dayjs'
 ---
 
-<section class={"min-h-screen text-center flex flex-col justify-center items-center " + (testimonials.length > 1 ? 'gap-14' : 'gap-3')}>
+<section id="testimonials" class={"min-h-screen opacity-0 text-center flex flex-col justify-center items-center " + (testimonials.length > 1 ? 'gap-14' : 'gap-3')}>
     <Icon name="ph:quotes" class="w-20 h-20 mx-auto text-gray-400 dark:text-white" aria-hidden="true" />
     {testimonials.map((testimonial, key) => (
             <figure class="max-w-screen w-[70%] text-pretty">
@@ -25,3 +25,48 @@ import dayjs from 'dayjs'
         </div>
     ))}
 </section>
+<script>
+    import { gsap, ScrollTrigger } from "gsap/all";
+    import { colors, alphaValues, isDarkMode } from "../utils/getColors";
+    gsap.registerPlugin(ScrollTrigger);
+
+    window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", () => {
+            _setColors();
+        });
+
+    _initialize();
+
+    function _renderTo() {
+        gsap.to("#testimonials", {
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            delay: 1,
+            duration: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: "#testimonials",
+                start: "top 40%",
+                end: "bottom 100%",
+                scrub: 2,
+            },
+        });
+    }
+
+    function _setColors() {
+        gsap.set("#testimonials", {
+            color: isDarkMode ? colors.light : colors.dark,
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+        });
+    }
+
+    function _initialize() {
+        _setColors()
+
+        gsap.set("#testimonials", {
+            opacity: 0,
+        });
+
+        _renderTo();
+    }
+</script>

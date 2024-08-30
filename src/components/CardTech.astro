@@ -50,12 +50,12 @@ let image = images[tech.imagePath]()
         const tl = gsap.timeline({
           scrollTrigger: {
             trigger: card,
-            start: "top 100%",
+            start: "top 95%",
             end: "bottom 95%",
-            scrub: 2,
+            scrub: 1,
           },
         });
-        tl.to(card, { opacity: 1, duration: 0.5 });
+        tl.to(card, { opacity: 1, duration: 0.8 });
       };
 
       _drawCards();
