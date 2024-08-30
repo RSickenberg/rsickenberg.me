@@ -17,24 +17,28 @@ const baseIconSize = 48;
 const contactMediums: IContactMedium[] = [
     {
         href: "mailto:r.sickenberg@gmail.com",
-        iconName: "arcticons:mail",
+        iconName: "ph:envelope-thin",
     },
     {
         href: "https://github.com/RSickenberg",
-        iconName: "arcticons:github",
+        iconName: "ph:github-logo-thin",
     },
     {
         href: "https://www.linkedin.com/in/romain-sickenberg",
-        iconName: "arcticons:linkedin",
+        iconName: "ph:linkedin-logo-thin",
     },
     {
         href: "https://www.instagram.com/romain.scknb/",
-        iconName: "arcticons:instagram"
+        iconName: "ph:instagram-logo-thin"
     },
     {
         href: "/assets/pdf/onepage.pdf",
-        iconName: "arcticons:pdf-file",
+        iconName: "ph:file-pdf-thin",
     },
+    {
+        href: '/assets/pdf/mindset_en.pdf',
+        iconName: 'ph:head-circuit-thin'
+    }
 ];
 ---
 
@@ -52,7 +56,7 @@ const contactMediums: IContactMedium[] = [
                         class="underline decoration-2 decoration-gray-500 dark:decoration-gray-200">for you</span>.
                 </p>
 
-                <div class={'grid grid-flow-row grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4'}>
+                <div class={'grid grid-flow-row grid-cols-3 2xl:grid-cols-6 gap-3'}>
                     {contactMediums.map((medium => {
                         return <a href={medium.href} class={medium.class ?? baseContactClass}>
                             <Icon name={medium.iconName} size={medium.iconSize ?? baseIconSize}
