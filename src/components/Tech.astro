@@ -4,7 +4,7 @@ import Card from './CardTech.astro';
 
 const images = import.meta.glob('/src/assets/techs/*.png')
 ---
-<div class="grid grid-flow-row grid-cols-2 2xl:grid-cols-4 gap-4 2xl:gap-10 mb-10">
+<div class="grid grid-flow-row grid-cols-2 2xl:grid-cols-4 gap-3 xl:gap-10 2xl:gap-16 mb-10">
     {techs.sort((a, b) => a.order - b.order).map(tech => (
         <Card tech={tech} data-tech={tech} images={images} />
     ))}
