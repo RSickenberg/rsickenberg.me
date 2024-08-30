@@ -18,7 +18,6 @@ import ProjectList from "../ui/ProjectList";
     import { gsap, ScrollTrigger } from "gsap/all";
         import { colors, alphaValues, isDarkMode } from "../utils/getColors";
         gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.normalizeScroll(true);
 
         function _init() {
             _setColors();
@@ -31,7 +30,7 @@ import ProjectList from "../ui/ProjectList";
                 scrollTrigger: {
                     trigger: "#testimonials",
                     start: "top",
-                    end: "bottom 40%",
+                    end: "bottom 10%",
                     scrub: 1,
                     }
                 });
@@ -42,12 +41,12 @@ import ProjectList from "../ui/ProjectList";
                 opacity: 1,
                 })
                 .to(".project-line", {
-                duration: 1,
+                duration: 1.2,
                 ease: "power4.inOut",
                 opacity: 1,
                 })
                 .to("#projects-list", {
-                duration: 1,
+                duration: 1.3,
                 ease: "power4.inOut",
                 opacity: 1,
                 });
