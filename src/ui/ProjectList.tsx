@@ -72,7 +72,7 @@ export default function ProjectList() {
     };
 
     return (
-        <ul class={"w-[90%] mx-auto pb-10"} role="list">
+        <ul id={"projects-list"} class={"w-[90%] mx-auto pb-10"} role="list">
             {projects.map((project: IProject, index: number) => (
                 <span
                     href={project.url}

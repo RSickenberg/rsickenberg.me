@@ -3,70 +3,75 @@ import ProjectList from "../ui/ProjectList";
 ---
 
 <section class="min-h-fit overflow-hidden" id="projects">
-  <header class="md:my-12 text-center">
-    <h2
-      class="text-black dark:text-white text-2xl font-extrabold project-title opacity-0"
-    >
-      Highlighted projects.
-    </h2>
-    <div class="h-16 w-0.5 dark:bg-gray-200 bg-gray-700 m-6 mx-auto opacity-0 project-line"></div>
-  </header>
-  <ProjectList client:visible />
+    <header class="md:my-12 text-center">
+        <h2
+                class="text-black dark:text-white text-2xl font-extrabold project-title opacity-0"
+        >
+            Highlighted projects.
+        </h2>
+        <div class="h-16 w-0.5 dark:bg-gray-200 bg-gray-700 m-6 mx-auto opacity-0 project-line"></div>
+    </header>
+    <ProjectList client:visible/>
 </section>
 
 <script>
-  import { gsap, ScrollTrigger } from "gsap/all";
-  import { colors, alphaValues, isDarkMode } from "../utils/getColors";
-  gsap.registerPlugin(ScrollTrigger);
+    import { gsap, ScrollTrigger } from "gsap/all";
+        import { colors, alphaValues, isDarkMode } from "../utils/getColors";
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.normalizeScroll(true);
 
-  function _init() {
-    gsap.set(".project-title", {
-      opacity: 0,
-    });
-    gsap.set(".project-line", {
-      opacity: 0,
-    });
+        function _init() {
+            _setColors();
+            gsap.set([".project-title", ".project-line", "#projects-list"], { opacity: 0 });
+            _renderTo();
+            }
 
-    _renderTo();
-    _setColors();
-  }
+        function _renderTo() {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#testimonials",
+                    start: "top",
+                    end: "bottom 40%",
+                    scrub: 1,
+                    }
+                });
 
-  function _renderTo() {
-    gsap.to(".project-title", {
-      scrollTrigger: {
-        trigger: ".project-title",
-        start: "top 90%",
-        end: "bottom 100%",
-        scrub: 2,
-      },
-      opacity: 1,
-    });
-    gsap.to(".project-line", {
-      scrollTrigger: {
-        trigger: ".project-title",
-        start: "top 80%",
-        end: "bottom 100%",
-        scrub: 2,
-      },
-      opacity: 1,
-    });
-  }
+            tl.to(".project-title", {
+                duration: 1,
+                ease: "power4.inOut",
+                opacity: 1,
+                })
+                .to(".project-line", {
+                duration: 1,
+                ease: "power4.inOut",
+                opacity: 1,
+                })
+                .to("#projects-list", {
+                duration: 1,
+                ease: "power4.inOut",
+                opacity: 1,
+                });
+            }
 
-  function _setColors() {
-    gsap.set(".project-line", {
-      color: isDarkMode ? colors.light : colors.dark,
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-    });
-    gsap.set(".project-title", {
-      color: isDarkMode ? colors.light : colors.dark,
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-    });
-  }
+        function _setColors() {
+            gsap.set(".project-line", {
+                color: isDarkMode ? colors.light : colors.dark,
+                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+                });
+            gsap.set(".project-title", {
+                color: isDarkMode ? colors.light : colors.dark,
+                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+                });
+            gsap.set("#projects-list", {
+                color: isDarkMode ? colors.light : colors.dark,
+                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+                });
+            }
 
-  _init();
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", () => {
-      _setColors();
-    });
+        _init();
+        window
+            .matchMedia("(prefers-color-scheme: dark)")
+            .addEventListener("change", () => {
+            _setColors();
+            });
 </script>
