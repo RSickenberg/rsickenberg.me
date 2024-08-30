@@ -4,19 +4,19 @@ import {Icon} from "astro-icon/components";
 import dayjs from 'dayjs'
 ---
 
-<section class={"min-h-screen text-center flex flex-col justify-center items-center " + (testimonials.length > 1 ? 'gap-14' : '')}>
+<section class={"min-h-screen text-center flex flex-col justify-center items-center " + (testimonials.length > 1 ? 'gap-14' : 'gap-3')}>
     <Icon name="ph:quotes" class="w-20 h-20 mx-auto text-gray-400 dark:text-white" aria-hidden="true" />
     {testimonials.map((testimonial, key) => (
-            <figure class="max-w-screen-md text-pretty">
+            <figure class="max-w-screen w-[70%] text-pretty">
                 <blockquote>
                     <p class="text-2xl italic text-justify font-medium text-gray-900 dark:text-white" set:html={testimonial.text}></p>
                 </blockquote>
-                <figcaption class="flex items-center justify-center mt-8 space-x-3 rtl:space-x-reverse">
-                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={testimonial.picture} alt="profile picture">
-                    <div class="flex items-baseline divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
-                        <cite class="pe-3 font-bold not-italic text-gray-900 dark:text-white">{testimonial.author}</cite>
-                        <cite class="ps-3 pe-3 text-sm not-italic text-gray-500 dark:text-gray-400">{testimonial.position}</cite>
-                        <cite class="ps-3 text-sm not-italic text-gray-500 dark:text-gray-400">{dayjs(testimonial.date).format('DD.MM.YYYY')}</cite>
+                <figcaption class="flex flex-col md:flex-row items-center justify-center mt-8 gap-3 md:gap-0 space-x-3">
+                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={testimonial.picture} alt="Author's Picture">
+                    <div class="flex flex-col gap-2 sm:gap-0 sm:flex-row items-center sm:items-baseline justify-evenly sm:divide-x-2 divide-gray-300 dark:divide-gray-700">
+                        <cite class="sm:pe-3 font-bold not-italic text-gray-900 dark:text-white">{testimonial.author}</cite>
+                        <cite class="sm:ps-3 sm:pe-3 text-sm not-italic text-gray-500 dark:text-gray-400">{testimonial.position}</cite>
+                        <cite class="sm:ps-3 text-sm not-italic text-gray-500 dark:text-gray-400">{dayjs(testimonial.date).format('DD.MM.YYYY')}</cite>
                     </div>
                 </figcaption>
             </figure>
