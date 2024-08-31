@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed #343
 - Fixed #342
 - Fixed #341
+- Fixed few gaps here and there
+
+### Added
+- Added more projects to the highlight
+
+### Changed
+- Project list & Title is a bit different now
 
 ## [1.1.5] - 2024-08-30
 ### Fixed

@@ -24,5 +24,29 @@
             "width": 1244
         },
         "deprecated": true
+    },
+    {
+        "id": 2,
+        "name": "Site de Vernier",
+        "url": "https://antistatique.net/projets/refonte-du-site-de-la-ville-de-vernier",
+        "roles": ["Web Developer"],
+        "media": "/images/projects/vernier/vernier_2x2600x1559.jpg",
+        "accent": {"light":  "#e8efc7", "black":  "#122f14"},
+        "mediaSizes": {
+            "height": 1920,
+            "width": 1244
+        }
+    },
+    {
+        "id": 3,
+        "name": "SwissTopo - Shop",
+        "url": "https://antistatique.net/projets/swisstopo-shop",
+        "roles": ["Web Developer"],
+        "media": "/images/projects/swisstopo/swisstopo_models.png",
+        "accent": {"light":  "#e0effb", "black":  "#003753"},
+        "mediaSizes": {
+            "height": 2600,
+            "width": 1338
+        }
     }
 ]

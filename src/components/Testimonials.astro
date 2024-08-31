@@ -4,7 +4,7 @@ import {Icon} from "astro-icon/components";
 import dayjs from 'dayjs'
 ---
 
-<section id="testimonials" class={"min-h-screen opacity-0 text-center flex flex-col justify-center items-center " + (testimonials.length > 1 ? 'gap-14' : 'gap-3')}>
+<section id="testimonials" class={"min-h-screen opacity-0 text-center flex flex-col pt-10 sm:pt-0 pb-20 sm:pb-0 justify-center items-center " + (testimonials.length > 1 ? 'gap-14' : 'gap-3')}>
     <Icon name="ph:quotes" class="w-20 h-20 mx-auto text-gray-400 dark:text-white" aria-hidden="true" />
     {testimonials.map((testimonial, key) => (
             <figure class="max-w-screen w-[70%] text-pretty">

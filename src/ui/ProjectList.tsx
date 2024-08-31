@@ -72,19 +72,16 @@ export default function ProjectList() {
     };
 
     return (
-        <ul id={"projects-list"} class={"w-[90%] mx-auto pb-10"} role="list">
+        <ul id={"projects-list"} class={"w-[90%] mx-auto pb-10 md:pb-0"} role="list">
             {projects.map((project: IProject, index: number) => (
-                <span
-                    href={project.url}
-                    target="_blank"
+                <li
                     key={project.id}
-                    class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black py-20"
+                    class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black pt-0 pb-20"
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={() => handleMouseEnter(-1)}
-                    rel="noreferrer"
                 >
-                    <div class="flex flex-col md:flex-row items-center md:space-x-8">
-                        <p class={'font-thin font-sans text-xl'}>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
+                    <div class="flex flex-col md:flex-row items-center md:items-baseline justify-center md:space-x-8">
+                        <p class={'font-light md:font-thin font-sans text-xl'}>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
                         <p class={'font-semibold text-3xl'}>{project.name}</p>
                     </div>
 
@@ -99,7 +96,7 @@ export default function ProjectList() {
                             <p key={index}>{role}.</p>
                         ))}
                     </div>
-                </span>
+                </li>
             ))}
 
             {/* Floating images on hover */}
