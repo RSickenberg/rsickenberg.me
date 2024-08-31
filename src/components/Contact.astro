@@ -55,7 +55,7 @@ const contactMediums: IContactMedium[] = [
             <h2 class="text-4xl font-bold text-center text-black opacity-0 md:text-left dark:text-white contact-me">Say
                 Hello!</h2>
             <!-- Line -->
-            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-8 mx-auto md:m-6 line opacity-0"/>
+            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-8 mx-auto md:m-6 contact-line opacity-0"/>
             <div class="opacity-0 contact-me-methods">
                 <p class="mb-8 text-center md:text-xl sm:text-justify">
                     Here are few ways to learn more about me.<br> If you have a project, an idea or a coffee to share,
@@ -96,7 +96,7 @@ const contactMediums: IContactMedium[] = [
 
     function _initialize() {
         _setColors();
-        gsap.set(".line", {
+        gsap.set(".contact-line", {
             opacity: 0
         });
         gsap.set(".contact-me", {
@@ -119,7 +119,7 @@ const contactMediums: IContactMedium[] = [
                 scrub: 1,
             }
         });
-        gsap.to(".line", {
+        gsap.to(".contact-line", {
             opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
             ease: "power4.out",
             scrollTrigger: {
@@ -140,7 +140,7 @@ const contactMediums: IContactMedium[] = [
     }
 
     function _setColors() {
-        gsap.set(".line", {
+        gsap.set(".contact-line", {
             color: isDarkMode ? colors.light : colors.dark,
             opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
         });

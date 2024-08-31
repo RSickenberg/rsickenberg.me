@@ -2,14 +2,12 @@
 import ProjectList from "../ui/ProjectList";
 ---
 
-<section class="min-h-fit overflow-hidden" id="projects">
+<section class="min-h-screen overflow-hidden pt-10" id="projects">
     <header class="md:my-12 text-center">
-        <h2
-                class="text-black dark:text-white text-2xl font-extrabold project-title opacity-0"
-        >
+        <h2 class="text-black dark:text-white text-2xl font-extrabold project-title opacity-0">
             Highlighted projects.
         </h2>
-        <div class="h-16 w-0.5 dark:bg-gray-200 bg-gray-700 m-6 mx-auto opacity-0 project-line"></div>
+        <div class="h-16 w-0.5 dark:bg-gray-200 bg-gray-700 m-6 mx-auto opacity-0 project-line" />
     </header>
     <ProjectList client:visible/>
 </section>
@@ -71,6 +69,6 @@ import ProjectList from "../ui/ProjectList";
         window
             .matchMedia("(prefers-color-scheme: dark)")
             .addEventListener("change", () => {
-            _setColors();
+                _setColors();
             });
 </script>
