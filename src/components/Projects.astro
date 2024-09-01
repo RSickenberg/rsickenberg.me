@@ -10,7 +10,7 @@ for await (const project of projects) {
         src: images[project.media](),
         width: project.mediaSizes.width,
         height: project.mediaSizes.height,
-        densities: ['1', '2'],
+        densities: ['0.5', '1', '2'],
         format: "webp"
     });
 }
