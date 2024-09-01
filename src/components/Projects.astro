@@ -1,8 +1,23 @@
 ---
+import {getImage} from "astro:assets";
 import ProjectList from "../ui/ProjectList";
+import projects from "../data/projects.json";
+const images = import.meta.glob('/src/assets/projects/**/*.{png,jpg}')
+
+let optimizedImages = [];
+for await (const project of projects) {
+    optimizedImages[project.id] = await getImage({
+        src: images[project.media](),
+        width: project.mediaSizes.width,
+        height: project.mediaSizes.height,
+        densities: ['1', '2'],
+        format: "webp"
+    });
+}
 ---
 
-<section class="flex flex-col items-center justify-center min-h-screen md:min-h-fit overflow-hidden pt-20 md:pt-0" id="projects">
+<section class="flex flex-col items-center justify-center min-h-screen md:min-h-fit overflow-hidden pt-20 md:pt-0"
+         id="projects">
     <div class="grid grid-flow-col w-[90%] mx-auto gap-10 py-6 px-8">
         <header class="md:my-12 text-center md:text-left">
             <h2 class="text-black dark:text-white text-4xl font-bold sm:font-extrabold project-title opacity-0">
@@ -11,7 +26,7 @@ import ProjectList from "../ui/ProjectList";
             <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-8 mx-auto md:m-6 project-line opacity-0"></div>
         </header>
     </div>
-    <ProjectList client:visible/>
+    <ProjectList client:load optimizedImages={optimizedImages}/>
 </section>
 
 <script>

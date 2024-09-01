@@ -27,7 +27,8 @@ const photos: IPhotos[] = projects.map((p) => {
     return {media: p.media, sizes: p.mediaSizes};
 });
 
-export default function ProjectList() {
+// @ts-ignore
+export default function ProjectList({optimizedImages}: Array<object>) {
     // This state variable keeps track of which item in the dropdown is currently active.
     // This is used to show that item is currently active.
     // The default value is -1 because the first item in the array is at index 0.
@@ -86,9 +87,12 @@ export default function ProjectList() {
                     </div>
 
                     <img
-                        src={project.media}
+                        src={optimizedImages[index].src}
                         alt={project.name}
                         class="block md:hidden my-4 w-full object-cover rounded-3xl border-2 border-gray-600 dark:border-gray-200 shadow-2xl"
+                        decoding={'async'}
+                        loading={'lazy'}
+                        srcset={optimizedImages[index].srcSet.attribute}
                     />
 
                     <div class="flex items-center space-x-2 md:space-x-4">
@@ -131,7 +135,9 @@ export default function ProjectList() {
                             key={index}
                             width={photo.sizes.width}
                             height={photo.sizes.height}
-                            loading="lazy"
+                            decoding={'async'}
+                            loading={'lazy'}
+                            srcset={optimizedImages[index].srcSet.attribute}
                             style="top: var(--img-y); left: var(--img-x);"
                         />
                     );
