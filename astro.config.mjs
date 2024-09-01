@@ -5,11 +5,20 @@ import preact from "@astrojs/preact";
 import icon from 'astro-icon';
 import partytown from "@astrojs/partytown";
 
+import browserslist from "browserslist";
+import { resolveToEsbuildTarget } from "esbuild-plugin-browserslist";
+
 // https://astro.build/config
 import sentry from "@sentry/astro";
 
 // https://astro.build/config
 export default defineConfig({
+  vite : {
+    build: {
+      cssTarget: resolveToEsbuildTarget(browserslist()),
+      resolveToEsbuildTarget: resolveToEsbuildTarget(browserslist())
+    }
+  },
   integrations: [tailwind(), preact({
     compat: true
   }), icon({
