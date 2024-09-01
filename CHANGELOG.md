@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Tweaked testimonial divider date
 
 ## [1.1.7] - 2024-09-01
 ### Added
@@ -268,7 +270,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.7...HEAD
+[Unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.7...HEAD
 [1.1.7]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.6...v1.1.7
 [1.1.6]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.5...v1.1.6
 [1.1.5]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.4...v1.1.5

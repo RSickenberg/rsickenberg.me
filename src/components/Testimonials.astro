@@ -13,10 +13,10 @@ import dayjs from 'dayjs'
                 </blockquote>
                 <figcaption class="flex flex-col md:flex-row items-center justify-center mt-8 gap-3 md:gap-0 md:space-x-3">
                     <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={testimonial.picture} alt="Author's Picture">
-                    <div class="flex flex-col gap-2 sm:gap-0 sm:flex-row items-center sm:items-baseline justify-evenly sm:divide-x-2 divide-gray-300 dark:divide-gray-700">
-                        <cite class="sm:pe-3 font-bold not-italic text-gray-900 dark:text-white">{testimonial.author}</cite>
-                        <cite class="sm:ps-3 sm:pe-3 text-sm not-italic text-gray-500 dark:text-gray-400">{testimonial.position}</cite>
-                        <cite class="sm:ps-3 text-sm not-italic text-gray-500 dark:text-gray-400">{dayjs(testimonial.date).format('DD.MM.YYYY')}</cite>
+                    <div class="flex flex-col gap-2 sm:gap-0 sm:flex-row justify-evenly items-stretch md:items-baseline sm:divide-x-2 divide-gray-300 dark:divide-gray-700">
+                        <cite class="sm:pe-3 flex-grow sm:h-auto font-bold not-italic text-gray-900 dark:text-white">{testimonial.author}</cite>
+                        <cite class="sm:ps-3 flex-grow sm:h-auto sm:pe-3 text-sm not-italic text-gray-500 dark:text-gray-400">{testimonial.position}</cite>
+                        <cite class="sm:ps-3 flex-grow text-sm not-italic text-gray-500 dark:text-gray-400">{dayjs(testimonial.date).format('DD.MM.YYYY')}</cite>
                     </div>
                 </figcaption>
             </figure>
