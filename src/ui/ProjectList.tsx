@@ -132,7 +132,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                         imageHandle.current = document.getElementById(el.children.item(activeIndex.current)?.id);
                     }
                 }}
-                className="relative top-0 left-0 z-10 hidden w-auto h-auto md:block aspect-auto transition-transform"
+                className="relative top-0 left-0 z-10 hidden w-auto h-auto md:block aspect-auto"
             >
                 {photos.map((photo: IPhotos, index: number) => {
                     const isActive = index === activeIndex.current;
@@ -143,7 +143,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                                 id={index}
                                 alt="A project picture"
                                 src={photo.media}
-                                className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-shadow transition-transform border-2 border-gray-600 dark:border-gray-200 shadow-2xl ${
+                                className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-[shadow,transform] border-2 border-gray-600 dark:border-gray-200 shadow-2xl ${
                                     isActive ? "opacity-100" : "opacity-0"
                                 } ${projects[index].accent.shadow_class}`}
                                 key={index}
