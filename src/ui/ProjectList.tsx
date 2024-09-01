@@ -1,4 +1,5 @@
-import {useEffect, useState} from "preact/hooks";
+import {type MutableRef, useEffect, useRef} from "preact/hooks";
+import throttle from "lodash.throttle";
 import {gsap} from "gsap";
 
 import projects from "../data/projects.json";
@@ -8,14 +9,21 @@ export interface IMediaSizes {
     width: number;
 }
 
+export interface IAccent {
+    black: string
+    light: string,
+    shadow_class: string
+}
+
 export interface IProject {
     id: number;
     name: string;
     roles: string[];
     url?: string | null;
     media: string;
+    accent: IAccent
     mediaSizes: IMediaSizes;
-    deprecated?: boolean
+    deprecated?: boolean,
 }
 
 interface IPhotos {
@@ -32,30 +40,40 @@ export default function ProjectList({optimizedImages}: Array<object>) {
     // This state variable keeps track of which item in the dropdown is currently active.
     // This is used to show that item is currently active.
     // The default value is -1 because the first item in the array is at index 0.
-    const [activeIndex, setActiveIndex] = useState<number>(-1);
-    const [mousePos, setMousePos] = useState({x: 0, y: 0});
-    const imageYOffset = 150;
-
-    // This function is called when the mouse moves.
-    const handleMouseMove = (e: MouseEvent) => {
-        // The mouse position is used to position the image.
-        setMousePos({x: e.clientX, y: e.clientY});
-    };
+    const activeIndex = useRef<number>(-1);
+    const mousePos = useRef({ x: 0, y: 0 });
+    const imageYOffset = 140;
+    let imageHandle: MutableRef<HTMLImageElement | null> = useRef(null);
 
     // This code adds an event listener to the window that listens for mouse moves.
     // It also returns a function that removes the event listener after the component
     // unmounts.
     useEffect(() => {
-        window.addEventListener("mousemove", handleMouseMove);
-
-        return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
+        const updatePosition = () => {
+            if (imageHandle.current === null || activeIndex.current === -1) {
+                return;
+            }
+            imageHandle.current.style.setProperty("--img-x", `${mousePos.current.x - imageHandle.current.width / 2}px`);
+            imageHandle.current.style.setProperty("--img-y", `${mousePos.current.y - imageYOffset}px`);
         };
+
+        // This function is called when the mouse moves.
+        const handleMouseMove = throttle((e: MouseEvent) => {
+            // The mouse position is used to position the image.
+            mousePos.current = {x: e.clientX, y: e.clientY};
+            requestAnimationFrame(updatePosition)
+        }, 15);
+
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
     }, []);
 
     const handleMouseEnter = (index: number) => {
         // When the mouse enters an item, the index of that item is set as the active index.
-        setActiveIndex(index);
+        activeIndex.current = index;
+        // @ts-ignore
+        this.forceUpdate();
+
         const isDarkMode = window.matchMedia(
             "(prefers-color-scheme: dark)"
         ).matches;
@@ -68,7 +86,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
         gsap.to(".layer", {
             duration: 0.5,
             backgroundColor: matchedColor || returnValue,
-            ease: "Cubic.easeOut",
+            ease: "power2.inOut",
         });
     };
 
@@ -77,7 +95,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
             {projects.map((project: IProject, index: number) => (
                 <li
                     key={project.id}
-                    class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black pt-0 pb-20"
+                    class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black pt-0 pb-32"
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={() => handleMouseEnter(-1)}
                 >
@@ -93,6 +111,8 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                         decoding={'async'}
                         loading={'lazy'}
                         srcset={optimizedImages[index].srcSet.attribute}
+                        width={optimizedImages[index].attributes.width}
+                        height={optimizedImages[index].attributes.height}
                     />
 
                     <div class="flex items-center space-x-2 md:space-x-4">
@@ -107,39 +127,33 @@ export default function ProjectList({optimizedImages}: Array<object>) {
             <div
                 // @ts-ignore TS2322
                 ref={(el: HTMLDivElement) => {
-                    if (el && activeIndex >= 0) {
+                    if (el) {
                         // @ts-ignore
-                        const img: Nullable<HTMLImageElement> = document.getElementById(el.children.item(activeIndex).id);
-                        if (!img) {
-                            return
-                        }
-
-                        img.style.setProperty("--img-x", `${mousePos.x - img.width / 2}px`);
-                        img.style.setProperty("--img-y", `${mousePos.y - imageYOffset}px`);
+                        imageHandle.current = document.getElementById(el.children.item(activeIndex.current)?.id);
                     }
                 }}
-                className="relative top-0 left-0 z-10 hidden w-auto h-auto md:block aspect-auto"
+                className="relative top-0 left-0 z-10 hidden w-auto h-auto md:block aspect-auto transition-transform"
             >
                 {photos.map((photo: IPhotos, index: number) => {
-                    const isActive = index === activeIndex;
+                    const isActive = index === activeIndex.current;
 
                     return (
-                        <img
-                            // @ts-ignore TS2322
-                            id={index}
-                            alt="A project picture"
-                            src={photo.media}
-                            className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-transform border-2 border-gray-600 dark:border-gray-200 ${
-                                isActive ? "opacity-100" : "opacity-0"
-                            }`}
-                            key={index}
-                            width={photo.sizes.width}
-                            height={photo.sizes.height}
-                            decoding={'async'}
-                            loading={'lazy'}
-                            srcset={optimizedImages[index].srcSet.attribute}
-                            style="top: var(--img-y); left: var(--img-x);"
-                        />
+                            <img
+                                // @ts-ignore TS2322
+                                id={index}
+                                alt="A project picture"
+                                src={photo.media}
+                                className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-shadow transition-transform border-2 border-gray-600 dark:border-gray-200 shadow-2xl ${
+                                    isActive ? "opacity-100" : "opacity-0"
+                                } ${projects[index].accent.shadow_class}`}
+                                key={index}
+                                width={optimizedImages[index].attributes.width}
+                                height={optimizedImages[index].attributes.height}
+                                decoding={'async'}
+                                loading={'eager'}
+                                srcset={optimizedImages[index].srcSet.attribute}
+                                style="top: var(--img-y); left: var(--img-x);"
+                            />
                     );
                 })}
             </div>

@@ -5,7 +5,7 @@
         "url": null,
         "roles": ["Mobile Developer", "Designer"],
         "media": "/src/assets/projects/tesla/composer_black_bg.jpg",
-        "accent": {"black": "#353133", "light": "#E7E6E4"},
+        "accent": {"black": "#353133", "light": "#E7E6E4", "shadow_class": "shadow-[#353133] dark:shadow-[#E7E6E4]/50"},
         "mediaSizes": {
             "height": 1920,
             "width": 1244
@@ -18,7 +18,7 @@
         "url": null,
         "roles": ["Mobile Developer", "Designer"],
         "media": "/src/assets/projects/fortnite/composer_blur.jpg",
-        "accent": {"black": "#0c0527", "light": "#e6e1fb"},
+        "accent": {"black": "#0c0527", "light": "#e6e1fb", "shadow_class": "shadow-[#0c0527] dark:shadow-[#e6e1fb]/50"},
         "mediaSizes": {
             "height": 1920,
             "width": 1244
@@ -31,7 +31,7 @@
         "url": "https://antistatique.net/projets/refonte-du-site-de-la-ville-de-vernier",
         "roles": ["Web Developer"],
         "media": "/src/assets/projects/vernier/vernier_2x2600x1559.jpg",
-        "accent": {"light":  "#e8efc7", "black":  "#122f14"},
+        "accent": {"light":  "#e8efc7", "black":  "#122f14", "shadow_class": "shadow-[#122f14] dark:shadow-[#e8efc7]/50"},
         "mediaSizes": {
             "height": 1920,
             "width": 1244
@@ -43,7 +43,7 @@
         "url": "https://antistatique.net/projets/swisstopo-shop",
         "roles": ["Web Developer"],
         "media": "/src/assets/projects/swisstopo/swisstopo_models.png",
-        "accent": {"light":  "#e0effb", "black":  "#003753"},
+        "accent": {"light":  "#e0effb", "black":  "#003753", "shadow_class": "shadow-[#003753] dark:shadow-[#e0effb]/50"},
         "mediaSizes": {
             "height": 1920,
             "width": 1244
