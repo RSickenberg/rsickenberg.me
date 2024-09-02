@@ -11,6 +11,15 @@ export interface Props {
 const {title} = Astro.props;
 ---
 
+<!--
+ __   __          __                       ___                   ___         __           __   ___  ___ __
+|  \ /  \    \ / /  \ |  |    |    | |__/ |__     |  | |__|  /\   |     \ / /  \ |  |    /__` |__  |__   _|
+|__/ \__/     |  \__/ \__/    |___ | |  \ |___    |/\| |  | /~~\  |      |  \__/ \__/    .__/ |___ |___  .
+
+I'm available to hire!
+This project is also open source: https://github.com/RSickenberg/rsickenberg.me
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +46,7 @@ const {title} = Astro.props;
     <meta name="generator" content={Astro.generator}/>
     <meta name="theme-color" content="#00000" media="(prefers-color-scheme: dark)"/>
     <meta name="theme-color" content="#FFFFF" media="(prefers-color-scheme: light)"/>
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
 
     <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin/>
