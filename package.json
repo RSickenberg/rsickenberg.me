@@ -46,7 +46,7 @@
     "eslint-plugin-astro": "^1.2.3",
     "globals": "^15.9.0",
     "release-it": "^17.6.0",
-    "sass": "^1.77.8",
+    "sass": "^1.78.0",
     "typescript-eslint": "^8.4.0"
   },
   "release-it": {
@@ -77,5 +77,8 @@
   },
   "browserslist": [
     "defaults, not dead"
+  ],
+  "trustedDependencies": [
+    "@sentry/cli"
   ]
 }

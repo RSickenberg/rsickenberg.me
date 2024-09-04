@@ -1,5 +1,5 @@
 ---
-import {Image, getImage} from "astro:assets";
+import {getImage} from "astro:assets";
 import testimonials from '../data/testimonials.json'
 import {Icon} from "astro-icon/components";
 import dayjs from 'dayjs'
@@ -9,7 +9,8 @@ let optimizedImages = [];
 for await (const testimonial of testimonials) {
     optimizedImages[testimonial.id] = await getImage({
         src: images[testimonial.picture](),
-        densities: ['0.5', '1'],
+        quality: "high",
+        widths: [80, 160, (images[testimonial.picture].width / 2)],
         format: "webp"
     });
 }
@@ -23,7 +24,7 @@ for await (const testimonial of testimonials) {
                     <p class="text-2xl italic leading-relaxed text-justify font-medium text-gray-900 dark:text-white" set:html={testimonial.text}></p>
                 </blockquote>
                 <figcaption class="flex flex-col md:flex-row items-center justify-center mt-8 gap-3 md:gap-0 md:space-x-3">
-                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={optimizedImages[key].src} srcset={optimizedImages[key].srcSet.attribute} alt="Author's Picture" inferSize={true}/>
+                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={optimizedImages[key].src} srcset={optimizedImages[key].srcSet.attribute} alt="Author's Picture" inferSize loading="lazy" decoding="async"/>
                     <div class="flex flex-col gap-3 md:gap-0 md:flex-row justify-evenly items-stretch md:items-baseline md:divide-x-2 md:divide-gray-300 md:dark:divide-gray-700">
                         <cite class="sm:pe-3 flex-grow sm:h-auto font-bold not-italic text-gray-900 dark:text-white">{testimonial.author}</cite>
                         <cite class="sm:ps-3 flex-grow line-clamp-3 sm:h-auto sm:pe-3 text-sm not-italic text-gray-500 dark:text-gray-400">{testimonial.position}</cite>
