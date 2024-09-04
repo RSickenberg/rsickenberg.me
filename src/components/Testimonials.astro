@@ -1,7 +1,18 @@
 ---
+import {Image, getImage} from "astro:assets";
 import testimonials from '../data/testimonials.json'
 import {Icon} from "astro-icon/components";
 import dayjs from 'dayjs'
+
+const images = import.meta.glob('/src/assets/testimonials/*.{png,jpg,jpeg}');
+let optimizedImages = [];
+for await (const testimonial of testimonials) {
+    optimizedImages[testimonial.id] = await getImage({
+        src: images[testimonial.picture](),
+        densities: ['0.5', '1'],
+        format: "webp"
+    });
+}
 ---
 
 <section id="testimonials" class={"min-h-screen opacity-0 text-center flex flex-col pt-10 sm:pt-0 pb-20 sm:pb-0 justify-center items-center " + (testimonials.length > 1 ? 'gap-14' : 'gap-3')}>
@@ -9,13 +20,13 @@ import dayjs from 'dayjs'
     {testimonials.map((testimonial, key) => (
             <figure class="max-w-screen w-[70%] text-pretty">
                 <blockquote>
-                    <p class="text-2xl italic text-justify font-medium text-gray-900 dark:text-white" set:html={testimonial.text}></p>
+                    <p class="text-2xl italic leading-relaxed text-justify font-medium text-gray-900 dark:text-white" set:html={testimonial.text}></p>
                 </blockquote>
                 <figcaption class="flex flex-col md:flex-row items-center justify-center mt-8 gap-3 md:gap-0 md:space-x-3">
-                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={testimonial.picture} alt="Author's Picture">
-                    <div class="flex flex-col gap-2 sm:gap-0 sm:flex-row justify-evenly items-stretch md:items-baseline sm:divide-x-2 divide-gray-300 dark:divide-gray-700">
+                    <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={optimizedImages[key].src} srcset={optimizedImages[key].srcSet.attribute} alt="Author's Picture" inferSize={true}/>
+                    <div class="flex flex-col gap-3 md:gap-0 md:flex-row justify-evenly items-stretch md:items-baseline md:divide-x-2 md:divide-gray-300 md:dark:divide-gray-700">
                         <cite class="sm:pe-3 flex-grow sm:h-auto font-bold not-italic text-gray-900 dark:text-white">{testimonial.author}</cite>
-                        <cite class="sm:ps-3 flex-grow sm:h-auto sm:pe-3 text-sm not-italic text-gray-500 dark:text-gray-400">{testimonial.position}</cite>
+                        <cite class="sm:ps-3 flex-grow line-clamp-3 sm:h-auto sm:pe-3 text-sm not-italic text-gray-500 dark:text-gray-400">{testimonial.position}</cite>
                         <cite class="sm:ps-3 flex-grow text-sm not-italic text-gray-500 dark:text-gray-400">{dayjs(testimonial.date).format('DD.MM.YYYY')}</cite>
                     </div>
                 </figcaption>
@@ -46,7 +57,7 @@ import dayjs from 'dayjs'
             ease: "power4.out",
             scrollTrigger: {
                 trigger: "#testimonials",
-                start: "top 40%",
+                start: "top 60%",
                 end: "bottom 100%",
                 scrub: 1,
             },
