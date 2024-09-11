@@ -76,7 +76,7 @@
     }
   },
   "browserslist": [
-    "defaults, not dead"
+    "defaults, last 5 versions, not dead"
   ],
   "trustedDependencies": [
     "@sentry/cli"
