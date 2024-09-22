@@ -42,11 +42,11 @@
     "esbuild-plugin-browserslist": "^0.14.0",
     "@typescript-eslint/parser": "^8.6.0",
     "dotenv-cli": "^7.4.2",
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.0",
     "eslint-plugin-astro": "^1.2.4",
     "globals": "^15.9.0",
     "release-it": "^17.6.0",
-    "sass": "^1.79.1",
+    "sass": "^1.79.2",
     "typescript-eslint": "^8.6.0"
   },
   "release-it": {
