@@ -39,15 +39,15 @@
   },
   "devDependencies": {
     "@release-it/keep-a-changelog": "^5.0.0",
-    "esbuild-plugin-browserslist": "^0.14.0",
-    "@typescript-eslint/parser": "^8.7.0",
+    "esbuild-plugin-browserslist": "^0.15.0",
+    "@typescript-eslint/parser": "^8.8.0",
     "dotenv-cli": "^7.4.2",
     "eslint": "^9.11.1",
     "eslint-plugin-astro": "^1.2.4",
-    "globals": "^15.9.0",
+    "globals": "^15.10.0",
     "release-it": "^17.6.0",
-    "sass": "^1.79.3",
-    "typescript-eslint": "^8.7.0"
+    "sass": "^1.79.4",
+    "typescript-eslint": "^8.8.0"
   },
   "release-it": {
     "npm": {
