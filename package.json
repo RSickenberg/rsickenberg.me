@@ -25,7 +25,7 @@
     "@sentry/astro": "^8.34.0",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/typography": "^0.5.15",
-    "astro": "^4.16.0",
+    "astro": "^4.16.3",
     "astro-icon": "^1.1.1",
     "astro-seo": "^0.8.4",
     "caniuse-lite": "^1.0.30001668",
@@ -33,9 +33,9 @@
     "flowbite": "^2.5.2",
     "gsap": "^3.12.5",
     "lodash.throttle": "^4.1.1",
-    "preact": "^10.24.2",
+    "preact": "^10.24.3",
     "tailwindcss": "^3.4.13",
-    "zustand": "^4.5.5"
+    "zustand": "^5.0.0"
   },
   "devDependencies": {
     "@release-it/keep-a-changelog": "^5.0.0",
