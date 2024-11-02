@@ -1,7 +1,8 @@
+@use "sass:meta";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "misc";
+@include meta.load-css("misc");
 
 html {
   overflow: auto;
