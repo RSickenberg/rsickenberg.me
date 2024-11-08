@@ -28,7 +28,7 @@
     "astro": "^4.16.10",
     "astro-icon": "^1.1.2",
     "astro-seo": "^0.8.4",
-    "caniuse-lite": "^1.0.30001677",
+    "caniuse-lite": "^1.0.30001679",
     "dayjs": "^1.11.13",
     "flowbite": "^2.5.2",
     "gsap": "^3.12.5",
