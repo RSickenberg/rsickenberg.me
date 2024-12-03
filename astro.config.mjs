@@ -4,6 +4,7 @@ import tailwind from "@astrojs/tailwind";
 import preact from "@astrojs/preact";
 import icon from 'astro-icon';
 import partytown from "@astrojs/partytown";
+import tailwindConfigViewer from 'astro-tailwind-config-viewer';
 
 import browserslist from "browserslist";
 import {resolveToEsbuildTarget} from "esbuild-plugin-browserslist";
@@ -39,6 +40,8 @@ export default defineConfig({
     }), sitemap({
         changefreq: 'weekly',
         priority: 0.7
+    }), tailwindConfigViewer({
+        configFile: 'tailwind.config.cjs'
     })],
     site: 'https://rsickenberg.me',
     output: 'static',
