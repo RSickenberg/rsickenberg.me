@@ -29,7 +29,7 @@
     "astro-icon": "^1.1.4",
     "astro-seo": "^0.8.4",
     "astro-tailwind-config-viewer": "^2.0.1",
-    "caniuse-lite": "^1.0.30001686",
+    "caniuse-lite": "^1.0.30001687",
     "dayjs": "^1.11.13",
     "flowbite": "^2.5.2",
     "gsap": "^3.12.5",
