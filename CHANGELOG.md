@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Project year
 - Added Project End-of-life
 
+### Security
+- Upgraded dependencies
+
 ## [1.1.23] - 2024-12-03
 ### Security
 - Upgraded dependencies
