@@ -10,7 +10,7 @@ export interface IMediaSizes {
 }
 
 export interface IAccent {
-    black: string
+    black: string,
     light: string,
     shadow_class: string
 }
@@ -21,9 +21,11 @@ export interface IProject {
     roles: string[];
     url?: string | null;
     media: string;
-    accent: IAccent
+    accent: IAccent;
     mediaSizes: IMediaSizes;
-    deprecated?: boolean,
+    deprecated?: boolean;
+    year: number;
+    eol?: number;
 }
 
 interface IPhotos {
@@ -99,9 +101,10 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={() => handleMouseEnter(-1)}
                 >
-                    <div class="flex flex-col md:flex-row items-center md:items-baseline justify-center md:space-x-8">
-                        <p class={'font-light md:font-thin font-sans text-xl'}>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center md:items-baseline md:space-x-8">
+                        <p class={'font-light md:font-thin font-sans text-xl text-gray-600'}>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
                         <p class={'font-semibold text-3xl'}>{project.name}</p>
+                        <p class={'font-light md:font-thin font-sans text-sm text-gray-600 mt-2 sm:mt-0'}>{project.year} {project.eol ? ' - ' + project.eol : ''}</p>
                     </div>
 
                     <img
@@ -109,7 +112,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                         alt={project.name}
                         class="block md:hidden my-4 w-full object-cover rounded-3xl border-2 border-gray-600 dark:border-gray-200 shadow-2xl"
                         decoding={'async'}
-                        loading={'lazy'}
+                        loading={'eager'}
                         srcset={optimizedImages[index].srcSet.attribute}
                         width={optimizedImages[index].attributes.width}
                         height={optimizedImages[index].attributes.height}
