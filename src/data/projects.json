@@ -47,7 +47,7 @@
         "url": "https://antistatique.net",
         "roles": ["Lead Developer", "Back-End Developer"],
         "media": "/src/assets/projects/cdc/cdc_hero.png",
-        "accent": {"light":  "#e0effb", "black":  "#003753", "shadow_class": "shadow-[#003753] dark:shadow-[#e0effb]/50"},
+        "accent": {"light":  "#FCEAF0", "black":  "#360010", "shadow_class": "shadow-[#7A4C5A] dark:shadow-[#AD7F8D]/50"},
         "mediaSizes": {
             "height": 1920,
             "width": 1244
