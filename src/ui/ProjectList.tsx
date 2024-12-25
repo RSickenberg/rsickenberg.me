@@ -1,6 +1,7 @@
 import {type MutableRef, useEffect, useRef} from "preact/hooks";
 import throttle from "lodash.throttle";
 import {gsap} from "gsap";
+import {isMobile} from "../utils/getScreenSize.ts";
 
 import projects from "../data/projects.json";
 
@@ -52,7 +53,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
     // unmounts.
     useEffect(() => {
         const updatePosition = () => {
-            if (imageHandle.current === null || activeIndex.current === -1) {
+            if (imageHandle.current === null || activeIndex.current === -1 || isMobile) {
                 return;
             }
             imageHandle.current.style.setProperty("--img-x", `${mousePos.current.x - imageHandle.current.width / 2}px`);
@@ -64,7 +65,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
             // The mouse position is used to position the image.
             mousePos.current = {x: e.clientX, y: e.clientY};
             requestAnimationFrame(updatePosition)
-        }, 15);
+        }, 5);
 
         window.addEventListener("mousemove", handleMouseMove);
         return () => window.removeEventListener("mousemove", handleMouseMove);

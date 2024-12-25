@@ -6,11 +6,11 @@ import profileImage from '../assets/profile/antistatique_romain-31-web.jpg'
 <article class="flex justify-center lg:justify-end items-center relative mt-10">
   <Picture
     src={profileImage}
-    widths={[400, 800, 1200]}
+    densities={[1, 0.5, 0.25]}
     formats={["webp"]}
     id={"picture"}
     loading={"lazy"}
-    decoding={"async"}
+    decoding={"auto"}
     alt="Romain, a developer."
     class={"w-[400px] 2xl:w-[500px] aspect-[600/901] block relative shadow-md object-cover select-none pointer-events-none rounded-xl mt-5 z-[2]"}
   />

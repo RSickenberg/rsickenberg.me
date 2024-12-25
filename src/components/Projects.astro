@@ -27,7 +27,7 @@ for await (const project of projects) {
             <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-8 mx-auto md:m-6 project-line opacity-0"></div>
         </header>
     </div>
-    <ProjectList client:load optimizedImages={optimizedImages}/>
+    <ProjectList client:visible={{rootMargin: '200px'}} optimizedImages={optimizedImages}/>
 </section>
 
 <script>
