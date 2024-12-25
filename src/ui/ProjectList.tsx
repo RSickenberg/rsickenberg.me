@@ -111,8 +111,8 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                         src={optimizedImages[index].src}
                         alt={project.name}
                         class="block md:hidden my-4 w-full object-cover rounded-3xl border-2 border-gray-600 dark:border-gray-200 shadow-2xl"
-                        decoding={'async'}
-                        loading={'eager'}
+                        decoding={'auto'}
+                        loading={'lazy'}
                         srcset={optimizedImages[index].srcSet.attribute}
                         width={optimizedImages[index].attributes.width}
                         height={optimizedImages[index].attributes.height}
@@ -152,8 +152,8 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                                 key={index}
                                 width={optimizedImages[index].attributes.width}
                                 height={optimizedImages[index].attributes.height}
-                                decoding={'async'}
-                                loading={'eager'}
+                                decoding={'auto'}
+                                loading={'lazy'}
                                 srcset={optimizedImages[index].srcSet.attribute}
                                 style="top: var(--img-y); left: var(--img-x);"
                             />
