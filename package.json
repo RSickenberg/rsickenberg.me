@@ -33,7 +33,6 @@
     "dayjs": "^1.11.13",
     "flowbite": "^2.5.2",
     "gsap": "^3.12.5",
-    "lodash.throttle": "^4.1.1",
     "preact": "^10.25.3",
     "tailwindcss": "^3.4.17",
     "zustand": "^5.0.2"

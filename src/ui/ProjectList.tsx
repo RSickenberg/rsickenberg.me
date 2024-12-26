@@ -1,5 +1,4 @@
-import {type MutableRef, useEffect, useRef} from "preact/hooks";
-import throttle from "lodash.throttle";
+import {type MutableRef, useLayoutEffect, useRef} from "preact/hooks";
 import {gsap} from "gsap";
 import {isMobile} from "../utils/getScreenSize.ts";
 
@@ -47,25 +46,35 @@ export default function ProjectList({optimizedImages}: Array<object>) {
     const mousePos = useRef({ x: 0, y: 0 });
     const imageYOffset = 140;
     let imageHandle: MutableRef<HTMLImageElement | null> = useRef(null);
+    const hasHandle = () => {
+        return imageHandle.current !== null || activeIndex.current !== -1;
+    };
 
     // This code adds an event listener to the window that listens for mouse moves.
     // It also returns a function that removes the event listener after the component
     // unmounts.
-    useEffect(() => {
+    useLayoutEffect(() => {
+        let ticking = false;
         const updatePosition = () => {
-            if (imageHandle.current === null || activeIndex.current === -1 || isMobile) {
+            ticking = false;
+            if (!hasHandle() || isMobile) {
                 return;
             }
+            // @ts-ignore TS18047
             imageHandle.current.style.setProperty("--img-x", `${mousePos.current.x - imageHandle.current.width / 2}px`);
+            // @ts-ignore TS18047
             imageHandle.current.style.setProperty("--img-y", `${mousePos.current.y - imageYOffset}px`);
         };
 
         // This function is called when the mouse moves.
-        const handleMouseMove = throttle((e: MouseEvent) => {
+        const handleMouseMove = (e: MouseEvent) => {
             // The mouse position is used to position the image.
             mousePos.current = {x: e.clientX, y: e.clientY};
-            requestAnimationFrame(updatePosition)
-        }, 5);
+            if (!ticking) {
+                requestAnimationFrame(updatePosition)
+            }
+            ticking = true;
+        };
 
         window.addEventListener("mousemove", handleMouseMove);
         return () => window.removeEventListener("mousemove", handleMouseMove);
