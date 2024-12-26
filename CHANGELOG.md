@@ -5,6 +5,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Changed lenis distribution
+- Changed some GSAP timelines
+- CTA scroll is gc after animation
+
+### Fixed
+- Fixed multiple GSAP scroll trigger registrations
+- Fixed some visuals alignements
+- Fixed lazy layout shift into mobile project images
+- Fixed some opacity on project
+
+### Removed
+- Removed old lenis distribution
+- Removed commented code
 
 ## [1.1.26] - 2024-12-26
 ### Changed
@@ -353,7 +367,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.26...HEAD
+[Unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.26...HEAD
 [1.1.26]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.25...v1.1.26
 [1.1.25]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.24...v1.1.25
 [1.1.24]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.23...v1.1.24
