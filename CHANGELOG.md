@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.1.26] - 2024-12-26
 ### Changed
 - Performances: Changed image decoding to auto and lazy loaded
 - Performances: Preact hover images *should* not be rendered on mobile
@@ -351,7 +353,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[Unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.25...HEAD
+[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.26...HEAD
+[1.1.26]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.25...v1.1.26
 [1.1.25]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.24...v1.1.25
 [1.1.24]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.23...v1.1.24
 [1.1.23]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.22...v1.1.23
