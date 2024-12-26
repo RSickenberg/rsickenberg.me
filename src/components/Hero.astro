@@ -10,7 +10,6 @@
 <script>
     import {gsap, ScrollTrigger} from "gsap/all";
         import {colors, alphaValues, isDarkMode} from "../utils/getColors";
-
         gsap.registerPlugin(ScrollTrigger);
 
         _buildGSAPAnimations();
@@ -68,12 +67,6 @@
             }
 
         function _startAnimations(delay: number = 1) {
-            // gsap.from(".title", {
-            //     opacity: 0,
-            //     duration: 1,
-            //     ease: "power4.out",
-            //     delay: delay,
-            // });
             gsap.from(".slogan", {
                 y: 100,
                 opacity: 0,
@@ -84,26 +77,12 @@
             }
 
         function _endAnimations(delay: number = 1) {
-            // gsap.to(".title", {
-            //     opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-            //     duration: 1,
-            //     ease: "power4.out",
-            //     delay: delay,
-            // });
-
             gsap.to(".slogan", {
                 opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
                 duration: 1,
                 delay: delay,
                 ease: "power4.out",
                 });
-
-            // gsap.to("#navbar", {
-            //     opacity: 1,
-            //     duration: 1,
-            //     ease: "power4.out",
-            //     delay: delay,
-            // });
             }
 
         function _tweenTimeLineOne() {
@@ -126,6 +105,7 @@
                 start: 'bottom top',
                 endTrigger: '.about',
                 scrub: true,
+                once: true,
                 onEnter: () => {
                     gsap.to('.cta', {
                         opacity: 0,

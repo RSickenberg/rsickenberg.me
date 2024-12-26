@@ -49,109 +49,92 @@ const contactMediums: IContactMedium[] = [
 ];
 ---
 
-<section class="flex items-center justify-center min-h-screen">
-    <div class="grid grid-flow-col w-[90%] mx-auto gap-10">
-        <article class="px-8 py-6">
-            <h2 class="text-4xl font-bold text-center text-black opacity-0 md:text-left dark:text-white contact-me">
-                Say Hello!
-            </h2>
-            <!-- Line -->
-            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-8 mx-auto md:m-6 contact-line opacity-0"/>
-            <div class="opacity-0 contact-me-methods">
-                <p class="mb-8 text-center md:text-xl sm:text-justify">
-                    Here are few ways to learn more about me.<br> If you have a project, an idea or a coffee to share,
-                    be
-                    free to contact me!<br><br>
+<section id="contact" class="flex items-center justify-center min-h-screen md:pt-20 pt-0">
+    <div class="flex flex-col w-[90%] mx-auto gap-4 px-8">
+        <header class="md:my-12 text-center md:text-left">
+            <div class="text-black dark:text-white contact-title opacity-0">
+                <h2 class="text-4xl font-bold sm:font-extrabold">Say Hello!</h2>
+            </div>
+            <div class="h-16 w-0.5 bg-gray-700 dark:bg-gray-200 my-8 mx-auto md:m-6 contact-line opacity-0"></div>
+            <div class="opacity-0 contact-subtitle md:pl-5">
+                <p class="text-center md:text-xl sm:text-justify">
+                    Here are few ways to learn more on my subject.<br> If you have a project, an idea or a coffee to share,
+                    feel free to contact me!<br><br>
                     I'll try my best to make it <span
                         class="underline decoration-2 decoration-gray-500 dark:decoration-gray-200">for you</span>.
                 </p>
-
-                <div class={'grid grid-flow-row grid-cols-2 sm:grid-cols-3 2xl:grid-cols-6 gap-3'}>
-                    {contactMediums.map((medium => {
-                        return <ContactCard href={medium.href} className={medium.class ?? baseContactClass}
-                                             iconName={medium.iconName}
-                                             iconSize={medium.iconSize ?? baseIconSize}
-                                             iconClass={medium.iconClass ?? baseIconClass}
-                                             tooltip={medium.tooltip}
-                                />
-                    }))}
-                </div>
             </div>
-        </article>
+        </header>
+
+        <div class={'grid grid-flow-row grid-cols-2 sm:grid-cols-3 2xl:grid-cols-6 gap-3 methods-grid'}>
+            {contactMediums.map((medium => {
+                return <ContactCard href={medium.href} className={medium.class ?? baseContactClass}
+                                     iconName={medium.iconName}
+                                     iconSize={medium.iconSize ?? baseIconSize}
+                                     iconClass={medium.iconClass ?? baseIconClass}
+                                     tooltip={medium.tooltip}
+                        />
+            }))}
+        </div>
     </div>
 </section>
 
 <script>
-    import {gsap, ScrollTrigger} from "gsap/all";
+    import {gsap} from "gsap/all";
     import {colors, alphaValues, isDarkMode} from "../utils/getColors";
 
-    gsap.registerPlugin(ScrollTrigger);
+    function _initialize() {
+        _setColors();
+        gsap.set([".contact-line", ".contact-title", ".contact-subtitle", ".methods-grid"], {opacity: 0})
+        _renderTo();
+    }
+
+    function _renderTo() {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#contact",
+                start: "top 70%",
+                end: "+=600",
+                scrub: 4,
+            }
+        });
+        tl.to(".contact-title", {
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            ease: "power4.inOut",
+            duration: 1.3,
+            delay: 0.3
+        })
+            .to(".contact-line", {
+                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+                ease: "power4.inOut",
+                duration: 1.1,
+                delay: 0.6
+            })
+            .to(".contact-subtitle", {
+                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+                ease: "power4.inOut",
+                duration: 1.2,
+                delay: 0.7,
+            })
+            .to(".methods-grid", {
+                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+                ease: "power4.inOut",
+                duration: 1.2,
+                delay: 0.3,
+            })
+    }
+
+    function _setColors() {
+        gsap.set([".contact-line", ".contact-title", ".contact-subtitle", ".methods-grid"], {
+            color: isDarkMode ? colors.light : colors.dark,
+            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+        })
+    }
 
     _initialize();
-
     window
         .matchMedia("(prefers-color-scheme: dark)")
         .addEventListener("change", () => {
             _setColors();
         })
-
-    function _initialize() {
-        _setColors();
-        gsap.set(".contact-line", {
-            opacity: 0
-        });
-        gsap.set(".contact-me", {
-            opacity: 0
-        });
-        gsap.set(".contact-me-methods", {
-            opacity: 0
-        });
-
-        _renderTo();
-    }
-
-    function _renderTo() {
-        gsap.to(".contact-me", {
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-            ease: "power4.out",
-            scrollTrigger: {
-                trigger: ".contact-me",
-                start: "top 100%",
-                scrub: 1,
-            }
-        });
-        gsap.to(".contact-line", {
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-            ease: "power4.out",
-            scrollTrigger: {
-                trigger: ".contact-me",
-                start: "top 100%",
-                scrub: 1,
-            }
-        });
-        gsap.to(".contact-me-methods", {
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-            ease: "power4.out",
-            scrollTrigger: {
-                trigger: ".contact-me-methods",
-                start: "top 90%",
-                scrub: 2,
-            }
-        })
-    }
-
-    function _setColors() {
-        gsap.set(".contact-line", {
-            color: isDarkMode ? colors.light : colors.dark,
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-        });
-        gsap.set(".contact-me", {
-            color: isDarkMode ? colors.light : colors.dark,
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-        });
-        gsap.set(".contact-me-methods", {
-            color: isDarkMode ? colors.light : colors.dark,
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-        });
-    }
 </script>

@@ -122,7 +122,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                         alt={project.name}
                         class="block md:hidden my-4 w-full object-cover rounded-3xl border-2 border-gray-600 dark:border-gray-200 shadow-2xl"
                         decoding={'auto'}
-                        loading={'lazy'}
+                        loading={'eager'}
                         srcset={optimizedImages[index].srcSet.attribute}
                         width={optimizedImages[index].attributes.width}
                         height={optimizedImages[index].attributes.height}
