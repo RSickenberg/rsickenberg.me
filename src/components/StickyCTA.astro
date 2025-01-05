@@ -1,5 +1,5 @@
 ---
-import {Icon} from 'astro-icon/components'
+import { Icon } from 'astro-icon/components'
 ---
 <div id="sticky-banner" tabindex="-1"
      class="opacity-0 fixed top-0 start-0 z-50 flex justify-between w-full p-4 border-b-2 border-gray-50 bg-gray-50/80 dark:bg-gray-700/80 dark:border-gray-600 backdrop-blur-md drop-shadow-sm">
@@ -26,8 +26,8 @@ import {Icon} from 'astro-icon/components'
 </div>
 
 <script>
-    import {Dismiss} from 'flowbite'
-    import {gsap} from "gsap/all";
+    import { Dismiss } from 'flowbite'
+    import { gsap } from "gsap/all";
 
     _initialize();
 
@@ -40,7 +40,7 @@ import {Icon} from 'astro-icon/components'
         })
 
         _renderTo();
-    };
+    }
 
     function _renderTo() {
       gsap.to('#sticky-banner', {

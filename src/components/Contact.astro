@@ -90,7 +90,8 @@ const contactMediums: IContactMedium[] = [
     }
 
     function _renderTo() {
-        let tl = gsap.timeline({
+		const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
+		let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: "#contact",
                 start: "top 70%",
@@ -99,42 +100,42 @@ const contactMediums: IContactMedium[] = [
             }
         });
         tl.to(".contact-title", {
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+            opacity: opacityValue,
             ease: "power4.inOut",
             duration: 1.3,
             delay: 0.3
         })
-            .to(".contact-line", {
-                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-                ease: "power4.inOut",
-                duration: 1.1,
-                delay: 0.6
-            })
-            .to(".contact-subtitle", {
-                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-                ease: "power4.inOut",
-                duration: 1.2,
-                delay: 0.7,
-            })
-            .to(".methods-grid", {
-                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-                ease: "power4.inOut",
-                duration: 1.2,
-                delay: 0.3,
-            })
+		.to(".contact-line", {
+			opacity: opacityValue,
+			ease: "power4.inOut",
+			duration: 1.1,
+			delay: 0.3
+		}, '-=1.0')
+		.to(".contact-subtitle", {
+			opacity: opacityValue,
+			ease: "power4.inOut",
+			duration: 1.2,
+			delay: 0.3,
+		}, '-=0.8')
+		.to(".methods-grid", {
+			opacity: opacityValue,
+			ease: "power4.inOut",
+			duration: 1.2,
+			delay: 0.3,
+		}, '-=0.8');
     }
 
     function _setColors() {
+		const colorValue = isDarkMode ? colors.light : colors.dark;
+		const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
         gsap.set([".contact-line", ".contact-title", ".contact-subtitle", ".methods-grid"], {
-            color: isDarkMode ? colors.light : colors.dark,
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+			color: colorValue,
+			opacity: opacityValue,
         })
     }
 
     _initialize();
     window
         .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", () => {
-            _setColors();
-        })
+        .addEventListener("change", _setColors);
 </script>

@@ -1,19 +1,18 @@
 ---
-import {getImage} from "astro:assets";
+import { getImage } from "astro:assets";
 import ProjectList from "../ui/ProjectList";
 import projects from "../data/projects.json";
 const images = import.meta.glob('/src/assets/projects/**/*.{png,jpg}')
 
-let optimizedImages = [];
-for await (const project of projects) {
-    optimizedImages[project.id] = await getImage({
-        src: images[project.media](),
-        width: project.mediaSizes.width,
-        height: project.mediaSizes.height,
-        densities: [0.5, 1, 2],
-        format: "webp"
-    });
-}
+let optimizedImages = await Promise.all(projects.map(async (project) => {
+	return await getImage({
+		src: images[project.media](),
+		width: project.mediaSizes.width,
+		height: project.mediaSizes.height,
+		densities: [0.5, 1, 2],
+		format: "webp"
+	});
+}));
 ---
 
 <section class="flex flex-col items-center justify-center min-h-screen overflow-hidden pt-20 md:pt-0"
@@ -31,17 +30,18 @@ for await (const project of projects) {
 </section>
 
 <script>
-    import {gsap} from "gsap/all";
-    import {colors, alphaValues, isDarkMode} from "../utils/getColors";
+    import { gsap } from "gsap/all";
+    import { colors, alphaValues, isDarkMode } from "../utils/getColors";
 
     function _init() {
         _setColors();
-        gsap.set([".project-title", ".project-line", "#projects-list"], {opacity: 0});
+        gsap.set([".project-title", ".project-line", "#projects-list"], { opacity: 0 });
         _renderTo();
     }
 
     function _renderTo() {
-        let tl = gsap.timeline({
+		const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
+		let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: "#testimonials",
                 start: "top",
@@ -52,39 +52,31 @@ for await (const project of projects) {
         tl.to(".project-title", {
             duration: 1,
             ease: "power4.inOut",
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+			opacity: opacityValue,
         })
         .to(".project-line", {
             duration: 1.2,
             ease: "power4.inOut",
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+			opacity: opacityValue,
         })
         .to("#projects-list", {
             duration: 1.3,
             ease: "power4.inOut",
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+			opacity: opacityValue,
         });
     }
 
     function _setColors() {
-        gsap.set(".project-line", {
-            color: isDarkMode ? colors.light : colors.dark,
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-        });
-        gsap.set(".project-title", {
-            color: isDarkMode ? colors.light : colors.dark,
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-        });
-        gsap.set("#projects-list", {
-            color: isDarkMode ? colors.light : colors.dark,
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-        });
+		const colorValue = isDarkMode ? colors.light : colors.dark;
+		const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
+		gsap.set([".project-line", ".project-title", "#projects-list"], {
+			color: colorValue,
+			opacity: opacityValue,
+		});
     }
 
     _init();
     window
         .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", () => {
-            _setColors();
-        });
+        .addEventListener("change", _setColors);
 </script>

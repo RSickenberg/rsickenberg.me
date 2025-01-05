@@ -8,124 +8,119 @@
 </section>
 
 <script>
-    import {gsap, ScrollTrigger} from "gsap/all";
-        import {colors, alphaValues, isDarkMode} from "../utils/getColors";
-        gsap.registerPlugin(ScrollTrigger);
+	import { gsap, ScrollTrigger } from "gsap/all";
+	import { colors, alphaValues, isDarkMode } from "../utils/getColors";
+	gsap.registerPlugin(ScrollTrigger);
 
-        _buildGSAPAnimations();
+	_initializeAnimations();
 
-        // @ts-ignore: Object is possibly 'null'.
-        const title: Element = document.querySelector(".slogan");
-        // Separate each letters in a span.
-        // @ts-ignore: Object is possibly 'null'.
-        const letters = title.textContent.split("");
-        title.textContent = "";
+	function _initializeAnimations() {
+		_setColors();
+		_splitTextIntoSpans();
+		_buildGSAPAnimations();
+		_addEventListeners();
+	}
 
-        letters.forEach((letter) => {
-            const span = document.createElement("span");
-            span.textContent = letter;
-            span.classList.add("letter");
-            title.append(span);
-            });
+	function _setColors() {
+		const colorValue = isDarkMode ? colors.light : colors.dark;
+		const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
+		gsap.set([".slogan", ".cta"], { color: colorValue, opacity: opacityValue });
+	}
 
-        const lettersSpans = document.querySelectorAll(".letter");
-        window
-            .matchMedia("(prefers-color-scheme: dark)")
-            .addEventListener("change", () => {
-            lettersSpans.forEach((span) => {
-                // Remove all style from the span.
-                span.removeAttribute("style");
-                });
-            // Change opacity of the slogan.
-            _endAnimations(0.3);
-            });
-        lettersSpans.forEach((span) => {
-            span.addEventListener("mouseenter", (e) => {
-                gsap.to(e.target, {
-                    duration: 0.5,
-                    color: isDarkMode ? colors.dark : colors.light,
-                    backgroundColor: isDarkMode ? colors.light : colors.dark,
-                    ease: "power4.out",
-                    });
-                });
+	function _splitTextIntoSpans() {
+		const title = document.querySelector(".slogan");
+		const letters = title.textContent.split("");
+		title.textContent = "";
+		letters.forEach((letter) => {
+			const span = document.createElement("span");
+			span.textContent = letter;
+			span.classList.add("letter");
+			title.append(span);
+		});
+	}
 
-            span.addEventListener("mouseleave", (e) => {
-                gsap.to(e.target, {
-                    duration: 0.5,
-                    color: isDarkMode ? colors.light : colors.dark,
-                    backgroundColor: "transparent",
-                    ease: "power4.out",
-                    delay: 0.5,
-                    });
-                });
-            });
+	function _buildGSAPAnimations() {
+		gsap.from(".slogan", {
+			y: 100,
+			opacity: 0,
+			duration: 1,
+			delay: 1,
+			ease: "power4.out",
+		});
 
-        function _buildGSAPAnimations() {
-            _startAnimations();
-            _endAnimations();
-            _tweenTimeLineOne();
-            }
+		gsap.to(".slogan", {
+			opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+			duration: 1,
+			delay: 1,
+			ease: "power4.out",
+		});
 
-        function _startAnimations(delay: number = 1) {
-            gsap.from(".slogan", {
-                y: 100,
-                opacity: 0,
-                duration: 1,
-                delay: delay,
-                ease: "power4.out",
-                });
-            }
+		const tl = gsap.timeline({ smoothChildTiming: true });
+		tl.set('.cta', { opacity: 0, autoAlpha: 1 }, 0)
+			.to('.cta', {
+				opacity: 1,
+				duration: 2,
+				ease: 'elastic',
+				delay: 3
+			});
 
-        function _endAnimations(delay: number = 1) {
-            gsap.to(".slogan", {
-                opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-                duration: 1,
-                delay: delay,
-                ease: "power4.out",
-                });
-            }
+		ScrollTrigger.create({
+			trigger: '.slogan',
+			start: 'bottom top',
+			endTrigger: '.about',
+			scrub: true,
+			once: true,
+			onEnter: () => {
+				gsap.to('.cta', {
+					opacity: 0,
+					duration: 1,
+					ease: 'power1.inOut'
+				});
+			}
+		});
 
-        function _tweenTimeLineOne() {
-            let tl = gsap.timeline({smoothChildTiming: true});
+		if (window.navigator.maxTouchPoints > 1) {
+			tl.to(".slogan", {
+				y: '+=25',
+				scrollTrigger: {
+					trigger: '.cta',
+					start: 'bottom top',
+					endTrigger: '.about',
+					scrub: 1,
+					once: true,
+				}
+			}, 0);
+		}
+	}
 
-            // Start with 0 opacity
-            tl.set('.cta', {opacity: 0, autoAlpha: 1}, 0);
+	function _addEventListeners() {
+		const lettersSpans = document.querySelectorAll(".letter");
+		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+			lettersSpans.forEach((span) => {
+				span.removeAttribute("style");
+			});
+			_setColors();
+		});
 
-            // Show the CTA after a 3-second delay
-            tl.to('.cta', {
-                opacity: 1, // Or use the isDarkMode condition
-                duration: 2,
-                ease: 'elastic',
-                delay: 3
-                });
+		lettersSpans.forEach((span) => {
+			span.addEventListener("mouseenter", (e) => {
+				gsap.to(e.target, {
+					duration: 0.5,
+					color: isDarkMode ? colors.dark : colors.light,
+					backgroundColor: isDarkMode ? colors.light : colors.dark,
+					ease: "power4.out",
+				});
+			});
 
-            // Set up ScrollTrigger to fade out the CTA on scroll
-            ScrollTrigger.create({
-                trigger: '.slogan',
-                start: 'bottom top',
-                endTrigger: '.about',
-                scrub: true,
-                once: true,
-                onEnter: () => {
-                    gsap.to('.cta', {
-                        opacity: 0,
-                        duration: 1,
-                        ease: 'power1.inOut'
-                        });
-                    }
-                });
-            // If mobile.
-            if (window.navigator.maxTouchPoints > 1) {
-                tl.to(".slogan", {
-                    y: '+=25',
-                    scrollTrigger: {
-                        trigger: '.cta',
-                        start: 'bottom top',
-                        endTrigger: '.about',
-                        scrub: 1,
-                        once: true,
-                        }
-                    }, 0)
-                }
-            }
+			span.addEventListener("mouseleave", (e) => {
+				gsap.to(e.target, {
+					duration: 0.5,
+					color: isDarkMode ? colors.light : colors.dark,
+					backgroundColor: "transparent",
+					ease: "power4.out",
+					delay: 0.5,
+				});
+			});
+		});
+	}
 </script>

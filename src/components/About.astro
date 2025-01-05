@@ -31,7 +31,7 @@ import Profile from "./Profile.astro";
       <div class="opacity-0 mt-8 about-tech">
         <div class="text-black dark:text-white">
           <h3 class="text-xl font-medium md:text-2xl">Here are my main technologies:</h3>
-          <div class="mt-6">
+          <div class="mt-6 about-tech-cards">
             <Tech />
           </div>
         </div>
@@ -44,90 +44,40 @@ import Profile from "./Profile.astro";
   import { gsap } from "gsap/all";
   import { colors, alphaValues, isDarkMode } from "../utils/getColors";
 
-  _initialize();
-
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", () => {
-      _setColors();
-    });
-
-  function _renderTo() {
-    gsap.to(".about", {
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: ".about",
-        start: "top 100%",
-        scrub: 1,
-      },
-    });
-    gsap.to(".line", {
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: ".about",
-        start: "top 100%",
-        scrub: 1,
-      },
-    });
-    gsap.to(".about-subtitle", {
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      delay: 0.5,
-      duration: 1,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: ".about",
-        start: "top 100%",
-        scrub: 1,
-      },
-    });
-    gsap.to(".about-tech", {
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-      delay: 0.7,
-      duration: 1,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: ".about",
-        start: "top 100%",
-        scrub: 1,
-      },
-    });
+  function _initialize() {
+	  _setColors();
+	  gsap.set([".line", ".about", ".about-subtitle", ".about-tech", ".about-tech-cards"], { opacity: 0 });
+	  _renderTo();
   }
 
-  function _initialize() {
-    _setColors();
-
-    gsap.set(".line", {
-      opacity: 0,
-    });
-    gsap.set(".about", {
-      opacity: 0,
-    });
-    gsap.set(".about-subtitle", {
-      opacity: 0,
-    });
-    gsap.set(".about-tech", {
-      opacity: 0,
-    });
-
-    _renderTo();
+  function _renderTo() {
+  	const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
+	  gsap.timeline({
+		  scrollTrigger: {
+			  trigger: ".about",
+			  start: "top 100%",
+			  scrub: 1,
+		  }
+	  })
+	  .to(".about", { opacity: opacityValue, delay: 0.3, duration: 1, ease: "power4.out" })
+	  .to(".line", { opacity: opacityValue, delay: 0.4, duration: 1, ease: "power4.out" })
+	  .to(".about-subtitle", { opacity: opacityValue, delay: 0.5, duration: 1, ease: "power4.out" })
+	  .to(".about-tech", { opacity: opacityValue, delay: 0.7, duration: 1, ease: "power4.out" })
+	  .to(".about-tech-cards", { opacity: opacityValue, delay: 1, duration: 1, ease: "power4.out" });
   }
 
   function _setColors() {
-    gsap.set(".line", {
-      color: isDarkMode ? colors.light : colors.dark,
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-    });
-    gsap.set(".about", {
-      color: isDarkMode ? colors.light : colors.dark,
-      opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-    });
-    gsap.set(".about-subtitle", {
-      color: isDarkMode ? colors.light : colors.dark,
-    });
-    gsap.set(".about-tech", {
-      color: isDarkMode ? colors.light : colors.dark,
-    });
+	  const colorValue = isDarkMode ? colors.light : colors.dark;
+	  const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
+	  gsap.set([".line", ".about", ".about-subtitle", ".about-tech", ".about-tech-cards"], {
+		  color: colorValue,
+		  opacity: opacityValue,
+	  });
   }
+
+  _initialize();
+
+  window
+	  .matchMedia("(prefers-color-scheme: dark)")
+	  .addEventListener("change", _setColors);
 </script>

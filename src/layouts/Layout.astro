@@ -1,6 +1,6 @@
 ---
 import "styles/global.scss";
-import {SEO} from 'astro-seo';
+import { SEO } from 'astro-seo';
 import profileImage from '../assets/profile/seo_picture.jpg'
 
 export interface Props {
@@ -8,7 +8,7 @@ export interface Props {
     description?: string;
 }
 
-const {title} = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!--
@@ -39,13 +39,13 @@ This project is also open source: https://github.com/RSickenberg/rsickenberg.me
             },
         }}
         extend={{
-            link: [{ rel: 'icon', type: 'image/ico', href: '/favicon.ico' }],
+            link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
         }}
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="generator" content={Astro.generator}/>
-    <meta name="theme-color" content="#00000" media="(prefers-color-scheme: dark)"/>
-    <meta name="theme-color" content="#FFFFF" media="(prefers-color-scheme: light)"/>
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)"/>
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)"/>
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
 
@@ -86,7 +86,7 @@ This project is also open source: https://github.com/RSickenberg/rsickenberg.me
 
 <script>
     import Lenis from "lenis";
-    import {gsap, ScrollTrigger} from "gsap/all";
+    import { gsap, ScrollTrigger } from "gsap/all";
     gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({

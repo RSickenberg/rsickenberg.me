@@ -1,6 +1,6 @@
-import {type MutableRef, useLayoutEffect, useRef} from "preact/hooks";
-import {gsap} from "gsap";
-import {isMobile} from "../utils/getScreenSize.ts";
+import { type MutableRef, useLayoutEffect, useRef } from "preact/hooks";
+import { gsap } from "gsap";
+import { isMobile } from "../utils/getScreenSize.ts";
 
 import projects from "../data/projects.json";
 
@@ -33,12 +33,17 @@ interface IPhotos {
     sizes: IMediaSizes,
 }
 
-const photos: IPhotos[] = projects.map((p) => {
-    return {media: p.media, sizes: p.mediaSizes};
-});
+interface ProjectListProps {
+    optimizedImages: Array<{ src: string; srcSet: { attribute: string }; attributes: { width: number; height: number } }>;
+}
+
+const photos: IPhotos[] = projects.map((p) => ({
+    media: p.media,
+    sizes: p.mediaSizes,
+}));
 
 // @ts-ignore
-export default function ProjectList({optimizedImages}: Array<object>) {
+export default function ProjectList({ optimizedImages }: ProjectListProps) {
     // This state variable keeps track of which item in the dropdown is currently active.
     // This is used to show that item is currently active.
     // The default value is -1 because the first item in the array is at index 0.
@@ -46,9 +51,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
     const mousePos = useRef({ x: 0, y: 0 });
     const imageYOffset = 140;
     let imageHandle: MutableRef<HTMLImageElement | null> = useRef(null);
-    const hasHandle = () => {
-        return imageHandle.current !== null || activeIndex.current !== -1;
-    };
+    const hasHandle = () => imageHandle.current !== null || activeIndex.current !== -1;
 
     // This code adds an event listener to the window that listens for mouse moves.
     // It also returns a function that removes the event listener after the component
@@ -69,7 +72,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
         // This function is called when the mouse moves.
         const handleMouseMove = (e: MouseEvent) => {
             // The mouse position is used to position the image.
-            mousePos.current = {x: e.clientX, y: e.clientY};
+            mousePos.current = { x: e.clientX, y: e.clientY };
             if (!ticking) {
                 requestAnimationFrame(updatePosition)
             }
@@ -142,7 +145,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
                 ref={(el: HTMLDivElement) => {
                     if (el) {
                         // @ts-ignore
-                        imageHandle.current = document.getElementById(el.children.item(activeIndex.current)?.id);
+                        imageHandle.current = document.getElementById(el.children.item(activeIndex.current)?.id) as HTMLImageElement;
                     }
                 }}
                 className="relative top-0 left-0 z-10 hidden w-auto h-auto md:block aspect-auto"
@@ -152,8 +155,7 @@ export default function ProjectList({optimizedImages}: Array<object>) {
 
                     return (
                             <img
-                                // @ts-ignore TS2322
-                                id={index}
+                                id={index.toString()}
                                 alt="A project picture"
                                 src={photo.media}
                                 className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-[shadow,transform] border-2 border-gray-600 dark:border-gray-200 shadow-2xl ${

@@ -9,11 +9,12 @@ interface ITech {
   parent?: number
 }
 
-const { tech, images }: { tech: ITech, images: [{key: string, value: Function}] } = Astro.props;
+const { tech, images }: { tech: ITech; images: { [key: string]: () => string } } = Astro.props;
 import { Image } from 'astro:assets'
 
 let imgClass = "w-[35%] lg:w-[45%] h-auto self-center sm:self-left sm:m-3";
-imgClass = tech.invertOnDark ? imgClass + " dark:invert" : imgClass;
+imgClass = tech.invertOnDark ? `${imgClass} dark:invert` : imgClass;
+
 
 let image = images[tech.imagePath]()
 ---
@@ -39,27 +40,24 @@ let image = images[tech.imagePath]()
   gsap.registerPlugin(ScrollTrigger);
 
   class CardTech extends HTMLElement {
-    constructor() {
-      super();
+	  constructor() {
+		  super();
+		  this._drawCards();
+	  }
 
-      const tech = this.dataset.techid;
-
-      const _drawCards = () => {
-        const card = document.getElementById(`tech-card-${tech}`);
-        gsap.set(card, { opacity: 0 });
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: card,
-            start: "top 95%",
-            end: "bottom 95%",
-            scrub: 1,
-          },
-        });
-        tl.to(card, { opacity: 1, duration: 0.8 });
-      };
-
-      _drawCards();
-    }
+	  _drawCards() {
+		  const tech = this.dataset.techid;
+		  const card = document.getElementById(`tech-card-${tech}`);
+		  gsap.set(card, { opacity: 0 });
+		  gsap.timeline({
+			  scrollTrigger: {
+				  trigger: card,
+				  start: "top 95%",
+				  end: "bottom 95%",
+				  scrub: 1,
+			  },
+		  }).to(card, { opacity: 1, duration: 1.2 });
+	  }
   }
 
   customElements.define("card-tech", CardTech);

@@ -26,57 +26,49 @@ import profileImage from '../assets/profile/antistatique_romain-31-web.jpg'
   import { isMinimalWidth, isMd, isSm, isXl } from "../utils/getColors";
   gsap.registerPlugin(ScrollTrigger);
 
-  // Make the picture fade in and out.
-  gsap.set("#picture", { opacity: 0 });
-  gsap.set("#picture-bg-border", { opacity: 0 });
+  function getDisplacement() {
+	  let x = 0, y = -320;
+	  if (isXl) {
+		  x = -150;
+	  } else if (isMinimalWidth && !isMd) {
+		  x = -80;
+		  y = -350;
+	  } else if (isMd && !isSm) {
+		  x = -45;
+		  y = -250;
+	  }
+	  return { x, y };
+  }
 
-  let getXDisplacement = () => {
-    if (isXl) {
-      return -150;
-    } else if (isMinimalWidth && !isMd) {
-      return -80;
-    } else if (isMd && !isSm) {
-      return -45;
-    } else {
-      return 0;
-    }
-  };
-
-  let getYDisplacement = () => {
-    if (isMinimalWidth) {
-      return -350;
-    } else if (isMd && !isSm) {
-      return -250;
-    } else {
-      return -320;
-    }
-  };
+  const { x, y } = getDisplacement();
+  gsap.set(["#picture", "#picture-bg-border"], { opacity: 0 });
 
   gsap.to("#picture", {
-    scrollTrigger: {
-      trigger: "#picture",
-      start: "top 100%",
-      end: "bottom 130%",
-      scrub: 1,
-      invalidateOnRefresh: true,
-      preventOverlaps: "picture",
-    },
-    opacity: 1,
-    y: -100,
-    ease: "power3.out",
+	  scrollTrigger: {
+		  trigger: "#picture",
+		  start: "top 100%",
+		  end: "bottom 130%",
+		  scrub: 1,
+		  invalidateOnRefresh: true,
+		  preventOverlaps: "picture",
+	  },
+	  opacity: 1,
+	  y: -100,
+	  ease: "power3.out",
   });
+
   gsap.to("#picture-bg-border", {
-    scrollTrigger: {
-      trigger: "#picture",
-      start: "top 100%",
-      end: "bottom 80%",
-      scrub: 1,
-      invalidateOnRefresh: true,
-      preventOverlaps: "picture-bg",
-    },
-    opacity: 1,
-    y: getYDisplacement(),
-    x: getXDisplacement(),
-    ease: "power1.out",
+	  scrollTrigger: {
+		  trigger: "#picture",
+		  start: "top 100%",
+		  end: "bottom 80%",
+		  scrub: 1,
+		  invalidateOnRefresh: true,
+		  preventOverlaps: "picture-bg",
+	  },
+	  opacity: 1,
+	  y: y,
+	  x: x,
+	  ease: "power1.out",
   });
 </script>

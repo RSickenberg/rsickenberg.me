@@ -1,18 +1,18 @@
 ---
-import {getImage} from "astro:assets";
+import { Icon } from "astro-icon/components";
+import { getImage } from "astro:assets";
 import testimonials from '../data/testimonials.json'
-import {Icon} from "astro-icon/components";
 import dayjs from 'dayjs'
 
 const images = import.meta.glob('/src/assets/testimonials/*.{png,jpg,jpeg}');
 let optimizedImages = [];
 for await (const testimonial of testimonials) {
-    optimizedImages[testimonial.id] = await getImage({
-        src: images[testimonial.picture](),
-        quality: "high",
-        widths: [80, 160, (images[testimonial.picture].width / 2)],
-        format: "webp"
-    });
+	optimizedImages[testimonial.id] = await getImage({
+		src: images[testimonial.picture](),
+		quality: "high",
+		widths: [80, 160, (images[testimonial.picture].width / 2)],
+		format: "webp"
+	});
 }
 ---
 
@@ -38,46 +38,39 @@ for await (const testimonial of testimonials) {
     ))}
 </section>
 <script>
-    import { gsap } from "gsap/all";
-    import { colors, alphaValues, isDarkMode } from "../utils/getColors";
+	import { gsap } from "gsap/all";
+	import { colors, alphaValues, isDarkMode } from "../utils/getColors";
 
-    function _renderTo() {
-        gsap.to("#testimonials", {
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-            delay: 1,
-            duration: 1,
-            ease: "power4.out",
-            scrollTrigger: {
-                trigger: "#testimonials",
-                start: "top 60%",
-                end: "bottom 100%",
-                scrub: 1,
-            },
-        });
-    }
+	function _initialize() {
+		_setColors();
+		gsap.set("#testimonials", { opacity: 0 });
+		_renderTo();
+	}
 
-    function _setColors() {
-        gsap.set("#testimonials", {
-            color: isDarkMode ? colors.light : colors.dark,
-            opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
-        });
-    }
+	function _setColors() {
+		const colorValue = isDarkMode ? colors.light : colors.dark;
+		const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
+		gsap.set("#testimonials", { color: colorValue, opacity: opacityValue });
+	}
 
-    function _initialize() {
-        _setColors()
+	function _renderTo() {
+		gsap.to("#testimonials", {
+			opacity: isDarkMode ? alphaValues.dark : alphaValues.light,
+			delay: 1,
+			duration: 1,
+			ease: "power4.out",
+			scrollTrigger: {
+				trigger: "#testimonials",
+				start: "top 60%",
+				end: "bottom 100%",
+				scrub: 1,
+			},
+		});
+	}
 
-        gsap.set("#testimonials", {
-            opacity: 0,
-        });
+	window
+		.matchMedia("(prefers-color-scheme: dark)")
+		.addEventListener("change", _setColors);
 
-        _renderTo();
-    }
-
-    window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", () => {
-            _setColors();
-        });
-
-    _initialize();
+	_initialize();
 </script>
