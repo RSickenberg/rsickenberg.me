@@ -7,7 +7,8 @@ module.exports = {
 	],
 	theme: {
 		fontFamily: {
-			sans: ['Satoshi', 'sans-serif'],
+			sans: ['Inter', 'ui-sans-serif'],
+			mono: ["Geist\ Mono", 'ui-monospace', 'SFMono-Regular']
 		},
 		extend: {},
 	},
