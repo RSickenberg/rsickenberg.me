@@ -24,7 +24,7 @@
     "@iconify-json/ph": "^1.2.2",
     "@sentry/astro": "^8.48.0",
     "@tailwindcss/typography": "^0.5.16",
-    "astro": "^5.1.5",
+    "astro": "^5.1.6",
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
     "astro-tailwind-config-viewer": "^2.0.1",
