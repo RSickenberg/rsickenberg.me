@@ -61,9 +61,10 @@ import Profile from "./Profile.astro";
 		  scrollTrigger: {
 			  trigger: ".about-container",
 			  endTrigger: ".about-subtitle",
-			  end: "bottom 40%",
 			  start: "top 80%",
-			  scrub: 2,
+			  end: "+=500",
+			  scrub: 3,
+			  once: true,
 		  }
 	  });
 	  tl.to(".about", { opacity: opacityValue, delay: 0.2, duration: 3.2, ease: "power4.inOut" })

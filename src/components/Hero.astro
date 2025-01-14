@@ -57,12 +57,12 @@
 
 		const tl = gsap.timeline({ smoothChildTiming: true });
 		tl.set('.cta', { opacity: 0, autoAlpha: 1 }, 0)
-			.to('.cta', {
-				opacity: 1,
-				duration: 2,
-				ease: 'elastic',
-				delay: 3
-			});
+		.to('.cta', {
+			opacity: 1,
+			duration: 2,
+			ease: 'elastic',
+			delay: 3
+		});
 
 		ScrollTrigger.create({
 			trigger: '.slogan',

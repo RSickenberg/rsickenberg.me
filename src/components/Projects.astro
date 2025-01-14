@@ -47,6 +47,7 @@ let optimizedImages = await Promise.all(projects.map(async (project) => {
                 start: "top",
                 end: "bottom 20%",
                 scrub: 1,
+				once: true,
             }
         });
         tl.to(".project-title", {
