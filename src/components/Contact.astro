@@ -84,8 +84,8 @@ const contactMediums: IContactMedium[] = [
     import {colors, alphaValues, isDarkMode} from "../utils/getColors";
 
     function _initialize() {
-        _setColors();
         gsap.set([".contact-line", ".contact-title", ".contact-subtitle", ".methods-grid"], {opacity: 0})
+        _setColors();
         _renderTo();
     }
 
@@ -128,10 +128,8 @@ const contactMediums: IContactMedium[] = [
 
     function _setColors() {
 		const colorValue = isDarkMode ? colors.light : colors.dark;
-		const opacityValue = isDarkMode ? alphaValues.dark : alphaValues.light;
         gsap.set([".contact-line", ".contact-title", ".contact-subtitle", ".methods-grid"], {
 			color: colorValue,
-			opacity: opacityValue,
         })
     }
 
