@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.32] - 2025-01-20
+### Security
+- Upgraded dependencies
+
+### Fixed
+- Enhanced animations
+
 ## [1.1.31] - 2025-01-14
 ### Fixed
 - Fixed scroll trigger on about component
@@ -392,7 +399,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.31...HEAD
+[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.32...HEAD
+[1.1.32]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.31...v1.1.32
 [1.1.31]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.30...v1.1.31
 [1.1.30]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.29...v1.1.30
 [1.1.29]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.28...v1.1.29

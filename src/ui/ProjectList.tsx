@@ -125,7 +125,7 @@ export default function ProjectList({ optimizedImages }: ProjectListProps) {
                         alt={project.name}
                         class="block md:hidden my-4 w-full object-cover rounded-3xl border-2 border-gray-600 dark:border-gray-200 shadow-2xl"
                         decoding={'auto'}
-                        loading={'eager'}
+                        loading={'lazy'}
                         srcset={optimizedImages[index].srcSet.attribute}
                         width={optimizedImages[index].attributes.width}
                         height={optimizedImages[index].attributes.height}
@@ -158,7 +158,7 @@ export default function ProjectList({ optimizedImages }: ProjectListProps) {
                                 id={index.toString()}
                                 alt="A project picture"
                                 src={photo.media}
-                                className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-[shadow,transform] border-2 border-gray-600 dark:border-gray-200 shadow-2xl ${
+                                className={`fixed scale-50 pointer-events-none select-none rounded-3xl transition-[shadow,transform] border-2 border-gray-600 dark:border-gray-200 shadow-2xl h-auto w-auto ${
                                     isActive ? "opacity-100" : "opacity-0"
                                 } ${projects[index].accent.shadow_class}`}
                                 key={index}
