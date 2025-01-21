@@ -120,12 +120,13 @@ export default function ProjectList({ optimizedImages }: ProjectListProps) {
                         <p class={'font-light md:font-thin font-sans text-sm text-gray-600 mt-2 sm:mt-0'}>{project.year} {project.eol ? ' - ' + project.eol : ''}</p>
                     </div>
 
+                    {/* Keep Eager in order to not have layout shift on iOS devices */}
                     <img
                         src={optimizedImages[index].src}
                         alt={project.name}
                         class="block md:hidden my-4 w-full object-cover rounded-3xl border-2 border-gray-600 dark:border-gray-200 shadow-2xl"
                         decoding={'auto'}
-                        loading={'lazy'}
+                        loading={'eager'}
                         srcset={optimizedImages[index].srcSet.attribute}
                         width={optimizedImages[index].attributes.width}
                         height={optimizedImages[index].attributes.height}
@@ -165,7 +166,7 @@ export default function ProjectList({ optimizedImages }: ProjectListProps) {
                                 width={optimizedImages[index].attributes.width}
                                 height={optimizedImages[index].attributes.height}
                                 decoding={'auto'}
-                                loading={'lazy'}
+                                loading={'eager'}
                                 srcset={optimizedImages[index].srcSet.attribute}
                                 style="top: var(--img-y); left: var(--img-x);"
                             />
