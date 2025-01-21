@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.1.34] - 2025-01-21
 ### Fixed
 - Fixed contact opacity bug
 
@@ -408,7 +410,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[Unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.33...HEAD
+[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.34...HEAD
+[1.1.34]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.33...v1.1.34
 [1.1.33]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.32...v1.1.33
 [1.1.32]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.31...v1.1.32
 [1.1.31]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.30...v1.1.31
