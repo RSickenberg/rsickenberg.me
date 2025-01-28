@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.35] - 2025-01-28
+### Fixed
+- Fixed opacity value missconfig on contact for gsap
+- Fixed astro/tailwind config to not include on everypage the @tailwind directives
+
+### Security
+- Upgraded dependencies
+
+## [1.1.35-0] - 2025-01-21
+### Changed
+- Removed Instagram contact for now
+
 ## [1.1.34] - 2025-01-21
 ### Fixed
 - Fixed contact opacity bug
@@ -410,7 +422,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.34...HEAD
+[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35...HEAD
+[1.1.35]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35-0...v1.1.35
+[1.1.35-0]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.34...v1.1.35-0
 [1.1.34]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.33...v1.1.34
 [1.1.33]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.32...v1.1.33
 [1.1.32]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.31...v1.1.32
