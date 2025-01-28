@@ -22,7 +22,9 @@ export default defineConfig({
         }
     },
     integrations: [
-        tailwind(),
+        tailwind({
+			applyBaseStyles: false
+		}),
         preact({
             compat: true
         }),
