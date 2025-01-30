@@ -5,4 +5,5 @@ export default function getScreenSize() {
     };
 }
 
-export const isMobile: boolean = (typeof localStorage !== 'undefined' && localStorage.mobile) || (typeof window !== 'undefined' && window.navigator.maxTouchPoints > 1);
+export const isMobile: boolean = (typeof localStorage !== 'undefined' && localStorage.mobile) ||
+    (typeof window !== 'undefined' && window.navigator.userAgent.match(/Android|BlackBerry|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i));

@@ -1,10 +1,10 @@
 import {defineConfig} from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 import preact from "@astrojs/preact";
 import icon from 'astro-icon';
 import partytown from "@astrojs/partytown";
-import tailwindConfigViewer from 'astro-tailwind-config-viewer';
+// import tailwindConfigViewer from 'astro-tailwind-config-viewer';
 
 import browserslist from "browserslist";
 import {resolveToEsbuildTarget} from "esbuild-plugin-browserslist";
@@ -18,13 +18,11 @@ export default defineConfig({
     vite: {
         build: {
             cssTarget: resolveToEsbuildTarget(browserslist(), {printUnknownTargets: false}),
-            resolveToEsbuildTarget: resolveToEsbuildTarget(browserslist(), {printUnknownTargets: false})
-        }
+            resolveToEsbuildTarget: resolveToEsbuildTarget(browserslist(), {printUnknownTargets: false}),
+        },
+		plugins: [tailwindcss()],
     },
     integrations: [
-        tailwind({
-			applyBaseStyles: false
-		}),
         preact({
             compat: true
         }),
@@ -53,9 +51,10 @@ export default defineConfig({
             changefreq: 'weekly',
             priority: 0.7
         }),
-        tailwindConfigViewer({
-            configFile: 'tailwind.config.cjs'
-        })],
+        // tailwindConfigViewer({
+        //     configFile: 'tailwind.config.cjs'
+        // })],
+		],
     site: 'https://rsickenberg.me',
     output: 'static',
 });
