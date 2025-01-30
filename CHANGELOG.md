@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.2.0] - 2025-01-30
 ### Changed
 - Changed TailwindCSS to V4
 
@@ -424,7 +426,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[Unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35...HEAD
+[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35...v1.2.0
 [1.1.35]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35-0...v1.1.35
 [1.1.35-0]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.34...v1.1.35-0
 [1.1.34]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.33...v1.1.34
