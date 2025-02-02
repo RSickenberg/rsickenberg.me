@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Fixed card tech layout
+
+### Security
+- Upgraded dependencies
 
 ## [1.2.0] - 2025-01-30
 ### Changed
@@ -426,7 +431,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.0...HEAD
 [1.2.0]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35...v1.2.0
 [1.1.35]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35-0...v1.1.35
 [1.1.35-0]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.34...v1.1.35-0
