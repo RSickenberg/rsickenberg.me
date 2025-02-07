@@ -23,7 +23,7 @@
     "@iconify-json/ph": "^1.2.2",
     "@sentry/astro": "^8.54.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.0.3",
+    "@tailwindcss/vite": "^4.0.4",
     "astro": "^5.2.5",
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
@@ -34,7 +34,7 @@
     "gsap": "^3.12.7",
     "lenis": "^1.1.20",
     "preact": "^10.25.4",
-    "tailwindcss": "^4.0.3",
+    "tailwindcss": "^4.0.4",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
