@@ -78,6 +78,8 @@
     "defaults, last 5 versions, not dead"
   ],
   "trustedDependencies": [
-    "@sentry/cli"
+    "@sentry/cli",
+    "esbuild",
+    "sharp"
   ]
 }
