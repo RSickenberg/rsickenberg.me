@@ -21,9 +21,9 @@
     "@astrojs/preact": "^4.0.5",
     "@astrojs/sitemap": "^3.2.1",
     "@iconify-json/ph": "^1.2.2",
-    "@sentry/astro": "^9.4.0",
+    "@sentry/astro": "^9.5.0",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.0.11",
+    "@tailwindcss/vite": "^4.0.12",
     "astro": "^5.4.2",
     "astro-icon": "^1.1.5",
     "astro-seo": "^0.8.4",
@@ -32,9 +32,9 @@
     "dayjs": "^1.11.13",
     "flowbite": "^3.1.2",
     "gsap": "^3.12.7",
-    "lenis": "^1.2.1",
+    "lenis": "^1.2.3",
     "preact": "^10.26.4",
-    "tailwindcss": "^4.0.11",
+    "tailwindcss": "^4.0.12",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
