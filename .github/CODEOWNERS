@@ -1,1 +1,4 @@
 *.js @RSickenberg
+/src @RSickenberg
+/.github @RSickenberg
+/public @RSickenberg
