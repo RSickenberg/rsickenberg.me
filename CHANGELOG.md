@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 - Upgraded dependencies
 
+### Changed
+- Updated CV to late 2025 version
+
 ## [1.2.6] - 2025-07-14
 ### Security
 - Upgraded dependencies
