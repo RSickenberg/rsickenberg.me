@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.2.8] - 2025-10-16
 ### Security
 - Upgraded dependencies
 
@@ -468,7 +470,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Few issues on dark mode and event listener
 
-[Unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.7...HEAD
+[unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.8...HEAD
+[1.2.8]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.7...v1.2.8
 [1.2.7]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.6...v1.2.7
 [1.2.6]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.4...v1.2.6
 [1.2.5]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.4...v1.2.5
