@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@release-it/keep-a-changelog": "^7.0.0",
-    "@typescript-eslint/parser": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.2",
     "dotenv-cli": "^10.0.0",
     "esbuild-plugin-browserslist": "^1.0.2",
     "eslint": "^9.38.0",
@@ -47,7 +47,7 @@
     "globals": "^16.4.0",
     "release-it": "^19.0.5",
     "sass-embedded": "^1.93.2",
-    "typescript-eslint": "^8.46.1"
+    "typescript-eslint": "^8.46.2"
   },
   "release-it": {
     "npm": {
