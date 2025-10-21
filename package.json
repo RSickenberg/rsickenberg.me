@@ -21,7 +21,7 @@
     "@astrojs/preact": "^4.1.1",
     "@astrojs/sitemap": "^3.6.0",
     "@iconify-json/ph": "^1.2.2",
-    "@sentry/astro": "^10.20.0",
+    "@sentry/astro": "^10.21.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.15",
     "astro": "^5.14.7",
