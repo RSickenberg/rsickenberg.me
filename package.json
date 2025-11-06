@@ -43,9 +43,9 @@
     "dotenv-cli": "^11.0.0",
     "esbuild-plugin-browserslist": "^1.0.2",
     "eslint": "^9.39.1",
-    "eslint-plugin-astro": "^1.4.0",
+    "eslint-plugin-astro": "^1.5.0",
     "globals": "^16.5.0",
-    "release-it": "^19.0.5",
+    "release-it": "^19.0.6",
     "sass-embedded": "^1.93.3",
     "typescript-eslint": "^8.46.3"
   },
