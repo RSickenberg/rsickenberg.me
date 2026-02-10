@@ -14,5 +14,13 @@
     "date": "2024-09-04",
     "picture": "/src/assets/testimonials/magali.jpeg",
     "position": "Responsable du Pôle Innovation et Clients @Services Industriels de Lausanne"
+  },
+  {
+    "id": 2,
+    "author": "Charles-Meldhine Madi Mnemoi",
+    "text": "\"J'ai eu l'occasion de collaborer avec <b>Romain</b> sur le projet open source eMush, au sein de l'association Eternaltwin. Son expertise en POO et bonnes pratiques de développement a été très utile pour améliorer la qualité de notre codebase. <br>Ses conseils sur l'utilisation systématique des DTOs nous ont notamment permis de gagner en maintenabilité. <br><b>Romain</b> est force de proposition et sait expliquer clairement ses recommandations. <br>Je recommande <b>Romain</b> pour toute mission nécessitant une expertise backend et une vision architecturale solide.\"",
+    "date": "2025-12-29",
+    "picture": "/src/assets/testimonials/charles.jpeg",
+    "position": "Lead Développeur sur un projet Open-Source."
   }
 ]
