@@ -38,16 +38,16 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "@release-it/keep-a-changelog": "^7.0.0",
-    "@typescript-eslint/parser": "^8.54.0",
+    "@release-it/keep-a-changelog": "^7.0.1",
+    "@typescript-eslint/parser": "^8.55.0",
     "dotenv-cli": "^11.0.0",
     "esbuild-plugin-browserslist": "^2.0.0",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "eslint-plugin-astro": "^1.5.0",
-    "globals": "^17.1.0",
+    "globals": "^17.3.0",
     "release-it": "^19.2.4",
     "sass-embedded": "^1.97.3",
-    "typescript-eslint": "^8.54.0"
+    "typescript-eslint": "^8.55.0"
   },
   "release-it": {
     "npm": {
