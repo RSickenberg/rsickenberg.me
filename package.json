@@ -38,7 +38,6 @@
     "zustand": "^5.0.12"
   },
   "devDependencies": {
-    "@release-it/keep-a-changelog": "^7.0.1",
     "@typescript-eslint/parser": "^8.57.2",
     "dotenv-cli": "^11.0.0",
     "esbuild-plugin-browserslist": "^2.0.0",
@@ -48,32 +47,6 @@
     "release-it": "^19.2.4",
     "sass-embedded": "^1.98.0",
     "typescript-eslint": "^8.57.2"
-  },
-  "release-it": {
-    "npm": {
-      "publish": false
-    },
-    "github": {
-      "release": true,
-      "releaseName": "Release ${version}",
-      "preRelease": false,
-      "draft": false
-    },
-    "git": {
-      "requireCleanWorkingDir": false,
-      "commitMessage": "Release ${version}",
-      "tagName": "v${version}",
-      "tag": true,
-      "requiredBranch": "main"
-    },
-    "plugins": {
-      "@release-it/keep-a-changelog": {
-        "filename": "CHANGELOG.md",
-        "strictLatest": true,
-        "addUnreleased": true,
-        "addVersionUrl": true
-      }
-    }
   },
   "browserslist": [
     "defaults, last 5 versions, not dead"
