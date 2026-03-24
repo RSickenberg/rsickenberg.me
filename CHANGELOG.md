@@ -1,567 +1,1623 @@
-# Changelog
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
-
-## [1.2.10] - 2026-02-10
-### Security
-- Upgraded dependencies
-
-### Added
-- New testimonial from 2025.12.29
-- New CV from 2026.03.24
-
-## [1.2.9] - 2025-11-27
-### Security
-- Upgraded dependencies
-
-## [1.2.8] - 2025-10-16
-### Security
-- Upgraded dependencies
-
-## [1.2.7] - 2025-09-01
-### Security
-- Upgraded dependencies
-
-### Changed
-- Updated CV to late 2025 version
-
-## [1.2.6] - 2025-07-14
-### Security
-- Upgraded dependencies
-
-### Changed
-- Changed Deprecation notice on Sentry
-
-### Deprecated
-- Removed Sentry from astro.config.mjs
-
-## [1.2.5] - 2025-05-15
-### Security
-- Upgraded dependencies
-
-## [1.2.4] - 2025-05-06
-### Security
-- Upgraded dependencies
-
-## [1.2.3] - 2025-04-06
-### Security
-- Upgraded dependencies
-
-## [1.2.2] - 2025-03-06
-### Security
-- Upgraded dependencies
-
-## [1.2.1] - 2025-02-02
-### Fixed
-- Fixed card tech layout
-
-### Security
-- Upgraded dependencies
-
-## [1.2.0] - 2025-01-30
-### Changed
-- Changed TailwindCSS to V4
-
-## [1.1.35] - 2025-01-28
-### Fixed
-- Fixed opacity value missconfig on contact for gsap
-- Fixed astro/tailwind config to not include on everypage the @tailwind directives
-
-### Security
-- Upgraded dependencies
-
-## [1.1.35-0] - 2025-01-21
-### Changed
-- Removed Instagram contact for now
-
-## [1.1.34] - 2025-01-21
-### Fixed
-- Fixed contact opacity bug
-
-### Changed
-- Changed project loading from async to eager to bypass layout shift
-
-## [1.1.33] - 2025-01-20
-### Fixed
-- Fixed contact opacity bug
-
-## [1.1.32] - 2025-01-20
-### Security
-- Upgraded dependencies
-
-### Fixed
-- Enhanced animations
-
-## [1.1.31] - 2025-01-14
-### Fixed
-- Fixed scroll trigger on about component
-
-## [1.1.30] - 2025-01-12
-### Fixed
-- Fixed NBSP testimonials source
-- Fixed scroll trigger on about component
-
-## [1.1.29] - 2025-01-12
-### Changed
-- Changed font to Inter and Geist Mono
-
-### Security
-- Upgraded dependencies
-
-## [1.1.28] - 2025-01-05
-### Fixed
-- Enhanced code readability
-
-### Security
-- Upgraded dependencies
-
-## [1.1.27] - 2024-12-26
-### Changed
-- Changed lenis distribution
-- Changed some GSAP timelines
-- CTA scroll is gc after animation
-
-### Fixed
-- Fixed multiple GSAP scroll trigger registrations
-- Fixed some visuals alignements
-- Fixed lazy layout shift into mobile project images
-- Fixed some opacity on project
-
-### Removed
-- Removed old lenis distribution
-- Removed commented code
-
-## [1.1.26] - 2024-12-26
-### Changed
-- Performances: Changed image decoding to auto and lazy loaded
-- Performances: Preact hover images *should* not be rendered on mobile
-- Performances: Preact Throttled less mouse position to have smoother experience
-- Performances: Preact Used browser API to get requestAF and ensure ticking is correctly done
-
-## [1.1.25] - 2024-12-25
-### Changed
-- Projects: Updated the CDC colors
-
-## [1.1.24] - 2024-12-24
-### Added
-- Added CDC Project
-- Added Project year
-- Added Project End-of-life
-
-### Security
-- Upgraded dependencies
-
-## [1.1.23] - 2024-12-03
-### Security
-- Upgraded dependencies
-
-## [1.1.22] - 2024-11-16
-### Security
-- Upgraded dependencies
-
-## [1.1.21] - 2024-11-02
-### Security
-- Upgraded dependencies
-
-## [1.1.20] - 2024-10-23
-### Security
-- Upgraded dependencies
-
-## [1.1.19] - 2024-10-16
-### Security
-- Upgraded dependencies
-
-## [1.1.18] - 2024-09-19
-### Security
-- Upgraded dependencies
-
-## [1.1.17] - 2024-09-11
-### Security
-- Upgraded dependencies
-
-## [1.1.16] - 2024-09-06
-### Security
-- Upgraded dependencies
-
-## [1.1.15] - 2024-09-06
-### Fixed
-- Fixed testimonials typo
-
-## [1.1.14] - 2024-09-04
-### Changed
-- PDF: Updated PDF to V5
-
-## [1.1.13] - 2024-09-04
-### Fixed
-- Fixed testimonials picture quality
-
-## [1.1.12] - 2024-09-04
-### Added
-- Added SIL testimonial
-
-## [1.1.11] - 2024-09-02
-### Added
-- Sitemap
-- Licence
-
-## [1.1.10] - 2024-09-01
-### Added
-- Browserlist support on build time
-
-## [1.1.9] - 2024-09-01
-### Changed
-- React: Component project is not recreated each mouse move + optimized perfs
-
-## [1.1.8] - 2024-09-01
-### Changed
-- Tweaked testimonial divider date
-
-## [1.1.7] - 2024-09-01
-### Added
-- Feat: Added optimized images for project
-
-## [1.1.6] - 2024-08-31
-### Fixed
-- Fixed #343
-- Fixed #342
-- Fixed #341
-- Fixed few gaps here and there
-
-### Added
-- Added more projects to the highlight
-
-### Changed
-- Project list & Title is a bit different now
-
-## [1.1.5] - 2024-08-30
-### Fixed
-- Fixed sutter on mobile
-
-## [1.1.4] - 2024-08-30
-### Fixed
-- Fixed GSAP Projects anim
-
-## [1.1.3] - 2024-08-30
-### Fixed
-- Fixed GSAP CTA anim
-
-## [1.1.2] - 2024-08-30
-### Added
-- Testimonials: GSAP
-
-## [1.1.1] - 2024-08-30
-### Changed
-- Sticky CTA text is more visible
-
-## [1.1.0] - 2024-08-30
-### Added
-- Call to action sticky
-- Tooltips on contact methods
-- Testimonials
-
-### Changed
-- Switched icons library
-
-### Fixed
-- Fixed tech cards on iPad Pro 13'' layout
-
-## [1.0.10] - 2024-08-29
-### Security
-- Upgraded dependencies
-
-## [1.0.9] - 2024-08-16
-### Security
-- Upgraded dependencies
-
-## [1.0.8] - 2024-08-09
-### Changed
-- Contact: Removed X
-
-### Added
-- Contact: Added Instagram
-- Eslint
-
-## [1.0.7] - 2024-08-09
-### Security
-- Upgraded dependencies
-
-## [1.0.6] - 2024-07-24
-### Changed
-- Release-it rework
-
-### Security
-- Upgraded dependencies
-
-### Fixed
-- Fixed CTA beeing visible on first page draw
-
-## [1.0.5] - 2024-07-17
-
-## [1.0.4] - 2024-07-10
-### Added
-- PDF V4
-- Darkmode: Tech cards now have white shadow casted
-
-## [1.0.3] - 2024-07-09
-### Fixed
-- SEO: Fixed picture with a new one
-
-## [1.0.2] - 2024-07-09
-### Added
-- SEO optimisations
-
-### Fixed
-- Changed links to spans
-
-## [1.0.1] - 2024-07-09
-### Fixed
-- Few animations fixes
-
-### Changed
-- Mobile CTA behaviour is more visible
-
-### Added
-- Extra animation to change Y axis on headline when scrolled
-
-## [1.0.0] - 2024-07-09
-### Added
-- Production ready
-- Favicon
-
-### Changed
-- Texts are now fully set
-- Page title is different
-
-### Fixed
-- Few visuals fixes
-- Few animations fixes
-
-## [0.2.10] - 2024-07-05
-### Fixed
-- Fixed package-lock asap
-
-## [0.2.9] - 2024-07-05
-### Changed
-- Dependabot will now update bun lockdb + group deps
-
-## [0.2.8] - 2024-05-14
-### Changed
-- Fixed twitter handle
-
-## [0.2.7] - 2024-05-14
-### Security
-- Upgraded dependencies
-
-## [0.2.6] - 2024-03-13
-### Security
-- Upgrade latest packages
-- Upgrade gh actions
-
-## [0.2.5] - 2024-03-09
-### Added
-- Added Sentry integration
-
-## [0.2.4] - 2024-03-09
-### Added
-- Added PartyTown for Gtag
-
-## [0.2.3] - 2024-03-09
-### Security
-- Upgrade latest packages
-
-## [0.2.2] - 2024-02-10
-### Security
-- Upgrade latest packages
-
-## [0.2.1] - 2024-02-02
-### Added
-- Tech images are now builded and optimized for the different navigator sizes
-
-### Fixed
-- Fixed few gaps on projects
-
-### Security
-- Upgrade latest packages
-
-## [0.2.0] - 2023-11-29
-### Fixed
-- Fixed few grammar issues
-
-### Security
-- Upgrade latest packages
-
-### Changed
-- Dependabot should check updates on a daily basis now
-- Some styles corrections with the grids and shadows
-
-### Added
-- Project show Fortnite Wiki but deprecated, now the title is over-lined
-
-## [0.1.2] - 2023-11-29
-### Fixed
-- Fixed a tailwind issue when used computed style class
-
-## [0.1.1] - 2023-11-29
-### Added
-- Contact mediums are build programmatically
-- Contact mediums have border radius to fit the site homogeneity
-
-### Fixed
-- Fixed few styles on techs
-
-## [0.1.0] - 2023-11-28
-### Added
-- New contact UI.
-
-### Fixed
-- Fixed few bugs and glitches in the UI and tweaked some animations.
-- Fixed contact on mobile
-
-### Security
-- Upgrade latest packages
-
-### Changed
-- Few changes on the gap about technologies
-
-## [0.0.8] - 2023-06-24
-### Security
-- Upgrade latest packages
-
-## [0.0.7] - 2023-05-26
-### Security
-- Upgrade latest packages
-
-### Fixed
-- Fixed rendering issue when multiple projects are rendered
-
-## [0.0.6] - 2023-04-28
-### Added
-- Project: The Project Thumbnail follows the mouse position
-
-### Security
-- Upgrade latest packages
-
-## [0.0.6-1] - 2023-04-17
-### Security
-- Upgrade latest packages
-
-## [0.0.6-0] - 2023-04-04
-### Fixed
-- Fixed an issue when the navbar was flashing before the first animations
-
-### Security
-- Upgrade latest packages
-
-## [0.0.5] - 2023-03-12
-### Security
-- Upgrade latest packages
-
-## [0.0.4] - 2023-02-13
-### Added
-- Profile pictures animations and technologies are now correct
-
-## [0.0.3] - 2023-01-11
-### Changed
-- changed the library of smooth scrolling
-
-### Added
-- Technology cards
-- GSAP scroll spy
-
-## [0.0.2] - 2023-01-10
-### Changed
-- release-it changelog versioning
-
-### Added
-- Technology list
-
-### Fixed
-- Few issues on dark mode and event listener
-
-[Unreleased]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.10...HEAD
-[1.2.10]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.9...v1.2.10
-[1.2.9]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.8...v1.2.9
-[1.2.8]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.7...v1.2.8
-[1.2.7]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.6...v1.2.7
-[1.2.6]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.4...v1.2.6
-[1.2.5]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.4...v1.2.5
-[1.2.4]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.3...v1.2.4
-[1.2.3]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.2...v1.2.3
-[1.2.2]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.0...v1.2.2
-[1.2.1]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35...v1.2.0
-[1.1.35]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35-0...v1.1.35
-[1.1.35-0]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.34...v1.1.35-0
-[1.1.34]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.33...v1.1.34
-[1.1.33]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.32...v1.1.33
-[1.1.32]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.31...v1.1.32
-[1.1.31]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.30...v1.1.31
-[1.1.30]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.29...v1.1.30
-[1.1.29]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.28...v1.1.29
-[1.1.28]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.27...v1.1.28
-[1.1.27]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.26...v1.1.27
-[1.1.26]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.25...v1.1.26
-[1.1.25]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.24...v1.1.25
-[1.1.24]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.23...v1.1.24
-[1.1.23]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.22...v1.1.23
-[1.1.22]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.21...v1.1.22
-[1.1.21]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.20...v1.1.21
-[1.1.20]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.19...v1.1.20
-[1.1.19]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.18...v1.1.19
-[1.1.18]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.17...v1.1.18
-[1.1.17]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.16...v1.1.17
-[1.1.16]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.15...v1.1.16
-[1.1.15]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.14...v1.1.15
-[1.1.14]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.13...v1.1.14
-[1.1.13]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.12...v1.1.13
-[1.1.12]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.11...v1.1.12
-[1.1.11]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.10...v1.1.11
-[1.1.10]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.9...v1.1.10
-[1.1.9]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.8...v1.1.9
-[1.1.8]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.7...v1.1.8
-[1.1.7]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.6...v1.1.7
-[1.1.6]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.5...v1.1.6
-[1.1.5]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.4...v1.1.5
-[1.1.4]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.3...v1.1.4
-[1.1.3]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.2...v1.1.3
-[1.1.2]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.1...v1.1.2
-[1.1.1]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.0...v1.1.1
-[1.1.0]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.10...v1.1.0
-[1.0.10]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.9...v1.0.10
-[1.0.9]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.8...v1.0.9
-[1.0.8]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.7...v1.0.8
-[1.0.7]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.6...v1.0.7
-[1.0.6]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.5...v1.0.6
-[1.0.5]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.4...v1.0.5
-[1.0.4]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.3...v1.0.4
-[1.0.3]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.2...v1.0.3
-[1.0.2]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.1...v1.0.2
-[1.0.1]: https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.0...v1.0.1
-[1.0.0]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.10...v1.0.0
-[0.2.10]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.9...v0.2.10
-[0.2.9]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.8...v0.2.9
-[0.2.8]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.7...v0.2.8
-[0.2.7]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.6...v0.2.7
-[0.2.6]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.5...v0.2.6
-[0.2.5]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.4...v0.2.5
-[0.2.4]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.3...v0.2.4
-[0.2.3]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.1...v0.2.3
-[0.2.2]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.2.1...v0.2.2
-[0.2.1]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.2...v0.2.1
-[0.2.0]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.2...v0.2.0
-[0.1.2]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.1...v0.1.2
-[0.1.1]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.1.0...v0.1.1
-[0.1.0]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.8...v0.1.0
-[0.0.8]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.7...v0.0.8
-[0.0.7]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.6...v0.0.7
-[0.0.6]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.6-1...v0.0.6
-[0.0.6-1]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.6-0...v0.0.6-1
-[0.0.6-0]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.5...v0.0.6-0
-[0.0.5]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.4...v0.0.5
-[0.0.4]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.3...v0.0.4
-[0.0.3]: https://github.com/RSickenberg/rsickenberg.me-next/compare/v0.0.2...v0.0.3
-[0.0.2]: https://github.com/RSickenberg/rsickenberg.me-next/releases/tag/v0.0.2
+### Changelog
+
+All notable changes to this project will be documented in this file. Dates are displayed in UTC.
+
+Generated by [`auto-changelog`](https://github.com/CookPete/auto-changelog).
+
+#### [v1.3.0](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.10...v1.3.0)
+
+- chore(deps-dev): bump the dev-deps group with 3 updates [`#767`](https://github.com/RSickenberg/rsickenberg.me/pull/767)
+- chore(deps): bump the prod-deps group with 2 updates [`#770`](https://github.com/RSickenberg/rsickenberg.me/pull/770)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`#769`](https://github.com/RSickenberg/rsickenberg.me/pull/769)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`#766`](https://github.com/RSickenberg/rsickenberg.me/pull/766)
+- fix(release): updated release-it to most recent ways to do it [`aa8241d`](https://github.com/RSickenberg/rsickenberg.me/commit/aa8241dba606311adc868f008024e99db8b8edea)
+- build(bun): updated deps [`aee73fa`](https://github.com/RSickenberg/rsickenberg.me/commit/aee73fa842e2aad3c38950884c40bfbee0ca36bc)
+- chore(deps): bump the prod-deps group across 1 directory with 7 updates [`18f7d05`](https://github.com/RSickenberg/rsickenberg.me/commit/18f7d05518339e039e7ad9bc02bfdca7dc16ea72)
+- chore(deps): bump the prod-deps group across 1 directory with 7 updates [`ad10711`](https://github.com/RSickenberg/rsickenberg.me/commit/ad10711af70be24e89885827bee2fd31579f114c)
+- chore(deps): bump the prod-deps group across 1 directory with 5 updates [`99fb943`](https://github.com/RSickenberg/rsickenberg.me/commit/99fb943f72d616f14fdb150a604ba589d00ed8a1)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`e011b30`](https://github.com/RSickenberg/rsickenberg.me/commit/e011b30b92b8c066ed77599acf2395c28a0d9c46)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`20bb253`](https://github.com/RSickenberg/rsickenberg.me/commit/20bb2534c6dc2d400b0098ffa0a2c456c1c55c62)
+- docs(cv): updated curriculum vitae [`ffe18bf`](https://github.com/RSickenberg/rsickenberg.me/commit/ffe18bf09786ed07016be4aac40b05eda6369c04)
+- docs(changelog): changelog bump [`f723441`](https://github.com/RSickenberg/rsickenberg.me/commit/f7234413595c95bc5f89788c8fabfe498af4e191)
+- Merge pull request #794 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f54150af0e [`03e3529`](https://github.com/RSickenberg/rsickenberg.me/commit/03e352986c157399832195bf34fef67b9ec9e9c5)
+- chore(deps): update astro requirement in the prod-deps group [`1d50aab`](https://github.com/RSickenberg/rsickenberg.me/commit/1d50aab37ca9bbe81e5a0e3c9ea307097e7fd60b)
+- Merge pull request #792 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-d8c3f78af6 [`ede298a`](https://github.com/RSickenberg/rsickenberg.me/commit/ede298a72eb657f3e41844b6e3cbd5b96b27db13)
+- Merge pull request #791 from RSickenberg/dependabot/github_actions/dev/withastro/action-6 [`269c4b2`](https://github.com/RSickenberg/rsickenberg.me/commit/269c4b2468b5452540e97398b5d9c92dd0eb15b4)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`6e70cdd`](https://github.com/RSickenberg/rsickenberg.me/commit/6e70cdd1d8bd0c601fe73ab929d271f122f56af7)
+- chore(deps): bump withastro/action from 5 to 6 [`e66967e`](https://github.com/RSickenberg/rsickenberg.me/commit/e66967e8ce193138e707755323b0005e1938017b)
+- Merge pull request #790 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-4ddb6c0d23 [`1563a29`](https://github.com/RSickenberg/rsickenberg.me/commit/1563a294aef5828390c79d7d3c7c3eb605ff5e26)
+- Merge pull request #786 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-544ac905de [`78fa934`](https://github.com/RSickenberg/rsickenberg.me/commit/78fa9340f4a69a3e8f94855c0da8fe47452f61b4)
+- Merge pull request #788 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f9b26a3d67 [`0fb78ff`](https://github.com/RSickenberg/rsickenberg.me/commit/0fb78ffda913ce91bd1ca4f0527cd74157943284)
+- Merge pull request #783 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-6029616a12 [`b1a30a9`](https://github.com/RSickenberg/rsickenberg.me/commit/b1a30a9e2fb2eda42c731616d7afdf4ff98bcce8)
+- Merge pull request #782 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-4440f755b8 [`b643991`](https://github.com/RSickenberg/rsickenberg.me/commit/b643991d5cea88afe7abd1ef114be06d329437fb)
+- Merge pull request #778 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-0a95bf8819 [`cacf6df`](https://github.com/RSickenberg/rsickenberg.me/commit/cacf6df7ab85975f62ac35cf0fadf6e69555ab39)
+- Merge pull request #776 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-030533b0b8 [`cffe54d`](https://github.com/RSickenberg/rsickenberg.me/commit/cffe54d1a81db4940711dbfeacfc63f4b0081519)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`bb9503f`](https://github.com/RSickenberg/rsickenberg.me/commit/bb9503f1b101286ac866571cde1bf085d9673a5d)
+- chore(deps-dev): update globals requirement in the dev-deps group [`c5a54da`](https://github.com/RSickenberg/rsickenberg.me/commit/c5a54dae09ed60eb8f7cd2778fb1663a2954d4cd)
+- Merge pull request #777 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-964238ac6d [`076a6c6`](https://github.com/RSickenberg/rsickenberg.me/commit/076a6c6689f18040aabd7009d0b53188b541f447)
+- Merge pull request #772 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-b3e910318c [`e7d1e35`](https://github.com/RSickenberg/rsickenberg.me/commit/e7d1e35b9e616c94697c7c955feddcc5794087c1)
+- Merge pull request #775 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f7b0241e0a [`2702414`](https://github.com/RSickenberg/rsickenberg.me/commit/2702414ae874297a511c3ebd260e2e3ee88d7e40)
+- chore(deps): update astro requirement in the prod-deps group [`25b5b0d`](https://github.com/RSickenberg/rsickenberg.me/commit/25b5b0ded71e59898ecf89430b4a02a4915511d0)
+- Merge pull request #774 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-1809b38577 [`3ba6937`](https://github.com/RSickenberg/rsickenberg.me/commit/3ba6937eb6b056d4a5031a1686d5c93171234073)
+
+#### [v1.2.10](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.9...v1.2.10)
+
+> 10 February 2026
+
+- feat(testimonials): added a new testimonial [`57c173f`](https://github.com/RSickenberg/rsickenberg.me/commit/57c173f7b806578c83d1bd4ed143c327aec091d9)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 5 updates [`9954895`](https://github.com/RSickenberg/rsickenberg.me/commit/9954895425bf2b392a2243d89b17f5c5aa531629)
+- Release 1.2.10 [`78ed1f4`](https://github.com/RSickenberg/rsickenberg.me/commit/78ed1f4f2529bee810ce5f08ae59935876e7cf0c)
+- docs(changelog): bump changelog [`448e803`](https://github.com/RSickenberg/rsickenberg.me/commit/448e803d98e233e3946e409b85bd39e25a157d74)
+- Merge pull request #764 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-13e97ac959 [`53bf493`](https://github.com/RSickenberg/rsickenberg.me/commit/53bf493deca518e2e129fbcf64bb9fa20036ac75)
+- Merge pull request #763 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-5e64f7b7eb [`83f0332`](https://github.com/RSickenberg/rsickenberg.me/commit/83f0332ff0a9b84fae9ffd155c38b8634a7a6e9d)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 5 updates [`487d988`](https://github.com/RSickenberg/rsickenberg.me/commit/487d988c76eb6bd271d1bb53f3eadb261d4e7c3b)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`e92eaaf`](https://github.com/RSickenberg/rsickenberg.me/commit/e92eaaf6ab5e3bab3596abbbb81bbcbab614da4a)
+- chore(deps): bump the prod-deps group with 3 updates [`3435f5b`](https://github.com/RSickenberg/rsickenberg.me/commit/3435f5bd51b51d9d3013ca4798fb29ea4af0fb03)
+- Merge pull request #762 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-50ca8ba246 [`28cf544`](https://github.com/RSickenberg/rsickenberg.me/commit/28cf54435fd9a9e26a39efc178cedbbd63cc68bd)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`235fede`](https://github.com/RSickenberg/rsickenberg.me/commit/235fede1cffcc56a5bdd5228aea2a1e8fa2204a2)
+- chore(deps): bump the prod-deps group with 2 updates [`018b45a`](https://github.com/RSickenberg/rsickenberg.me/commit/018b45aa8e161a01ea9cbc3e6fe50e61a849792c)
+- Merge pull request #761 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-941eaca7b0 [`6d09e16`](https://github.com/RSickenberg/rsickenberg.me/commit/6d09e16f1acfd298b1d579beabf373c8cc938274)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`2975011`](https://github.com/RSickenberg/rsickenberg.me/commit/297501176a5f103aa3e63db435c85445f8b666c6)
+- Merge pull request #758 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-154602adae [`c5428b4`](https://github.com/RSickenberg/rsickenberg.me/commit/c5428b4d585e9752e04fca5ee29a42835048825e)
+- chore(deps): bump the prod-deps group across 1 directory with 7 updates [`d39907a`](https://github.com/RSickenberg/rsickenberg.me/commit/d39907abb167b3271dc4527b046ce0f13c227c35)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`e0ca114`](https://github.com/RSickenberg/rsickenberg.me/commit/e0ca11426446f82cee7f64e22d8bff91f2b11fda)
+- Merge pull request #757 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-6871a50012 [`d7cc3c9`](https://github.com/RSickenberg/rsickenberg.me/commit/d7cc3c9ed799a3c3e365649d3eee71f841251649)
+- chore(deps): bump the prod-deps group across 1 directory with 5 updates [`7625cb0`](https://github.com/RSickenberg/rsickenberg.me/commit/7625cb03c62ea9da5d4624612114477f4bf70310)
+- chore(deps): bump the prod-deps group with 4 updates [`f3e0201`](https://github.com/RSickenberg/rsickenberg.me/commit/f3e0201fddf669a57aa889a7b9e4af8c892737ec)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`c203473`](https://github.com/RSickenberg/rsickenberg.me/commit/c203473209f5eb2e311061ac86ac32360f5677a6)
+- chore(deps): bump the prod-deps group with 2 updates [`3f6ca22`](https://github.com/RSickenberg/rsickenberg.me/commit/3f6ca224b3dcec1991de334fde8a50ba817efb4a)
+- Merge pull request #754 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-e7c8817168 [`f35ef59`](https://github.com/RSickenberg/rsickenberg.me/commit/f35ef592c74cc10e2408f33884d38b64e8eb15e1)
+- chore(deps): bump the prod-deps group with 2 updates [`2e1ce78`](https://github.com/RSickenberg/rsickenberg.me/commit/2e1ce78951f4d0f231c050cd29497fbb74dd6c28)
+- Merge pull request #755 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-ecbc7cb023 [`f755ee7`](https://github.com/RSickenberg/rsickenberg.me/commit/f755ee7d96217b9441ef6f24c27b3f4969759c89)
+- build(bun): updated deps [`e791b5b`](https://github.com/RSickenberg/rsickenberg.me/commit/e791b5be55247f924df68def9abfe79d27bf91ef)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`810ae81`](https://github.com/RSickenberg/rsickenberg.me/commit/810ae81d05715e15d6fe233514ea9f773904682d)
+- Merge pull request #751 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-4a5df33d26 [`5469667`](https://github.com/RSickenberg/rsickenberg.me/commit/5469667fae2738747dccfd822d3e9894bccaa814)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`bcaa8b6`](https://github.com/RSickenberg/rsickenberg.me/commit/bcaa8b6b578d05ed1da919abec1e78e73c65aa95)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`876082a`](https://github.com/RSickenberg/rsickenberg.me/commit/876082a02a42ae17ce5a9a0961c6c5c28d362f72)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`20581c2`](https://github.com/RSickenberg/rsickenberg.me/commit/20581c20ec4135dd62b1c425c6fb439e9f220ece)
+- Merge pull request #752 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c3301d4cd1 [`5c7a98a`](https://github.com/RSickenberg/rsickenberg.me/commit/5c7a98a6684f1141aa04c7c60f770175e53c01e4)
+- chore(deps): bump the prod-deps group with 2 updates [`9a8c383`](https://github.com/RSickenberg/rsickenberg.me/commit/9a8c383ed7da99135b16bc139482f43ea5bd9471)
+- Merge pull request #746 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-cf246b5dba [`c64e13a`](https://github.com/RSickenberg/rsickenberg.me/commit/c64e13af93e6e814b64307e6d9e70c8d7146471d)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`e9674a3`](https://github.com/RSickenberg/rsickenberg.me/commit/e9674a32558eaea9c41c51b119b8e9b7bacf8793)
+- Merge pull request #750 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-cbf3f3605e [`36e3139`](https://github.com/RSickenberg/rsickenberg.me/commit/36e31398220a73266f82a6921a23a7d5df140431)
+- Merge pull request #748 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-4093acdc09 [`277e925`](https://github.com/RSickenberg/rsickenberg.me/commit/277e9251f725dd6ccf1540ea1977e89ca83aadb9)
+- Merge pull request #745 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-233a841c9b [`e62941e`](https://github.com/RSickenberg/rsickenberg.me/commit/e62941eef174ca4effc1344749655737ea4fd828)
+- chore(deps): update astro requirement in the prod-deps group [`67a8fc5`](https://github.com/RSickenberg/rsickenberg.me/commit/67a8fc5f88edaa5d9a448f8b824458cb09cdd0bc)
+- Merge pull request #744 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-b01b2922fd [`9fa6d5a`](https://github.com/RSickenberg/rsickenberg.me/commit/9fa6d5a40c699eae3b48e67f78b7167e355621d9)
+- Merge pull request #742 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-09c3f1726e [`5bb26f6`](https://github.com/RSickenberg/rsickenberg.me/commit/5bb26f6bf4e33725ede6c3a9aacfbbf08d21582e)
+- Merge pull request #733 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-107ce0f201 [`349963b`](https://github.com/RSickenberg/rsickenberg.me/commit/349963b1a553ba309ffafc8a474335a5945a12b5)
+- Merge pull request #734 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-4bb922a330 [`9756dba`](https://github.com/RSickenberg/rsickenberg.me/commit/9756dba3b757f0a612cc0e9d6ebe43c0aef15c5e)
+- Merge pull request #728 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-cbeeb7e7f7 [`a80b812`](https://github.com/RSickenberg/rsickenberg.me/commit/a80b812e6689ad0f1fc24fc9f460897261023547)
+- Merge pull request #729 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c9147a77d1 [`b0f7d67`](https://github.com/RSickenberg/rsickenberg.me/commit/b0f7d670736c927d4235273a0c6ccd3301ea5345)
+- chore(deps): bump the prod-deps group with 2 updates [`2a2a89a`](https://github.com/RSickenberg/rsickenberg.me/commit/2a2a89afd19082ce03f1df74d7b3e91cabd450aa)
+- Merge pull request #727 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-74113dda49 [`a56655c`](https://github.com/RSickenberg/rsickenberg.me/commit/a56655c8cb46d5abff3174f7fa45928d142fc3ea)
+- chore(deps): update gsap requirement in the prod-deps group [`16f420e`](https://github.com/RSickenberg/rsickenberg.me/commit/16f420e13dcd09639218689081fc56b8804b16bd)
+- Merge pull request #726 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-74020135e0 [`873ded7`](https://github.com/RSickenberg/rsickenberg.me/commit/873ded73f6e9d946dbefbcde9bdfc72cf6ba8c95)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 5 updates [`7f1caff`](https://github.com/RSickenberg/rsickenberg.me/commit/7f1caffe3b8a8a053a887c7e33119308e50da7bd)
+- Merge pull request #725 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-44c38eab35 [`473f5b6`](https://github.com/RSickenberg/rsickenberg.me/commit/473f5b6ca76c03eb62bd6f762d9a317f0a9b974f)
+- Merge pull request #718 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-0c1596a2e8 [`3dd2e8a`](https://github.com/RSickenberg/rsickenberg.me/commit/3dd2e8aee131d078942fbb5c4e7aef156fcb7008)
+- chore(deps): update gsap requirement in the prod-deps group [`5b0cb56`](https://github.com/RSickenberg/rsickenberg.me/commit/5b0cb56e609157c7fc466ec9ce3dc54b9bd61774)
+- Merge pull request #717 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-3e83a4ba4f [`88d6898`](https://github.com/RSickenberg/rsickenberg.me/commit/88d6898e66900698321f261d3c82c117235e6d24)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`cbea707`](https://github.com/RSickenberg/rsickenberg.me/commit/cbea70752eb5c34c03370a57278d51c12897c0cb)
+- Merge pull request #716 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-5bc988b0a7 [`57b00d7`](https://github.com/RSickenberg/rsickenberg.me/commit/57b00d7e255464603bf4238c5571bf641a1179ab)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`f346ea9`](https://github.com/RSickenberg/rsickenberg.me/commit/f346ea9e52454a9d67174f9779f60d5b7b07acef)
+- Merge pull request #713 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-8e42b9e9a8 [`696fd62`](https://github.com/RSickenberg/rsickenberg.me/commit/696fd62869a25ecde3f528663fb99732c238e0c5)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`6e8b857`](https://github.com/RSickenberg/rsickenberg.me/commit/6e8b857b501d7a36751798f66e8dce5a9cdd41f5)
+- Merge pull request #714 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-131d587b7f [`ce94c21`](https://github.com/RSickenberg/rsickenberg.me/commit/ce94c21dc37ccbec56e2d0e57ffba5820a8895e1)
+- Merge pull request #712 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-8f33978df7 [`1150e06`](https://github.com/RSickenberg/rsickenberg.me/commit/1150e06bbc7b6ee30a39681cab4d98286c88cd53)
+- chore(deps): update astro requirement in the prod-deps group [`7415a5d`](https://github.com/RSickenberg/rsickenberg.me/commit/7415a5d5af2f4d54457df3d3cca3ef829b3f5515)
+
+#### [v1.2.9](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.8...v1.2.9)
+
+> 27 November 2025
+
+- Release 1.2.9 [`8c9187d`](https://github.com/RSickenberg/rsickenberg.me/commit/8c9187da07370734cc8f17d666c30b6041a11e15)
+- docs(changelog): updated changelog [`9ccdcff`](https://github.com/RSickenberg/rsickenberg.me/commit/9ccdcff2e3d84b9fdcd59ebce1a40b9b3653cf46)
+- build(bun): updated astro to 5.16.1 [`074a82e`](https://github.com/RSickenberg/rsickenberg.me/commit/074a82ee193b207c648b7b3611d2bc6ec5cd21f0)
+- Merge pull request #710 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-b71e35dc76 [`8fa8eb2`](https://github.com/RSickenberg/rsickenberg.me/commit/8fa8eb25837ac52515b2f9770fa5a6c4f9eba62d)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`802ede4`](https://github.com/RSickenberg/rsickenberg.me/commit/802ede4abcb156feb9114f140fb0427567200d28)
+- Merge pull request #709 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-a01e21a429 [`1a23e19`](https://github.com/RSickenberg/rsickenberg.me/commit/1a23e1972862e619e2caf3ea619a4c4deb5d4d87)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`2ac957f`](https://github.com/RSickenberg/rsickenberg.me/commit/2ac957fe72de9ebabf4c40f7ca2998df877c55f3)
+- Merge pull request #706 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f5eb8348ae [`f0ffa51`](https://github.com/RSickenberg/rsickenberg.me/commit/f0ffa51eaa43aa826add23d11e554bba1b772a3c)
+- Merge pull request #707 from RSickenberg/dependabot/github_actions/dev/actions/checkout-6 [`b3a0eed`](https://github.com/RSickenberg/rsickenberg.me/commit/b3a0eed85d43e63115e18d8ae9d47d91f27b41c0)
+- chore(deps): bump actions/checkout from 5 to 6 [`b1e4c89`](https://github.com/RSickenberg/rsickenberg.me/commit/b1e4c89c8500bc30f37f6d27baffb8173fcb8b13)
+- chore(deps): update astro requirement in the prod-deps group [`450dc9f`](https://github.com/RSickenberg/rsickenberg.me/commit/450dc9fecbebcbf761cf4c010574b7fc98911652)
+- Merge pull request #705 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-893df1eccd [`4e5bf9f`](https://github.com/RSickenberg/rsickenberg.me/commit/4e5bf9f8ee59f14494f0c5c520410fd7a63d6d88)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`787c960`](https://github.com/RSickenberg/rsickenberg.me/commit/787c9600e65ceeee1eb3b7d722cd9849142ca8b0)
+- Merge pull request #704 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-0c1ecc1d44 [`46b2934`](https://github.com/RSickenberg/rsickenberg.me/commit/46b2934ae71748edec9f048dd1c5782fd471b33f)
+- chore(deps): bump the prod-deps group with 3 updates [`20386d0`](https://github.com/RSickenberg/rsickenberg.me/commit/20386d04cd9b98cfc59f5e572e89b06a2b5090e6)
+- Merge pull request #703 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-6ba7fb2192 [`9b8522f`](https://github.com/RSickenberg/rsickenberg.me/commit/9b8522fda08a2bcd2094f52ffe268f0480125ea1)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`a50daae`](https://github.com/RSickenberg/rsickenberg.me/commit/a50daae55215b93325e21933640a4b89f0677d8a)
+- Merge pull request #702 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-a8751174b3 [`fd76b59`](https://github.com/RSickenberg/rsickenberg.me/commit/fd76b59cc46f2dae9ab87ee48fae9f664d49a71f)
+- chore(deps): bump the prod-deps group with 2 updates [`48d0205`](https://github.com/RSickenberg/rsickenberg.me/commit/48d02053504110ec4c4314d90288db2adc5c8eb4)
+- Merge pull request #701 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-d15f5b410e [`349f0b7`](https://github.com/RSickenberg/rsickenberg.me/commit/349f0b75f9eea60d41b1c98e21dbefb5de3a83f8)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`2418f83`](https://github.com/RSickenberg/rsickenberg.me/commit/2418f836ee1f48142525626351176847e6ebd8b2)
+- Merge pull request #700 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-154064415a [`8dada21`](https://github.com/RSickenberg/rsickenberg.me/commit/8dada21890e6756d3021a759d6557dc9121d338a)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`71588fd`](https://github.com/RSickenberg/rsickenberg.me/commit/71588fdfdf4d5098e66c2a273025f1959b587a9a)
+- Merge pull request #697 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-ce3f45fa5f [`a5c0186`](https://github.com/RSickenberg/rsickenberg.me/commit/a5c0186ae5a4527287e43059f854ba77b16657f2)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`f0f1921`](https://github.com/RSickenberg/rsickenberg.me/commit/f0f1921f7247b2173ef54c3ebd0cda4a8b10b161)
+- Merge pull request #696 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c8fde9209c [`dbafca3`](https://github.com/RSickenberg/rsickenberg.me/commit/dbafca39c43d5adc0299eeb69baeb756f02ee977)
+- chore(deps): bump the prod-deps group with 2 updates [`577d8fd`](https://github.com/RSickenberg/rsickenberg.me/commit/577d8fd6d4571de6dd220c03f9aa873b60043059)
+- Merge pull request #695 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-750de08fbb [`7e420f2`](https://github.com/RSickenberg/rsickenberg.me/commit/7e420f277e9d68c2e642b4872d4854809f57866a)
+- chore(deps): bump the prod-deps group with 3 updates [`9bc9b19`](https://github.com/RSickenberg/rsickenberg.me/commit/9bc9b1901cd3d41feca39af8740fecf84bcd2f25)
+- Merge pull request #693 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-1c8363997b [`d530299`](https://github.com/RSickenberg/rsickenberg.me/commit/d5302994f483e586f9dba997ea4947cc6f1d6ed4)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`61013cb`](https://github.com/RSickenberg/rsickenberg.me/commit/61013cb02b94a9085cb9e011b372577957c35e1f)
+- Merge pull request #694 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-d31a743953 [`9482ebc`](https://github.com/RSickenberg/rsickenberg.me/commit/9482ebcc999a009f0f8bb4ab6b94bc44bb84a0b1)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`2210030`](https://github.com/RSickenberg/rsickenberg.me/commit/2210030f9346b795807a7fab1fc3ac011713a975)
+- Merge pull request #692 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-3ae21cef14 [`25b508c`](https://github.com/RSickenberg/rsickenberg.me/commit/25b508cb0e12873a56d9e72fe23573398c644f26)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`4e74f30`](https://github.com/RSickenberg/rsickenberg.me/commit/4e74f30984bc5a1d1c087c65e84ca98360848856)
+- Merge pull request #691 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-d1bde81738 [`4596d75`](https://github.com/RSickenberg/rsickenberg.me/commit/4596d75623defe5e5eb26e0fdeedae0a029056d3)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 5 updates [`a00f085`](https://github.com/RSickenberg/rsickenberg.me/commit/a00f085e9250b54201888ba56797c567677eeed0)
+- Merge pull request #688 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-b94e674431 [`9c2211e`](https://github.com/RSickenberg/rsickenberg.me/commit/9c2211e676685564eb41c83072d251332fe21720)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`c1aceb9`](https://github.com/RSickenberg/rsickenberg.me/commit/c1aceb906aecbc40d941f4a3afd6e6c3076f2d90)
+- Merge pull request #686 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-f7e6e7f859 [`2e3d4e2`](https://github.com/RSickenberg/rsickenberg.me/commit/2e3d4e2b3ec8b01d44fb0e0bcf07c25382de9d7d)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`1497af4`](https://github.com/RSickenberg/rsickenberg.me/commit/1497af4c42cfca2bfe56665230fb9ec9614c8466)
+- Merge pull request #685 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-9470b34726 [`55b822a`](https://github.com/RSickenberg/rsickenberg.me/commit/55b822a4e350a6025938a37a8679f7203893fbbd)
+- Merge pull request #684 from RSickenberg/dependabot/github_actions/dev/withastro/action-5 [`457519b`](https://github.com/RSickenberg/rsickenberg.me/commit/457519ba0dafe5751b19a2214155e2e15fa42d30)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`daccb61`](https://github.com/RSickenberg/rsickenberg.me/commit/daccb613a3f581b8de371c6e0ade87588665b1d1)
+- chore(deps): bump withastro/action from 4 to 5 [`f958171`](https://github.com/RSickenberg/rsickenberg.me/commit/f958171306dc6668da1f5bd2fdf0c7f225fc4e6b)
+- Merge pull request #681 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-a70ac5d7f9 [`64373a0`](https://github.com/RSickenberg/rsickenberg.me/commit/64373a01ab3e4fb8a2f5a6441778c9e9d414a1dc)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`7403b21`](https://github.com/RSickenberg/rsickenberg.me/commit/7403b21b1c9569f5adf40eb99fcba33a4297b96b)
+- Merge pull request #679 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-7ce7275960 [`31aa0e1`](https://github.com/RSickenberg/rsickenberg.me/commit/31aa0e12bb9e76505043aa06cd7cd3533b7d1871)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`afe2913`](https://github.com/RSickenberg/rsickenberg.me/commit/afe29132d6050159a5eaeaf519c71931d2531fe3)
+- Merge pull request #677 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-3972e3567f [`f98b5de`](https://github.com/RSickenberg/rsickenberg.me/commit/f98b5de1afc0c831b855e363d5311b864a261bd1)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`0b7905b`](https://github.com/RSickenberg/rsickenberg.me/commit/0b7905b78add52790bede8069306311f28035dd6)
+- Merge pull request #676 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-488167eb48 [`cc84590`](https://github.com/RSickenberg/rsickenberg.me/commit/cc8459039fc5247d60548b3610696f8c1f171773)
+- chore(deps): bump the prod-deps group with 4 updates [`e720da2`](https://github.com/RSickenberg/rsickenberg.me/commit/e720da20ee8f11b93b2d31baddd7138424cabfbb)
+- Merge pull request #675 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-1b25edb5ec [`cf25dff`](https://github.com/RSickenberg/rsickenberg.me/commit/cf25dff9ad71988e94257897f5a568eca6e0be5e)
+- chore(deps-dev): update eslint requirement in the dev-deps group [`9e721cb`](https://github.com/RSickenberg/rsickenberg.me/commit/9e721cba1e491d41df8a63352aef34704474a314)
+
+#### [v1.2.8](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.7...v1.2.8)
+
+> 16 October 2025
+
+- Release 1.2.8 [`c511837`](https://github.com/RSickenberg/rsickenberg.me/commit/c511837004cf0a94d2071f1402991d89327185e5)
+- docs(changelog): bump changelog [`06c5adb`](https://github.com/RSickenberg/rsickenberg.me/commit/06c5adb3dfc8e14979c04b2f3b9ca7a781d93713)
+- build(caniuse-lite): relaxed constraint [`31fc55d`](https://github.com/RSickenberg/rsickenberg.me/commit/31fc55ddee41ea862106b97061212844b76d2bcf)
+- Merge pull request #673 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-45739ed502 [`9e8dea4`](https://github.com/RSickenberg/rsickenberg.me/commit/9e8dea411c0bead656bafa6dccafe324c6d7427e)
+- chore(deps-dev): update esbuild-plugin-browserslist requirement [`72703bb`](https://github.com/RSickenberg/rsickenberg.me/commit/72703bb3bfe79e3361e106e3a99b78d0fb8ec609)
+- Merge pull request #496 from RSickenberg/dependabot/github_actions/dev/getsentry/action-release-3 [`fba3f79`](https://github.com/RSickenberg/rsickenberg.me/commit/fba3f79eaed7e6568898b1d84e49e6b17a85a4b3)
+- Merge pull request #674 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-30e8d4e315 [`5b163de`](https://github.com/RSickenberg/rsickenberg.me/commit/5b163def8d8aabb8c25ffd8356aaa571550ad8dd)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`88d7292`](https://github.com/RSickenberg/rsickenberg.me/commit/88d72924ffc5005236eaf0619a90f6e7e2ac11b6)
+- Merge pull request #672 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-1fab58fa83 [`7811966`](https://github.com/RSickenberg/rsickenberg.me/commit/781196687c1e646e21209125f70c73fe20d96b22)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`e54c9a2`](https://github.com/RSickenberg/rsickenberg.me/commit/e54c9a2642c4e786d8d8ae35cbc089b2a29244fb)
+- Merge pull request #671 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-6d03d79c8b [`8b5e03a`](https://github.com/RSickenberg/rsickenberg.me/commit/8b5e03a11295a4bdaf328c4f0b18195eb30b4509)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`d41e3c5`](https://github.com/RSickenberg/rsickenberg.me/commit/d41e3c5f342fd54fe9482b7a56f700b4a36baaaa)
+- Merge pull request #669 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-8554045f87 [`6b60692`](https://github.com/RSickenberg/rsickenberg.me/commit/6b606923d5c21f8f662eb7c90336204524fe8172)
+- chore(deps): update astro requirement in the prod-deps group [`7509fcf`](https://github.com/RSickenberg/rsickenberg.me/commit/7509fcfbebfc2a8afaf78530a2457395ed2b8af8)
+- Merge pull request #668 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-fb4d8abf1a [`246899b`](https://github.com/RSickenberg/rsickenberg.me/commit/246899b71142657c36490ca9d306a21007701240)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`15f5c2d`](https://github.com/RSickenberg/rsickenberg.me/commit/15f5c2d8f9b84c4b68aac5b9bbc43c0f3e5e7aa4)
+- Merge pull request #666 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-e945b0e978 [`73ac1c3`](https://github.com/RSickenberg/rsickenberg.me/commit/73ac1c39042cf290900c0479ab39b7841073c9e9)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`a621253`](https://github.com/RSickenberg/rsickenberg.me/commit/a6212536c168cab89e435b556bdeca878d4de028)
+- Merge pull request #665 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c98163d9ce [`6a547c7`](https://github.com/RSickenberg/rsickenberg.me/commit/6a547c7d710ef4d99e743d30eb4b33d82a03c54c)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`20dce4b`](https://github.com/RSickenberg/rsickenberg.me/commit/20dce4bbf959558f2d1749ceffad2882b52487a1)
+- Merge pull request #664 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-f88fd00c23 [`bb17b0e`](https://github.com/RSickenberg/rsickenberg.me/commit/bb17b0ea8f3c7e0c10799029fb768af0394e9894)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`e2be802`](https://github.com/RSickenberg/rsickenberg.me/commit/e2be80289effcd13e6db4089eba689ebd60d6cb3)
+- Merge pull request #662 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-5f78d6ad05 [`04065c8`](https://github.com/RSickenberg/rsickenberg.me/commit/04065c8937b40979bb759e3fb15c8108021b2b21)
+- chore(deps): bump the prod-deps group with 2 updates [`b21a81c`](https://github.com/RSickenberg/rsickenberg.me/commit/b21a81c53859642571cfe0b54347b88b3f2355d4)
+- Merge pull request #661 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-1bbb2a8a94 [`58b718b`](https://github.com/RSickenberg/rsickenberg.me/commit/58b718b60b075b8f7a9cfe20a4b1919a2a58d1cf)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`3773088`](https://github.com/RSickenberg/rsickenberg.me/commit/3773088fee43e4ff45fcbba8ee0ad00ea2b30bdb)
+- Merge pull request #658 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f124d085e2 [`b1c47a2`](https://github.com/RSickenberg/rsickenberg.me/commit/b1c47a2b22543dc84d8861b364d4602c46762c0e)
+- chore(deps): update astro requirement in the prod-deps group [`8f36178`](https://github.com/RSickenberg/rsickenberg.me/commit/8f36178fe1dffb4f19f6fb184c5d8fca0206f958)
+- Merge pull request #657 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-fe35ed02c2 [`1c699c9`](https://github.com/RSickenberg/rsickenberg.me/commit/1c699c9f77d4db7d0b50adaada4200ab27345321)
+- chore(deps): bump the prod-deps group with 2 updates [`0653547`](https://github.com/RSickenberg/rsickenberg.me/commit/06535474a20162513fe70281ba3e864e3c69c5a5)
+- Merge pull request #656 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-63e68322ef [`d0807f7`](https://github.com/RSickenberg/rsickenberg.me/commit/d0807f75e101c355013f0c731afc27174281eed5)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`95fc705`](https://github.com/RSickenberg/rsickenberg.me/commit/95fc705b70b16f44ccf78bb8da79db1c8d0cf537)
+- Merge pull request #653 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-2ce3dad712 [`45d5b47`](https://github.com/RSickenberg/rsickenberg.me/commit/45d5b473aeb9c3f43e1d691100603f152dcef990)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`9b79bd2`](https://github.com/RSickenberg/rsickenberg.me/commit/9b79bd2c11ade2f1cee614df978438dbaf9ab07f)
+- Merge pull request #652 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f4060376e1 [`505c2f6`](https://github.com/RSickenberg/rsickenberg.me/commit/505c2f6b1c0938076c13ec10406d80c22a49037f)
+- chore(deps): bump the prod-deps group with 3 updates [`e37c129`](https://github.com/RSickenberg/rsickenberg.me/commit/e37c129688eece9a46c48ddcc3a1c12b4eaa4498)
+- Merge pull request #651 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-0bddc4c1c4 [`67982ce`](https://github.com/RSickenberg/rsickenberg.me/commit/67982ce1a868443a3976b169c83f1f29f608c91f)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`584ecba`](https://github.com/RSickenberg/rsickenberg.me/commit/584ecba1fd7a94af5418480b0be3725af6e90270)
+- Merge pull request #649 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-fc4104709e [`bc7c653`](https://github.com/RSickenberg/rsickenberg.me/commit/bc7c653a6ff998fb1ea46c2ef880674b6ab6f0ce)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`31c7c84`](https://github.com/RSickenberg/rsickenberg.me/commit/31c7c84a6880b734baf52a831508796df670c9cc)
+- Merge pull request #648 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-cd2f9da47e [`deff4e8`](https://github.com/RSickenberg/rsickenberg.me/commit/deff4e862502699453e0c22940091ba5e23cb4a5)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`79e1ae1`](https://github.com/RSickenberg/rsickenberg.me/commit/79e1ae1ce8a7f392a10d61bcc9486220ba2946cd)
+- Merge pull request #646 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-73e6636601 [`2941c3a`](https://github.com/RSickenberg/rsickenberg.me/commit/2941c3a1d89c165d0735e132d7002e988b21e164)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`062cd46`](https://github.com/RSickenberg/rsickenberg.me/commit/062cd4627ab6b17dc1c20a89b95944e9db46b6a5)
+- Merge pull request #641 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-0e61073a98 [`79c83ce`](https://github.com/RSickenberg/rsickenberg.me/commit/79c83ce02814397eae95a57161ed80695f75b059)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`4f0ee16`](https://github.com/RSickenberg/rsickenberg.me/commit/4f0ee16e822bd8f755069a75b022c80957c53b1d)
+- Merge pull request #642 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-00b6a31ca4 [`73a99bd`](https://github.com/RSickenberg/rsickenberg.me/commit/73a99bd36e2ba0a23076bd95d91ffe99edd8bcd1)
+- chore(deps): bump the prod-deps group with 3 updates [`5ad8ee0`](https://github.com/RSickenberg/rsickenberg.me/commit/5ad8ee0e6c24df29fa09a1c6832d062107938d7c)
+- Merge pull request #638 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-33e2d4d15a [`67ed0bb`](https://github.com/RSickenberg/rsickenberg.me/commit/67ed0bb028a105b07b561ad8409e02f8bbc91fa5)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`a259dd6`](https://github.com/RSickenberg/rsickenberg.me/commit/a259dd6b14893384782415e32e8447a1b71e07f8)
+- Merge pull request #637 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-0b7013e11c [`73c4f6b`](https://github.com/RSickenberg/rsickenberg.me/commit/73c4f6baad0e832f12df49a1e8fa1887f9d80ebb)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`ae120e8`](https://github.com/RSickenberg/rsickenberg.me/commit/ae120e89db2b2d0fc274e0f76cf78d4f3b156299)
+- chore(deps): bump getsentry/action-release from 1 to 3 [`30fa1c1`](https://github.com/RSickenberg/rsickenberg.me/commit/30fa1c1404b1b0e347a649158b8d163aeb91c3bb)
+
+#### [v1.2.7](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.6...v1.2.7)
+
+> 1 September 2025
+
+- chore(deps): bump the prod-deps group with 4 updates [`#627`](https://github.com/RSickenberg/rsickenberg.me/pull/627)
+- build(bun): generated build [`001bcbb`](https://github.com/RSickenberg/rsickenberg.me/commit/001bcbbf97926fdd4f65816a5ac757d3dccdf6e5)
+- chore(deps): bump the prod-deps group across 1 directory with 8 updates [`e48fa0b`](https://github.com/RSickenberg/rsickenberg.me/commit/e48fa0bd29cbc5f3826bfc5bd6532da03d11c93c)
+- chore(deps): bump the prod-deps group across 1 directory with 5 updates [`c0f0696`](https://github.com/RSickenberg/rsickenberg.me/commit/c0f06965e9297889cf63f9b724e38a8922a7075b)
+- Release 1.2.7 [`e2d3b40`](https://github.com/RSickenberg/rsickenberg.me/commit/e2d3b40a1a0bda46f1b1f250df491d021c891b0b)
+- build(bun): Updated deps by hand [`c5ba62d`](https://github.com/RSickenberg/rsickenberg.me/commit/c5ba62d2b82c1f7b4734a9fdc423d9fd19eba2d6)
+- chore(deps): bump the prod-deps group with 3 updates [`d4ade64`](https://github.com/RSickenberg/rsickenberg.me/commit/d4ade64b6501e7bfea5fc3ff72816c90f82d75b0)
+- chore(deps): bump the prod-deps group with 3 updates [`c160a76`](https://github.com/RSickenberg/rsickenberg.me/commit/c160a76e854e4692181f2b877e329f2bdffb847f)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`13402b8`](https://github.com/RSickenberg/rsickenberg.me/commit/13402b8f094d5c9645884f44cf5ff497a4aea0af)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`b627dc1`](https://github.com/RSickenberg/rsickenberg.me/commit/b627dc18f28367de3debbfc6ba4093854e51f2b6)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`970bb75`](https://github.com/RSickenberg/rsickenberg.me/commit/970bb756ad7b7a2862f1b21b67fe408b1f470ad6)
+- chore(deps): bump the prod-deps group with 3 updates [`181e7cf`](https://github.com/RSickenberg/rsickenberg.me/commit/181e7cf4ecce8945efc7c9ce054ca5d0804b71b7)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`768cc49`](https://github.com/RSickenberg/rsickenberg.me/commit/768cc49f042363c951b450e1a1e08f1339c64081)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`ffd6ec3`](https://github.com/RSickenberg/rsickenberg.me/commit/ffd6ec32e4f26335972c21a2353b82bbb5462b03)
+- chore(deps): bump the prod-deps group with 3 updates [`7136d42`](https://github.com/RSickenberg/rsickenberg.me/commit/7136d426e0ccff8412a287715367a28094734694)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`ed0d48f`](https://github.com/RSickenberg/rsickenberg.me/commit/ed0d48f265a69886c6d8b300dc074cc8e2e29c81)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`794ce66`](https://github.com/RSickenberg/rsickenberg.me/commit/794ce66e1128615a5b033503e2ad266ce80de47b)
+- chore(deps): bump the prod-deps group with 2 updates [`232918f`](https://github.com/RSickenberg/rsickenberg.me/commit/232918fd5abf4b7367adf892f3ea88fa5dec8df5)
+- chore(deps): bump the prod-deps group with 2 updates [`42c29ce`](https://github.com/RSickenberg/rsickenberg.me/commit/42c29ceae79dddd8cdf3eb10e3ec1d9f69fcc3e8)
+- chore(deps): bump actions/checkout from 4 to 5 [`3ac5a68`](https://github.com/RSickenberg/rsickenberg.me/commit/3ac5a68b2029f33f421f49068d09f187cd5ad661)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`1e5478a`](https://github.com/RSickenberg/rsickenberg.me/commit/1e5478ad34e4870070cb3bc8857e68fadc9dc19f)
+- chore(deps): bump the prod-deps group with 2 updates [`b07f213`](https://github.com/RSickenberg/rsickenberg.me/commit/b07f21329b36a720ee17b56c492ff6ff8c69fad7)
+- docs(changelog): bump [`4011807`](https://github.com/RSickenberg/rsickenberg.me/commit/40118071f334ec8fba975fbed3fcddec48a4b01d)
+- chore(deps): update astro requirement in the prod-deps group [`72ce0f6`](https://github.com/RSickenberg/rsickenberg.me/commit/72ce0f60af7d5e52cc13a2089393e0167e0a978f)
+- chore(deps): update astro requirement in the prod-deps group [`bdcc239`](https://github.com/RSickenberg/rsickenberg.me/commit/bdcc2392992a862fb221b26ed01e1076a3ae2763)
+- chore(deps): update astro requirement in the prod-deps group [`e7dd7dc`](https://github.com/RSickenberg/rsickenberg.me/commit/e7dd7dcda5c054f02458112f52b9bca091c60bd9)
+- chore(deps): update astro requirement in the prod-deps group [`10a4473`](https://github.com/RSickenberg/rsickenberg.me/commit/10a447364523dbff8898a082e093709644d7f5ce)
+- chore(deps): update lenis requirement in the prod-deps group [`68c0ad6`](https://github.com/RSickenberg/rsickenberg.me/commit/68c0ad668e032c28d9d62c785e853ed9df027f7a)
+- docs(pdf): updated CV late-2025 [`dbc09e5`](https://github.com/RSickenberg/rsickenberg.me/commit/dbc09e53937d8d99445a1f3cac4cb601af2407e9)
+- Merge pull request #634 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-b0926dc403 [`369dbf4`](https://github.com/RSickenberg/rsickenberg.me/commit/369dbf47830e48ef7289dfdac0f89b6ef6466f42)
+- Merge pull request #633 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-3cd7726cee [`4d0aa8f`](https://github.com/RSickenberg/rsickenberg.me/commit/4d0aa8f7df90fc595daaf637ca69018e1b773b5c)
+- Merge pull request #632 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-cb76e5ec93 [`ad45147`](https://github.com/RSickenberg/rsickenberg.me/commit/ad4514786cbb684fb0c3922848d42a461605549c)
+- Merge pull request #630 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-bc80fe5dbf [`f4bd691`](https://github.com/RSickenberg/rsickenberg.me/commit/f4bd69107c19368775b3eaa6e2bc88932ed0c7a1)
+- Merge pull request #628 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-b03ce2ea96 [`d7f1fac`](https://github.com/RSickenberg/rsickenberg.me/commit/d7f1face4ea03c35c4d543a224149b06fc6bafad)
+- Merge pull request #626 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-78f0ba6a73 [`3a08005`](https://github.com/RSickenberg/rsickenberg.me/commit/3a080059bd03f6c2900c35fc07b1e16379fcfde8)
+- Merge pull request #620 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-4a007e37e5 [`bb3c869`](https://github.com/RSickenberg/rsickenberg.me/commit/bb3c869f56eab7ad10d00984be4c0390df58dd58)
+- Merge pull request #621 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-d64cfefe55 [`062d227`](https://github.com/RSickenberg/rsickenberg.me/commit/062d2272557ecd2d0358218b1dba04610e2b0170)
+- Merge pull request #619 from RSickenberg/dependabot/github_actions/dev/actions/checkout-5 [`c59e990`](https://github.com/RSickenberg/rsickenberg.me/commit/c59e9905ce7a4c2f6dfd60202c78dcd1351672fe)
+- Merge pull request #618 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c62ae8f794 [`7bb7a94`](https://github.com/RSickenberg/rsickenberg.me/commit/7bb7a940387df38392c8c1c04d0e4843e988f976)
+- Merge pull request #615 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-b64a32bd2c [`ac43db1`](https://github.com/RSickenberg/rsickenberg.me/commit/ac43db17fe3c30a2415666849caed8ee3e1874c8)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`d513933`](https://github.com/RSickenberg/rsickenberg.me/commit/d51393327c6e6a53058607fea9aa229b036beddb)
+- Merge pull request #617 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-8ebafaa28d [`392e383`](https://github.com/RSickenberg/rsickenberg.me/commit/392e383f487849bd0ea66d56fe624a501296b3ba)
+- Merge pull request #614 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-4ff975fab0 [`a01b43f`](https://github.com/RSickenberg/rsickenberg.me/commit/a01b43ff9b7f8f311e766ce89b1b6f9237c1902d)
+- Merge pull request #612 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-3d513d9f23 [`bf296ae`](https://github.com/RSickenberg/rsickenberg.me/commit/bf296aefbed527b45622c7704c67df42b35789ed)
+- Merge pull request #613 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c9ccfb5fd7 [`4d39cbf`](https://github.com/RSickenberg/rsickenberg.me/commit/4d39cbfcfb903a17789464ab79482d173977443d)
+- Merge pull request #611 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-0e699d8140 [`567913a`](https://github.com/RSickenberg/rsickenberg.me/commit/567913ae0448bed9f484c95124ca1f36687ed3b6)
+- Merge pull request #610 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-cf2029833c [`f8ecb70`](https://github.com/RSickenberg/rsickenberg.me/commit/f8ecb7097fc73b70e27e20ce92426f563c606206)
+- Merge pull request #606 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-9401541ce5 [`2ea6aec`](https://github.com/RSickenberg/rsickenberg.me/commit/2ea6aec13ee205d58e236e92ef4a31577857759b)
+- Merge pull request #607 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-ce6a444ed6 [`96c5dad`](https://github.com/RSickenberg/rsickenberg.me/commit/96c5dad36f83e63a9d7ce1615e9a4a7f4027990e)
+- Merge pull request #604 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-ba60fe13b7 [`ede9af9`](https://github.com/RSickenberg/rsickenberg.me/commit/ede9af9fe8f6bb535e2b325f5074589b28a59fcb)
+- Merge pull request #603 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-5b12b20291 [`b9fee2a`](https://github.com/RSickenberg/rsickenberg.me/commit/b9fee2a3705d7753c6b3faba3fa0d665a34b42d5)
+- Merge pull request #602 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-ae86f61851 [`b350ba5`](https://github.com/RSickenberg/rsickenberg.me/commit/b350ba52910518cfc844a882ca32212c98b6b996)
+- Merge pull request #600 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-c019de33a7 [`f685018`](https://github.com/RSickenberg/rsickenberg.me/commit/f68501820dbf3de100625946905958a0b66955ef)
+- Merge pull request #601 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-235ebcc920 [`aaac0d0`](https://github.com/RSickenberg/rsickenberg.me/commit/aaac0d0831afd0d63148d8296de7dde0ca9b4067)
+
+#### [v1.2.6](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.5...v1.2.6)
+
+> 14 July 2025
+
+- refactor(sentry): fixed deprecation with sentry implementation [`ea1486a`](https://github.com/RSickenberg/rsickenberg.me/commit/ea1486ac625bcabcb3d6e8793bfad5d25d674a43)
+- docs: changelog [`6866c8c`](https://github.com/RSickenberg/rsickenberg.me/commit/6866c8cebf868c1a3b50c9c44d7c5bc30f293db0)
+- build(bun): updated deps [`096ebe2`](https://github.com/RSickenberg/rsickenberg.me/commit/096ebe25f50d86c0b2478767bb4626e57283e8b0)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`f2b17fb`](https://github.com/RSickenberg/rsickenberg.me/commit/f2b17fb78082d7a23bb7e0560ac2ffb0c4a12b58)
+- Release 1.2.6 [`7837702`](https://github.com/RSickenberg/rsickenberg.me/commit/7837702cbae3bf5d481aabeaca662e06084831ae)
+- Merge pull request #597 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f90639af33 [`5c449d0`](https://github.com/RSickenberg/rsickenberg.me/commit/5c449d03a1de050e853669cfdd6cb8e6df060df3)
+- chore(deps): bump the prod-deps group with 5 updates [`b2df237`](https://github.com/RSickenberg/rsickenberg.me/commit/b2df23729f41a3a5feabfdff3075e64eaa8cbef3)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`66af5d7`](https://github.com/RSickenberg/rsickenberg.me/commit/66af5d7890e92a5033fbb3f2bf61a2837e06a317)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`3d13fd0`](https://github.com/RSickenberg/rsickenberg.me/commit/3d13fd03d109ae993f0acc1c427ac8e165485300)
+- Merge pull request #594 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-2bd72f614e [`b040f8d`](https://github.com/RSickenberg/rsickenberg.me/commit/b040f8d09d77261ccd48b04ebf8eb4752856d2df)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`fc9f974`](https://github.com/RSickenberg/rsickenberg.me/commit/fc9f974850c6f46f4b4b832b583c85e2e1db6c92)
+- chore(deps): bump the prod-deps group with 2 updates [`93b16d0`](https://github.com/RSickenberg/rsickenberg.me/commit/93b16d05390a5ab3d684d0a717ef609f627795a7)
+- Merge pull request #592 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-870104b39c [`16d53e8`](https://github.com/RSickenberg/rsickenberg.me/commit/16d53e86aadf4411d43fb2712004b997b5a32bff)
+- Merge pull request #593 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-1713c52b51 [`38beb3b`](https://github.com/RSickenberg/rsickenberg.me/commit/38beb3bef906962a1382ecee6aa389680339de1e)
+- chore(deps): bump the prod-deps group across 1 directory with 7 updates [`b7cc762`](https://github.com/RSickenberg/rsickenberg.me/commit/b7cc762a7b274539893e449135ec89b18c725208)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`7e268ed`](https://github.com/RSickenberg/rsickenberg.me/commit/7e268edb27e180317540f2f7ed8764d43f82926a)
+- Merge pull request #590 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-59199e040b [`c77e7a6`](https://github.com/RSickenberg/rsickenberg.me/commit/c77e7a6c34b8d6faf24f8c32b5d494f7d5571031)
+- chore(deps): bump the prod-deps group with 3 updates [`8ec0487`](https://github.com/RSickenberg/rsickenberg.me/commit/8ec04874182d4025d2d3cd0866d96b6b25c64499)
+- Merge pull request #589 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c213994b28 [`a0e63e7`](https://github.com/RSickenberg/rsickenberg.me/commit/a0e63e78875ac7eef52e179d87861f17cbf4f01c)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`d26251b`](https://github.com/RSickenberg/rsickenberg.me/commit/d26251ba6499734bfb296d48d062f6751cff2698)
+- chore(deps): bump the prod-deps group with 2 updates [`42a5da2`](https://github.com/RSickenberg/rsickenberg.me/commit/42a5da24c5e0571e6b7b9683c2421e0df57cdc83)
+- Merge pull request #588 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c04d741607 [`6039ba1`](https://github.com/RSickenberg/rsickenberg.me/commit/6039ba13108b95866272de9a2721c39a75c55f53)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`9b548b3`](https://github.com/RSickenberg/rsickenberg.me/commit/9b548b31de39b72642e707fdc27cb045a96bb832)
+- chore(deps): bump the prod-deps group with 2 updates [`dbea896`](https://github.com/RSickenberg/rsickenberg.me/commit/dbea896e69470d22959f9fe761533f7274e4c633)
+- Merge pull request #587 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-e04ed99e49 [`a1e9a68`](https://github.com/RSickenberg/rsickenberg.me/commit/a1e9a68b43e33ade960782453ec9bd73a90cd854)
+- Merge pull request #583 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-8948c9277b [`9e881e2`](https://github.com/RSickenberg/rsickenberg.me/commit/9e881e2b251e2fb87e47d26d18d011cc73a784bb)
+- chore(deps): bump the prod-deps group across 1 directory with 5 updates [`ba82373`](https://github.com/RSickenberg/rsickenberg.me/commit/ba82373a9d091e8f7326d2cae35b6e0377d2852d)
+- Merge pull request #581 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-22303e3bdc [`31f2502`](https://github.com/RSickenberg/rsickenberg.me/commit/31f25022793fefc2a864bac19dd9969b0dce7579)
+- Merge pull request #579 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-2df0fcb825 [`499dd73`](https://github.com/RSickenberg/rsickenberg.me/commit/499dd7301831cea4b3d79663bc05ec5695d5d662)
+- Merge pull request #580 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-a28b313609 [`12f9c4b`](https://github.com/RSickenberg/rsickenberg.me/commit/12f9c4b87736cae307bd5210007cc8dacf410232)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`79b7ce8`](https://github.com/RSickenberg/rsickenberg.me/commit/79b7ce8ef8613f70de911e58277db0a2ef175f34)
+- Merge pull request #577 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-efd32cf392 [`396c479`](https://github.com/RSickenberg/rsickenberg.me/commit/396c479b39797839e6e38f62ec87a6266711754c)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`ab97348`](https://github.com/RSickenberg/rsickenberg.me/commit/ab973481df4c8e3530495f296e01cb07b0aa539d)
+- Merge pull request #576 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-1212943326 [`813bafc`](https://github.com/RSickenberg/rsickenberg.me/commit/813bafc46f7551cd02df6a3c163747a578fbab43)
+- Merge pull request #573 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-ded1557876 [`fd8c80a`](https://github.com/RSickenberg/rsickenberg.me/commit/fd8c80a5c4fc2f31a166eb046954bc8ffea487c7)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`2a8b495`](https://github.com/RSickenberg/rsickenberg.me/commit/2a8b4955303152ee8c8c46f4233df359f45a2fcd)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`5205931`](https://github.com/RSickenberg/rsickenberg.me/commit/52059312b29fc721d5c41c0bc82413066a0084d6)
+- Merge pull request #572 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-64448245da [`b7b62d2`](https://github.com/RSickenberg/rsickenberg.me/commit/b7b62d2e1f92d98a75687d95c9e4ed6afd55037c)
+- Merge pull request #571 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-ea808854a3 [`9548039`](https://github.com/RSickenberg/rsickenberg.me/commit/95480391988e81a430d9988d5f7d808337e27b0b)
+- Merge pull request #568 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f2780c2c6e [`0ba2073`](https://github.com/RSickenberg/rsickenberg.me/commit/0ba2073661495dde456cadcbbc251bf3a0c322c6)
+- Release 1.2.5 [`6f68151`](https://github.com/RSickenberg/rsickenberg.me/commit/6f681510a951c27cd51aaa67c97a6f238b9c04bc)
+- chore(deps): bump the prod-deps group with 2 updates [`04d5b1e`](https://github.com/RSickenberg/rsickenberg.me/commit/04d5b1efc4126a7a5dda7011ac92c56e6977e4b3)
+- chore(deps): update preact requirement in the prod-deps group [`c3234fe`](https://github.com/RSickenberg/rsickenberg.me/commit/c3234fec6f354526b120c76bd7691cdd41a3da1e)
+- Merge pull request #563 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-afa793b1ed [`4f44b50`](https://github.com/RSickenberg/rsickenberg.me/commit/4f44b50c41df818c2357f682ca257fd20664fbcb)
+- chore(deps-dev): update esbuild-plugin-browserslist requirement [`b6ccbe6`](https://github.com/RSickenberg/rsickenberg.me/commit/b6ccbe67320ef54a340fd2f582777cb3edc9dd00)
+- Merge pull request #566 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-9d051f4738 [`6f44dbf`](https://github.com/RSickenberg/rsickenberg.me/commit/6f44dbfa03740a46d6745f7a8cd0551d13cd8e66)
+- Merge pull request #564 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-764b13801d [`46e54c8`](https://github.com/RSickenberg/rsickenberg.me/commit/46e54c805a73b03df70830f4be483b96eeddfe57)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`f82fa0d`](https://github.com/RSickenberg/rsickenberg.me/commit/f82fa0dbcfa6ffc52a7743711a8c4742726ebe01)
+- Merge pull request #562 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-70370ad028 [`47c2839`](https://github.com/RSickenberg/rsickenberg.me/commit/47c2839a13d75adf74de5494b6feb3bf0fd06bca)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`34fb194`](https://github.com/RSickenberg/rsickenberg.me/commit/34fb194e9287c8d94489f71c2abfdd1b13ca22bb)
+- Merge pull request #561 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-35d0539570 [`52d7a04`](https://github.com/RSickenberg/rsickenberg.me/commit/52d7a0422e264d7525d2dff8f0cd890164440dd8)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`4fddbdb`](https://github.com/RSickenberg/rsickenberg.me/commit/4fddbdbaf02422fe3b7c78adf6da260ecd054676)
+- Merge pull request #559 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-0e665b637f [`8ada797`](https://github.com/RSickenberg/rsickenberg.me/commit/8ada7972e938fa15b3457b7e561ae9ec21885a1e)
+
+#### [v1.2.5](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.4...v1.2.5)
+
+> 15 May 2025
+
+- chore(deps): update astro requirement from ^5.7.10 to ^5.7.11 in the prod-deps group [`#549`](https://github.com/RSickenberg/rsickenberg.me/pull/549)
+- Release 1.2.5 [`b870af5`](https://github.com/RSickenberg/rsickenberg.me/commit/b870af54099b85d404db36ffc685331168933d54)
+- build(bun): updated deps [`285c95c`](https://github.com/RSickenberg/rsickenberg.me/commit/285c95cc7d0d5e8b692f75c522dbcb36065aef30)
+- Merge pull request #558 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c7fcbc1f28 [`5a040c5`](https://github.com/RSickenberg/rsickenberg.me/commit/5a040c5379430a25e6ba536c85b9b7d181c53981)
+- chore(deps): bump the prod-deps group with 3 updates [`ab09337`](https://github.com/RSickenberg/rsickenberg.me/commit/ab09337fdc2ee4a12edde97e9e0baf12dc9b0a4b)
+- Merge pull request #557 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-54e0e2289a [`341c9c4`](https://github.com/RSickenberg/rsickenberg.me/commit/341c9c42890f04c1457a83a4c237d4db8df1e384)
+- fix(contact): removed (for now) instagram [`6b5963a`](https://github.com/RSickenberg/rsickenberg.me/commit/6b5963a72d5dfeea4e83b8d1049fa0e05bdf13b9)
+- Release 1.2.1 [`c81a6be`](https://github.com/RSickenberg/rsickenberg.me/commit/c81a6be4d5719bce10cc5bcc12d778013ffb3ea7)
+- chore(deps): bump the prod-deps group with 2 updates [`4c590a3`](https://github.com/RSickenberg/rsickenberg.me/commit/4c590a3eea7289a754a46d9a2e2c05c5c03f5883)
+- Merge pull request #556 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-30219937c5 [`4dae421`](https://github.com/RSickenberg/rsickenberg.me/commit/4dae4213bc54dbdba8655b863547d24621b24804)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`f2ab1fb`](https://github.com/RSickenberg/rsickenberg.me/commit/f2ab1fbe8d571c4ce12cb70930dbcb00ea7c8503)
+- Merge pull request #554 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-6f4127a6f8 [`c853e6e`](https://github.com/RSickenberg/rsickenberg.me/commit/c853e6e3e0ed6de92c06110d76e556a2f92b2c75)
+- fix(build): fixed build issue [`a2d2368`](https://github.com/RSickenberg/rsickenberg.me/commit/a2d2368f410a4723ab8c5754793e159a6fb291fe)
+- chore(deps): update @astrojs/sitemap requirement in the prod-deps group [`435221e`](https://github.com/RSickenberg/rsickenberg.me/commit/435221e28e05bba96364bf312c0e841fa160c99b)
+- Merge pull request #553 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-704952fff8 [`2f67f92`](https://github.com/RSickenberg/rsickenberg.me/commit/2f67f92460f9a0512dc4ec6778382bbfafa0acf5)
+- chore(deps): bump the prod-deps group with 2 updates [`7d9f73e`](https://github.com/RSickenberg/rsickenberg.me/commit/7d9f73e1ac353b69617ffb292005c38098495cdc)
+- Merge pull request #552 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-591c6c250e [`8b507f4`](https://github.com/RSickenberg/rsickenberg.me/commit/8b507f41b350d8c4ff9fe6e54c37d5a42d51c20e)
+- chore(deps): bump the prod-deps group with 2 updates [`2aa5105`](https://github.com/RSickenberg/rsickenberg.me/commit/2aa51056264e0608b46647a30aa2d9288eb18d45)
+- Merge pull request #551 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-44fbd2d3f7 [`a959bd6`](https://github.com/RSickenberg/rsickenberg.me/commit/a959bd6af362cfccf3f5025db0105d50f509e102)
+- chore(deps): bump the prod-deps group with 2 updates [`cc48fc2`](https://github.com/RSickenberg/rsickenberg.me/commit/cc48fc2d2ecd00148022153f0f87661eec43a7cc)
+- Merge pull request #550 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-d18d56e044 [`e15a28a`](https://github.com/RSickenberg/rsickenberg.me/commit/e15a28a62ea6579d7ba9c45bdf7d01bb63fbc8f3)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`f5d6593`](https://github.com/RSickenberg/rsickenberg.me/commit/f5d6593e6fddcf6f01660f9591679494eb18d69a)
+- chore(deps): update astro requirement in the prod-deps group [`3b1f9fe`](https://github.com/RSickenberg/rsickenberg.me/commit/3b1f9fec5fe30a950004f86a3e969411bfeb42b6)
+
+#### [v1.2.4](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.3...v1.2.4)
+
+> 6 May 2025
+
+- chore(deps-dev): bump the dev-deps group with 2 updates [`#547`](https://github.com/RSickenberg/rsickenberg.me/pull/547)
+- chore(deps): update zustand requirement from ^5.0.3 to ^5.0.4 in the prod-deps group [`#545`](https://github.com/RSickenberg/rsickenberg.me/pull/545)
+- chore(deps): bump the prod-deps group across 1 directory with 7 updates [`#544`](https://github.com/RSickenberg/rsickenberg.me/pull/544)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`#541`](https://github.com/RSickenberg/rsickenberg.me/pull/541)
+- chore(deps): update astro requirement from ^5.7.5 to ^5.7.7 in the prod-deps group [`#540`](https://github.com/RSickenberg/rsickenberg.me/pull/540)
+- chore(deps): bump the prod-deps group with 4 updates [`#539`](https://github.com/RSickenberg/rsickenberg.me/pull/539)
+- chore(deps): update lenis requirement from ^1.3.0 to ^1.3.1 in the prod-deps group [`#538`](https://github.com/RSickenberg/rsickenberg.me/pull/538)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 5 updates [`#537`](https://github.com/RSickenberg/rsickenberg.me/pull/537)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`#536`](https://github.com/RSickenberg/rsickenberg.me/pull/536)
+- chore(deps): bump the prod-deps group across 1 directory with 5 updates [`#532`](https://github.com/RSickenberg/rsickenberg.me/pull/532)
+- chore(deps): update @sentry/astro requirement from ^9.11.0 to ^9.12.0 in the prod-deps group [`#528`](https://github.com/RSickenberg/rsickenberg.me/pull/528)
+- Release 1.2.4 [`6502edf`](https://github.com/RSickenberg/rsickenberg.me/commit/6502edf4111550e0fc266e19be1884293afea183)
+- [skip ci] docs: Bump [`6324afe`](https://github.com/RSickenberg/rsickenberg.me/commit/6324afeb2ac81c8a722cb77cccc2bbdd32f76eb4)
+- Update CODEOWNERS [`551d663`](https://github.com/RSickenberg/rsickenberg.me/commit/551d6639b501d05e96ad7066771c06bcc89f2321)
+- chore(deps): update zustand requirement in the prod-deps group [`5929ff7`](https://github.com/RSickenberg/rsickenberg.me/commit/5929ff7826a2dd181f0fb9af5fc22453b8aa72f0)
+- chore(deps): update astro requirement in the prod-deps group [`63fb49f`](https://github.com/RSickenberg/rsickenberg.me/commit/63fb49f0e4d26c631396e74c8476a74aab5f6e52)
+- chore(deps): update lenis requirement in the prod-deps group [`7b88d1c`](https://github.com/RSickenberg/rsickenberg.me/commit/7b88d1c13c23a76c6ea73b3ed11013510538fdbe)
+- Create CODEOWNERS [`a67f9d7`](https://github.com/RSickenberg/rsickenberg.me/commit/a67f9d7d0ccf200849c49960dbedeb4b3f6c0a0a)
+- Merge pull request #531 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-ee5c2918fb [`8d2d43a`](https://github.com/RSickenberg/rsickenberg.me/commit/8d2d43ade62a7ff4bdbab3851fb9837a4e1620ae)
+- Merge pull request #527 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-9b310a0426 [`7242d33`](https://github.com/RSickenberg/rsickenberg.me/commit/7242d336a0d1669e203ac54ac9950928f15cfce3)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`6ab93c7`](https://github.com/RSickenberg/rsickenberg.me/commit/6ab93c731d782d9f8a1e5e0926a58cf068e98e4b)
+
+#### [v1.2.3](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.2...v1.2.3)
+
+> 6 April 2025
+
+- chore(deps): bump the prod-deps group with 4 updates [`#526`](https://github.com/RSickenberg/rsickenberg.me/pull/526)
+- chore(deps): bump the prod-deps group with 3 updates [`#525`](https://github.com/RSickenberg/rsickenberg.me/pull/525)
+- chore(deps): bump the prod-deps group with 2 updates [`#524`](https://github.com/RSickenberg/rsickenberg.me/pull/524)
+- chore(deps): bump the prod-deps group with 2 updates [`#522`](https://github.com/RSickenberg/rsickenberg.me/pull/522)
+- chore(deps): bump the prod-deps group across 1 directory with 5 updates [`#521`](https://github.com/RSickenberg/rsickenberg.me/pull/521)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`#518`](https://github.com/RSickenberg/rsickenberg.me/pull/518)
+- chore(deps): bump the prod-deps group with 2 updates [`#517`](https://github.com/RSickenberg/rsickenberg.me/pull/517)
+- chore(deps): bump the prod-deps group with 5 updates [`#515`](https://github.com/RSickenberg/rsickenberg.me/pull/515)
+- chore(deps): bump withastro/action from 3 to 4 [`#513`](https://github.com/RSickenberg/rsickenberg.me/pull/513)
+- chore(deps): update @sentry/astro requirement from ^9.6.1 to ^9.7.0 in the prod-deps group [`#514`](https://github.com/RSickenberg/rsickenberg.me/pull/514)
+- chore(deps): update @sentry/astro requirement from ^9.6.0 to ^9.6.1 in the prod-deps group [`#511`](https://github.com/RSickenberg/rsickenberg.me/pull/511)
+- chore(deps): bump the prod-deps group with 3 updates [`#509`](https://github.com/RSickenberg/rsickenberg.me/pull/509)
+- chore(deps): bump the prod-deps group with 2 updates [`#508`](https://github.com/RSickenberg/rsickenberg.me/pull/508)
+- chore(deps): bump the prod-deps group with 4 updates [`#507`](https://github.com/RSickenberg/rsickenberg.me/pull/507)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`#506`](https://github.com/RSickenberg/rsickenberg.me/pull/506)
+- chore(deps): bump the prod-deps group with 4 updates [`#501`](https://github.com/RSickenberg/rsickenberg.me/pull/501)
+- build(bun): updated deps [`e701c07`](https://github.com/RSickenberg/rsickenberg.me/commit/e701c071ed076c5e592f671000c4a673c5cb363b)
+- Release 1.2.3 [`1141b8e`](https://github.com/RSickenberg/rsickenberg.me/commit/1141b8e00542bd333f6dc01164b80d0e1ce8c665)
+- docs(changelog): bump changelog [`05586eb`](https://github.com/RSickenberg/rsickenberg.me/commit/05586ebeb0174a8bcea712acbb1366dc37ac8836)
+- Merge pull request #523 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-66ea7997a1 [`c45d2f9`](https://github.com/RSickenberg/rsickenberg.me/commit/c45d2f952321f9b594c1c24049ea9cf28204ff12)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`1dbd2ea`](https://github.com/RSickenberg/rsickenberg.me/commit/1dbd2ea83bd73b3c7093a6987802afe59a1d2091)
+- Merge pull request #512 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-afdcd257a3 [`4660aef`](https://github.com/RSickenberg/rsickenberg.me/commit/4660aefb69dd60eed7ee1dd615371cc77c4fda32)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`5b0ef47`](https://github.com/RSickenberg/rsickenberg.me/commit/5b0ef479335c2a2cf3ea0cf077a583fca69c059c)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`e7951b4`](https://github.com/RSickenberg/rsickenberg.me/commit/e7951b46ad07a8db59c90a921ad2bedea7202e4e)
+- Merge pull request #505 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-97e1b5abfb [`7c3a0ed`](https://github.com/RSickenberg/rsickenberg.me/commit/7c3a0ed73f4dccd4f8e4f806f82c99772fe39d16)
+
+#### [v1.2.2](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.1...v1.2.2)
+
+> 6 March 2025
+
+- chore(deps): bump the prod-deps group across 1 directory with 8 updates [`#500`](https://github.com/RSickenberg/rsickenberg.me/pull/500)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`#497`](https://github.com/RSickenberg/rsickenberg.me/pull/497)
+- chore(deps): update @sentry/astro requirement from ^9.2.0 to ^9.3.0 in the prod-deps group [`#494`](https://github.com/RSickenberg/rsickenberg.me/pull/494)
+- chore(deps): bump the prod-deps group across 1 directory with 6 updates [`#493`](https://github.com/RSickenberg/rsickenberg.me/pull/493)
+- chore(deps): bump the prod-deps group with 3 updates [`#491`](https://github.com/RSickenberg/rsickenberg.me/pull/491)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`#489`](https://github.com/RSickenberg/rsickenberg.me/pull/489)
+- chore(deps): bump the prod-deps group with 2 updates [`#488`](https://github.com/RSickenberg/rsickenberg.me/pull/488)
+- chore(deps): bump the prod-deps group with 2 updates [`#484`](https://github.com/RSickenberg/rsickenberg.me/pull/484)
+- chore(deps): bump the prod-deps group with 2 updates [`#483`](https://github.com/RSickenberg/rsickenberg.me/pull/483)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`#481`](https://github.com/RSickenberg/rsickenberg.me/pull/481)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 4 updates [`#478`](https://github.com/RSickenberg/rsickenberg.me/pull/478)
+- chore(deps): bump the prod-deps group with 4 updates [`#477`](https://github.com/RSickenberg/rsickenberg.me/pull/477)
+- chore(deps): bump the prod-deps group with 2 updates [`#475`](https://github.com/RSickenberg/rsickenberg.me/pull/475)
+- chore(deps): bump the prod-deps group with 2 updates [`#473`](https://github.com/RSickenberg/rsickenberg.me/pull/473)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`#472`](https://github.com/RSickenberg/rsickenberg.me/pull/472)
+- build(bun): updated dependencies [`612b81a`](https://github.com/RSickenberg/rsickenberg.me/commit/612b81ade1060f8d95f7b05e069affbc248b75f5)
+- Release 1.2.2 [`23de7f2`](https://github.com/RSickenberg/rsickenberg.me/commit/23de7f26ec40f169c4188a70d6129ea4be5ef5d8)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`cd6eccf`](https://github.com/RSickenberg/rsickenberg.me/commit/cd6eccf05841ed23a8f44586a7c1b35ba134d8c0)
+- Merge pull request #490 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-b33ecd97f2 [`94570e9`](https://github.com/RSickenberg/rsickenberg.me/commit/94570e94581c16037a1d9324f2a6ee808d249718)
+- Merge pull request #485 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-00c694c3c7 [`3175f1c`](https://github.com/RSickenberg/rsickenberg.me/commit/3175f1c1c8e8ee4aa1762a2ff73a4395bcad8b42)
+- Merge pull request #486 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-b9c2dcb510 [`9a7bd79`](https://github.com/RSickenberg/rsickenberg.me/commit/9a7bd79bd59f80dfde96fb31fe17c943912d72c7)
+- Merge pull request #482 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-1772f8aef2 [`3e26464`](https://github.com/RSickenberg/rsickenberg.me/commit/3e26464e7bec07367f67645bc81a3dbaecb3f822)
+- Merge pull request #471 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-5953948be9 [`8a3e783`](https://github.com/RSickenberg/rsickenberg.me/commit/8a3e783ea603c74800e914032f318b5e7bb928cb)
+- Release 1.2.1 [`20e07d2`](https://github.com/RSickenberg/rsickenberg.me/commit/20e07d294230e11900352293ef8c20c0862dce8b)
+
+#### [v1.2.1](https://github.com/RSickenberg/rsickenberg.me/compare/v1.2.0...v1.2.1)
+
+> 2 February 2025
+
+- chore(deps): bump the prod-deps group with 3 updates [`#469`](https://github.com/RSickenberg/rsickenberg.me/pull/469)
+- fix(tech): fixed tech layout + updated deps [`c33f376`](https://github.com/RSickenberg/rsickenberg.me/commit/c33f376ddd5f8814f7607c6a6aa4fc673df6d49b)
+- Release 1.2.1 [`c81a6be`](https://github.com/RSickenberg/rsickenberg.me/commit/c81a6be4d5719bce10cc5bcc12d778013ffb3ea7)
+
+#### [v1.2.0](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35...v1.2.0)
+
+> 30 January 2025
+
+- chore(deps): bump the prod-deps group with 6 updates [`#468`](https://github.com/RSickenberg/rsickenberg.me/pull/468)
+- feat(tailwind): bumped tailwind to V4 ! [`d21bef4`](https://github.com/RSickenberg/rsickenberg.me/commit/d21bef4dcea262aa69b67aa3447bcefe13a647e2)
+- Release 1.2.0 [`b1b1890`](https://github.com/RSickenberg/rsickenberg.me/commit/b1b189032231e9f6e621e956699f34382176f89f)
+
+#### [v1.1.35](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.35-0...v1.1.35)
+
+> 28 January 2025
+
+- fix(config): fixed console gsap error + tailwind on everypage is not needed [`fe1380f`](https://github.com/RSickenberg/rsickenberg.me/commit/fe1380f77c899eaa302041ec4dd51aa5600a7f4b)
+- Release 1.1.35 [`3a75457`](https://github.com/RSickenberg/rsickenberg.me/commit/3a7545730d96b9109555e53d707bd102d3de1176)
+
+#### [v1.1.35-0](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.34...v1.1.35-0)
+
+> 21 January 2025
+
+- fix(contact): removed (for now) instagram [`408871d`](https://github.com/RSickenberg/rsickenberg.me/commit/408871d1b8bbf7cc1cc7c81705583e3b5afe46c9)
+- Release 1.1.35-0 [`d1b091e`](https://github.com/RSickenberg/rsickenberg.me/commit/d1b091eafbdce119d6c3d895aca80ebea17ad3ff)
+
+#### [v1.1.34](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.33...v1.1.34)
+
+> 21 January 2025
+
+- fix(project): removed async to bypass layoutshift [`5a678c7`](https://github.com/RSickenberg/rsickenberg.me/commit/5a678c761fa173d029291eba5821f0065ef55689)
+- Release 1.1.34 [`e9158be`](https://github.com/RSickenberg/rsickenberg.me/commit/e9158be1ca620d0b973f14ffca10b7a77078c7f4)
+
+#### [v1.1.33](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.32...v1.1.33)
+
+> 20 January 2025
+
+- Merge to Prod 1.1.32 [`#467`](https://github.com/RSickenberg/rsickenberg.me/pull/467)
+- Release 1.1.33 [`2a9fc06`](https://github.com/RSickenberg/rsickenberg.me/commit/2a9fc067693cd8e91b3dc9c859dbe2b436219faa)
+- fix(contact): fixed oppacity on contact [`a961714`](https://github.com/RSickenberg/rsickenberg.me/commit/a9617141b3bfc06560fdeb11f5fdbdf18bd79843)
+- changelog [`b76cbe6`](https://github.com/RSickenberg/rsickenberg.me/commit/b76cbe6a18b7df805aa1f04d31bdaec3363c6828)
+
+#### [v1.1.32](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.31...v1.1.32)
+
+> 20 January 2025
+
+- chore(deps): update gsap requirement from ^3.12.5 to ^3.12.7 in the prod-deps group [`#466`](https://github.com/RSickenberg/rsickenberg.me/pull/466)
+- chore(deps): bump the prod-deps group with 3 updates [`#465`](https://github.com/RSickenberg/rsickenberg.me/pull/465)
+- fix(ui): fixes few elements here and there on animations mostly [`c4184d3`](https://github.com/RSickenberg/rsickenberg.me/commit/c4184d3776c2ed9eec03b1a8a9789bac1cfc8af3)
+- Release 1.1.32 [`1c72c8c`](https://github.com/RSickenberg/rsickenberg.me/commit/1c72c8cbc7e7c62996a5d1e5056312ebd225ebec)
+- chore(deps): update gsap requirement in the prod-deps group [`f98d1a9`](https://github.com/RSickenberg/rsickenberg.me/commit/f98d1a9f67ee8a58f5adc3a47ac97204150b7da9)
+
+#### [v1.1.31](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.30...v1.1.31)
+
+> 14 January 2025
+
+- chore(deps): update astro requirement from ^5.1.5 to ^5.1.6 in the prod-deps group [`#464`](https://github.com/RSickenberg/rsickenberg.me/pull/464)
+- fix(gsap): fixed scroll trigger + dev deps update [`34d7b21`](https://github.com/RSickenberg/rsickenberg.me/commit/34d7b21370d831d5a0d07ef25edb3071848574da)
+- Release 1.1.31 [`bcbc375`](https://github.com/RSickenberg/rsickenberg.me/commit/bcbc3756955a3b1f212dc405da27af8be39c3c2c)
+- chore(deps): update astro requirement in the prod-deps group [`6f7ec6e`](https://github.com/RSickenberg/rsickenberg.me/commit/6f7ec6e4bbefe9f6407c9637e4d527914426d1e2)
+
+#### [v1.1.30](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.29...v1.1.30)
+
+> 12 January 2025
+
+- fix(about): fixed scroll trigger gsap + nbsp on testimonials [`4b900c8`](https://github.com/RSickenberg/rsickenberg.me/commit/4b900c86aef4fc42e21af2eb6024e5800fa73cc9)
+- Release 1.1.30 [`9ec9614`](https://github.com/RSickenberg/rsickenberg.me/commit/9ec96140ff35fe125481743dfca06dda2a2a9d15)
+
+#### [v1.1.29](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.28...v1.1.29)
+
+> 12 January 2025
+
+- chore(deps): bump the prod-deps group with 3 updates [`#463`](https://github.com/RSickenberg/rsickenberg.me/pull/463)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`#460`](https://github.com/RSickenberg/rsickenberg.me/pull/460)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`#459`](https://github.com/RSickenberg/rsickenberg.me/pull/459)
+- feat(font): updated font [`7638dab`](https://github.com/RSickenberg/rsickenberg.me/commit/7638dab2e5e84d40cacd878bf0ba04df9373366d)
+- Release 1.1.29 [`675b4bf`](https://github.com/RSickenberg/rsickenberg.me/commit/675b4bf75c48cd4fbe98cf9b8485ac94a78303f5)
+- Merge pull request #462 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-ce25968abd [`8d77a88`](https://github.com/RSickenberg/rsickenberg.me/commit/8d77a8823f29a3e687ffadb0416630e7b1473e34)
+- chore(deps-dev): update release-it requirement in the dev-deps group [`b4fcb88`](https://github.com/RSickenberg/rsickenberg.me/commit/b4fcb884b8416bd8f0dacea13195af415be4db39)
+- Merge pull request #461 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-05e5b84cba [`9201663`](https://github.com/RSickenberg/rsickenberg.me/commit/9201663315658059b1a5c98d7072acb86746c587)
+- chore(deps): bump the prod-deps group with 4 updates [`93743a7`](https://github.com/RSickenberg/rsickenberg.me/commit/93743a7c251d749bd82ea16c947cdc61d6100997)
+
+#### [v1.1.28](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.27...v1.1.28)
+
+> 5 January 2025
+
+- chore(deps): bump the prod-deps group with 2 updates [`#458`](https://github.com/RSickenberg/rsickenberg.me/pull/458)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`#457`](https://github.com/RSickenberg/rsickenberg.me/pull/457)
+- chore(deps): update astro-icon requirement from ^1.1.4 to ^1.1.5 in the prod-deps group [`#455`](https://github.com/RSickenberg/rsickenberg.me/pull/455)
+- perf(code): optimized via github copilot code readability + performances [`7beef10`](https://github.com/RSickenberg/rsickenberg.me/commit/7beef1081e6990549801b787802cc8de9557b8d0)
+- Release 1.1.28 [`19a421a`](https://github.com/RSickenberg/rsickenberg.me/commit/19a421aedf4c5e2c50ddac0d59b33e212f8ac933)
+- docs(changelog): updated changelog [`b9d5fa2`](https://github.com/RSickenberg/rsickenberg.me/commit/b9d5fa2d59275e0c0cd54d80d395332d1bbd44e0)
+- Merge pull request #456 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-5f3cdacd52 [`acfa98c`](https://github.com/RSickenberg/rsickenberg.me/commit/acfa98c33116cadd0c6458b8971cb5d8bf9a996e)
+- chore(deps): update preact requirement in the prod-deps group [`59e5d93`](https://github.com/RSickenberg/rsickenberg.me/commit/59e5d93560d028d6bf8328dcb1128dd030a6d9bc)
+- chore(deps): update astro-icon requirement in the prod-deps group [`be23435`](https://github.com/RSickenberg/rsickenberg.me/commit/be234359e57c055d4218a5fad2aa88cf9f991d86)
+
+#### [v1.1.27](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.26...v1.1.27)
+
+> 26 December 2024
+
+- fix(contact): fixed contact not beeing visible due to lazy loading on mobile images [`c8268ab`](https://github.com/RSickenberg/rsickenberg.me/commit/c8268abbca45685be5a31230e7426f4e8da11d83)
+- docs(changelog): updated changelog [`10e078a`](https://github.com/RSickenberg/rsickenberg.me/commit/10e078a58ebae1bdff3fad4fa836f9b6896907ab)
+- Release 1.1.27 [`5eeb65b`](https://github.com/RSickenberg/rsickenberg.me/commit/5eeb65b32380153963bf2ef51148d6beaf077602)
+
+#### [v1.1.26](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.25...v1.1.26)
+
+> 26 December 2024
+
+- feat(performances): enhanced performances [`6fd42d0`](https://github.com/RSickenberg/rsickenberg.me/commit/6fd42d05e40b1e195184b6d5f1ae1bf9e09f3e25)
+- feat(performances): updated performances by a little [`46be395`](https://github.com/RSickenberg/rsickenberg.me/commit/46be39590331117d993f7ee6235870c60084da10)
+- fix(image): image loading -&gt; Lazy / Decoding -&gt; Auto [`bfc2353`](https://github.com/RSickenberg/rsickenberg.me/commit/bfc2353bbd6f9624a839c80d2fa28593a2ccd642)
+- Release 1.1.26 [`ca414c9`](https://github.com/RSickenberg/rsickenberg.me/commit/ca414c913efdf52fdde370c6921df2ac3073201d)
+
+#### [v1.1.25](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.24...v1.1.25)
+
+> 25 December 2024
+
+- Release 1.1.25 [`cd541c9`](https://github.com/RSickenberg/rsickenberg.me/commit/cd541c91b6d1f424c03dc4a176961772ed90ff6c)
+- fix(Projects): fixed cdc background colors [`9d065f8`](https://github.com/RSickenberg/rsickenberg.me/commit/9d065f8d31eec304c38b5408f961bdc65be468ac)
+
+#### [v1.1.24](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.23...v1.1.24)
+
+> 24 December 2024
+
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`#454`](https://github.com/RSickenberg/rsickenberg.me/pull/454)
+- chore(deps): bump the prod-deps group with 3 updates [`#453`](https://github.com/RSickenberg/rsickenberg.me/pull/453)
+- chore(deps): bump the prod-deps group with 3 updates [`#451`](https://github.com/RSickenberg/rsickenberg.me/pull/451)
+- chore(deps): bump the prod-deps group with 2 updates [`#450`](https://github.com/RSickenberg/rsickenberg.me/pull/450)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`#448`](https://github.com/RSickenberg/rsickenberg.me/pull/448)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`#445`](https://github.com/RSickenberg/rsickenberg.me/pull/445)
+- chore(deps): update @sentry/astro requirement from ^8.44.0 to ^8.45.0 in the prod-deps group [`#444`](https://github.com/RSickenberg/rsickenberg.me/pull/444)
+- chore(deps): bump the prod-deps group with 3 updates [`#442`](https://github.com/RSickenberg/rsickenberg.me/pull/442)
+- chore(deps): update astro requirement from ^5.0.4 to ^5.0.5 in the prod-deps group [`#441`](https://github.com/RSickenberg/rsickenberg.me/pull/441)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`#438`](https://github.com/RSickenberg/rsickenberg.me/pull/438)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`#439`](https://github.com/RSickenberg/rsickenberg.me/pull/439)
+- chore(deps): update astro requirement from ^5.0.2 to ^5.0.3 in the prod-deps group [`#436`](https://github.com/RSickenberg/rsickenberg.me/pull/436)
+- chore(deps): bump the prod-deps group with 3 updates [`#435`](https://github.com/RSickenberg/rsickenberg.me/pull/435)
+- feat(project): added new project + added year + end of life [`4254122`](https://github.com/RSickenberg/rsickenberg.me/commit/4254122d63ab25baed104d5d91544005d8d51554)
+- Release 1.1.24 [`9f2b44a`](https://github.com/RSickenberg/rsickenberg.me/commit/9f2b44af5832484cfc648c4652d7e9f0fadbd86d)
+- docs(changelog): added security releases to the changelog [`6a83396`](https://github.com/RSickenberg/rsickenberg.me/commit/6a83396e2f572281d844e484dedea4bdb3f5872d)
+- Merge pull request #449 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-3d4aa924e6 [`3a75517`](https://github.com/RSickenberg/rsickenberg.me/commit/3a75517f097e971c06420541703f2d2370708902)
+- chore(deps-dev): update globals requirement in the dev-deps group [`911bd14`](https://github.com/RSickenberg/rsickenberg.me/commit/911bd14be264d625766b674f8ce807d9c6ab23e8)
+- Merge pull request #447 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-7c1d4cfcf5 [`ec79b6b`](https://github.com/RSickenberg/rsickenberg.me/commit/ec79b6b41e49fa33a1cd7eb69c15cb3e485cbccb)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`5a5d9ea`](https://github.com/RSickenberg/rsickenberg.me/commit/5a5d9ead6bb8fa4d0c14ff9b837f7f85a1f91231)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`12a0e50`](https://github.com/RSickenberg/rsickenberg.me/commit/12a0e5027041888b25632efb60b0d5b2fcc43b49)
+- chore(deps): update astro requirement in the prod-deps group [`6f306fe`](https://github.com/RSickenberg/rsickenberg.me/commit/6f306fe7ab703189e7751e8905431d59b783646f)
+- Merge pull request #440 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-447e0eef97 [`1e53876`](https://github.com/RSickenberg/rsickenberg.me/commit/1e538763c5ea576b14870dba793b340167b05b10)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`662d2ed`](https://github.com/RSickenberg/rsickenberg.me/commit/662d2ed96653b03a5bbc68ba55cc61364ab88a00)
+- chore(deps): update astro requirement in the prod-deps group [`a37a940`](https://github.com/RSickenberg/rsickenberg.me/commit/a37a9406ef45c95c5342059ca4d20b03b8e02122)
+
+#### [v1.1.23](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.22...v1.1.23)
+
+> 3 December 2024
+
+- chore(deps): bump the prod-deps group with 4 updates [`#433`](https://github.com/RSickenberg/rsickenberg.me/pull/433)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 5 updates [`#432`](https://github.com/RSickenberg/rsickenberg.me/pull/432)
+- chore(deps): bump the prod-deps group with 3 updates [`#431`](https://github.com/RSickenberg/rsickenberg.me/pull/431)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`#426`](https://github.com/RSickenberg/rsickenberg.me/pull/426)
+- chore(deps-dev): update dotenv-cli requirement from ^7.4.3 to ^7.4.4 in the dev-deps group [`#424`](https://github.com/RSickenberg/rsickenberg.me/pull/424)
+- chore(deps): bump the prod-deps group with 2 updates [`#425`](https://github.com/RSickenberg/rsickenberg.me/pull/425)
+- chore(deps): bump the prod-deps group with 3 updates [`#423`](https://github.com/RSickenberg/rsickenberg.me/pull/423)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`#421`](https://github.com/RSickenberg/rsickenberg.me/pull/421)
+- build(dev): added tailwind debugger [`c187a3c`](https://github.com/RSickenberg/rsickenberg.me/commit/c187a3c4d2691802bba9b5cb52f8f62bc934abf9)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`5d134a9`](https://github.com/RSickenberg/rsickenberg.me/commit/5d134a913cd78325aae976c92fd584bb13d6fc25)
+- Release 1.1.23 [`9e8a501`](https://github.com/RSickenberg/rsickenberg.me/commit/9e8a501132487cda7cbf8e1884772f9f03729705)
+- docs(changelog): bump changelog [`9f21c2d`](https://github.com/RSickenberg/rsickenberg.me/commit/9f21c2d8cd615aa117746a30c42f9c8b22ce3d24)
+- Merge pull request #429 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-fa2f7426d6 [`44d41e1`](https://github.com/RSickenberg/rsickenberg.me/commit/44d41e1fb2e15a472ff0b8f80da85723c7f160e0)
+- chore(deps-dev): update dotenv-cli requirement in the dev-deps group [`b135efb`](https://github.com/RSickenberg/rsickenberg.me/commit/b135efb580e28dc62ed46796eb6c460ae6562dee)
+- Merge pull request #422 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-9167cffa98 [`5d6f41d`](https://github.com/RSickenberg/rsickenberg.me/commit/5d6f41db6c41dacfce57fa427f2d97755234fc9a)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`76c4d46`](https://github.com/RSickenberg/rsickenberg.me/commit/76c4d46a0c57c73e79db8203701dec54b76dcc8f)
+
+#### [v1.1.22](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.21...v1.1.22)
+
+> 16 November 2024
+
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`#420`](https://github.com/RSickenberg/rsickenberg.me/pull/420)
+- chore(deps): bump the prod-deps group with 2 updates [`#419`](https://github.com/RSickenberg/rsickenberg.me/pull/419)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`#416`](https://github.com/RSickenberg/rsickenberg.me/pull/416)
+- chore(deps): update caniuse-lite requirement from ^1.0.30001677 to ^1.0.30001679 in the prod-deps group across 1 directory [`#413`](https://github.com/RSickenberg/rsickenberg.me/pull/413)
+- chore(deps-dev): update eslint-plugin-astro requirement from ^1.3.0 to ^1.3.1 in the dev-deps group [`#411`](https://github.com/RSickenberg/rsickenberg.me/pull/411)
+- chore(deps): bump the prod-deps group with 2 updates [`#410`](https://github.com/RSickenberg/rsickenberg.me/pull/410)
+- chore(deps): bump the prod-deps group with 2 updates [`#409`](https://github.com/RSickenberg/rsickenberg.me/pull/409)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`#408`](https://github.com/RSickenberg/rsickenberg.me/pull/408)
+- chore(deps): bump the prod-deps group with 2 updates [`#407`](https://github.com/RSickenberg/rsickenberg.me/pull/407)
+- Release 1.1.22 [`4f2ef9b`](https://github.com/RSickenberg/rsickenberg.me/commit/4f2ef9bd310c755e63c70612c4ff3eccefa19e1e)
+- docs(changelog): bumped changelog [`ba65076`](https://github.com/RSickenberg/rsickenberg.me/commit/ba65076d94baf5118119ef36ed9fecbcc4bfcf3e)
+- Merge pull request #417 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-d392f50a14 [`34ddad4`](https://github.com/RSickenberg/rsickenberg.me/commit/34ddad462f0a5e9a8606f56e43be915c80251764)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`7e38677`](https://github.com/RSickenberg/rsickenberg.me/commit/7e3867797cc7752db469fc13748ab5ff83f43534)
+- chore(deps): update caniuse-lite requirement [`7219064`](https://github.com/RSickenberg/rsickenberg.me/commit/72190648eaf0698722d1d6372bdfd51f3dcf6de2)
+- chore(deps-dev): update eslint-plugin-astro requirement [`21462c0`](https://github.com/RSickenberg/rsickenberg.me/commit/21462c0c66aad3fd067ecce46d99d0aacbbbf82f)
+
+#### [v1.1.21](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.20...v1.1.21)
+
+> 2 November 2024
+
+- chore(deps): bump the prod-deps group with 3 updates [`#405`](https://github.com/RSickenberg/rsickenberg.me/pull/405)
+- refactor(sass): fixed deprecation notice with `@import` on dart [`48d4e39`](https://github.com/RSickenberg/rsickenberg.me/commit/48d4e3918f409856c9d4990bcdcb92e27a2f07bb)
+- Release 1.1.21 [`4f98dc0`](https://github.com/RSickenberg/rsickenberg.me/commit/4f98dc058a13db95a19aeb69b6e09df925ad665b)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`2ae1e31`](https://github.com/RSickenberg/rsickenberg.me/commit/2ae1e31ae4cde3e457b06bff0d3c495b532e1b58)
+- build(bun): updated eslint+saas [`e300e27`](https://github.com/RSickenberg/rsickenberg.me/commit/e300e27f322fe471c983de0e7e78c8cd023bd48d)
+- Merge pull request #404 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-f1ba52f29a [`6c2607a`](https://github.com/RSickenberg/rsickenberg.me/commit/6c2607a91f708a4f0e5c938fbb52a67362698296)
+- Merge pull request #403 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-39be4c673d [`de880c0`](https://github.com/RSickenberg/rsickenberg.me/commit/de880c0bc9659faedaf69c824d8469123ebc8d40)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`f9c6d0a`](https://github.com/RSickenberg/rsickenberg.me/commit/f9c6d0ab89e6428b1fc0e22d55ec79e851c54854)
+- Merge pull request #399 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-bcfd08c0da [`bc507fe`](https://github.com/RSickenberg/rsickenberg.me/commit/bc507fe039208d31ccfdd752c854f2eff9a81645)
+- chore(deps-dev): update sass requirement in the dev-deps group [`b0f527a`](https://github.com/RSickenberg/rsickenberg.me/commit/b0f527ad6e5b1eeb12691774ef05cd75fbe6f94b)
+
+#### [v1.1.20](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.19...v1.1.20)
+
+> 23 October 2024
+
+- Release 1.1.20 [`752541b`](https://github.com/RSickenberg/rsickenberg.me/commit/752541b5f046186e3b56a533b31ef81993726ad9)
+- docs(release): bump changelog [`60e3fb4`](https://github.com/RSickenberg/rsickenberg.me/commit/60e3fb4f2f770475faaf62cb5bb16a8c790d438f)
+- Merge pull request #398 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-081378d99c [`16d1c27`](https://github.com/RSickenberg/rsickenberg.me/commit/16d1c27dbceb6006cb61bf61c4fcbfe7be133bc8)
+- chore(deps): update astro requirement in the prod-deps group [`827bbd1`](https://github.com/RSickenberg/rsickenberg.me/commit/827bbd1995559281a59d6d8c0994499e3a825ac2)
+- Merge pull request #397 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-e55560bd13 [`327e453`](https://github.com/RSickenberg/rsickenberg.me/commit/327e45378b8e3cbb124324b45442322b05e82ce4)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`244e23f`](https://github.com/RSickenberg/rsickenberg.me/commit/244e23f00f345a706219c547bad89bbf8bdef007)
+- Merge pull request #396 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f6e43e30cb [`83ae91b`](https://github.com/RSickenberg/rsickenberg.me/commit/83ae91b3a31c75e845283372fa6b98953372d9aa)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`20d8dc4`](https://github.com/RSickenberg/rsickenberg.me/commit/20d8dc4745c83da2e2f5d92f441b2be9d48592a6)
+- Merge pull request #395 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-eeec0e3ae0 [`6abd418`](https://github.com/RSickenberg/rsickenberg.me/commit/6abd418df0e38b362bf2b097d5e3484cd3b2a5f6)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`bc59665`](https://github.com/RSickenberg/rsickenberg.me/commit/bc596654f9452e93ad1526873a31eba6e21a946c)
+- Merge pull request #394 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-a0c43e1bad [`04d8e08`](https://github.com/RSickenberg/rsickenberg.me/commit/04d8e08975c73974d17c4dab066fa11947e2b132)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`ccdf8c0`](https://github.com/RSickenberg/rsickenberg.me/commit/ccdf8c0bcf7534d2597a328bdc58be4eed81a900)
+- Merge pull request #393 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-fdd98c4b9c [`b7367b2`](https://github.com/RSickenberg/rsickenberg.me/commit/b7367b27c445fc43f425ae7ff7acb919aef6e770)
+- chore(deps): update astro requirement in the prod-deps group [`5f393ce`](https://github.com/RSickenberg/rsickenberg.me/commit/5f393ceed9c73c41a5eaca5b8d212de7783d1c38)
+
+#### [v1.1.19](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.18...v1.1.19)
+
+> 16 October 2024
+
+- Release 1.1.19 [`a02e648`](https://github.com/RSickenberg/rsickenberg.me/commit/a02e64829fd302ef41edc356bb725d87bc4ed831)
+- build(release): updated release-it [`5486ebd`](https://github.com/RSickenberg/rsickenberg.me/commit/5486ebd73d161fc7c3d07581ae5971194f90b692)
+- Merge pull request #391 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-3d03756c6f [`7a6e56b`](https://github.com/RSickenberg/rsickenberg.me/commit/7a6e56bfa7365bb10dd6a2bac3b4d9a2405fc954)
+- chore(deps): bump the prod-deps group across 1 directory with 6 updates [`17fefac`](https://github.com/RSickenberg/rsickenberg.me/commit/17fefacaf11ab9843f23b0a3d102f4f240f722fc)
+- Merge pull request #389 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-9b95080e05 [`280c71e`](https://github.com/RSickenberg/rsickenberg.me/commit/280c71e2f67e098b6e66b68ccabe1e9bc134ac56)
+- chore(deps-dev): bump the dev-deps group with 4 updates [`2cad7d4`](https://github.com/RSickenberg/rsickenberg.me/commit/2cad7d4750fea7c888b388299b88c1eb716cd869)
+- Merge pull request #387 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-0809ce78a1 [`413b9c9`](https://github.com/RSickenberg/rsickenberg.me/commit/413b9c9046642288b4f29fba6485e3996322a78e)
+- chore(deps): update caniuse-lite requirement in the prod-deps group [`608a84a`](https://github.com/RSickenberg/rsickenberg.me/commit/608a84a24b8889027dc524af429ce001712f4c3e)
+- Merge pull request #386 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-b963830011 [`b474a5d`](https://github.com/RSickenberg/rsickenberg.me/commit/b474a5d017a9ea005588f1e083113175aaa4d83a)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 5 updates [`ee11608`](https://github.com/RSickenberg/rsickenberg.me/commit/ee11608c10ebb64f7a8f88f07aaf357aaeb0049e)
+- Merge pull request #385 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-8b6e1d434f [`c63c43e`](https://github.com/RSickenberg/rsickenberg.me/commit/c63c43e84d80209072e6299d2e92a6a3bab8659d)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`210de96`](https://github.com/RSickenberg/rsickenberg.me/commit/210de96b1e9902ab055fb0aabe60ca6fad7ad407)
+- Merge pull request #380 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-209eed7adc [`84d06a4`](https://github.com/RSickenberg/rsickenberg.me/commit/84d06a4118ec86f29c0d56f92214bc1ee81baa2e)
+- chore(deps): update astro requirement in the prod-deps group [`ab5e51e`](https://github.com/RSickenberg/rsickenberg.me/commit/ab5e51e9c127aaba3c6e0ad2161ce6426291bf6e)
+- Merge pull request #379 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-6e13e837ab [`2d18b6c`](https://github.com/RSickenberg/rsickenberg.me/commit/2d18b6c88fee394e15af21461ee53ac99b97188f)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`1a03925`](https://github.com/RSickenberg/rsickenberg.me/commit/1a039255fc3084d4b9e8b36f9f4db77c5e31b978)
+- Merge pull request #378 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-2e402a30e2 [`a0d0608`](https://github.com/RSickenberg/rsickenberg.me/commit/a0d0608cd48cd8d4fb4a1d4b47c679e822b5871f)
+- chore(deps): bump the prod-deps group with 2 updates [`219290a`](https://github.com/RSickenberg/rsickenberg.me/commit/219290a75b9bf3cae1dd95e4009af5fd440271b5)
+- Merge pull request #376 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-44a42d8fbe [`4f4ddd1`](https://github.com/RSickenberg/rsickenberg.me/commit/4f4ddd17abfbbcba492a4d6b9e093691d0baceff)
+- chore(deps): bump the prod-deps group with 3 updates [`d96398f`](https://github.com/RSickenberg/rsickenberg.me/commit/d96398ff14cc6c784c4c0d42940ac0af39fbfbc3)
+- Merge pull request #375 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-1c68c18256 [`19d85b2`](https://github.com/RSickenberg/rsickenberg.me/commit/19d85b2aa0c288178d64a4c7ab368b18a5349d99)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`406df3c`](https://github.com/RSickenberg/rsickenberg.me/commit/406df3c4dcf2e157de4090351e06eb595860cd1f)
+- Merge pull request #374 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-8c75d7bc1c [`c537def`](https://github.com/RSickenberg/rsickenberg.me/commit/c537def96ba24e6dfac706bc1b596fe5b90cab30)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 5 updates [`1ebfccc`](https://github.com/RSickenberg/rsickenberg.me/commit/1ebfccc62b0d4cf840b2fe73e5ccaf369ca401b5)
+- Merge pull request #370 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-0c4eb38aed [`d8eb9d9`](https://github.com/RSickenberg/rsickenberg.me/commit/d8eb9d9a4ffe22a536d84b5ae52acc55930cb764)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`c60f931`](https://github.com/RSickenberg/rsickenberg.me/commit/c60f931065fcf10e728bcfcaea250022bc52cf2a)
+- Merge pull request #366 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-d3758eef3b [`842dbef`](https://github.com/RSickenberg/rsickenberg.me/commit/842dbefdecd307df285746b4acd9af11db4d52d0)
+- chore(deps-dev): bump the dev-deps group with 3 updates [`213fe3f`](https://github.com/RSickenberg/rsickenberg.me/commit/213fe3fedf640372e95cdbf5016d71358cea949f)
+- Merge pull request #368 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f795e820cc [`370d83c`](https://github.com/RSickenberg/rsickenberg.me/commit/370d83cd11060b2d08f90f27a62745a0c1bba6ef)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`bafe270`](https://github.com/RSickenberg/rsickenberg.me/commit/bafe270fe19b291532094b23eb522289906d7cf9)
+- Merge pull request #365 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-851664c478 [`b1a97ef`](https://github.com/RSickenberg/rsickenberg.me/commit/b1a97ef88a37caf332610f5cf5867aad68036f6f)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`cc4a1f5`](https://github.com/RSickenberg/rsickenberg.me/commit/cc4a1f51d3c7d783b9210fd4f2c3305330454c73)
+- Merge pull request #363 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-faf62b5f89 [`c67c25c`](https://github.com/RSickenberg/rsickenberg.me/commit/c67c25c81eb8cf05c7a6bb7a2a4cc911ba18fe71)
+- chore(deps-dev): update sass requirement in the dev-deps group [`b62cc2b`](https://github.com/RSickenberg/rsickenberg.me/commit/b62cc2b2959ce2e41a8cc3d4052198d44e7be872)
+- Merge pull request #362 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-0977dddb2f [`9bd009e`](https://github.com/RSickenberg/rsickenberg.me/commit/9bd009ef29b1ed2660da2ea52770a1631565596d)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`8984544`](https://github.com/RSickenberg/rsickenberg.me/commit/898454420dc05b5ba1be4abde006007f2cba2545)
+
+#### [v1.1.18](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.17...v1.1.18)
+
+> 19 September 2024
+
+- Release 1.1.18 [`30adbd7`](https://github.com/RSickenberg/rsickenberg.me/commit/30adbd79fb7251b7fd97eeda7da5d6f3f90f0bc3)
+- docs(changelog): [skip ci] updated changelog [`aafd2b7`](https://github.com/RSickenberg/rsickenberg.me/commit/aafd2b76a2fa9adf7f0d71bb5e224aba4aa2e109)
+- Merge pull request #361 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-732773f6da [`65c3b16`](https://github.com/RSickenberg/rsickenberg.me/commit/65c3b16fdfbe1b3816e2a123951fb2206068f33a)
+- chore(deps): bump the prod-deps group with 2 updates [`b361927`](https://github.com/RSickenberg/rsickenberg.me/commit/b361927d9e7b7e4112520ec8319bce836cc9976f)
+- Merge pull request #360 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-963ae666cb [`4456a96`](https://github.com/RSickenberg/rsickenberg.me/commit/4456a96fe9e6cf0e7d61b55755ec568675930350)
+- chore(deps-dev): update sass requirement in the dev-deps group [`1fec670`](https://github.com/RSickenberg/rsickenberg.me/commit/1fec670e8acdcfd8aef84b6e71ee8024ef461d3f)
+- Merge pull request #359 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-c433e0637a [`c9c88e2`](https://github.com/RSickenberg/rsickenberg.me/commit/c9c88e2c7f213636ba8525231276d93bf1960557)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`937324a`](https://github.com/RSickenberg/rsickenberg.me/commit/937324a3ed88f74546b0ad35c29313c3d33b2c99)
+- Merge pull request #357 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-d0b449a109 [`6aa6a5d`](https://github.com/RSickenberg/rsickenberg.me/commit/6aa6a5d679af8648dd60a4ed1534199c85287dc7)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`cfb82dc`](https://github.com/RSickenberg/rsickenberg.me/commit/cfb82dc1039dbbe0c61dc5b69c94b0349eb88b91)
+- Merge pull request #356 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-67ced1b2b0 [`a88e542`](https://github.com/RSickenberg/rsickenberg.me/commit/a88e542aed07d54e1a20a9130c72a41c73625d6c)
+- chore(deps): bump the prod-deps group with 2 updates [`8f586c6`](https://github.com/RSickenberg/rsickenberg.me/commit/8f586c64aab2a11263ed345fe44768d237b1be76)
+- Merge pull request #354 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-fd7ea18ab8 [`0ae218d`](https://github.com/RSickenberg/rsickenberg.me/commit/0ae218dac91935c620474424a76c22fc515a1a46)
+- chore(deps-dev): update eslint-plugin-astro requirement [`8b813b1`](https://github.com/RSickenberg/rsickenberg.me/commit/8b813b15ad15e6192823d97da5846320d6cfb9ef)
+- Merge pull request #355 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-eed496068e [`87b5989`](https://github.com/RSickenberg/rsickenberg.me/commit/87b598949140dca490d01fce173e4ff22c8d40dd)
+- chore(deps): update astro requirement in the prod-deps group [`61ebb47`](https://github.com/RSickenberg/rsickenberg.me/commit/61ebb479f707c52a975425d1b704a7c1ec37475a)
+- Merge pull request #353 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-2ed58384ef [`52170c6`](https://github.com/RSickenberg/rsickenberg.me/commit/52170c636073167c4b97aa3a2ee6e68386d2d39b)
+- chore(deps): update tailwindcss requirement in the prod-deps group [`a3c80f1`](https://github.com/RSickenberg/rsickenberg.me/commit/a3c80f102476762eae04136e802b97fe3f7d8a5e)
+
+#### [v1.1.17](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.16...v1.1.17)
+
+> 11 September 2024
+
+- Release 1.1.17 [`27ba9b7`](https://github.com/RSickenberg/rsickenberg.me/commit/27ba9b7f05a068865441c7a0015a407c85cc9bdf)
+- [skip ci] changelog [`20599e8`](https://github.com/RSickenberg/rsickenberg.me/commit/20599e88e8d25659fbec98a862360b9321465668)
+- refactor(browserlist): updated browserlist selection [`3dd233f`](https://github.com/RSickenberg/rsickenberg.me/commit/3dd233f10278b96af255ef4cd45ac2beed7b4d53)
+- Merge pull request #352 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-aa50992bc2 [`52a01b1`](https://github.com/RSickenberg/rsickenberg.me/commit/52a01b1a4e76eb2609cda0e513bc68b649741483)
+- chore(deps): bump the prod-deps group with 2 updates [`264eaaf`](https://github.com/RSickenberg/rsickenberg.me/commit/264eaafd60cf4e2556779dedc64a9e50cacef8ff)
+- Merge pull request #351 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-a31bc783f0 [`536deec`](https://github.com/RSickenberg/rsickenberg.me/commit/536deec8531753ec144e0e16a3299fc0d6b58fc7)
+- build(bun): updated bun deps [`2e02c9b`](https://github.com/RSickenberg/rsickenberg.me/commit/2e02c9b0b2b671e7c21cef8c040d083ad951fb68)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`fca34c0`](https://github.com/RSickenberg/rsickenberg.me/commit/fca34c09dff7a6117b02425f3acbad000153584e)
+
+#### [v1.1.16](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.15...v1.1.16)
+
+> 6 September 2024
+
+- Release 1.1.16 [`07e4413`](https://github.com/RSickenberg/rsickenberg.me/commit/07e44131e673f5195ac45846eb3bbb15808bd0c3)
+- Merge pull request #350 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-1dbc711358 [`7c0247b`](https://github.com/RSickenberg/rsickenberg.me/commit/7c0247b76fc9bb474206050af2c7f0164fc0a95d)
+- chore(deps): bump the prod-deps group with 2 updates [`497b730`](https://github.com/RSickenberg/rsickenberg.me/commit/497b730d79aff4f5ea954e9979c5949695600e5f)
+
+#### [v1.1.15](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.14...v1.1.15)
+
+> 6 September 2024
+
+- Release 1.1.15 [`854b2de`](https://github.com/RSickenberg/rsickenberg.me/commit/854b2de3ea3868c6bb3fb6865531856d12d5b437)
+- fix(testimonial): fixed typo [`a2f3169`](https://github.com/RSickenberg/rsickenberg.me/commit/a2f316975a4bebd986e85336c9316c88b9c704c7)
+- refactor(pdf): reduced PDF size [`08a48b1`](https://github.com/RSickenberg/rsickenberg.me/commit/08a48b17c7b641bbc5fd318f87c27dee8c40a409)
+
+#### [v1.1.14](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.13...v1.1.14)
+
+> 4 September 2024
+
+- Release 1.1.14 [`4a7d56c`](https://github.com/RSickenberg/rsickenberg.me/commit/4a7d56c12ef34eb1516ecf472ac4256a181c952b)
+- docs(pdf): updated CV to v5 [`3ca93cb`](https://github.com/RSickenberg/rsickenberg.me/commit/3ca93cb26e6fb09340cde18d3772b1310eed027e)
+
+#### [v1.1.13](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.12...v1.1.13)
+
+> 4 September 2024
+
+- fix(testimonial): fixed testimonials pictures quality [`d702074`](https://github.com/RSickenberg/rsickenberg.me/commit/d7020742b5652c89ec7378462046d0acf81ae093)
+- Release 1.1.13 [`e13fa33`](https://github.com/RSickenberg/rsickenberg.me/commit/e13fa333e48ed06ec160f670c7362dda6a03301d)
+
+#### [v1.1.12](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.11...v1.1.12)
+
+> 4 September 2024
+
+- Release 1.1.12 [`3e189ae`](https://github.com/RSickenberg/rsickenberg.me/commit/3e189ae7273dd929ef56c0aa07d26a85b37643f4)
+- Merge pull request #349 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-22708433ae [`44a6655`](https://github.com/RSickenberg/rsickenberg.me/commit/44a6655739f399325f257af5a0d6659ab2cbd832)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`3fd6718`](https://github.com/RSickenberg/rsickenberg.me/commit/3fd67182b3490b8f56fc7ca2878dc7caf38965cc)
+- Merge pull request #348 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-38b1ac9590 [`ce6abfb`](https://github.com/RSickenberg/rsickenberg.me/commit/ce6abfba014a291e6530c93efd30e8c74a570094)
+- feat(testimonial): added SIL testimonial + fixed flex logic & optimized testimonials pictures [`de9eadf`](https://github.com/RSickenberg/rsickenberg.me/commit/de9eadf29a5b6ece587488e414fcbc55e3f94d31)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`ca47bcc`](https://github.com/RSickenberg/rsickenberg.me/commit/ca47bcc6c9404f8030c1d19b0884c85b2bf8ebfc)
+- Merge pull request #346 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-8733153d02 [`f7bc098`](https://github.com/RSickenberg/rsickenberg.me/commit/f7bc098cec8f042066f24ca660e959167a0ddfa0)
+- Merge pull request #347 from RSickenberg/dependabot/github_actions/dev/withastro/action-3 [`4293bd5`](https://github.com/RSickenberg/rsickenberg.me/commit/4293bd51dece13766ac3183ba2f3d5aee44bdd40)
+- chore(deps): bump withastro/action from 2 to 3 [`4551fb7`](https://github.com/RSickenberg/rsickenberg.me/commit/4551fb79f8d778e931f2efe2d4afd92a10bd571e)
+- chore(deps): update astro requirement in the prod-deps group [`ef2e994`](https://github.com/RSickenberg/rsickenberg.me/commit/ef2e994c10380f1433309d16367094e88e58672b)
+
+#### [v1.1.11](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.10...v1.1.11)
+
+> 2 September 2024
+
+- feat(sitemap): added sitemap astro gen [`f006058`](https://github.com/RSickenberg/rsickenberg.me/commit/f00605885f7e455e29a3bb082ce0ff8aa890ebca)
+- Create LICENSE [`921543e`](https://github.com/RSickenberg/rsickenberg.me/commit/921543e5d7eedc677fb2d80dff2e4651b447a97b)
+- Release 1.1.11 [`87d8bd2`](https://github.com/RSickenberg/rsickenberg.me/commit/87d8bd27dbbd64f9882a08966726b11a5372a317)
+- Merge pull request #345 from RSickenberg/licence [`67e4fb2`](https://github.com/RSickenberg/rsickenberg.me/commit/67e4fb29b917b19455b0c2e65243d19b0cfd33dc)
+- fix(projects): image densities are wider now [`70f1034`](https://github.com/RSickenberg/rsickenberg.me/commit/70f1034e415404c7010eeb769e1b1fb78204f94e)
+
+#### [v1.1.10](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.9...v1.1.10)
+
+> 1 September 2024
+
+- feat(browserlist): browserlist support on build time [`f7b2e02`](https://github.com/RSickenberg/rsickenberg.me/commit/f7b2e02059709ea546cef140d6b309d5d4350676)
+- Release 1.1.10 [`fd7f728`](https://github.com/RSickenberg/rsickenberg.me/commit/fd7f728095062a409124f396e9f00dd10165821d)
+- fix(css): fixed transition class [`f4e2790`](https://github.com/RSickenberg/rsickenberg.me/commit/f4e2790e2c4fb0bed587d15f923d83847e7cec92)
+
+#### [v1.1.9](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.8...v1.1.9)
+
+> 1 September 2024
+
+- fix(preact): project component is optimized [`0ce1d74`](https://github.com/RSickenberg/rsickenberg.me/commit/0ce1d747058f79508ab077c510fee0d79ab6d9ff)
+- Release 1.1.9 [`9f85122`](https://github.com/RSickenberg/rsickenberg.me/commit/9f85122589e618d200325a2f3e2d0d6de3999a7f)
+
+#### [v1.1.8](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.7...v1.1.8)
+
+> 1 September 2024
+
+- fix(testimonial): fixed testimonial divider date [`57095e8`](https://github.com/RSickenberg/rsickenberg.me/commit/57095e824064a858cb1751649fa325b07d38919a)
+- Release 1.1.8 [`84231bd`](https://github.com/RSickenberg/rsickenberg.me/commit/84231bd3f37b01c8264813f9d76a80d38aec9b81)
+
+#### [v1.1.7](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.6...v1.1.7)
+
+> 1 September 2024
+
+- feat(projects): passed optimzed images to project react [`fb76996`](https://github.com/RSickenberg/rsickenberg.me/commit/fb769960b5cc731038ce045e3acb2a309c519f3a)
+- Release 1.1.7 [`7b10178`](https://github.com/RSickenberg/rsickenberg.me/commit/7b10178f35bfda87303775c3efd7e3f0f44b5e2c)
+
+#### [v1.1.6](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.5...v1.1.6)
+
+> 31 August 2024
+
+- fix(margins/padding): fixed few margins & paddings [`d42f506`](https://github.com/RSickenberg/rsickenberg.me/commit/d42f506e611bd9fe186617396bcdf9ab1690b678)
+- fix(layout): fixed few layout issues on mobile [`82e0e97`](https://github.com/RSickenberg/rsickenberg.me/commit/82e0e973ed3bb05494a780deaa6d968ee7367afe)
+- Release 1.1.6 [`b627d65`](https://github.com/RSickenberg/rsickenberg.me/commit/b627d65187fc501b0944f5573424cce3a5085b0b)
+
+#### [v1.1.5](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.4...v1.1.5)
+
+> 30 August 2024
+
+- fix(gsap): fixed sutter on mobile [`bcd2dd4`](https://github.com/RSickenberg/rsickenberg.me/commit/bcd2dd45467d80578ced3efb4bd8b9af81f421c1)
+- Release 1.1.5 [`a3b9cc6`](https://github.com/RSickenberg/rsickenberg.me/commit/a3b9cc673b00538ac3755efbd3b23d6a157b9e6d)
+
+#### [v1.1.4](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.3...v1.1.4)
+
+> 30 August 2024
+
+- fix(gsap): fixed highlighted project list gsap animations [`dee8acc`](https://github.com/RSickenberg/rsickenberg.me/commit/dee8acc4ade0b88621c5042bd86862dae955d381)
+- Release 1.1.4 [`5799ec7`](https://github.com/RSickenberg/rsickenberg.me/commit/5799ec7cce73be72786b488c9e93e6db0ce2d9ac)
+
+#### [v1.1.3](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.2...v1.1.3)
+
+> 30 August 2024
+
+- fix(gsap): fixed CTA gsap animation [`f004004`](https://github.com/RSickenberg/rsickenberg.me/commit/f0040047e6739e6e34729ce26d415071f59ac137)
+- Release 1.1.3 [`6856417`](https://github.com/RSickenberg/rsickenberg.me/commit/685641734efbb635a1f7b71de4fe63c787b05efc)
+- fix(lenis): probably fixed lenis lag [`d5510e2`](https://github.com/RSickenberg/rsickenberg.me/commit/d5510e258169b0e064bdeae11676a64ca6ab9303)
+
+#### [v1.1.2](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.1...v1.1.2)
+
+> 30 August 2024
+
+- feat(testimonials): added GSAP [`249f40f`](https://github.com/RSickenberg/rsickenberg.me/commit/249f40fd0b6919609928a54cc4a4a8db2bf0a665)
+- Release 1.1.2 [`3b2e974`](https://github.com/RSickenberg/rsickenberg.me/commit/3b2e97454bb48a1bb8afab551a45162e6f60225f)
+
+#### [v1.1.1](https://github.com/RSickenberg/rsickenberg.me/compare/v1.1.0...v1.1.1)
+
+> 30 August 2024
+
+- style(cta): sticky cta text is more visible now [`238c304`](https://github.com/RSickenberg/rsickenberg.me/commit/238c3049059608e01c538a0d7eda1ea931cdbc98)
+- Release 1.1.1 [`237ef06`](https://github.com/RSickenberg/rsickenberg.me/commit/237ef06761e921cb1f47ea161e90e4279f76d914)
+
+#### [v1.1.0](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.10...v1.1.0)
+
+> 30 August 2024
+
+- feat(tooltip): added tooltip lib [`ac074cf`](https://github.com/RSickenberg/rsickenberg.me/commit/ac074cfdc7458c67ca022851cf97110318a36867)
+- feat(testimonials): added testimonials [`0f0dbce`](https://github.com/RSickenberg/rsickenberg.me/commit/0f0dbcedb6c4c45db0d59d6d0a74460b658c5a7e)
+- feat(mindset): added minset pdf results + changed icons library [`1013f2d`](https://github.com/RSickenberg/rsickenberg.me/commit/1013f2da72d0542b5dcba7a21d603c63212f89fb)
+- fix(testimonials): fixed mobile integration [`61c2dd8`](https://github.com/RSickenberg/rsickenberg.me/commit/61c2dd8625b4864a47d87090adf9923d39836456)
+- Release 1.1.0 [`9efe7a9`](https://github.com/RSickenberg/rsickenberg.me/commit/9efe7a9a0d02a6e2b5859325c764d615ce1acf3b)
+- fix(tech): fixed tech cards layout on iPad pro 13" [`6d35e11`](https://github.com/RSickenberg/rsickenberg.me/commit/6d35e11d68e5d647cf57bed2b8d06f67d13d47e2)
+- [skip ci] changelog [`68e2d10`](https://github.com/RSickenberg/rsickenberg.me/commit/68e2d105b350ff758b56bfe9f3f08af6fc8552a4)
+- Merge pull request #340 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-fd8d10b9c0 [`9071462`](https://github.com/RSickenberg/rsickenberg.me/commit/90714625da931b4e6fe371ef50ad611b0ee55a5b)
+- chore(deps): update astro requirement in the prod-deps group [`d204c96`](https://github.com/RSickenberg/rsickenberg.me/commit/d204c96f203673bb482163980ea3087dbc4e56fb)
+
+#### [v1.0.10](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.9...v1.0.10)
+
+> 29 August 2024
+
+- Release 1.0.10 [`6c78b12`](https://github.com/RSickenberg/rsickenberg.me/commit/6c78b12b194cb0c4e597167419dad5b17537798d)
+- docs(changelog): bump changelog [`5bc2865`](https://github.com/RSickenberg/rsickenberg.me/commit/5bc286552c71af3c15c917af94925103a8b37397)
+- Merge pull request #339 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-014b4b9ec6 [`5830723`](https://github.com/RSickenberg/rsickenberg.me/commit/58307237651f736f3ce5a337a09d7553e82e36cc)
+- chore(deps): bump the prod-deps group with 4 updates [`d532f6b`](https://github.com/RSickenberg/rsickenberg.me/commit/d532f6bca266b41c2e11eae24f910eb4b66ef190)
+- Merge pull request #338 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-9d602e452e [`5c8c5d1`](https://github.com/RSickenberg/rsickenberg.me/commit/5c8c5d1dc9a102618af2929558c5e8c4226ef492)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`daa43fc`](https://github.com/RSickenberg/rsickenberg.me/commit/daa43fc22070a694b435187294e5da30511346d1)
+- Merge pull request #337 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-a45f6c24d5 [`98df7f2`](https://github.com/RSickenberg/rsickenberg.me/commit/98df7f2ba66c6277ed61099b7ac46aed4a8e8b85)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`4310b93`](https://github.com/RSickenberg/rsickenberg.me/commit/4310b930b73ef124f5558609837edaed03a38355)
+- Merge pull request #335 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-8204ec6d13 [`5997106`](https://github.com/RSickenberg/rsickenberg.me/commit/59971062fc147450a743a3e63cb704db079fc2a6)
+- chore(deps): update astro requirement in the prod-deps group [`c8153c2`](https://github.com/RSickenberg/rsickenberg.me/commit/c8153c29f9cddb1a42dfe1b789e5e55b694550b4)
+- Merge pull request #334 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-de59421b15 [`30c097a`](https://github.com/RSickenberg/rsickenberg.me/commit/30c097af020878e30ff11aa7dd667277fb7f45e2)
+- chore(deps): update astro requirement in the prod-deps group [`c407e8b`](https://github.com/RSickenberg/rsickenberg.me/commit/c407e8b6f24c641da313b59ad82451c1525c76f1)
+- Merge pull request #332 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-4ec96e16a9 [`f625178`](https://github.com/RSickenberg/rsickenberg.me/commit/f625178d8cfb7fd27c06bf8255caac99c83e0ace)
+- chore(deps-dev): bump the dev-deps group with 2 updates [`42d0766`](https://github.com/RSickenberg/rsickenberg.me/commit/42d0766510cbd5f6eb4b3f791e98c79631d53da9)
+- Merge pull request #333 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-f3391e2652 [`52bd98a`](https://github.com/RSickenberg/rsickenberg.me/commit/52bd98afbbd5af3e9b9e4cd4e1ffb8e267722fcb)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`7415cbb`](https://github.com/RSickenberg/rsickenberg.me/commit/7415cbbeabbd81d92c2fb9e5bfa847c73570482c)
+
+#### [v1.0.9](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.8...v1.0.9)
+
+> 16 August 2024
+
+- Release 1.0.9 [`1565641`](https://github.com/RSickenberg/rsickenberg.me/commit/1565641c5ce2c6758d4148537f5296c0bb78c595)
+- [skip ci] changelog [`f259e0f`](https://github.com/RSickenberg/rsickenberg.me/commit/f259e0f70d62ecfbb611f41172610c59115681ef)
+- Merge pull request #330 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-b118958742 [`8d17695`](https://github.com/RSickenberg/rsickenberg.me/commit/8d17695c2a40abc2a7991fb571726cf58ffb7339)
+- chore(deps): bump the prod-deps group across 1 directory with 5 updates [`852aecf`](https://github.com/RSickenberg/rsickenberg.me/commit/852aecf659940e29db7bb8b007b198a41fb58ed8)
+- Merge pull request #327 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-c1ce6c7660 [`4417e6b`](https://github.com/RSickenberg/rsickenberg.me/commit/4417e6bf3d4df774618fedab6abf03aedc5dcdb0)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 3 updates [`1c24f6c`](https://github.com/RSickenberg/rsickenberg.me/commit/1c24f6c96cb2369cf94dcee0c4f4409be6247d74)
+- Merge pull request #326 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-9fc6ea9aeb [`f0c072e`](https://github.com/RSickenberg/rsickenberg.me/commit/f0c072ebe6ca6abf530d5836e73561b9224a8795)
+- chore(deps): update astro requirement in the prod-deps group [`624d652`](https://github.com/RSickenberg/rsickenberg.me/commit/624d65240210079dd3e898c1c7171f9bf6a2f942)
+
+#### [v1.0.8](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.7...v1.0.8)
+
+> 9 August 2024
+
+- feat(contact): removed twitter & added instagram / added eslint [`ac16e66`](https://github.com/RSickenberg/rsickenberg.me/commit/ac16e66c387dbdc62b68a2f9e36db469d71f7474)
+- [skip ci] changelog [`204410b`](https://github.com/RSickenberg/rsickenberg.me/commit/204410b9a4acae88e82ed8ccbf3273ad0a57cf03)
+- Release 1.0.8 [`a1a84e4`](https://github.com/RSickenberg/rsickenberg.me/commit/a1a84e412665e907f64a373407a66e4c6121f4eb)
+
+#### [v1.0.7](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.6...v1.0.7)
+
+> 9 August 2024
+
+- Release 1.0.7 [`1012ea8`](https://github.com/RSickenberg/rsickenberg.me/commit/1012ea82794804bf719a703b260cd686c361a234)
+- [skip ci] changelog [`f91103f`](https://github.com/RSickenberg/rsickenberg.me/commit/f91103fe6c9f04452c41ae06b4e1f6bc78c12922)
+- Merge pull request #324 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-ba63713c2d [`be058fb`](https://github.com/RSickenberg/rsickenberg.me/commit/be058fb3ea5d229f30634e930c9174c7ea7cc240)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`7e15256`](https://github.com/RSickenberg/rsickenberg.me/commit/7e152567afe4d9a09e348d655c983b624dd65a2e)
+- Merge pull request #322 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-3f2989413c [`accb2ff`](https://github.com/RSickenberg/rsickenberg.me/commit/accb2ff6cabf92924b0b21f45c55e6ae8aab60d6)
+- chore(deps): bump the prod-deps group across 1 directory with 3 updates [`125e03d`](https://github.com/RSickenberg/rsickenberg.me/commit/125e03d740ae790fabea94492ec271ad2279a90a)
+- Merge pull request #319 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-ae4ed09f05 [`3f545db`](https://github.com/RSickenberg/rsickenberg.me/commit/3f545dbf3afa56fb873630431c31cb8e32d70c77)
+- chore(deps): bump the prod-deps group with 2 updates [`fde8e9f`](https://github.com/RSickenberg/rsickenberg.me/commit/fde8e9f5dbb38c2d45a04c7aaceebeca9480bbee)
+- Merge pull request #318 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-bb07a6d34c [`8bac19c`](https://github.com/RSickenberg/rsickenberg.me/commit/8bac19c35549b126f8ef63ddd43835d7dcc5b31d)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`3a7f0ea`](https://github.com/RSickenberg/rsickenberg.me/commit/3a7f0eaf7b3a3e9577a77e4b3ceea092d8f7a404)
+- Merge pull request #317 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-37515ed6f4 [`96c8e37`](https://github.com/RSickenberg/rsickenberg.me/commit/96c8e37ac98f756744590537e91a10dad1a99c59)
+- chore(deps): update astro requirement in the prod-deps group [`9f7225e`](https://github.com/RSickenberg/rsickenberg.me/commit/9f7225e8c0983a3ca4fc742cd7b485f615b8def0)
+- Merge pull request #316 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-3c0e4d4cea [`0f6b902`](https://github.com/RSickenberg/rsickenberg.me/commit/0f6b902f4363d30b9ef951f5ec8f54c7659f3c4e)
+- chore(deps): bump the prod-deps group with 2 updates [`fe0a91a`](https://github.com/RSickenberg/rsickenberg.me/commit/fe0a91a8d1f31614029a4d3e605ad97801adca7f)
+- Merge pull request #315 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-46e444a742 [`b7b420f`](https://github.com/RSickenberg/rsickenberg.me/commit/b7b420f486756952727765d21fea868bcf3dd448)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`c4fc254`](https://github.com/RSickenberg/rsickenberg.me/commit/c4fc2546715be1591987a14a80aa49b45969874d)
+
+#### [v1.0.6](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.5...v1.0.6)
+
+> 24 July 2024
+
+- fix(style): fixed cta opacity on start + removed will-change properties [`a5c36ee`](https://github.com/RSickenberg/rsickenberg.me/commit/a5c36ee4381fab83bddd492f9b1c6117515b9e26)
+- Release 1.0.6 [`ad894e2`](https://github.com/RSickenberg/rsickenberg.me/commit/ad894e24104127f597bd60d45a64aca798c2dd1d)
+- build(bun): upgraded preact [`832d48b`](https://github.com/RSickenberg/rsickenberg.me/commit/832d48bc6b33e8ffa8911762a48cf0c17e9111cf)
+- Merge pull request #314 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-45002540c5 [`3a9c418`](https://github.com/RSickenberg/rsickenberg.me/commit/3a9c41829cf35cccabef6f1cf3ebb503dd3f8816)
+- chore(deps): update @iconify-json/arcticons requirement [`e0393c3`](https://github.com/RSickenberg/rsickenberg.me/commit/e0393c360a4273ae8abfba9e192cc2c791a54c1c)
+- Merge pull request #313 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-6c27c242a4 [`6330d7c`](https://github.com/RSickenberg/rsickenberg.me/commit/6330d7c9f166d8b987908a3878e30f505372c39c)
+- build(release): removed release-it plugin [`e567a25`](https://github.com/RSickenberg/rsickenberg.me/commit/e567a25017c09e4896b3ffc0ea1c261aee52c340)
+- chore(deps): bump the prod-deps group across 1 directory with 4 updates [`26fe913`](https://github.com/RSickenberg/rsickenberg.me/commit/26fe91376e391dac21920c3b634055d764d677fc)
+
+#### [v1.0.5](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.4...v1.0.5)
+
+> 17 July 2024
+
+- Release 1.0.5 [`2176e7a`](https://github.com/RSickenberg/rsickenberg.me/commit/2176e7a73e1fb99ece2c5713cb7782b5229b3ed9)
+- feat(release): added plugin to write changelog [`6a9577a`](https://github.com/RSickenberg/rsickenberg.me/commit/6a9577ab7eca5d71d2566034c18c3d3a3f7858a8)
+- bun lockdb is diffed correctly [`c5f06fe`](https://github.com/RSickenberg/rsickenberg.me/commit/c5f06fe62a052b322d81e651332ed3589497c69c)
+- Merge pull request #310 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-8d72cae5ec [`a35df9d`](https://github.com/RSickenberg/rsickenberg.me/commit/a35df9d04790b0643e591a753b4ea4b5cf86ff2e)
+- chore(deps-dev): bump the dev-deps group across 1 directory with 2 updates [`49ffcf7`](https://github.com/RSickenberg/rsickenberg.me/commit/49ffcf77f0b812d69d1ab752fd01715a3e5f8c95)
+- Merge pull request #311 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-d71895f62f [`ef8e1fc`](https://github.com/RSickenberg/rsickenberg.me/commit/ef8e1fc1cade9588f70469c0519b15313f5f4245)
+- build: sentry build [`73a2551`](https://github.com/RSickenberg/rsickenberg.me/commit/73a2551f637931625498dc33ab3bd53b87819237)
+- ci(sentry): released sentry release on deploy [`a44710b`](https://github.com/RSickenberg/rsickenberg.me/commit/a44710b99c109e39a7bfbfee2afc6bfa55c7ed50)
+- chore(deps): bump the prod-deps group across 1 directory with 2 updates [`fa9e611`](https://github.com/RSickenberg/rsickenberg.me/commit/fa9e61157977dec9416cbab4afb57bbb65e394a4)
+- Merge pull request #307 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-942bab87d0 [`58825b8`](https://github.com/RSickenberg/rsickenberg.me/commit/58825b854400a5ab283f711e1386ac62dd59860d)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`910f1b2`](https://github.com/RSickenberg/rsickenberg.me/commit/910f1b2321c69971bf31f3590d8c6b702299ee87)
+- Merge pull request #306 from RSickenberg/dependabot/npm_and_yarn/dev/dev-deps-619c8b5249 [`56fa57a`](https://github.com/RSickenberg/rsickenberg.me/commit/56fa57aadc6346016c24db8cba59d5dea5398281)
+- changed secret [`ae07155`](https://github.com/RSickenberg/rsickenberg.me/commit/ae0715509176fff6febed50e71702d573c9b391e)
+- chore(deps-dev): update sass requirement in the dev-deps group [`88e8c0c`](https://github.com/RSickenberg/rsickenberg.me/commit/88e8c0c87d4b2da8d0d2d5d89fdb55b54b5607b4)
+- build: try this [`b4ccf36`](https://github.com/RSickenberg/rsickenberg.me/commit/b4ccf36964c6dfb3d0e6fac8d72d41a821cb05a2)
+
+#### [v1.0.4](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.3...v1.0.4)
+
+> 10 July 2024
+
+- Release 1.0.4 [`b17362e`](https://github.com/RSickenberg/rsickenberg.me/commit/b17362e4049dad7dfc5e03481fe00e48227809cb)
+- feat(pdf): updated CV [`0a79747`](https://github.com/RSickenberg/rsickenberg.me/commit/0a797479b0cbf05237a9b411e10d78c09af3d4ed)
+- fix(visuals): visual fixes in dark mode [`4a94654`](https://github.com/RSickenberg/rsickenberg.me/commit/4a9465491131d449946e027d240f2018e00862b7)
+- fix(icon): fixed double icon link [`777473f`](https://github.com/RSickenberg/rsickenberg.me/commit/777473f1009c56d319c9d9b1b517db3716837eb2)
+- ci(sentry): fixed sentry slug [`36d8fb1`](https://github.com/RSickenberg/rsickenberg.me/commit/36d8fb1d35c3728a990543b6206d7f0df73bfa35)
+- Merge pull request #305 from RSickenberg/dependabot/npm_and_yarn/dev/prod-deps-5c5cc84526 [`73f3f96`](https://github.com/RSickenberg/rsickenberg.me/commit/73f3f96e2e4e1742f60afecff0f735b878128f20)
+- chore(deps): update @sentry/astro requirement in the prod-deps group [`cd6ebcf`](https://github.com/RSickenberg/rsickenberg.me/commit/cd6ebcfbbeda45a964eb5645b38889f94a622bbe)
+- fix(typo): fixed typo in the description [`f214943`](https://github.com/RSickenberg/rsickenberg.me/commit/f2149438307804960fedd6e4bf0712d1d986bc81)
+- seo: fixed page title [`e5e4bfe`](https://github.com/RSickenberg/rsickenberg.me/commit/e5e4bfe02bf9eba2fbad5688f7b07f76e4b46a72)
+
+#### [v1.0.3](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.2...v1.0.3)
+
+> 9 July 2024
+
+- Release 1.0.3 [`eadbfac`](https://github.com/RSickenberg/rsickenberg.me/commit/eadbfac7e848565d000747ff70ca0a7547a5cfa7)
+- feat(seo): enhanced picture on link sharing [`0ec6d3c`](https://github.com/RSickenberg/rsickenberg.me/commit/0ec6d3c069c8f86ede84894310df10e4fa8e3bad)
+- [skip ci] changelog [`30a77f7`](https://github.com/RSickenberg/rsickenberg.me/commit/30a77f74c5a83be5919f571d0feb2ff77bb718dc)
+
+#### [v1.0.2](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.1...v1.0.2)
+
+> 9 July 2024
+
+- feat(seo): added seo optimisations [`a866aa4`](https://github.com/RSickenberg/rsickenberg.me/commit/a866aa467009116581e2bd6bbc2ed091beead27b)
+- Release 1.0.2 [`a87c199`](https://github.com/RSickenberg/rsickenberg.me/commit/a87c1996c5655c2ede8168bd67b502fed1740d08)
+- fix(release-it): releases are now not pre-releases [`970b2de`](https://github.com/RSickenberg/rsickenberg.me/commit/970b2de1194185ad343d9c6bf8996b0a860bbc92)
+
+#### [v1.0.1](https://github.com/RSickenberg/rsickenberg.me/compare/v1.0.0...v1.0.1)
+
+> 9 July 2024
+
+- feat(visuals): tweaked few styles [`6f2c3d0`](https://github.com/RSickenberg/rsickenberg.me/commit/6f2c3d06100d4e8e5abdb73e073eab6dbe9732c1)
+- Release 1.0.1 [`b4341ac`](https://github.com/RSickenberg/rsickenberg.me/commit/b4341ac9a461ca84f1d508fd797c30096f4155a5)
+- Changed CNAME [`02b64a6`](https://github.com/RSickenberg/rsickenberg.me/commit/02b64a6b6be1c587356ab83e3640c98d3c4e944f)
+
+### [v1.0.0](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.10...v1.0.0)
+
+> 9 July 2024
+
+- chore(deps): bump the npm_and_yarn group across 1 directory with 2 updates [`#231`](https://github.com/RSickenberg/rsickenberg.me/pull/231)
+- ci: updated github deploy [`761a009`](https://github.com/RSickenberg/rsickenberg.me/commit/761a009164324fbae3a9959568760e33813f6002)
+- feat(production): production ready with texts, favicons and more [`92d1373`](https://github.com/RSickenberg/rsickenberg.me/commit/92d1373698691634e1eb8f8be661f9b70f13de9e)
+- fix build [`55d726e`](https://github.com/RSickenberg/rsickenberg.me/commit/55d726e1c98476fd1d552868a07ee1457ebbdeaa)
+- [skip ci] changelog [`9528db6`](https://github.com/RSickenberg/rsickenberg.me/commit/9528db6125cdce08a3ceb7b6ad4c4dc2b6fec15a)
+- ci(workflows): tweaked few settings [`f62d4be`](https://github.com/RSickenberg/rsickenberg.me/commit/f62d4be7ea20719f88727d965a75627fd20731aa)
+- Release 1.0.0 [`0d131a1`](https://github.com/RSickenberg/rsickenberg.me/commit/0d131a10b6b90ca18923779a7f50c2fb082e6959)
+- build(bun): release-it bump [`79d99c8`](https://github.com/RSickenberg/rsickenberg.me/commit/79d99c80cb345569dc02c5db682955de11cccaa7)
+
+#### [v0.2.10](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.9...v0.2.10)
+
+> 5 July 2024
+
+- fix(npm): fixed npm lock file [`bd1d83c`](https://github.com/RSickenberg/rsickenberg.me/commit/bd1d83c28ca8c0686aa1c6ea8ef51e01479945f6)
+- Release 0.2.10 [`5fda6c5`](https://github.com/RSickenberg/rsickenberg.me/commit/5fda6c5465aa856cd8c0078a0fa0c3773cfcbe87)
+- [skip ci] changelog [`2f67e43`](https://github.com/RSickenberg/rsickenberg.me/commit/2f67e438ec1ec743856bc65971aa64b6e94cb3b6)
+
+#### [v0.2.9](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.8...v0.2.9)
+
+> 5 July 2024
+
+- chore(deps): bump @sentry/astro from 8.13.0 to 8.14.0 [`5ada11a`](https://github.com/RSickenberg/rsickenberg.me/commit/5ada11a46bed21c77e0754fa6b34088564a0488a)
+- ci(dependabot): grouped dependabot + bun update lockdb [`cdf7f24`](https://github.com/RSickenberg/rsickenberg.me/commit/cdf7f24468a3c461e997f78fd81e12b702befa6e)
+- Release 0.2.9 [`f5c7c94`](https://github.com/RSickenberg/rsickenberg.me/commit/f5c7c94af43e13a8f86252e87073f125e67c9c6e)
+- chore(deps): bump astro from 4.11.4 to 4.11.5 [`94c2b05`](https://github.com/RSickenberg/rsickenberg.me/commit/94c2b05899531d8786f93b77fb5acc7ca72c1a8c)
+- [skip ci] changelog [`1ca69db`](https://github.com/RSickenberg/rsickenberg.me/commit/1ca69dbb33a1e8a84b10ef057c0a9ad0dca5c422)
+- Merge pull request #301 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.11.5 [`24b63e2`](https://github.com/RSickenberg/rsickenberg.me/commit/24b63e2dcb46955e4553ff1b95fa140793f78773)
+- Merge pull request #300 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-8.14.0 [`5ad86eb`](https://github.com/RSickenberg/rsickenberg.me/commit/5ad86eba4949a5ca23834d1190c7bd4198b678e2)
+- Merge pull request #297 from RSickenberg/dependabot/npm_and_yarn/dev/preact-10.22.1 [`2775e62`](https://github.com/RSickenberg/rsickenberg.me/commit/2775e628bf3fc512f5718d84e111606da718bd51)
+- Merge pull request #298 from RSickenberg/dependabot/npm_and_yarn/dev/release-it-17.4.1 [`8bb445c`](https://github.com/RSickenberg/rsickenberg.me/commit/8bb445cf16eea38967e0b0b2a70205b129a97873)
+- Merge pull request #299 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.11.4 [`6fb5594`](https://github.com/RSickenberg/rsickenberg.me/commit/6fb5594b547c6261957161bef14f4cc92a04fe8a)
+- chore(deps): bump astro from 4.10.1 to 4.11.1 [`6915709`](https://github.com/RSickenberg/rsickenberg.me/commit/69157099a514b378c502af702dcf6e4de2229fe5)
+- chore(deps-dev): bump release-it from 17.4.0 to 17.4.1 [`1e13487`](https://github.com/RSickenberg/rsickenberg.me/commit/1e13487bf9122d97ce8b05a159357dc5de619b4f)
+- chore(deps): bump @sentry/astro from 8.0.0 to 8.4.0 [`df6ca98`](https://github.com/RSickenberg/rsickenberg.me/commit/df6ca981aa90dae8eb1b7a4a158e8ae1a55a79b1)
+- chore(deps): bump @sentry/astro from 8.4.0 to 8.11.0 [`0e34f82`](https://github.com/RSickenberg/rsickenberg.me/commit/0e34f82a2e651d29030828e8003d6bbf58160852)
+- chore(deps): bump astro from 4.9.1 to 4.10.1 [`e8a9743`](https://github.com/RSickenberg/rsickenberg.me/commit/e8a974345fbb9b58547268d84096542f8fe3c056)
+- chore(deps): bump @sentry/astro from 8.11.0 to 8.13.0 [`b7b1dc1`](https://github.com/RSickenberg/rsickenberg.me/commit/b7b1dc1615af6a338fd2fa7945b76fd710cb1c4a)
+- --- [`59d710b`](https://github.com/RSickenberg/rsickenberg.me/commit/59d710b399e9ce16af8db96c23e322b27337e1ac)
+- chore(deps): bump astro from 4.11.3 to 4.11.4 [`1ed924f`](https://github.com/RSickenberg/rsickenberg.me/commit/1ed924ff30ffb1728eccd67e13c57df7c6c268bf)
+- chore(deps): bump @astrojs/preact from 3.3.0 to 3.5.0 [`bdfd337`](https://github.com/RSickenberg/rsickenberg.me/commit/bdfd337de45cf7030d93a6f06089b35586286406)
+- chore(deps): bump @astrojs/partytown from 2.1.0 to 2.1.1 [`b2d4348`](https://github.com/RSickenberg/rsickenberg.me/commit/b2d434850123187a4c9512b8e24b844068425a0b)
+- chore(deps): bump preact from 10.22.0 to 10.22.1 [`ed825ab`](https://github.com/RSickenberg/rsickenberg.me/commit/ed825aba22245de43bf2d492e931c3e14866ad27)
+- Merge pull request #294 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.11.3 [`7d2daa1`](https://github.com/RSickenberg/rsickenberg.me/commit/7d2daa19104673e67bd7e9e051bfdf0bf59b6be8)
+- Merge pull request #295 from RSickenberg/dependabot/npm_and_yarn/dev/zustand-4.5.4 [`6e22a19`](https://github.com/RSickenberg/rsickenberg.me/commit/6e22a19743f491ba64f1b78523478362babec7e5)
+- Merge pull request #296 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-8.13.0 [`153cc55`](https://github.com/RSickenberg/rsickenberg.me/commit/153cc552bd4be448c00d569373e5ef8d2cf0f8d0)
+- chore(deps): bump astro from 4.11.1 to 4.11.3 [`2909b38`](https://github.com/RSickenberg/rsickenberg.me/commit/2909b388252c44b4100d4142e84e142d000ec4e1)
+- chore(deps): bump zustand from 4.5.2 to 4.5.4 [`3c7137f`](https://github.com/RSickenberg/rsickenberg.me/commit/3c7137f7484492ff8301a69ceefe71be1c609afc)
+- Merge pull request #276 from RSickenberg/dependabot/npm_and_yarn/dev/tailwindcss-3.4.4 [`4be8e30`](https://github.com/RSickenberg/rsickenberg.me/commit/4be8e30f7390cff09358493028a7d0b15fe90895)
+- Merge pull request #279 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.106 [`373bad9`](https://github.com/RSickenberg/rsickenberg.me/commit/373bad965e176fd06d076375ba728c01edc2bea2)
+- Merge pull request #281 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/partytown-2.1.1 [`d105c1a`](https://github.com/RSickenberg/rsickenberg.me/commit/d105c1af2272e2701413d37d3c6fcfd1eefaf161)
+- Merge pull request #286 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/preact-3.5.0 [`a083d5d`](https://github.com/RSickenberg/rsickenberg.me/commit/a083d5d9cd83113c67f0dd48e567ad793740bfe3)
+- Merge pull request #287 from RSickenberg/dependabot/npm_and_yarn/dev/sass-1.77.6 [`99edf7f`](https://github.com/RSickenberg/rsickenberg.me/commit/99edf7f539c57ebd1eca943c040e811b1bcbe351)
+- Merge pull request #290 from RSickenberg/dependabot/npm_and_yarn/dev/release-it-17.4.0 [`860f85c`](https://github.com/RSickenberg/rsickenberg.me/commit/860f85cfd8ea4eb1ae3c21428dece942f2493a2a)
+- Merge pull request #291 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-8.11.0 [`8c615db`](https://github.com/RSickenberg/rsickenberg.me/commit/8c615dbbbca8d756d73f98a8c53119137439e30b)
+- Merge pull request #292 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.11.1 [`c097728`](https://github.com/RSickenberg/rsickenberg.me/commit/c097728d0911ce61d48d8d150d3cf4798ac33c5a)
+- chore(deps-dev): bump release-it from 17.3.0 to 17.4.0 [`2a5b58e`](https://github.com/RSickenberg/rsickenberg.me/commit/2a5b58efb44acbd96a5db1025a3c783ff0490303)
+- chore(deps-dev): bump sass from 1.77.2 to 1.77.6 [`9215863`](https://github.com/RSickenberg/rsickenberg.me/commit/9215863e3fede0c32c3464363424ebb88d148edb)
+- Merge pull request #278 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.10.1 [`6e37355`](https://github.com/RSickenberg/rsickenberg.me/commit/6e37355ee7270950931157068bbb266b4715ef3e)
+- chore(deps): bump @iconify-json/arcticons from 1.1.104 to 1.1.106 [`404c7f4`](https://github.com/RSickenberg/rsickenberg.me/commit/404c7f4cfb60cea00143fbcf3256bfe066ce05d5)
+- chore(deps): bump tailwindcss from 3.4.3 to 3.4.4 [`634c618`](https://github.com/RSickenberg/rsickenberg.me/commit/634c618f16645f4c31260cfcf88449fef9850540)
+- Merge pull request #257 from RSickenberg/dependabot/npm_and_yarn/dev/preact-10.22.0 [`33f1c99`](https://github.com/RSickenberg/rsickenberg.me/commit/33f1c99560471dd38fcca7adf9aaf487cd26cd19)
+- Merge pull request #261 from RSickenberg/dependabot/npm_and_yarn/dev/sass-1.77.2 [`79812ef`](https://github.com/RSickenberg/rsickenberg.me/commit/79812ef0d4e694bffc3b95a1b6046072145bc046)
+- Merge pull request #262 from RSickenberg/dependabot/npm_and_yarn/dev/release-it-17.3.0 [`35c2f80`](https://github.com/RSickenberg/rsickenberg.me/commit/35c2f80d5678f5cc25cbb2e2f1085b556d913d9e)
+- Merge pull request #264 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-8.4.0 [`79cd8e6`](https://github.com/RSickenberg/rsickenberg.me/commit/79cd8e6bb068829402d18c329d499d947b5daa68)
+- Merge pull request #265 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.104 [`0204fa1`](https://github.com/RSickenberg/rsickenberg.me/commit/0204fa175efab4eae6b98b92b837016d88c42334)
+- Merge pull request #266 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.9.1 [`730ecf3`](https://github.com/RSickenberg/rsickenberg.me/commit/730ecf3c2999cc29b4f5debf859aa54110fde98c)
+- chore(deps): bump astro from 4.8.3 to 4.9.1 [`8f083a3`](https://github.com/RSickenberg/rsickenberg.me/commit/8f083a349413c97e0650b3d90e64b9af79e2d14d)
+- chore(deps): bump @iconify-json/arcticons from 1.1.103 to 1.1.104 [`adb39c9`](https://github.com/RSickenberg/rsickenberg.me/commit/adb39c907a693c656c4da9fb53334e2895682462)
+- chore(deps-dev): bump sass from 1.77.1 to 1.77.2 [`59a5914`](https://github.com/RSickenberg/rsickenberg.me/commit/59a5914a6e74075f4bbb71f2cff35151a77d7b80)
+- chore(deps): bump preact from 10.21.0 to 10.22.0 [`24602df`](https://github.com/RSickenberg/rsickenberg.me/commit/24602df8406956c0862155cf528df85c99082707)
+
+#### [v0.2.8](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.7...v0.2.8)
+
+> 14 May 2024
+
+- Release 0.2.8 [`c5491a2`](https://github.com/RSickenberg/rsickenberg.me/commit/c5491a2f4640608e4eb35e4790ecd61c34d89bc0)
+- fix(contact): fixed twitter href [`ec3a1b9`](https://github.com/RSickenberg/rsickenberg.me/commit/ec3a1b9689a9623fffef856030c9b05fac7c5b0d)
+
+#### [v0.2.7](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.6...v0.2.7)
+
+> 14 May 2024
+
+- Release 0.2.7 [`faa45f2`](https://github.com/RSickenberg/rsickenberg.me/commit/faa45f2b44b45dac2e054e7c3132a902f978f792)
+- docs(changelog): bump changelog [`889fa3b`](https://github.com/RSickenberg/rsickenberg.me/commit/889fa3b389f1a79657c76cde34b33f1b4fa0976c)
+- build(bun): updated bun lockdb [`8f6e973`](https://github.com/RSickenberg/rsickenberg.me/commit/8f6e9736da4f73bd36353c29682dfe4d76843a11)
+- Merge pull request #246 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.103 [`2ee406a`](https://github.com/RSickenberg/rsickenberg.me/commit/2ee406ab64bd9ff43c5cc7f633534215bf35a15d)
+- Merge pull request #247 from RSickenberg/dependabot/npm_and_yarn/dev/dotenv-cli-7.4.2 [`ccbf204`](https://github.com/RSickenberg/rsickenberg.me/commit/ccbf204be78458b773024df3a7fb0bda253dacae)
+- Merge pull request #251 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/preact-3.3.0 [`729cfe3`](https://github.com/RSickenberg/rsickenberg.me/commit/729cfe32514c56f0ec9069dcde4b096b21ab1f6d)
+- Merge pull request #253 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-8.0.0 [`b5acd4b`](https://github.com/RSickenberg/rsickenberg.me/commit/b5acd4b6abb4b84c7a6e45b18eabfd131b767e38)
+- Merge pull request #254 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.8.3 [`58ae4ed`](https://github.com/RSickenberg/rsickenberg.me/commit/58ae4ed1372803b413448efe272104998e2ebe68)
+- Merge pull request #255 from RSickenberg/dependabot/npm_and_yarn/dev/sass-1.77.1 [`c865a48`](https://github.com/RSickenberg/rsickenberg.me/commit/c865a48eddee60eb6a14d72e2582d2fe522f552c)
+- chore(deps): bump astro from 4.6.3 to 4.7.0 [`5bbea54`](https://github.com/RSickenberg/rsickenberg.me/commit/5bbea5409baa51039848f8b7d7335f1592c2798c)
+- chore(deps): bump @sentry/astro from 7.113.0 to 8.0.0 [`707ea5e`](https://github.com/RSickenberg/rsickenberg.me/commit/707ea5ea523b8bba003a494a0f1782a3b9d29dc4)
+- chore(deps): bump astro from 4.7.1 to 4.8.3 [`3dca73e`](https://github.com/RSickenberg/rsickenberg.me/commit/3dca73ebc713029121df6f287b6d98ee688f86de)
+- chore(deps): bump @sentry/astro from 7.111.0 to 7.112.2 [`c4047d7`](https://github.com/RSickenberg/rsickenberg.me/commit/c4047d7913172bc6fc42ebed2c81fcbd79d4f580)
+- chore(deps): bump @sentry/astro from 7.110.1 to 7.111.0 [`6982d6d`](https://github.com/RSickenberg/rsickenberg.me/commit/6982d6d1ca4fdc1905a3c6764868c51160364948)
+- chore(deps): bump @astrojs/preact from 3.2.0 to 3.3.0 [`5230ac3`](https://github.com/RSickenberg/rsickenberg.me/commit/5230ac3d72c74ccadb4d57e065bc00fee615c846)
+- chore(deps-dev): bump release-it from 17.2.0 to 17.2.1 [`663dbba`](https://github.com/RSickenberg/rsickenberg.me/commit/663dbba342cd2f7c58c4e1f7c53c4004923ddfb6)
+- chore(deps): bump @astrojs/partytown from 2.0.4 to 2.1.0 [`6689dd4`](https://github.com/RSickenberg/rsickenberg.me/commit/6689dd49bd92edd5a69107da5c0a1ff150ff45b5)
+- chore(deps-dev): bump sass from 1.76.0 to 1.77.1 [`c5f268d`](https://github.com/RSickenberg/rsickenberg.me/commit/c5f268d83e2ea49845b86078ebe3252c70936433)
+- chore(deps-dev): bump dotenv-cli from 7.4.1 to 7.4.2 [`2a146cc`](https://github.com/RSickenberg/rsickenberg.me/commit/2a146ccf2a65d9d38bd3d40fe44ed17385ed794d)
+- chore(deps): bump @iconify-json/arcticons from 1.1.102 to 1.1.103 [`205658d`](https://github.com/RSickenberg/rsickenberg.me/commit/205658d94440576911164ac37323eac7f74844e1)
+- Merge pull request #241 from RSickenberg/dependabot/npm_and_yarn/dev/tailwindcss/typography-0.5.13 [`b89a12e`](https://github.com/RSickenberg/rsickenberg.me/commit/b89a12e22e59cc27dfe5698b9407725fc79a7937)
+- Merge pull request #242 from RSickenberg/dependabot/npm_and_yarn/dev/preact-10.21.0 [`3694cce`](https://github.com/RSickenberg/rsickenberg.me/commit/3694ccef363dd6e9627d66c3460a5cf401a7c54c)
+- Merge pull request #243 from RSickenberg/dependabot/npm_and_yarn/dev/sass-1.76.0 [`51374eb`](https://github.com/RSickenberg/rsickenberg.me/commit/51374eb4363c6f50ceab9dacf92b25044f3f1b87)
+- Merge pull request #244 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.7.1 [`c74f320`](https://github.com/RSickenberg/rsickenberg.me/commit/c74f320ca796d69f0eed711f95dfaedcb9ec25dc)
+- Merge pull request #245 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-7.113.0 [`974f782`](https://github.com/RSickenberg/rsickenberg.me/commit/974f782ee8c00c8da1159d72ea9277ec5c952f62)
+- chore(deps): bump astro from 4.7.0 to 4.7.1 [`d0c1033`](https://github.com/RSickenberg/rsickenberg.me/commit/d0c10332e07719024f8e8c9c687885686bdd3263)
+- chore(deps): bump @sentry/astro from 7.112.2 to 7.113.0 [`7198bf9`](https://github.com/RSickenberg/rsickenberg.me/commit/7198bf9952cfe400aacb3571cdc6170d91655886)
+- chore(deps-dev): bump sass from 1.75.0 to 1.76.0 [`0c4a9e3`](https://github.com/RSickenberg/rsickenberg.me/commit/0c4a9e3d2594531e135802073342eb788eca0de7)
+- chore(deps): bump preact from 10.20.2 to 10.21.0 [`8faa4d6`](https://github.com/RSickenberg/rsickenberg.me/commit/8faa4d6306bf06554504201c6f9a8f80802e4f19)
+- chore(deps): bump @tailwindcss/typography from 0.5.12 to 0.5.13 [`524ecd6`](https://github.com/RSickenberg/rsickenberg.me/commit/524ecd6fa6a96695ac26f4c924a40398a8cd4d53)
+- Merge pull request #238 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.7.0 [`bd4fcf7`](https://github.com/RSickenberg/rsickenberg.me/commit/bd4fcf728e90bf0606ccec07235daae00a6cf067)
+- Merge pull request #235 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-7.112.2 [`a314464`](https://github.com/RSickenberg/rsickenberg.me/commit/a31446489fa173e8fc631c3ff233add76c8de9cd)
+- Merge pull request #236 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/partytown-2.1.0 [`d5fc9f1`](https://github.com/RSickenberg/rsickenberg.me/commit/d5fc9f14db7c6782b2d4101753380471a5169eca)
+- Merge pull request #239 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.102 [`a24a7a9`](https://github.com/RSickenberg/rsickenberg.me/commit/a24a7a9174ead99fefa7a594b682ecc3a92d6ecc)
+- Merge pull request #240 from RSickenberg/dependabot/npm_and_yarn/dev/release-it-17.2.1 [`5e5df0d`](https://github.com/RSickenberg/rsickenberg.me/commit/5e5df0d38613905253b0fa9ae9427561d631a164)
+- chore(deps): bump @iconify-json/arcticons from 1.1.100 to 1.1.102 [`47bf9d8`](https://github.com/RSickenberg/rsickenberg.me/commit/47bf9d8ce8fe234fde2d43a9dd69b6e2428d2f97)
+- Merge pull request #232 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-7.111.0 [`ea4e8b8`](https://github.com/RSickenberg/rsickenberg.me/commit/ea4e8b83aee617e5082d6da4692586f87131e50f)
+- Merge pull request #218 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.100 [`44715bc`](https://github.com/RSickenberg/rsickenberg.me/commit/44715bccf90c1f4c0ac7ea5ae931e58e64c447ea)
+- Merge pull request #219 from RSickenberg/dependabot/npm_and_yarn/dev/preact-10.20.2 [`bcf4aa0`](https://github.com/RSickenberg/rsickenberg.me/commit/bcf4aa08a2d1c9ef384154eeb93e803b463f9dce)
+- chore(deps): bump preact from 10.20.1 to 10.20.2 [`d83b246`](https://github.com/RSickenberg/rsickenberg.me/commit/d83b2468b1fb47822f8dc33e9cc4354a52a2ec53)
+- Merge pull request #224 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/preact-3.2.0 [`556ca01`](https://github.com/RSickenberg/rsickenberg.me/commit/556ca01035cbd5f14517961720af656524468a1c)
+- Merge pull request #226 from RSickenberg/dependabot/npm_and_yarn/dev/release-it-17.2.0 [`e0212e2`](https://github.com/RSickenberg/rsickenberg.me/commit/e0212e20807b587ccde3260899a2f7f516d4b814)
+- Merge pull request #227 from RSickenberg/dependabot/npm_and_yarn/dev/sass-1.75.0 [`b350b3b`](https://github.com/RSickenberg/rsickenberg.me/commit/b350b3b727f0a1eccb2e62f3ef00228067ac0319)
+- Merge pull request #228 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-7.110.1 [`743e9a1`](https://github.com/RSickenberg/rsickenberg.me/commit/743e9a13b6e1043a353dde31574278b61f5139ef)
+- Merge pull request #230 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.6.3 [`fbac03f`](https://github.com/RSickenberg/rsickenberg.me/commit/fbac03f8712d19a3b46b719cb767ee19f3e2deed)
+- chore(deps): bump vite from 5.1.5 to 5.2.8 [`09f6750`](https://github.com/RSickenberg/rsickenberg.me/commit/09f6750b94761661ffb71ae4e5adfd34e83ff895)
+- feat(cta): added scroll call to action + new font + bundles upgrades [`dbd11d7`](https://github.com/RSickenberg/rsickenberg.me/commit/dbd11d70db34352cf18bdd3823ea44f04d089080)
+- chore(deps-dev): bump release-it from 17.1.1 to 17.2.0 [`b7f46a4`](https://github.com/RSickenberg/rsickenberg.me/commit/b7f46a4948e3238bc7bb321219691095c1607827)
+- chore(deps): bump @sentry/astro from 7.109.0 to 7.110.1 [`7ad670c`](https://github.com/RSickenberg/rsickenberg.me/commit/7ad670cf6f08d28d7c437069f6e637a8ac9e2724)
+- chore(deps): bump @sentry/astro from 7.108.0 to 7.109.0 [`e0ef7f3`](https://github.com/RSickenberg/rsickenberg.me/commit/e0ef7f3590354cef5357f50c59769a680663fb7a)
+- chore(deps): bump @iconify-json/arcticons from 1.1.98 to 1.1.99 [`f8ae54e`](https://github.com/RSickenberg/rsickenberg.me/commit/f8ae54ee43a2bac18b29e9d7ef92a9e17d518f58)
+- chore(deps): bump astro from 4.5.17 to 4.6.3 [`c18fa2b`](https://github.com/RSickenberg/rsickenberg.me/commit/c18fa2b1a81c09ecdb0f9f8ed1d1d0d8626f6133)
+- chore(deps): bump @astrojs/preact from 3.1.2 to 3.2.0 [`e633f75`](https://github.com/RSickenberg/rsickenberg.me/commit/e633f7517ff60abaf3f748a1e5d0458149ce7f89)
+- chore(deps-dev): bump sass from 1.74.1 to 1.75.0 [`b132f3f`](https://github.com/RSickenberg/rsickenberg.me/commit/b132f3f50d63b459d29c2e756e317423ed527d80)
+- chore(deps): bump @iconify-json/arcticons from 1.1.99 to 1.1.100 [`1545250`](https://github.com/RSickenberg/rsickenberg.me/commit/15452504496feaebae0af0b6685b62bff1ea13f5)
+- Merge pull request #213 from RSickenberg/dependabot/npm_and_yarn/dev/sass-1.74.1 [`1125a44`](https://github.com/RSickenberg/rsickenberg.me/commit/1125a44daeef7d35f42e0e9e0346a8cfae734209)
+- Merge pull request #217 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.5.17 [`4d7bd26`](https://github.com/RSickenberg/rsickenberg.me/commit/4d7bd26e78b5e5a48a4734fe664a74155725fa52)
+- chore(deps): bump astro from 4.5.16 to 4.5.17 [`1c469be`](https://github.com/RSickenberg/rsickenberg.me/commit/1c469bea38a4024ab704013a547e88aaa719a198)
+- Merge pull request #207 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-7.109.0 [`7d859c6`](https://github.com/RSickenberg/rsickenberg.me/commit/7d859c606b0ebdff3da89456155719439c1fe446)
+- Merge pull request #208 from RSickenberg/dependabot/github_actions/dev/actions/configure-pages-5 [`a3c3978`](https://github.com/RSickenberg/rsickenberg.me/commit/a3c3978c8c917353004b6bae5506d009ed5a4c20)
+- Merge pull request #209 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/preact-3.1.2 [`039acfb`](https://github.com/RSickenberg/rsickenberg.me/commit/039acfb585f9fe0a9a330e715f7010e6e008fed2)
+- chore(deps): bump @sentry/astro from 7.107.0 to 7.108.0 [`bb54f2f`](https://github.com/RSickenberg/rsickenberg.me/commit/bb54f2feb023285642e0bac74c6a380fa5f214b5)
+- chore(deps): bump @sentry/astro from 7.106.1 to 7.107.0 [`1a06a93`](https://github.com/RSickenberg/rsickenberg.me/commit/1a06a9377962b516cf0be9717faffde4b90293eb)
+- chore(deps): bump astro from 4.5.5 to 4.5.9 [`f6a77c4`](https://github.com/RSickenberg/rsickenberg.me/commit/f6a77c46625c56b26c703274688a2705e1d3b3f4)
+- chore(deps): bump astro from 4.5.9 to 4.5.16 [`0bfad4a`](https://github.com/RSickenberg/rsickenberg.me/commit/0bfad4ab1d2e3a6467671458f6628f1466687705)
+- feat(visuals): some visuals tweaks [`da9c919`](https://github.com/RSickenberg/rsickenberg.me/commit/da9c919eb6f06d920f63e6cb988b2924c8f26030)
+- chore(deps): bump @astrojs/preact from 3.1.1 to 3.1.2 [`70fd094`](https://github.com/RSickenberg/rsickenberg.me/commit/70fd0948bb4a698842fb5e64bc9f40b06fe90989)
+- Merge pull request #212 from RSickenberg/dependabot/npm_and_yarn/vite-5.2.8 [`c6eee94`](https://github.com/RSickenberg/rsickenberg.me/commit/c6eee9429f55bd547fc0adc00ba6c9cd2ee74a20)
+- chore(deps-dev): bump sass from 1.72.0 to 1.74.1 [`fd96ea0`](https://github.com/RSickenberg/rsickenberg.me/commit/fd96ea0e7d2ef54a4ca3cc6ddfa3af8dd691880d)
+- Merge pull request #215 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.5.16 [`dc3d920`](https://github.com/RSickenberg/rsickenberg.me/commit/dc3d920ecffcd3e2e7902cbc236f534e98360036)
+- Merge pull request #216 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.99 [`c9d2019`](https://github.com/RSickenberg/rsickenberg.me/commit/c9d2019898d224a0718530ecd7a79db9a04cecfe)
+- chore(deps): bump actions/configure-pages from 4 to 5 [`00f8462`](https://github.com/RSickenberg/rsickenberg.me/commit/00f8462b222b9cb2f1404324c9821172329a9c56)
+- Merge pull request #198 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-7.108.0 [`8c3d4e1`](https://github.com/RSickenberg/rsickenberg.me/commit/8c3d4e14f6212af8dc49242950d8ad0720f73b8a)
+- Merge pull request #196 from RSickenberg/dependabot/npm_and_yarn/dev/preact-10.20.0 [`0c38ce4`](https://github.com/RSickenberg/rsickenberg.me/commit/0c38ce4b39a3997ab94be637d0d3bd5eddc9b6d6)
+- Merge pull request #199 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.5.9 [`a17c67c`](https://github.com/RSickenberg/rsickenberg.me/commit/a17c67c9dfa0759b400cc984e1d56c15c866495f)
+- chore(deps): bump astro from 4.5.2 to 4.5.5 [`2b0e774`](https://github.com/RSickenberg/rsickenberg.me/commit/2b0e774b2c26623dd90e0de988d5823b215ee3db)
+- chore(deps): bump preact from 10.19.7 to 10.20.0 [`f27de31`](https://github.com/RSickenberg/rsickenberg.me/commit/f27de31fdf18264947e61e0e50140c24d58acefc)
+- Merge pull request #187 from RSickenberg/dependabot/npm_and_yarn/dev/sentry/astro-7.107.0 [`0f4fe84`](https://github.com/RSickenberg/rsickenberg.me/commit/0f4fe84db4258ff582581cc95e972a57b3015911)
+- Merge pull request #188 from RSickenberg/dependabot/npm_and_yarn/dev/sass-1.72.0 [`a7f3da3`](https://github.com/RSickenberg/rsickenberg.me/commit/a7f3da3c46c4194ed3f13a489c43cb71f2e7391f)
+- Merge pull request #191 from RSickenberg/dependabot/npm_and_yarn/dev/preact-10.19.7 [`b3282fc`](https://github.com/RSickenberg/rsickenberg.me/commit/b3282fce8c35243c4eab146fe4ae8858b0cd33d6)
+- Merge pull request #192 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.5.5 [`71c0438`](https://github.com/RSickenberg/rsickenberg.me/commit/71c043835b31adcd5c7dc89592ce46328032e0ed)
+- Merge pull request #193 from RSickenberg/dependabot/npm_and_yarn/dev/studio-freight/lenis-1.0.42 [`656f6be`](https://github.com/RSickenberg/rsickenberg.me/commit/656f6be01db6af45f5dca7e3a96d3d4ac471e016)
+- Merge pull request #194 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.98 [`7611910`](https://github.com/RSickenberg/rsickenberg.me/commit/76119102a4059fbd9279f1a043a3bd60d4279aa2)
+- chore(deps): bump @iconify-json/arcticons from 1.1.95 to 1.1.98 [`fb9e9d8`](https://github.com/RSickenberg/rsickenberg.me/commit/fb9e9d84a465ebf6c1b8adecdbe09bb93f4c0cd1)
+- chore(deps): bump @studio-freight/lenis from 1.0.39 to 1.0.42 [`389e399`](https://github.com/RSickenberg/rsickenberg.me/commit/389e399cc2aa6e031967477720d9f439b5f1b5d3)
+- chore(deps): bump preact from 10.19.6 to 10.19.7 [`a0ac886`](https://github.com/RSickenberg/rsickenberg.me/commit/a0ac886e2c5da28c18bb4aa5afda91c056cb1050)
+- chore(deps-dev): bump sass from 1.71.1 to 1.72.0 [`1a1e838`](https://github.com/RSickenberg/rsickenberg.me/commit/1a1e83823a91d93d57226a58fb310397e78abac4)
+- Merge pull request #182 from RSickenberg/dependabot/npm_and_yarn/astro-4.5.2 [`a4039fb`](https://github.com/RSickenberg/rsickenberg.me/commit/a4039fb160a0d73b914b1042e5d50ff925934d2a)
+- chore(deps): bump astro from 4.4.15 to 4.5.2 [`b7c42a8`](https://github.com/RSickenberg/rsickenberg.me/commit/b7c42a86329727fdd5488ff365fe006a01a6970f)
+
+#### [v0.2.6](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.5...v0.2.6)
+
+> 13 March 2024
+
+- Release 0.2.6 [`695b72b`](https://github.com/RSickenberg/rsickenberg.me/commit/695b72b284575e60df6c584449124420e9b92b45)
+- changelog [`e7de454`](https://github.com/RSickenberg/rsickenberg.me/commit/e7de454d03ac623643da360e2902647d4817f922)
+- build(bun): updated bun.lockb [`95a6834`](https://github.com/RSickenberg/rsickenberg.me/commit/95a6834cc3b12e55085f1b5b041e346a7cf9fa4a)
+- Merge pull request #179 from RSickenberg/dependabot/npm_and_yarn/sentry/astro-7.106.1 [`2fe2b78`](https://github.com/RSickenberg/rsickenberg.me/commit/2fe2b78c31498f0b42f094336148c05a7e136f15)
+- Merge pull request #178 from RSickenberg/dependabot/npm_and_yarn/dotenv-cli-7.4.1 [`49aba37`](https://github.com/RSickenberg/rsickenberg.me/commit/49aba379cf035931ddf4de82e13da839b73d6392)
+- Merge pull request #177 from RSickenberg/dependabot/npm_and_yarn/astro-4.5.0 [`91e303e`](https://github.com/RSickenberg/rsickenberg.me/commit/91e303ea52f3f1254bff5faaa1b10d5591fe24fa)
+- chore(deps): bump astro from 4.4.15 to 4.5.0 [`647cb9d`](https://github.com/RSickenberg/rsickenberg.me/commit/647cb9d00dc52e0f2a0c38f874941d886fc18a0f)
+- Update dependabot.yml [`1e2cdff`](https://github.com/RSickenberg/rsickenberg.me/commit/1e2cdffe8fae0cf95bed345d862701b8abacaba8)
+- Merge pull request #176 from RSickenberg/dependabot/github_actions/actions/deploy-pages-4 [`e17792e`](https://github.com/RSickenberg/rsickenberg.me/commit/e17792e9c5ca3b409492ff4f4cafd411dbe0a7dd)
+- Merge pull request #175 from RSickenberg/dependabot/github_actions/actions/configure-pages-4 [`035f822`](https://github.com/RSickenberg/rsickenberg.me/commit/035f822b138c66a7f9ada6b4504aab2dfb17b1ca)
+- Merge pull request #174 from RSickenberg/dependabot/github_actions/actions/upload-pages-artifact-3 [`a3a7e42`](https://github.com/RSickenberg/rsickenberg.me/commit/a3a7e42955f1ca4b821d26e640e2f4befe6946c5)
+- chore(deps): bump @sentry/astro from 7.106.0 to 7.106.1 [`6687324`](https://github.com/RSickenberg/rsickenberg.me/commit/6687324186e2b9d668f38a8099cc46ba85660887)
+- chore(deps-dev): bump dotenv-cli from 7.4.0 to 7.4.1 [`b804b92`](https://github.com/RSickenberg/rsickenberg.me/commit/b804b9210fd249de007b7bde2c95f9095e52709d)
+- chore(deps): bump actions/deploy-pages from 2 to 4 [`07ba4e2`](https://github.com/RSickenberg/rsickenberg.me/commit/07ba4e220a4570f03b3fec38ac835496f88c1dbc)
+- chore(deps): bump actions/configure-pages from 3 to 4 [`d42f90c`](https://github.com/RSickenberg/rsickenberg.me/commit/d42f90c5966f7a52cad12cb0e1d23cb9fe92f04f)
+- chore(deps): bump actions/upload-pages-artifact from 2 to 3 [`1f63dd6`](https://github.com/RSickenberg/rsickenberg.me/commit/1f63dd6db7feba0b88900ce85bbb340675c1f9b3)
+
+#### [v0.2.5](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.4...v0.2.5)
+
+> 9 March 2024
+
+- feat(sentry): added sentry for integration [`fc8edf8`](https://github.com/RSickenberg/rsickenberg.me/commit/fc8edf8cf601e7e9490243aea3d6fb511b640ea0)
+- Release 0.2.5 [`f3ccb17`](https://github.com/RSickenberg/rsickenberg.me/commit/f3ccb17411a486b84cd16037914fba382abee88b)
+
+#### [v0.2.4](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.3...v0.2.4)
+
+> 9 March 2024
+
+- feat(partytown): added gtag via partytown [`babaf4d`](https://github.com/RSickenberg/rsickenberg.me/commit/babaf4d0c7273c67c8fce528178116e8c2ab2b16)
+- Release 0.2.4 [`caf6f28`](https://github.com/RSickenberg/rsickenberg.me/commit/caf6f28726fb2caaa5ecd6f77c63b6a2a824f5f0)
+
+#### [v0.2.3](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.2...v0.2.3)
+
+> 9 March 2024
+
+- build(npm): upgrade npm deps [`b7261dc`](https://github.com/RSickenberg/rsickenberg.me/commit/b7261dcf19bd51cd52ead471b58acef09ffc4dbb)
+- build(npm): upgraded deps [`11bab75`](https://github.com/RSickenberg/rsickenberg.me/commit/11bab758946547dc307b448f8ca1fd3a2e3778f4)
+- chore(deps): bump astro from 4.3.1 to 4.3.5 [`cd720f1`](https://github.com/RSickenberg/rsickenberg.me/commit/cd720f1693fe46b5484183efa8b6ffa3477e97d9)
+- Release 0.2.3 [`1144a2f`](https://github.com/RSickenberg/rsickenberg.me/commit/1144a2f705701726d0fb1673468b58fb2d4cf1c8)
+- Release 0.2.2 [`1223c65`](https://github.com/RSickenberg/rsickenberg.me/commit/1223c653e6ee7f62df3d969efa149d58bfa884dd)
+- changelog [`70a590b`](https://github.com/RSickenberg/rsickenberg.me/commit/70a590b701667b4939457b32ac1cc0b9823a5e77)
+- chore(deps): bump preact from 10.19.3 to 10.19.4 [`4998459`](https://github.com/RSickenberg/rsickenberg.me/commit/4998459b51664847dc0ce37d086ac1574e8581c8)
+- chore(deps): bump astro-icon from 1.0.4 to 1.1.0 [`c27056c`](https://github.com/RSickenberg/rsickenberg.me/commit/c27056cc0194a828177ad60fc94fc257610ec760)
+- bump 0.2.2 [`ee5d183`](https://github.com/RSickenberg/rsickenberg.me/commit/ee5d1832556fd0917ad0d0d66b373a1b5a645236)
+- changelog [`b29c315`](https://github.com/RSickenberg/rsickenberg.me/commit/b29c3151870476652bef843b3f5c15523fa7683b)
+- Merge pull request #141 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.95 [`a28a98e`](https://github.com/RSickenberg/rsickenberg.me/commit/a28a98e6dcdcd326d647a8eac41b476e14178d0a)
+- Merge pull request #140 from RSickenberg/dependabot/npm_and_yarn/dev/astro-icon-1.1.0 [`de5ba62`](https://github.com/RSickenberg/rsickenberg.me/commit/de5ba62e1569c407f841dc72b949470f96dc7210)
+- Merge pull request #143 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.3.5 [`1223359`](https://github.com/RSickenberg/rsickenberg.me/commit/122335902f1f0c554146be1fc1ef534c7666f421)
+- Merge pull request #144 from RSickenberg/dependabot/npm_and_yarn/dev/preact-10.19.4 [`d001e36`](https://github.com/RSickenberg/rsickenberg.me/commit/d001e365951967ca82ca0468b7f609003c707ee3)
+- chore(deps): bump @iconify-json/arcticons from 1.1.93 to 1.1.95 [`f5c1097`](https://github.com/RSickenberg/rsickenberg.me/commit/f5c10971c4b0d36234363dd669b33e0175cbfd10)
+
+#### [v0.2.2](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.1...v0.2.2)
+
+> 2 February 2024
+
+- Merge pull request #92 from RSickenberg/dependabot/github_actions/actions/upload-pages-artifact-3 [`d380eb2`](https://github.com/RSickenberg/rsickenberg.me/commit/d380eb262cd5d42c395cbd7abd5e477e4022be3c)
+- Merge pull request #93 from RSickenberg/dependabot/github_actions/actions/deploy-pages-4 [`9518321`](https://github.com/RSickenberg/rsickenberg.me/commit/9518321e801b7bf92a2207ed321ac0df2b64f0cf)
+- chore(deps): bump actions/deploy-pages from 3 to 4 [`035817f`](https://github.com/RSickenberg/rsickenberg.me/commit/035817fb5c624cb2455fe19fe391566ea7683c75)
+- chore(deps): bump actions/upload-pages-artifact from 2 to 3 [`51bca04`](https://github.com/RSickenberg/rsickenberg.me/commit/51bca04cf5b65f727bd9728d8faef65bc2735db5)
+- Merge pull request #82 from RSickenberg/dependabot/npm_and_yarn/vite-4.5.1 [`aa50c69`](https://github.com/RSickenberg/rsickenberg.me/commit/aa50c6953612a7cdf24e3f67cdd3e3a454b2854d)
+- chore(deps): bump vite from 4.5.0 to 4.5.1 [`2537e9d`](https://github.com/RSickenberg/rsickenberg.me/commit/2537e9d665850679fc791e70c5432a56b8e5020d)
+- Merge pull request #78 from RSickenberg/dependabot/github_actions/actions/configure-pages-4 [`eaf433d`](https://github.com/RSickenberg/rsickenberg.me/commit/eaf433d980d7909bda918eaf67fb44d3b6685463)
+- Merge pull request #79 from RSickenberg/dependabot/github_actions/actions/deploy-pages-3 [`0372dcd`](https://github.com/RSickenberg/rsickenberg.me/commit/0372dcd82a7f17cdd3d3e101828812910b85cadd)
+- chore(deps): bump gsap from 3.12.2 to 3.12.3 [`549a9c0`](https://github.com/RSickenberg/rsickenberg.me/commit/549a9c09e6e5103809b9ba6e247833ba8081c432)
+- chore(deps): bump astro from 3.6.3 to 3.6.4 [`84875c8`](https://github.com/RSickenberg/rsickenberg.me/commit/84875c82e49dea697cf779b6894c0dc3cdc05313)
+- Target branch dev for dependabot [`a28eed8`](https://github.com/RSickenberg/rsickenberg.me/commit/a28eed8a03cd9fe81a16c3db3d3e24ef5672d692)
+- chore(deps): bump actions/deploy-pages from 2 to 3 [`3ee0c2d`](https://github.com/RSickenberg/rsickenberg.me/commit/3ee0c2d3e589a44e147dac00416a3f11f6a366a1)
+- chore(deps): bump actions/configure-pages from 3 to 4 [`a042572`](https://github.com/RSickenberg/rsickenberg.me/commit/a04257273bc222ee5023ebdbf8a7bda5ff479dd1)
+- Merge pull request #75 from RSickenberg/dependabot/npm_and_yarn/gsap-3.12.3 [`74564f3`](https://github.com/RSickenberg/rsickenberg.me/commit/74564f3aeebafb4db00429e8629ee23a61b659aa)
+- Merge pull request #74 from RSickenberg/dependabot/npm_and_yarn/astro-3.6.4 [`27b5966`](https://github.com/RSickenberg/rsickenberg.me/commit/27b5966499f5fcbfc685d48347dc7dd95d4a20fa)
+- Merge pull request #73 from RSickenberg/dev [`e86adfd`](https://github.com/RSickenberg/rsickenberg.me/commit/e86adfd7612f3f9341e4e7ad2be7692b1775f7a9)
+
+#### [v0.2.1](https://github.com/RSickenberg/rsickenberg.me/compare/0.2.0...v0.2.1)
+
+> 2 February 2024
+
+- build(npm): upgrade deps [`c390a0c`](https://github.com/RSickenberg/rsickenberg.me/commit/c390a0ceb9d4b36c94e01b46d22e4253494a231d)
+- build(npm): upgrade astro to 4.3.1 [`8296217`](https://github.com/RSickenberg/rsickenberg.me/commit/82962179e91637781b8bd6ee4b7c3aa6cd5c51d3)
+- build(npm): upgrade deps [`e11be25`](https://github.com/RSickenberg/rsickenberg.me/commit/e11be256ecb5b26742da170ef82ae78cc4602905)
+- Release 0.2.1 [`1eae829`](https://github.com/RSickenberg/rsickenberg.me/commit/1eae82953d5d39867a4d48309c00c1f89aa7c607)
+- docs(changelog): bump changelog [`a9f40a2`](https://github.com/RSickenberg/rsickenberg.me/commit/a9f40a2c7c7f3b0008b006506e0a93a01a79f20f)
+- Merge pull request #103 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/tailwind-5.1.0 [`4c154d3`](https://github.com/RSickenberg/rsickenberg.me/commit/4c154d338ff81e5b09c79458c9c28c3518928e9c)
+- Merge pull request #111 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/preact-3.1.0 [`c954ed2`](https://github.com/RSickenberg/rsickenberg.me/commit/c954ed264397ca3c8fc5007a8a7dc3e86c401520)
+- Merge pull request #113 from RSickenberg/dependabot/npm_and_yarn/dev/tailwindcss-3.4.1 [`bc0a4ae`](https://github.com/RSickenberg/rsickenberg.me/commit/bc0a4aebc9218ffe176e562c740c2e6b5b4abb1a)
+- Merge pull request #120 from RSickenberg/dependabot/npm_and_yarn/dev/gsap-3.12.5 [`9d03fba`](https://github.com/RSickenberg/rsickenberg.me/commit/9d03fbad84da0b5e9691f2e1f0e29f7ecce84f96)
+- Merge pull request #123 from RSickenberg/dependabot/npm_and_yarn/dev/zustand-4.5.0 [`3c5e565`](https://github.com/RSickenberg/rsickenberg.me/commit/3c5e565853f7daaa9368fcec90e578099bab3b6f)
+- Merge pull request #125 from RSickenberg/dependabot/npm_and_yarn/dev/studio-freight/lenis-1.0.34 [`d89e6d3`](https://github.com/RSickenberg/rsickenberg.me/commit/d89e6d3880dff46692e1f7981a0cda4fd3533b66)
+- Merge pull request #127 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.91 [`817dfdd`](https://github.com/RSickenberg/rsickenberg.me/commit/817dfdd8a45ece91b0c2913ba39379721dbaca99)
+- Merge pull request #128 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.2.4 [`2016688`](https://github.com/RSickenberg/rsickenberg.me/commit/2016688e14045e84084da48692a3d94495433e45)
+- chore(deps): bump astro from 3.6.4 to 4.0.4 [`02f3a01`](https://github.com/RSickenberg/rsickenberg.me/commit/02f3a010ff76d9e2a1e7e4ffc802f2042864a25b)
+- chore(deps): bump astro from 4.0.5 to 4.2.4 [`73b6469`](https://github.com/RSickenberg/rsickenberg.me/commit/73b6469dd6580e6d3e078ed1f27408f4871ca269)
+- feat(tech): the techs images are now optimized [`d163450`](https://github.com/RSickenberg/rsickenberg.me/commit/d16345098ea0280f2f27954d536629a218aa50a6)
+- chore(deps): bump @astrojs/preact from 3.0.1 to 3.1.0 [`32a31c4`](https://github.com/RSickenberg/rsickenberg.me/commit/32a31c4b811e93db2673a878328b9fc7ffa97f7d)
+- chore(deps-dev): bump release-it from 17.0.0 to 17.0.1 [`52a6b2b`](https://github.com/RSickenberg/rsickenberg.me/commit/52a6b2bd6aad554f236fd7eb7792f14e285f64c8)
+- chore(deps): bump @astrojs/tailwind from 5.0.2 to 5.0.3 [`802cd6a`](https://github.com/RSickenberg/rsickenberg.me/commit/802cd6aad1137dde19026241137100f1bf42e6f4)
+- fix(style): fixed few gaps [`f63b7a6`](https://github.com/RSickenberg/rsickenberg.me/commit/f63b7a65f5fa4d80c1dc90154055a2f1a9426641)
+- chore(deps): bump zustand from 4.4.7 to 4.5.0 [`2cfdb40`](https://github.com/RSickenberg/rsickenberg.me/commit/2cfdb4069a3f19de56c32edaa676a48df84a49a1)
+- chore(deps): bump @iconify-json/arcticons from 1.1.86 to 1.1.91 [`a4c49c6`](https://github.com/RSickenberg/rsickenberg.me/commit/a4c49c6c282a888f976d390e6c02641cdb17c532)
+- chore(deps): bump @studio-freight/lenis from 1.0.29 to 1.0.34 [`8d9fd38`](https://github.com/RSickenberg/rsickenberg.me/commit/8d9fd38d8bc3f12b9605357586bef552e98a8044)
+- chore(deps): bump gsap from 3.12.4 to 3.12.5 [`fa10a35`](https://github.com/RSickenberg/rsickenberg.me/commit/fa10a35a390d45765e3d2d42c9a6a62c9b1910e8)
+- chore(deps): bump tailwindcss from 3.3.6 to 3.4.1 [`62d69e3`](https://github.com/RSickenberg/rsickenberg.me/commit/62d69e36712095bb5e5e4d2a5e2fc656c792edec)
+- chore(deps): bump @astrojs/tailwind from 5.0.3 to 5.1.0 [`f023005`](https://github.com/RSickenberg/rsickenberg.me/commit/f023005c087a10bccb38739737de5bb1fb218ec6)
+- Merge pull request #90 from RSickenberg/dependabot/npm_and_yarn/dev/gsap-3.12.4 [`b019d4b`](https://github.com/RSickenberg/rsickenberg.me/commit/b019d4ba8bccf54a32684b8d496b340f46e762de)
+- chore(deps): bump gsap from 3.12.3 to 3.12.4 [`07ab7ec`](https://github.com/RSickenberg/rsickenberg.me/commit/07ab7ecb662ef30e81004f9823ef74c5c6d05e50)
+- Merge pull request #89 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.0.5 [`969f7c1`](https://github.com/RSickenberg/rsickenberg.me/commit/969f7c1cd3170460dbeb5c7c7844621400951337)
+- chore(deps): bump astro from 4.0.4 to 4.0.5 [`13f34ec`](https://github.com/RSickenberg/rsickenberg.me/commit/13f34eced58c75fac64daa6c1dc2621789365c2b)
+- Merge pull request #88 from RSickenberg/dependabot/npm_and_yarn/dev/iconify-json/arcticons-1.1.86 [`6880716`](https://github.com/RSickenberg/rsickenberg.me/commit/68807169305af2cefc2cad11b8a3f728e32e8a40)
+- chore(deps): bump @iconify-json/arcticons from 1.1.85 to 1.1.86 [`774ec08`](https://github.com/RSickenberg/rsickenberg.me/commit/774ec085acbfefd41957baa6415ca45879203d65)
+- Merge pull request #85 from RSickenberg/dependabot/npm_and_yarn/dev/release-it-17.0.1 [`ad18bd2`](https://github.com/RSickenberg/rsickenberg.me/commit/ad18bd210cef0b44470d76fdb10ba0cb5beaccd7)
+- Merge pull request #86 from RSickenberg/dependabot/npm_and_yarn/dev/preact-10.19.3 [`b35e775`](https://github.com/RSickenberg/rsickenberg.me/commit/b35e77562f4a231c56ad2ecff88cb50225a96370)
+- chore(deps): bump preact from 10.19.2 to 10.19.3 [`11b5a81`](https://github.com/RSickenberg/rsickenberg.me/commit/11b5a81da0c56ef82bc7100346771325cedeb68f)
+- Merge pull request #87 from RSickenberg/dependabot/npm_and_yarn/dev/astro-4.0.4 [`88ec8d2`](https://github.com/RSickenberg/rsickenberg.me/commit/88ec8d24f39124ddb19ba80b26c26ed70083ca84)
+- Merge pull request #80 from RSickenberg/dependabot/npm_and_yarn/dev/astrojs/tailwind-5.0.3 [`7d6e102`](https://github.com/RSickenberg/rsickenberg.me/commit/7d6e102e1c04bdc567bfb16bf432e29a23fd876d)
+- Merge pull request #81 from RSickenberg/dependabot/npm_and_yarn/dev/tailwindcss-3.3.6 [`7ace7c4`](https://github.com/RSickenberg/rsickenberg.me/commit/7ace7c46b120f7dd7d67961dc81390879e25c71b)
+- chore(deps): bump tailwindcss from 3.3.5 to 3.3.6 [`f3d752f`](https://github.com/RSickenberg/rsickenberg.me/commit/f3d752f36f85a24fca4f5d6a2388830523e59020)
+- Merge pull request #76 from RSickenberg/dependabot/npm_and_yarn/dev/astro-3.6.4 [`300487b`](https://github.com/RSickenberg/rsickenberg.me/commit/300487bfc85dd243cc78faf7621c721adeccfe84)
+- Merge pull request #77 from RSickenberg/dependabot/npm_and_yarn/dev/gsap-3.12.3 [`8775c84`](https://github.com/RSickenberg/rsickenberg.me/commit/8775c846e80b59e7d6e7c81894df6697515efa21)
+- chore(deps): bump gsap from 3.12.2 to 3.12.3 [`7da595b`](https://github.com/RSickenberg/rsickenberg.me/commit/7da595bbbf5d02fe7392fcffa875bbc2055e2ecd)
+- chore(deps): bump astro from 3.6.3 to 3.6.4 [`8760f50`](https://github.com/RSickenberg/rsickenberg.me/commit/8760f500cd96e4b50e8c6c75f24e422ca3e0d8aa)
+
+#### [0.2.0](https://github.com/RSickenberg/rsickenberg.me/compare/v0.2.0...0.2.0)
+
+> 29 November 2023
+
+#### [v0.2.0](https://github.com/RSickenberg/rsickenberg.me/compare/v0.1.2...v0.2.0)
+
+> 29 November 2023
+
+- bump 0.2.0 [`4235fb1`](https://github.com/RSickenberg/rsickenberg.me/commit/4235fb17d826060896d4f2465e7d13a98307c422)
+- Merge pull request #73 from RSickenberg/dev [`e86adfd`](https://github.com/RSickenberg/rsickenberg.me/commit/e86adfd7612f3f9341e4e7ad2be7692b1775f7a9)
+- feat(project): added old project into the list + marked as deprecated [`b338c0b`](https://github.com/RSickenberg/rsickenberg.me/commit/b338c0bc856555fec788c4a23ae8fdc80bc9d2bf)
+- build(chore): upgraded deps [`d8577b4`](https://github.com/RSickenberg/rsickenberg.me/commit/d8577b4c85f7ebf90deba73303f7e25d51ad07be)
+- fix(style): fixed few styles here and there with the grid, shadow and outlines [`e70ce2c`](https://github.com/RSickenberg/rsickenberg.me/commit/e70ce2ca1d1433d8db587d39687478021dedd45b)
+- [skip ci] Changelog [`e5dbcd6`](https://github.com/RSickenberg/rsickenberg.me/commit/e5dbcd6a11c29667fa29e93520712e551859cb84)
+- prepare 0.2.0 [`5847667`](https://github.com/RSickenberg/rsickenberg.me/commit/58476677bc64ce5291bc560236023a7ef0edfe54)
+- ci(dependabot): increased the dependabot schedule [`8f851e8`](https://github.com/RSickenberg/rsickenberg.me/commit/8f851e84d60ba267397c415b8d242cf80fecc273)
+- style(contact): Grammar fix [`7b6ae2b`](https://github.com/RSickenberg/rsickenberg.me/commit/7b6ae2bb9f75aa09c8d42fd569576c723461723f)
+
+#### [v0.1.2](https://github.com/RSickenberg/rsickenberg.me/compare/v0.1.1...v0.1.2)
+
+> 29 November 2023
+
+- Release 0.1.2 [`afd057a`](https://github.com/RSickenberg/rsickenberg.me/commit/afd057ac5da034ee591bbab6629ea06414994d29)
+- build(release): since the project is still in active dev, release are in pre-release by default + hook dev rebase after release [`da76a35`](https://github.com/RSickenberg/rsickenberg.me/commit/da76a35cab8f1e1e13445b91a78833638d55691c)
+- build(release): since the project is still in active dev, release are in pre-release by default + hook dev rebase after release [`771d668`](https://github.com/RSickenberg/rsickenberg.me/commit/771d6688a347c35b4055c21d0554624236f6dfb1)
+- fix(contact): fixed a glitch when used a computed tailwind class [`e67c8d2`](https://github.com/RSickenberg/rsickenberg.me/commit/e67c8d2f8eecebce7f2f84c9332ce9aa55216891)
+- fix(release): removed hook since it's look bad [`ea42b80`](https://github.com/RSickenberg/rsickenberg.me/commit/ea42b8026c428b86845d3cc3234f006fa8e0f649)
+
+#### [v0.1.1](https://github.com/RSickenberg/rsickenberg.me/compare/0.1.0...v0.1.1)
+
+> 29 November 2023
+
+- fix(styles): tweaked few styles here and there. See changelog [`624f057`](https://github.com/RSickenberg/rsickenberg.me/commit/624f0576d244a6750becee93c37f710aee940e56)
+- Release 0.1.1 [`c80bca2`](https://github.com/RSickenberg/rsickenberg.me/commit/c80bca2a3a00c88517351ae4c3708b83a0b79b5a)
+
+#### [0.1.0](https://github.com/RSickenberg/rsickenberg.me/compare/v0.1.0...0.1.0)
+
+> 28 November 2023
+
+#### [v0.1.0](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.8...v0.1.0)
+
+> 28 November 2023
+
+- chore(deps): bump zod from 3.21.4 to 3.22.4 [`#72`](https://github.com/RSickenberg/rsickenberg.me/pull/72)
+- chore(deps): bump actions/setup-node from 3 to 4 [`#71`](https://github.com/RSickenberg/rsickenberg.me/pull/71)
+- chore(deps): bump @babel/traverse from 7.22.5 to 7.23.2 [`#70`](https://github.com/RSickenberg/rsickenberg.me/pull/70)
+- chore(deps): bump undici from 5.22.1 to 5.26.3 [`#69`](https://github.com/RSickenberg/rsickenberg.me/pull/69)
+- chore(deps): bump postcss from 8.4.24 to 8.4.31 [`#68`](https://github.com/RSickenberg/rsickenberg.me/pull/68)
+- chore(deps): bump actions/checkout from 3 to 4 [`#67`](https://github.com/RSickenberg/rsickenberg.me/pull/67)
+- chore(deps): bump semver from 6.3.0 to 6.3.1 [`#64`](https://github.com/RSickenberg/rsickenberg.me/pull/64)
+- chore(deps-dev): bump word-wrap from 1.2.3 to 1.2.4 [`#66`](https://github.com/RSickenberg/rsickenberg.me/pull/66)
+- build(deps): upgrade deps [`e19fafb`](https://github.com/RSickenberg/rsickenberg.me/commit/e19fafba56e290f05fb34f0b9d9c255995c1ed77)
+- deps(astro): Upgraded deps to astro V3 and removed deprecated content [`5c04061`](https://github.com/RSickenberg/rsickenberg.me/commit/5c04061a8f6950617b9c49323c46599718b1537f)
+- feat(contact): added the contact methods along with some icons [`9350fad`](https://github.com/RSickenberg/rsickenberg.me/commit/9350fad498f57aa2e9332233016c98e44c8beb3f)
+- fix(contact): contact fixes on mobile [`fc29089`](https://github.com/RSickenberg/rsickenberg.me/commit/fc290896951d1e8ab612d2041649d42e6f2b87ea)
+- docs(changelog): new changelog lines [`87a6472`](https://github.com/RSickenberg/rsickenberg.me/commit/87a647200481bc5f9194b34c3e152bb2f79051c9)
+- build(bump): bump version to 0.1.0 [`9ef271e`](https://github.com/RSickenberg/rsickenberg.me/commit/9ef271ea0be6123313eb6e1602aeb3e78946a273)
+- fix(gsap): enhanced an animation on project list [`55af251`](https://github.com/RSickenberg/rsickenberg.me/commit/55af2516c6eb022ca15779091bd49ee5d96260e9)
+- Merge pull request #65 from RSickenberg/dependabot/github_actions/actions/upload-pages-artifact-2 [`bfa632f`](https://github.com/RSickenberg/rsickenberg.me/commit/bfa632f44bff28cf56b90b88c233681e5360a5f0)
+- chore(deps): bump actions/upload-pages-artifact from 1 to 2 [`2539bb8`](https://github.com/RSickenberg/rsickenberg.me/commit/2539bb80e702f385be0c255ed2ce71f9b35e54d1)
+
+#### [v0.0.8](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.7...v0.0.8)
+
+> 24 June 2023
+
+- chore(deps): upgrade deps [`a78bfc3`](https://github.com/RSickenberg/rsickenberg.me/commit/a78bfc3cefadd6eacf771317dad0f4326c1b5872)
+- Release 0.0.8 [`13e44b2`](https://github.com/RSickenberg/rsickenberg.me/commit/13e44b225f18efb747dc83bbf36c32c5eb8621dd)
+
+#### [v0.0.7](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.6...v0.0.7)
+
+> 26 May 2023
+
+- chore(deps): Upgrade deps [`b19c6ec`](https://github.com/RSickenberg/rsickenberg.me/commit/b19c6ec0c435f279c6ad075f0139e040998535b2)
+- style(lint): Linted ProjectList.tsx [`3a8ad16`](https://github.com/RSickenberg/rsickenberg.me/commit/3a8ad163737f0c05910c406c2041c06e872da942)
+- fix(projects): Fixed an issue where the image wouldn't appear when multiple projects are present [`4a05306`](https://github.com/RSickenberg/rsickenberg.me/commit/4a053065904372a7ec1c2a86b40b3610b7438f87)
+- Release 0.0.7 [`e06ffd0`](https://github.com/RSickenberg/rsickenberg.me/commit/e06ffd0c581286f76bdff353621565783ee274d3)
+- changelog [`4a05cb7`](https://github.com/RSickenberg/rsickenberg.me/commit/4a05cb72e1ce2716bf5622477330daa974646bda)
+- Merge pull request #63 from RSickenberg/dependabot/npm_and_yarn/vm2-3.9.19 [`30fedc8`](https://github.com/RSickenberg/rsickenberg.me/commit/30fedc8d12f0171bf3b5c51653bd55a6b6abac12)
+- chore(deps): bump vm2 from 3.9.17 to 3.9.19 [`d62b985`](https://github.com/RSickenberg/rsickenberg.me/commit/d62b985ca4c260831e4ccd5c763261cb7f7fd12a)
+
+#### [v0.0.6](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.6-1...v0.0.6)
+
+> 28 April 2023
+
+- fix(security): fixes #61 [`#61`](https://github.com/RSickenberg/rsickenberg.me/issues/61)
+- chore(deps): upgrade deps + migrate lenis [`2dee8b9`](https://github.com/RSickenberg/rsickenberg.me/commit/2dee8b984af5c97c973b215de6a8fe3b2aa61fc7)
+- feat(project): project tumbnail is now working. Thanks @yago &lt;3 [`3363e8f`](https://github.com/RSickenberg/rsickenberg.me/commit/3363e8fd801a4539237d89141de5b7ef2cd7dd1a)
+- Release 0.0.6 [`21f1774`](https://github.com/RSickenberg/rsickenberg.me/commit/21f1774f434c9999b189c253ea0793f1d1026e63)
+- changelog [`a75fe37`](https://github.com/RSickenberg/rsickenberg.me/commit/a75fe373af09f22e01f72269724e6fb253fa36f7)
+- chore(deps): bump vm2 from 3.9.16 to 3.9.17 [`91fcdd3`](https://github.com/RSickenberg/rsickenberg.me/commit/91fcdd361ca086a255762a1a846f186c681f8b9b)
+- Update dependabot.yml [`930ab14`](https://github.com/RSickenberg/rsickenberg.me/commit/930ab147e75d182e68f6fc2e6ca712c27d290ead)
+- Update dependabot.yml [`0bd0b54`](https://github.com/RSickenberg/rsickenberg.me/commit/0bd0b549b5feb1fe20148ad9fc69d906de9925dc)
+- Merge pull request #59 from RSickenberg/dependabot/npm_and_yarn/vm2-3.9.17 [`8470659`](https://github.com/RSickenberg/rsickenberg.me/commit/84706592c172a8b6b960944c0c0a6d708ccef9ac)
+
+#### [v0.0.6-1](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.6-0...v0.0.6-1)
+
+> 17 April 2023
+
+- chore(deps): upgrade deps to latest releases [`81658d8`](https://github.com/RSickenberg/rsickenberg.me/commit/81658d87375ad4c549ad558f8acf419f53042c79)
+- Release 0.0.6-1 [`3778647`](https://github.com/RSickenberg/rsickenberg.me/commit/37786472d8599fc05eca5870db11a1dc3275d07b)
+- changelog [`be2dd76`](https://github.com/RSickenberg/rsickenberg.me/commit/be2dd7615e8d958fb7f6afc1d8252e7f99a5fcca)
+- Merge pull request #58 from RSickenberg/dependabot/npm_and_yarn/micromark-extension-gfm-footnote-1.1.0 [`bd80951`](https://github.com/RSickenberg/rsickenberg.me/commit/bd80951300de2fec455f19a7f0c6d6ce6e2baa51)
+- Merge pull request #57 from RSickenberg/dependabot/npm_and_yarn/electron-to-chromium-1.4.365 [`013286c`](https://github.com/RSickenberg/rsickenberg.me/commit/013286c1bc275145531ab50f392c65db81275134)
+- Merge pull request #56 from RSickenberg/dependabot/npm_and_yarn/ampproject/remapping-2.2.1 [`6d9bbb5`](https://github.com/RSickenberg/rsickenberg.me/commit/6d9bbb571a8e45a144a167a76b10611fc77ec0ae)
+- Merge pull request #55 from RSickenberg/dependabot/npm_and_yarn/jridgewell/trace-mapping-0.3.18 [`86f8aab`](https://github.com/RSickenberg/rsickenberg.me/commit/86f8aaba9443e854c08b0e77d119c1c8f63a59e2)
+- chore(deps): bump @ampproject/remapping from 2.2.0 to 2.2.1 [`62f6200`](https://github.com/RSickenberg/rsickenberg.me/commit/62f6200af6a42933f6695edc9f3eed76254a13fb)
+- Update Dependabot with correct NPM settings [`f458186`](https://github.com/RSickenberg/rsickenberg.me/commit/f458186e47e4a1603a833655c0bf28540b49ba8c)
+- chore(deps): bump micromark-extension-gfm-footnote from 1.0.4 to 1.1.0 [`4879367`](https://github.com/RSickenberg/rsickenberg.me/commit/4879367a63627e95a2d09e821f50cbc84a8c5e42)
+- chore(deps): bump electron-to-chromium from 1.4.349 to 1.4.365 [`125c246`](https://github.com/RSickenberg/rsickenberg.me/commit/125c246ffbe586910f516f85273f8aba4275e3d4)
+- chore(deps): bump rollup from 3.20.2 to 3.20.3 [`02349b9`](https://github.com/RSickenberg/rsickenberg.me/commit/02349b9aac53b4122f5f9bb082e3ef443a56bbd8)
+- Dependabot, don’t take my time but when you do, please do it well. [`3829c30`](https://github.com/RSickenberg/rsickenberg.me/commit/3829c30ac905499b847d3a639df8a5e4cfc032a1)
+- Merge pull request #54 from RSickenberg/dependabot/npm_and_yarn/rollup-3.20.3 [`db6a04a`](https://github.com/RSickenberg/rsickenberg.me/commit/db6a04a4f9a938e460b5ababef117facd18e0bad)
+- chore(deps): bump @jridgewell/trace-mapping from 0.3.17 to 0.3.18 [`f2231ae`](https://github.com/RSickenberg/rsickenberg.me/commit/f2231ae33cd4ebcecec2c84445500709ec3f71bd)
+- chore(deps): bump vm2 from 3.9.14 to 3.9.16 [`8f93715`](https://github.com/RSickenberg/rsickenberg.me/commit/8f93715503d59f6f535d1ca3930c8423faae75c3)
+- Fix typo [`85730f5`](https://github.com/RSickenberg/rsickenberg.me/commit/85730f5a3c8d6b44605fc2012e508f1c9eaf81af)
+- Merge pull request #53 from RSickenberg/dependabot/npm_and_yarn/vm2-3.9.16 [`ee6fc6a`](https://github.com/RSickenberg/rsickenberg.me/commit/ee6fc6ab48e4dab126b9925d644290907941cf5f)
+
+#### [v0.0.6-0](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.5...v0.0.6-0)
+
+> 4 April 2023
+
+- chore: updated deps + removed .idea folder to recreate it [`eeabaac`](https://github.com/RSickenberg/rsickenberg.me/commit/eeabaacd457e3a7e1518735cc16d383a05742005)
+- chore(deps): Upgrade deps [`4b9f850`](https://github.com/RSickenberg/rsickenberg.me/commit/4b9f850a66fcad7dbe48edb1dfd8c208cc81a07d)
+- ci(dependabot): fixed dependabot update [`7704fc0`](https://github.com/RSickenberg/rsickenberg.me/commit/7704fc07826a4495dc8731c019a0adbc9189d6ba)
+- feat(project): wip: Project picture have the size in it [`6749076`](https://github.com/RSickenberg/rsickenberg.me/commit/6749076ffc88f57edccdf628ef7a52a8977aefd7)
+- feat(ui): wip: hovering project image tentative [`263d88d`](https://github.com/RSickenberg/rsickenberg.me/commit/263d88d2faaba76358030ab9c3d279824a4f9ebc)
+- fix: fixed a navbar flashing animation [`b86b82f`](https://github.com/RSickenberg/rsickenberg.me/commit/b86b82f50feb04518242b1783effd91e01beea95)
+- fix(profile): fixed a z-index issue with the squares [`eb97521`](https://github.com/RSickenberg/rsickenberg.me/commit/eb97521e77cc5b477044bdbf9186b9617d18db5e)
+- Release 0.0.6-0 [`23d25d4`](https://github.com/RSickenberg/rsickenberg.me/commit/23d25d4449e72a3e823dd2a30cf187d75eb5b2d1)
+- fix(import): fixed import paths [`66455e8`](https://github.com/RSickenberg/rsickenberg.me/commit/66455e8eabd0578fd80a5caabfeec74fafb09141)
+- ci: pass node to 18 and allow dependabot to flag github action update [`b2b00fb`](https://github.com/RSickenberg/rsickenberg.me/commit/b2b00fb3a66b68aeea08fabadef3835e2c24bbbd)
+- [skip ci] changelog [`88c9331`](https://github.com/RSickenberg/rsickenberg.me/commit/88c9331e40e194727557c1180623abe05c4b4b58)
+- Merge pull request #51 from RSickenberg/dependabot/github_actions/actions/deploy-pages-2 [`1b89864`](https://github.com/RSickenberg/rsickenberg.me/commit/1b8986488439d65de825cf7d29863bee94ba6c2a)
+- chore(deps): bump actions/deploy-pages from 1 to 2 [`ad2056d`](https://github.com/RSickenberg/rsickenberg.me/commit/ad2056d465eaf0366908f3481ce278be36a76e3e)
+- Merge pull request #50 from RSickenberg/dependabot/github_actions/actions/configure-pages-3 [`da51566`](https://github.com/RSickenberg/rsickenberg.me/commit/da51566a74625453b377011bf00e5a399f896464)
+- chore(deps): bump actions/configure-pages from 2 to 3 [`5ec71fd`](https://github.com/RSickenberg/rsickenberg.me/commit/5ec71fd7c69a5364a8ba52da8b63f6c93c6fca5e)
+
+#### [v0.0.5](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.4...v0.0.5)
+
+> 12 March 2023
+
+- chore(deps): update deps to latest iteration [`b5e4591`](https://github.com/RSickenberg/rsickenberg.me/commit/b5e4591c4d24b25189f9d7ee6c09972e59ea326a)
+- chore(deps): bump astro from 2.0.15 to 2.0.18 [`7442b52`](https://github.com/RSickenberg/rsickenberg.me/commit/7442b5246e4cd1737729f1ecdb31d8b26e248de9)
+- Release 0.0.5 [`4064e93`](https://github.com/RSickenberg/rsickenberg.me/commit/4064e93f33b13f9093f46e8d9278e39e53f42541)
+- changelog [`b29c67c`](https://github.com/RSickenberg/rsickenberg.me/commit/b29c67c7448f4b07d569e6371e336213b644b6ac)
+- chore: dependabot - change frequency to weekly + allow unrestricted pr [`2ba0cbd`](https://github.com/RSickenberg/rsickenberg.me/commit/2ba0cbd8e6efb4e5547d2b2efb1a990e9a1bed79)
+- Merge pull request #41 from RSickenberg/dependabot/npm_and_yarn/babel/plugin-transform-react-jsx-7.21.0 [`54b92cf`](https://github.com/RSickenberg/rsickenberg.me/commit/54b92cf179da5b575355376c00a1f918f027aa2e)
+- Merge pull request #40 from RSickenberg/dependabot/npm_and_yarn/astro-2.0.18 [`83601f8`](https://github.com/RSickenberg/rsickenberg.me/commit/83601f8365154451daf48af9a67616253afbde3f)
+- Merge pull request #39 from RSickenberg/dependabot/npm_and_yarn/astrojs/webapi-2.0.3 [`6cc0ac7`](https://github.com/RSickenberg/rsickenberg.me/commit/6cc0ac785bf9f4859721af37fbad845a3b2a252b)
+- Merge pull request #38 from RSickenberg/dependabot/npm_and_yarn/raw-body-2.5.2 [`f81e99a`](https://github.com/RSickenberg/rsickenberg.me/commit/f81e99a0880e850e73a21812b1aae616a9c5ca68)
+- Merge pull request #42 from RSickenberg/dependabot/npm_and_yarn/astrojs/telemetry-2.0.1 [`1f2866b`](https://github.com/RSickenberg/rsickenberg.me/commit/1f2866b3d62c7f9208b9d3735b7f578cc9f8a6a9)
+- chore(deps): bump @babel/core from 7.20.12 to 7.21.0 [`c97d811`](https://github.com/RSickenberg/rsickenberg.me/commit/c97d8112c4e9e5f4ef92dad47f3e23d1dca500f6)
+- chore(deps): bump @astrojs/image from 0.14.1 to 0.15.1 [`b2bc7a5`](https://github.com/RSickenberg/rsickenberg.me/commit/b2bc7a583ad3f51af50a2f8e3a8efcbf68138284)
+- chore(deps): bump @astrojs/webapi from 2.0.1 to 2.0.3 [`710a02a`](https://github.com/RSickenberg/rsickenberg.me/commit/710a02a223a7cbb984649ea32479fc6297d71f53)
+- chore(deps): bump @astrojs/telemetry from 2.0.0 to 2.0.1 [`afee2ca`](https://github.com/RSickenberg/rsickenberg.me/commit/afee2ca34ccd511782d36ab7d5ed160adbcae945)
+- chore(deps): bump @babel/plugin-transform-react-jsx [`70e5c8f`](https://github.com/RSickenberg/rsickenberg.me/commit/70e5c8f7d65ed1454c9ae5391def0d07be2b4a71)
+- chore(deps): bump raw-body from 2.5.1 to 2.5.2 [`6572a96`](https://github.com/RSickenberg/rsickenberg.me/commit/6572a96e74eda08f4408d4c28b7eff95e88eb168)
+- Merge pull request #37 from RSickenberg/dependabot/npm_and_yarn/caniuse-lite-1.0.30001460 [`07246b0`](https://github.com/RSickenberg/rsickenberg.me/commit/07246b033f707ff08d690348b4a491806baa7712)
+- Merge pull request #36 from RSickenberg/dependabot/npm_and_yarn/zustand-4.3.5 [`8a436e5`](https://github.com/RSickenberg/rsickenberg.me/commit/8a436e581015f9b6fbfad8ff1dcbad90e059d9a0)
+- Merge pull request #34 from RSickenberg/dependabot/npm_and_yarn/babel/core-7.21.0 [`1879252`](https://github.com/RSickenberg/rsickenberg.me/commit/18792524ecafd63ebb7f018937dd1962749d557b)
+- Merge pull request #33 from RSickenberg/dependabot/npm_and_yarn/babel/compat-data-7.21.0 [`c9cbcc1`](https://github.com/RSickenberg/rsickenberg.me/commit/c9cbcc1b88c0043e93ecd39d30725d5baafee9a8)
+- Merge pull request #31 from RSickenberg/dependabot/npm_and_yarn/unist-util-is-5.2.1 [`1f70105`](https://github.com/RSickenberg/rsickenberg.me/commit/1f701055a0633898018f9d087815ac6be8c6f4f5)
+- chore(deps): bump vscode-languageserver from 8.0.2 to 8.1.0 [`3701425`](https://github.com/RSickenberg/rsickenberg.me/commit/3701425df50aeea172fdc9a19bffe5588233fa9b)
+- chore(deps): bump zustand from 4.3.3 to 4.3.5 [`6bca898`](https://github.com/RSickenberg/rsickenberg.me/commit/6bca89800d90727e4b5bb060b2b7fc8bf109fba6)
+- chore(deps): bump unist-util-is from 5.2.0 to 5.2.1 [`f735e50`](https://github.com/RSickenberg/rsickenberg.me/commit/f735e50b67820fb4c011aeae7a44566884dbaba8)
+- chore(deps): bump caniuse-lite from 1.0.30001452 to 1.0.30001460 [`35ac28c`](https://github.com/RSickenberg/rsickenberg.me/commit/35ac28c55c70275f5b98da63f36bfd64c2428e21)
+- chore(deps): bump @babel/compat-data from 7.20.14 to 7.21.0 [`d57b8c8`](https://github.com/RSickenberg/rsickenberg.me/commit/d57b8c874fd593d07745bd7cd09dce2022746561)
+- Merge pull request #30 from RSickenberg/dependabot/npm_and_yarn/astrojs/image-0.15.1 [`da8246d`](https://github.com/RSickenberg/rsickenberg.me/commit/da8246d70df749ee417456babfd83feb0d985e9d)
+- Merge pull request #29 from RSickenberg/dependabot/npm_and_yarn/astrojs/compiler-1.1.2 [`aad42cc`](https://github.com/RSickenberg/rsickenberg.me/commit/aad42cce25128b1faf22f6b9bdb2e900bcc78e44)
+- Merge pull request #28 from RSickenberg/dependabot/npm_and_yarn/electron-to-chromium-1.4.310 [`264e176`](https://github.com/RSickenberg/rsickenberg.me/commit/264e176446d7a3c6ed9cd12e68aea40b66cd8da1)
+- Merge pull request #24 from RSickenberg/dependabot/npm_and_yarn/vscode-languageserver-8.1.0 [`d235ede`](https://github.com/RSickenberg/rsickenberg.me/commit/d235ede3b36bddda818cf76f7b592cbb048c21af)
+- Merge pull request #23 from RSickenberg/dependabot/npm_and_yarn/hast-util-from-parse5-7.1.2 [`140157c`](https://github.com/RSickenberg/rsickenberg.me/commit/140157c9f1e0d298047fbebb7b26dce76e8ebc8d)
+- chore(deps): bump @astrojs/preact from 2.0.2 to 2.0.3 [`fbb41a6`](https://github.com/RSickenberg/rsickenberg.me/commit/fbb41a6e28d560529d7e1fa8de0ea7512f43a946)
+- chore(deps): bump caniuse-lite from 1.0.30001451 to 1.0.30001452 [`a2168b6`](https://github.com/RSickenberg/rsickenberg.me/commit/a2168b650d4d03c36ef397c3100bd45ec83d3921)
+- chore(deps-dev): bump sass from 1.58.0 to 1.58.1 [`ea14e10`](https://github.com/RSickenberg/rsickenberg.me/commit/ea14e10880cc73f7e4d55b480c8d3b304c3e4739)
+- chore(deps): bump @astrojs/compiler from 1.1.0 to 1.1.2 [`43b21a8`](https://github.com/RSickenberg/rsickenberg.me/commit/43b21a88f22efe93fe0875655a1c18f622ecb842)
+- chore(deps): bump electron-to-chromium from 1.4.295 to 1.4.310 [`7baf2e5`](https://github.com/RSickenberg/rsickenberg.me/commit/7baf2e50c37dc18ebaf490b5a7896b660619f25b)
+- chore(deps): bump hast-util-from-parse5 from 7.1.1 to 7.1.2 [`584900c`](https://github.com/RSickenberg/rsickenberg.me/commit/584900c9532dd1e5def17f65246577c31423e4e6)
+- Merge pull request #18 from RSickenberg/dependabot/npm_and_yarn/caniuse-lite-1.0.30001452 [`5a9e147`](https://github.com/RSickenberg/rsickenberg.me/commit/5a9e147bb29e4a0aa81dd855f58282de0b5bad20)
+- Merge pull request #17 from RSickenberg/dependabot/npm_and_yarn/sass-1.58.1 [`31bd2ce`](https://github.com/RSickenberg/rsickenberg.me/commit/31bd2ce691afd7963265379b8942bd5ceee627b4)
+- Merge pull request #14 from RSickenberg/dependabot/npm_and_yarn/undici-5.19.1 [`b29e9a6`](https://github.com/RSickenberg/rsickenberg.me/commit/b29e9a679ba3f16d744d22b1c21c822a017efa1f)
+- Merge pull request #15 from RSickenberg/dependabot/npm_and_yarn/astrojs/preact-2.0.3 [`8680734`](https://github.com/RSickenberg/rsickenberg.me/commit/8680734b5c376fe8c8faa02da8d7df01e12ea7ba)
+- Merge pull request #19 from RSickenberg/dependabot/npm_and_yarn/astro-2.0.12 [`c4ff63e`](https://github.com/RSickenberg/rsickenberg.me/commit/c4ff63ec5a7e38edfbb63f88a98a4d62d49ac643)
+- chore(deps): bump astro from 2.0.10 to 2.0.12 [`9ea3435`](https://github.com/RSickenberg/rsickenberg.me/commit/9ea34354ca218afc6ce5abe88fc7d40f0a3c0ff0)
+- chore(deps): bump undici from 5.18.0 to 5.19.1 [`52a1c97`](https://github.com/RSickenberg/rsickenberg.me/commit/52a1c97c0e9614e98d17a527477acf289c6dc6b0)
+
+#### [v0.0.4](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.3...v0.0.4)
+
+> 13 February 2023
+
+- chore: deps upgrade [`9a19da7`](https://github.com/RSickenberg/rsickenberg.me/commit/9a19da7e805dc3d9cf4013d85bd5b29b59fda521)
+- packages updates [`ea9d224`](https://github.com/RSickenberg/rsickenberg.me/commit/ea9d22465bb4515f0f83a410c18fc7bf494fc832)
+- WIP: Project list [`7474db2`](https://github.com/RSickenberg/rsickenberg.me/commit/7474db284d6f2b581b843e324f6c87ee9cdf3961)
+- fix: styles [`a32fd4c`](https://github.com/RSickenberg/rsickenberg.me/commit/a32fd4c698afd8283af6b50aa81ec3b192de4734)
+- feat: profile picture [`81b2f6a`](https://github.com/RSickenberg/rsickenberg.me/commit/81b2f6a3e8eb667b51ef65140d93c91eefda73c3)
+- chore: removed automotive scroll [`49df180`](https://github.com/RSickenberg/rsickenberg.me/commit/49df1804083bc97f21ff94ad13c0e587530abe60)
+- enhanced: displacement [`f4b34e1`](https://github.com/RSickenberg/rsickenberg.me/commit/f4b34e192be67c79eff45237c847e741dab49a44)
+- fix: layout responsiveness [`8129583`](https://github.com/RSickenberg/rsickenberg.me/commit/81295838c7b251b3f89c6561e2daee91d2a6cc17)
+- fix: gsap updated values [`eaf620a`](https://github.com/RSickenberg/rsickenberg.me/commit/eaf620a320192c4f102d1d6c4b57be425d1c74a5)
+- Release 0.0.4 [`1af452a`](https://github.com/RSickenberg/rsickenberg.me/commit/1af452aba404aec50e4f8b0863ea2e78ee307c82)
+- Merge pull request #2 from RSickenberg/dependabot/npm_and_yarn/dotenv-cli-7.0.0 [`c3763d3`](https://github.com/RSickenberg/rsickenberg.me/commit/c3763d307a92fd03b75cccff7f3c38777a504ded)
+- bump: update deps [`6e99f54`](https://github.com/RSickenberg/rsickenberg.me/commit/6e99f5405669040b23aeca115cc555758f52dce5)
+- chore(deps-dev): bump dotenv-cli from 6.0.0 to 7.0.0 [`114a377`](https://github.com/RSickenberg/rsickenberg.me/commit/114a3774f08949451c277af4cb3f1b67d474a05f)
+- fix: enhance mobile animations [`7b00d7c`](https://github.com/RSickenberg/rsickenberg.me/commit/7b00d7c7f675cf88400624675a894147c4adc916)
+- fix: displacement [`6ca3dd9`](https://github.com/RSickenberg/rsickenberg.me/commit/6ca3dd92eb17ac305330de278453e8d5d7b39c89)
+- feat: animations good state [`351ddab`](https://github.com/RSickenberg/rsickenberg.me/commit/351ddabdd7dc792543153cbb4da3307ae65afa7c)
+- chore(deps): bump astro from 1.9.1 to 1.9.2 [`419dc15`](https://github.com/RSickenberg/rsickenberg.me/commit/419dc155bf7cf43cb50e984c76eceb2df4169ca8)
+- fix: removed totally locomotive [`7f6f086`](https://github.com/RSickenberg/rsickenberg.me/commit/7f6f0865729a819ecb3f89ebe12da5c712350196)
+- fix: faster scrub [`f1099c6`](https://github.com/RSickenberg/rsickenberg.me/commit/f1099c6dd2b255e5d96ab5aaad35d8aa216b3129)
+- fix: keep-a-changelog unreleased [`3e03a91`](https://github.com/RSickenberg/rsickenberg.me/commit/3e03a91c789506eeda20e31adfb650bd1c0ded16)
+- fix: incrase profile picture size [`a0d750b`](https://github.com/RSickenberg/rsickenberg.me/commit/a0d750be787c2ad65005c01066bf922bf6d832b0)
+- fix: reduced tech gap [`689a1a9`](https://github.com/RSickenberg/rsickenberg.me/commit/689a1a9ec2fc9ece5ccd9c775760617a6c2dee48)
+- feat: bigger profile pic [`a31167f`](https://github.com/RSickenberg/rsickenberg.me/commit/a31167f29cfcf2f22ff02aba66455b87b1592bf9)
+- will change transform [`d919300`](https://github.com/RSickenberg/rsickenberg.me/commit/d91930031ae1a5762fb387ca449070cfb197b42f)
+- fix: responsive cards grid fix [`24431de`](https://github.com/RSickenberg/rsickenberg.me/commit/24431de6bffa668176da52938efe205fa8347ec0)
+- feat: correct theme color [`e204760`](https://github.com/RSickenberg/rsickenberg.me/commit/e2047605050f3729ffa27757ecfa74a0798d4506)
+- changelog [`129f99e`](https://github.com/RSickenberg/rsickenberg.me/commit/129f99edaf2f4f76356eba41d9f301c5c3fefa66)
+- fix: scrub to 0.5 [`432ae59`](https://github.com/RSickenberg/rsickenberg.me/commit/432ae599909ffdc8cd44a2629304aad1734860e5)
+- Merge pull request #1 from RSickenberg/dependabot/npm_and_yarn/astro-1.9.2 [`5c1f25a`](https://github.com/RSickenberg/rsickenberg.me/commit/5c1f25a1cb1ca50c870f165a78abb402c1444fa5)
+- fix: hero text animation is visible on hover [`d798846`](https://github.com/RSickenberg/rsickenberg.me/commit/d798846b76fe1210fd6770726ae09c42138c018c)
+- added unreleased section [`473d78e`](https://github.com/RSickenberg/rsickenberg.me/commit/473d78efadbcaaadb83b6561a31569bf9af2a23d)
+
+#### [v0.0.3](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.2...v0.0.3)
+
+> 11 January 2023
+
+- feat: removed scroll to lenis [`a7ca754`](https://github.com/RSickenberg/rsickenberg.me/commit/a7ca7544cd2c23a9be727ec6bc426abb4cc44565)
+- feat: order correctly [`c4e17f9`](https://github.com/RSickenberg/rsickenberg.me/commit/c4e17f9e5091250d43cf6db917e3cdaae9aff37a)
+- feat: Cards animations [`257635a`](https://github.com/RSickenberg/rsickenberg.me/commit/257635a287aac395f34793dd3e4733ae3c475dad)
+- fix: fixes path on image [`ade2c13`](https://github.com/RSickenberg/rsickenberg.me/commit/ade2c1397f364df36aece7ee07e61273e14d709e)
+- changelog [`f37e46c`](https://github.com/RSickenberg/rsickenberg.me/commit/f37e46ca9a80a2f698d8486df44ef1c5edb89eda)
+- Release 0.0.3 [`00ac2ca`](https://github.com/RSickenberg/rsickenberg.me/commit/00ac2ca4668246a5d6b30d86c5691d9a544c9dfb)
+- refactor: enhance animation [`e65498b`](https://github.com/RSickenberg/rsickenberg.me/commit/e65498b4ecec3f3975c555b6e8a960eac2cb386a)
+- bump version [`8ce5095`](https://github.com/RSickenberg/rsickenberg.me/commit/8ce509580dd9740e1ee9a3ff191014c885f45502)
+- fix: allow webp since optimization is good [`6136dec`](https://github.com/RSickenberg/rsickenberg.me/commit/6136dec0bc2c4779958697ff2838124be8cc8216)
+- fix: changed image format [`d2138cb`](https://github.com/RSickenberg/rsickenberg.me/commit/d2138cbafd7765a3ad2fd1de40d647896f5ddaf5)
+- fix: removed quality on img [`cdf1916`](https://github.com/RSickenberg/rsickenberg.me/commit/cdf19169d8036ce22d76affa98843fbc1d0ae210)
+
+#### [v0.0.2](https://github.com/RSickenberg/rsickenberg.me/compare/v0.0.1...v0.0.2)
+
+> 10 January 2023
+
+- use other plugin for changelog [`ad4f6b0`](https://github.com/RSickenberg/rsickenberg.me/commit/ad4f6b037930be6783a07c86481cb9b8a8ebb51d)
+- added changelog generator [`700f638`](https://github.com/RSickenberg/rsickenberg.me/commit/700f6388b44ae0e1367b4225601a106e283321bd)
+- added hero [`df5cc42`](https://github.com/RSickenberg/rsickenberg.me/commit/df5cc42c72e51a1df980aa092485c608497787d6)
+- chore: update deps + setup dependabot [`0516af2`](https://github.com/RSickenberg/rsickenberg.me/commit/0516af2220c4ee07bcfda1b5211dec5d1d3c4b1e)
+- working layout [`4819760`](https://github.com/RSickenberg/rsickenberg.me/commit/4819760ac38da1a1fa65ce15f8d45c81141b0118)
+- wip: paragraph about me in progress [`27ec2c7`](https://github.com/RSickenberg/rsickenberg.me/commit/27ec2c738abc3b65eee27e950f05cb799dee120d)
+- feat(techs): added technos [`490642b`](https://github.com/RSickenberg/rsickenberg.me/commit/490642b8c07e8405e20db695b5d7a6057354f0e1)
+- Create astro.yml [`352ae02`](https://github.com/RSickenberg/rsickenberg.me/commit/352ae022e9ac660619a585fde197d6acaa6eb4fd)
+- hero code simplifications [`06f4bd2`](https://github.com/RSickenberg/rsickenberg.me/commit/06f4bd23e8040ee126200020a4313e7bad22d0dd)
+- add @astro/image [`b21bd96`](https://github.com/RSickenberg/rsickenberg.me/commit/b21bd96c8270d3686d9d6a8dd366f999e6c29887)
+- tailwind config [`4b505c2`](https://github.com/RSickenberg/rsickenberg.me/commit/4b505c27f8c27ddd649be94df525cac0e62f499f)
+- fix: window react on dark mode change [`240bcc2`](https://github.com/RSickenberg/rsickenberg.me/commit/240bcc2669426ddeebcd07c6eb9acecde9b4155c)
+- read .env file [`9aa6f68`](https://github.com/RSickenberg/rsickenberg.me/commit/9aa6f687a82f867dba77fd06de11f047b5f5671a)
+- feat: about - added sub-title [`2f920e5`](https://github.com/RSickenberg/rsickenberg.me/commit/2f920e5cb6f4f7aae07bdcc5c6eec51a4d9f23fc)
+- fix scroll spy about [`d742514`](https://github.com/RSickenberg/rsickenberg.me/commit/d7425141be798dfc34e9fbfe44d73631cc9d7b53)
+- Enhanced hero visualisation [`1e6e8a3`](https://github.com/RSickenberg/rsickenberg.me/commit/1e6e8a3c854e2023f4d531213d307245ef8ea7a2)
+- changelog fix [`79c15f6`](https://github.com/RSickenberg/rsickenberg.me/commit/79c15f666d87f14e107265fec06d0aa6f93fdc79)
+- Release 0.0.2 [`42c9b27`](https://github.com/RSickenberg/rsickenberg.me/commit/42c9b2774b66f66065126fac315b406cf31d3fe4)
+- changelog [`f2945ab`](https://github.com/RSickenberg/rsickenberg.me/commit/f2945ab6920bee553346abda3a8704fd44175616)
+- added site [`2ea4e3c`](https://github.com/RSickenberg/rsickenberg.me/commit/2ea4e3c4cf279a7e856a8e365cb98fa8723743af)
+- initial release (0.0.1) [`b67035d`](https://github.com/RSickenberg/rsickenberg.me/commit/b67035d00ccf9652252f07f6cefea181b3196a33)
+- no publish npm [`0c0871f`](https://github.com/RSickenberg/rsickenberg.me/commit/0c0871f4ed810446d290e1cb2c52b3210fe46a4c)
+- fixes hero size on mobile [`c12b2d3`](https://github.com/RSickenberg/rsickenberg.me/commit/c12b2d35c730e4974e8840adb8ffe8fa7acd6946)
+- fix scroll on mobile [`de4d073`](https://github.com/RSickenberg/rsickenberg.me/commit/de4d07330db576cf712eacc40a430db010e81d9d)
+- fixed an issue where the title is still visible but not the logo [`c8838fa`](https://github.com/RSickenberg/rsickenberg.me/commit/c8838fa7c45502923a3c8b62d6032ea0880119e9)
+- added changelog file [`b5939fc`](https://github.com/RSickenberg/rsickenberg.me/commit/b5939fcb8c1325783b863ba628a3c46c9a49f89b)
+- fix: w-full layout [`fd95e47`](https://github.com/RSickenberg/rsickenberg.me/commit/fd95e47d3ccb8b82ad9170b8101e50beabe12c32)
+- update site address to next [`658bebd`](https://github.com/RSickenberg/rsickenberg.me/commit/658bebd0cdf0e1781687cf68ad92edf19fddc4bc)
+- Update CNAME [`8214aba`](https://github.com/RSickenberg/rsickenberg.me/commit/8214abaf2f45897aac99328161b6ec8a8545bd06)
+- public structure [`a9db6e1`](https://github.com/RSickenberg/rsickenberg.me/commit/a9db6e1e782b330f76409d09a3c1011885cae82e)
+- changed package name [`245d1e7`](https://github.com/RSickenberg/rsickenberg.me/commit/245d1e73f1ecfc5597387f494a39f4a7b43d57e4)
+
+#### v0.0.1
+
+> 5 January 2023
+
+- first blood [`cea6b53`](https://github.com/RSickenberg/rsickenberg.me/commit/cea6b534e3c238613b71aa19bcfeb71b6be00316)
+- add release-it [`06b6430`](https://github.com/RSickenberg/rsickenberg.me/commit/06b6430d8fece95138e58d6b2bd374f5d48cf786)
+- ignore phpstorm [`582a278`](https://github.com/RSickenberg/rsickenberg.me/commit/582a27845090f23abdbcd350ee35bccc1cae897b)
+- Initial commit [`b4e580e`](https://github.com/RSickenberg/rsickenberg.me/commit/b4e580eebdfa15f37f4848e835cb0d3a6e39ccaf)
+- Release 0.0.1 [`c8b935c`](https://github.com/RSickenberg/rsickenberg.me/commit/c8b935cc5c2cc7f50ae30cf8f6f9095141499509)
+- set version to 0.0.0 [`b6e5a91`](https://github.com/RSickenberg/rsickenberg.me/commit/b6e5a91ba7d861bad648a3bec8fc63bd17b34c64)
