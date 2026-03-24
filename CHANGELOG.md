@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - New testimonial from 2025.12.29
+- New CV from 2026.03.24
 
 ## [1.2.9] - 2025-11-27
 ### Security
