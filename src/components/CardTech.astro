@@ -12,7 +12,7 @@ interface ITech {
 const { tech, images }: { tech: ITech; images: { [key: string]: () => string } } = Astro.props;
 import { Image } from 'astro:assets'
 
-let imgClass = "w-[35%] lg:w-[45%] h-auto self-center sm:self-left sm:m-3";
+let imgClass = "w-[35%] lg:w-[45%] h-auto rounded-md self-center sm:self-left sm:m-3";
 imgClass = tech.invertOnDark ? `${imgClass} dark:invert` : imgClass;
 
 
