@@ -15,7 +15,7 @@
         "astro": "^6.4.8",
         "astro-icon": "^1.1.5",
         "astro-seo": "^1.1.0",
-        "baseline-browser-mapping": "^2.10.37",
+        "baseline-browser-mapping": "^2.10.38",
         "caniuse-lite": "^1.0.30001799",
         "dayjs": "^1.11.21",
         "flowbite": "^4.0.2",
@@ -26,15 +26,15 @@
         "zustand": "^5.0.14",
       },
       "devDependencies": {
-        "@typescript-eslint/parser": "^8.61.0",
+        "@typescript-eslint/parser": "^8.61.1",
         "dotenv-cli": "^11.0.0",
         "esbuild-plugin-browserslist": "^4.0.0",
-        "eslint": "^10.4.1",
+        "eslint": "^10.5.0",
         "eslint-plugin-astro": "^1.7.0",
         "globals": "^17.6.0",
         "release-it": "^20.2.0",
         "sass-embedded": "^1.100.0",
-        "typescript-eslint": "^8.61.0",
+        "typescript-eslint": "^8.61.1",
       },
     },
   },
@@ -684,7 +684,7 @@
 
     "balanced-match": ["balanced-match@4.0.4", "", {}, "sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA=="],
 
-    "baseline-browser-mapping": ["baseline-browser-mapping@2.10.37", "", { "bin": { "baseline-browser-mapping": "dist/cli.cjs" } }, "sha512-girxaJ7WZssDOFhzCGZTDKoTa1gk6A1TbflaYTpykLJ4UU9Fz9kx1aREM8JCuoVHbL8X8T/mJg7w2oYSq72Oig=="],
+    "baseline-browser-mapping": ["baseline-browser-mapping@2.10.38", "", { "bin": { "baseline-browser-mapping": "dist/cli.cjs" } }, "sha512-31/02mVB4yuQU6adKk5SlY6m+mxDwUq5KZkyYgnLrrKl7TEm1+3PyDtDBz2kOv/wxZz41GHsvV1A/u6RmiyBvw=="],
 
     "basic-ftp": ["basic-ftp@5.0.5", "", {}, "sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg=="],
 

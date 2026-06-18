@@ -27,7 +27,7 @@
     "astro": "^6.4.8",
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.1.0",
-    "baseline-browser-mapping": "^2.10.37",
+    "baseline-browser-mapping": "^2.10.38",
     "caniuse-lite": "^1.0.30001799",
     "dayjs": "^1.11.21",
     "flowbite": "^4.0.2",
