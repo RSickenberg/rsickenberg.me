@@ -38,7 +38,7 @@
     "zustand": "^5.0.14"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^8.62.1",
+    "@typescript-eslint/parser": "^8.63.0",
     "dotenv-cli": "^11.0.0",
     "esbuild-plugin-browserslist": "^4.0.0",
     "eslint": "^10.6.0",
@@ -46,7 +46,7 @@
     "globals": "^17.7.0",
     "release-it": "^20.2.1",
     "sass-embedded": "^1.100.0",
-    "typescript-eslint": "^8.62.1"
+    "typescript-eslint": "^8.63.0"
   },
   "browserslist": [
     "defaults, last 5 versions, not dead"
