@@ -56,8 +56,5 @@
     "@tailwindcss/oxide",
     "esbuild",
     "sharp"
-  ],
-  "overrides": {
-    "vite": "^7"
-  }
+  ]
 }
