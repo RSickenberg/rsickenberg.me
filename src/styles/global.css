@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "./misc.css" layer(utilities);
+@import "flowbite/src/themes/default.css";
 @plugin "@tailwindcss/typography";
+
+@plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
 
 @theme {
     --font-sans: 'Inter', 'ui-sans-serif';

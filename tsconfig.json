@@ -1,7 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "lib": ["dom", "es2015"],
+    "sourceMap": true,
+    "declaration": true,
     "jsx": "react-jsx",
+    "noImplicitAny": true,
+    "allowJs": true,
     "jsxImportSource": "preact",
     "target": "ES2022",
     "module": "ES2022",
@@ -10,8 +15,9 @@
     "isolatedModules": true,
     "types": ["astro/client"],
     "allowSyntheticDefaultImports": true,
-
     "baseUrl": "./src",
-    "suppressImplicitAnyIndexErrors": true,
+    "suppressImplicitAnyIndexErrors": true
   },
+  "include": ["src/**/*.ts*"],
+  "exclude": ["node_modules", "dist", "lib"]
 }
