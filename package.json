@@ -44,7 +44,7 @@
     "eslint": "^10.7.0",
     "eslint-plugin-astro": "^3.0.1",
     "globals": "^17.7.0",
-    "release-it": "^20.2.1",
+    "release-it": "^21.0.1",
     "sass-embedded": "^1.100.0",
     "typescript-eslint": "^8.65.0"
   },
