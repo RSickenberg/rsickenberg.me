@@ -1,38 +1,44 @@
 # CLAUDE.md
 
-Guidance for Claude Code when working in this repository. Keep this file
-short and factual — delete any section that doesn't apply, fill in the rest.
+Guidance for Claude Code when working in this repository.
 
 ## What this project is
 
-<!-- One or two sentences: what it does, who it's for. -->
+Romain Sickenberg's personal portfolio website (rsickenberg.me) — a static/SSG site
+showcasing projects, including an archived Tesla Companion sub-project.
 
 ## Stack
 
-<!-- e.g. Symfony 7 + Docker (FrankenPHP) + Postgres + Redis, or Next.js 15 + Prisma + Postgres -->
+Astro 7 + Preact (islands) + Tailwind CSS 4 + Sass. Package manager is Bun (`bun.lock`
+is the source of truth; ignore `package-lock.json`). Sentry (`@sentry/astro`) for error
+tracking. Deployed as a static build (`astro build` → `dist/`).
 
 ## Common commands
 
-<!-- Keep this in sync with the Makefile / package.json scripts, don't duplicate logic here. -->
+<!-- Keep this in sync with package.json scripts, don't duplicate logic here. -->
 
 | Task | Command |
 |---|---|
-| Start the stack | `make start` |
-| Run tests | `make test` |
-| Lint / format | `make lint` |
-| Release a new version | `npm run release` |
+| Start the dev server | `bun run dev` |
+| Build for production | `bun run build` |
+| Preview the production build | `bun run preview` |
+| Lint | `bun run lint` |
+| Release a new version | `bun run release` |
+
+There is no test suite in this repo.
 
 ## Conventions
 
 - Commit messages: Conventional Commits (`feat:`, `fix:`, `chore:`, `build(recipe):`, …) — `.release-it.ts` + `auto-changelog` turn these into `CHANGELOG.md` entries automatically.
 - Branch `main` is what `release-it` requires and pushes tags to; day-to-day work happens on `dev` (or feature branches), merged in via PR.
-- <!-- coding style notes, folder layout rules, anything a generic linter can't catch -->
+- Source layout under `src/`: `pages/` (routes, including `pages/project/`), `components/`, `layouts/`, `ui/`, `data/`, `styles/`, `scripts/`, `icons/`, `assets/`, `utils/`.
+- Project-specific work (e.g. the Tesla Companion archive) gets its own subfolder under `styles/` and `scripts/` (see `styles/tesla/`, `scripts/tesla/`) rather than being mixed into shared files.
 
 ## Guardrails
 
 - Never edit `.env*` files with real secrets in place — only `.env.example`.
-- Don't run destructive DB commands (`doctrine:database:drop`, `prisma migrate reset`, etc.) against anything but the local/test environment.
 - Ask before force-pushing, rewriting history, or touching CI/CD config.
+- `main` triggers releases via `release-it` (tags + GitHub release) — don't push to `main` directly; work goes through `dev`/feature branches and PRs.
 
 # graphify
 - **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
