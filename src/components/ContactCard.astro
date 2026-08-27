@@ -12,9 +12,9 @@ import {Icon} from 'astro-icon/components'
 </div>
 
 <script>
-    import {Tooltip} from "flowbite";
-	const tooltipTriggerEl = document.querySelector(`[data-tooltip-target="${iconName}"]`) as HTMLElement;
-	const tooltipInstance = new Tooltip(tooltipTriggerEl, {
+	import {Tooltip} from "flowbite";
+	const tooltipTriggerEl: Element = document.querySelector(`[data-tooltip-target="${iconName}"]`);
+	new Tooltip(tooltipTriggerEl, {
 		placement: 'top',
 		triggerType: 'hover',
 		delay: 100,

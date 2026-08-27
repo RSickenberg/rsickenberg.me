@@ -31,4 +31,18 @@
             transform: translateY(20px);
         }
     }
+
+    .project-image-float {
+        animation: project-image-breathe 8s ease-in-out infinite;
+        transform-style: preserve-3d;
+    }
+
+    @keyframes project-image-breathe {
+        0%, 100% {
+            transform: perspective(1000px) rotateX(-1deg) rotateY(calc(var(--float-rotate, 1.5deg) * -1)) translateY(0);
+        }
+        50% {
+            transform: perspective(1000px) rotateX(1deg) rotateY(var(--float-rotate, 1.5deg)) translateY(-6px);
+        }
+    }
 }
