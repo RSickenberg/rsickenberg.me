@@ -1,0 +1,10 @@
+@import "./settings/variables";
+@import "./settings/custom-variables";
+
+@import "uikit/src/scss/variables";
+@import "uikit/src/scss/mixins";
+
+@import "uikit/src/scss/uikit-theme";
+@import "uikit/src/scss/mixins-theme";
+
+@import "./components/sidebar";

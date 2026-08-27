@@ -107,13 +107,21 @@ export default function ProjectList({ optimizedImages }: ProjectListProps) {
 
     return (
         <ul id={"projects-list"} class={"w-[90%] mx-auto pb-10 md:pb-0"} role="list">
-            {projects.map((project: IProject, index: number) => (
+            {projects.map((project: IProject, index: number) => {
+                const isExternal = !!project.url && /^https?:\/\//.test(project.url);
+                const Wrapper = project.url ? 'a' : 'div';
+                const wrapperProps = project.url
+                    ? { href: project.url, ...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {}) }
+                    : {};
+
+                return (
                 <li
                     key={project.id}
                     class="flex flex-col md:flex-row justify-between items-center dark:text-white text-black pt-0 pb-32"
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={() => handleMouseEnter(-1)}
                 >
+                    <Wrapper {...wrapperProps} class="flex flex-col md:flex-row justify-between items-center w-full">
                     <div class="flex flex-col md:flex-row items-center justify-center md:items-baseline md:space-x-8">
                         <p class={'font-light md:font-thin font-sans text-xl text-gray-600'}>{`${(index + 1).toString().padStart(2, '0')} / ${projects.length.toString().padStart(2, '0')}`}</p>
                         <p class={'font-semibold text-3xl'}>{project.name}</p>
@@ -137,8 +145,10 @@ export default function ProjectList({ optimizedImages }: ProjectListProps) {
                             <p key={index}>{role}.</p>
                         ))}
                     </div>
+                    </Wrapper>
                 </li>
-            ))}
+                );
+            })}
 
             {/* Floating images on hover */}
             <div

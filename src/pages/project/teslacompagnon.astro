@@ -1,0 +1,332 @@
+---
+import "../../styles/tesla/common.scss";
+
+import navIcon from "../../assets/projects/tesla/CompanionNavIcon.png";
+import ogImage from "../../assets/projects/tesla/companion-for-tesla.png";
+import heroImg from "../../assets/projects/tesla/hero/hero.png";
+import designImg from "../../assets/projects/tesla/hero/design.png";
+import funcImg from "../../assets/projects/tesla/hero/func.png";
+import evoImg from "../../assets/projects/tesla/hero/evo.png";
+import securityImg from "../../assets/projects/tesla/hero/security.png";
+
+const title = "Tesla Companion - iOS";
+const description = "Tesla Companion, Tesla, iOS, WatchOS, Companion, For, Tesla";
+const canonicalURL = new URL("/project/teslacompagnon", Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>{title}</title>
+	<meta name="author" content="Romain Sickenberg" />
+	<meta name="description" content={description} />
+	<meta name="robots" content="all" />
+	<link rel="canonical" href={canonicalURL} />
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+	<meta property="og:title" content="Tesla Companion is an App for iOS." />
+	<meta property="og:url" content={canonicalURL} />
+	<meta
+		property="og:description"
+		content="Controll your Tesla car from your wrist and your iPhone with Apple's ecosystem."
+	/>
+	<meta property="og:image" content={new URL(ogImage.src, Astro.site)} />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<header class="uk-container uk-nav-header uk-margin-medium-bottom">
+	<nav class="uk-navbar-container uk-margin uk-flex uk-flex-left@m uk-flex-center" uk-navbar>
+		<a class="uk-navbar-item uk-logo" href="/">
+			<img data-src={navIcon.src} alt="logo" width="190" height="72" uk-img loading="lazy" />
+		</a>
+	</nav>
+</header>
+<div class="uk-container uk-section-default">
+	<div class="uk-section uk-section-default uk-padding-large uk-margin-medium-top">
+		<div class="uk-container">
+			<div class="uk-child-width-1-1@m uk-child-width-1-2" uk-grid="parallax:80">
+				<div class="uk-width-expand@m uk-width-1-1 uk-animation-fade">
+					<div>
+						<h3 class="uk-text-lead uk-text-bolder">New interaction with your Tesla!</h3>
+						<h1 class="uk-heading-large uk-text-bold uk-margin-remove-top">Control.<br />Enjoy.</h1>
+						<p class="uk-text-large uk-text-meta">
+							Tesla Companion is an evolution of the original Tesla application. It brings
+							new interaction with the same level of security as the official app.<br
+							/>Trustful, evolutive, community-driven, and well designed.
+						</p>
+					</div>
+				</div>
+				<div class="uk-width-expand">
+					<div>
+						<img
+							class="uk-animation-fade"
+							data-src={heroImg.src}
+							alt="Hero"
+							data-width="740"
+							width="740"
+							height="1080"
+							data-height="1080"
+							uk-img
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div
+		class="uk-section uk-section-xlarge uk-section-default uk-margin-medium-top uk-padding-small"
+		uk-scrollspy="cls:uk-animation-fade; delay: 450"
+	>
+		<div class="uk-text-center">
+			<p class="uk-heading-medium">
+				<span class="uk-text-bold">Deep dive.</span><br />
+				<span class="uk-text-muted">Discover more.</span>
+			</p>
+		</div>
+	</div>
+	<div class="tm-sidebar-right uk-visible@xl" uk-scrollspy="cls:uk-animation-fade; delay: 450">
+		<div uk-sticky="offset: 160" class="uk-sticky uk-sticky-fixed">
+			<ul
+				uk-scrollspy-nav="closest: li; scroll: true; offset: 100"
+				class="tm-nav uk-nav uk-nav-default uk-nav-parent-icon"
+			>
+				<li><a href="#design">Design</a></li>
+				<li><a href="#features">App Features</a></li>
+				<li><a href="#evolution">Evolution</a></li>
+				<li><a href="#security">Security</a></li>
+				<li><a href="#help">Assistance</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="design" class="uk-section uk-section-default uk-margin-medium-top uk-padding-small">
+		<div class="uk-child-width-1-2@m uk-child-width-1-1" uk-grid="parallax:250">
+			<div>
+				<div uk-scrollspy="cls:uk-animation-fade; delay: 700;">
+					<div>
+						<h2 class="uk-heading-small uk-text-bold uk-text-left@m uk-text-center@s">Design</h2>
+						<h3>
+							Built with design in mind, Companion for Tesla brings a new challenger on the
+							scene of non-official Tesla applications.<br />
+							Since iOS 13, Companion for Tesla supports dark and light mode fluently and
+							adapts to your iPhone settings.
+						</h3>
+						<ul class="uk-margin-medium-top uk-list uk-list-hyphen uk-list-divider uk-list-large">
+							<li>Futuristic design</li>
+							<li>Dark mode / Light mode</li>
+							<li>iOS symbols and Apple's human interfacing design</li>
+							<li>Animations</li>
+							<li>Car image built from your actual car</li>
+							<li>No phantom drain or wake your car for no reason</li>
+							<li>
+								Available in English, French, and German<br />You can{" "}
+								<a class="uk-text-muted" href="https://poeditor.com/join/project?hash=llilwOMiD5"
+								>contribute here</a
+								>
+							</li>
+							<li>And many more ...</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="uk-width-expand">
+				<div>
+					<img
+						class="uk-align-center"
+						data-src={designImg.src}
+						alt="Design"
+						width="570"
+						height="741"
+						uk-img
+						uk-scrollspy="cls:uk-animation-fade; delay: 200"
+						loading="lazy"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div id="features" class="uk-section uk-section-default uk-margin-medium-top uk-padding-small">
+		<div
+			class="uk-child-width-1-2@m uk-child-width-auto uk-align-center uk-flex uk-flex-center"
+			uk-grid="parallax:250"
+		>
+			<div class="uk-padding-remove">
+				<div>
+					<img
+						class="uk-align-center"
+						data-src={funcImg.src}
+						alt="Features"
+						width="570"
+						height="741"
+						uk-img
+						uk-scrollspy="cls:uk-animation-fade; delay: 200"
+						loading="lazy"
+					/>
+				</div>
+			</div>
+			<div class="uk-flex-first uk-flex-last@m uk-padding-remove" uk-scrollspy="cls:uk-animation-fade; delay: 700">
+				<div>
+					<h2 class="uk-heading-small uk-text-bold uk-text-left@m uk-text-center@s">App features</h2>
+					<h3>
+						Discover a new way to interact with your car from your Apple Watch!<br />
+						There are so many planned releases along the way. This app is only at its beginning
+						and one of my proudest achievement.<br /> It's about 1.5 years of hard work.<br />
+					</h3>
+					<ul class="uk-margin-medium-top uk-list uk-list-hyphen uk-list-divider uk-list-large">
+						<li>Apple Watch counterpart</li>
+						<li>In-app GPS routing to your vehicle</li>
+						<li>In real-time battery data</li>
+						<li>Siri</li>
+						<li>Charts and graphics <strong class="uk-text-muted">(planned)</strong></li>
+						<li>Summon <strong class="uk-text-muted">(planned)</strong></li>
+						<li>And many more ...</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div id="evolution" class="uk-section uk-section-default uk-margin-medium-top uk-padding-small">
+		<div class="uk-child-width-1-2@m uk-child-width-1-1" uk-grid="parallax:250">
+			<div>
+				<div class="uk-padding-remove" uk-scrollspy="cls:uk-animation-fade; delay: 700">
+					<div>
+						<h2 class="uk-heading-small uk-text-bold uk-text-left@m uk-text-center@s">Evolution & History</h2>
+						<h3>
+							Tesla Companion came from a long path, hard work, and commitment who made the app
+							what it is today.<br />
+							The original release had a simple and not ambitious enough design, so I decided
+							to postpone the first release and work on the next design iteration.<br />
+						</h3>
+						<ul class="uk-margin-medium-top uk-list uk-list-hyphen uk-list-divider uk-list-large">
+							<li>Long-term application</li>
+							<li>Community-driven</li>
+							<li>Ambitious <a href="/">developer</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="uk-width-expand">
+				<div>
+					<img
+						class="uk-align-center"
+						data-src={evoImg.src}
+						alt="Evolution"
+						width="570"
+						height="741"
+						uk-img
+						uk-scrollspy="cls:uk-animation-fade; delay: 200"
+						loading="lazy"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div id="security" class="uk-section uk-section-default uk-margin-medium-top uk-padding-small">
+		<div
+			class="uk-child-width-1-2@m uk-child-width-auto uk-align-center uk-flex uk-flex-center"
+			uk-grid="parallax:100"
+		>
+			<div class="uk-padding-remove">
+				<div>
+					<img
+						class="uk-align-center"
+						data-src={securityImg.src}
+						alt="Security"
+						width="570"
+						height="741"
+						uk-img
+						uk-scrollspy="cls:uk-animation-fade; delay: 200"
+						loading="lazy"
+					/>
+				</div>
+			</div>
+			<div class="uk-flex-first uk-flex-last@m uk-padding-remove" uk-scrollspy="cls:uk-animation-fade; delay: 700">
+				<div>
+					<h2 class="uk-heading-small uk-text-bold uk-text-left@m uk-text-center@s">Security & Privacy</h2>
+					<h3>
+						Security along with privacy are a fundamental human rights and a strong value.<br />
+						The core of this app is built with strong on-device keychain encryption using the
+						Apple Secure Enclave.<br />No servers are between your device and Tesla!<br />
+						Companion for Tesla use <strong>Google Firebase</strong> and{" "}
+						<strong>Instabug</strong> for debugging and analytics purposes but none of the collected
+						data is linked to you or your Tesla account!
+					</h3>
+					<ul class="uk-list uk-list-divider uk-list-large uk-list-hyphen uk-margin-medium-top">
+						<li>On-device encryption with hardware-based key manager</li>
+						<li>Anonymized data collection for debugging purposes</li>
+						<li>No servers between you and Tesla</li>
+						<li>Token-based communications</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div
+		id="help"
+		uk-scrollspy="cls:uk-animation-slide-bottom-small; delay: 200"
+		class="uk-section uk-section-muted uk-margin-medium-top uk-padding-small"
+	>
+		<div class="uk-flex uk-flex-center uk-flex-column">
+			<h2 class="uk-heading-small uk-align-center">Needs some help?</h2>
+			<p class="uk-text-center uk-text-meta">
+				The help center for this project is no longer available — it was retired along with
+				the app.
+			</p>
+		</div>
+	</div>
+</div>
+<footer uk-scrollspy="cls:uk-animation-slide-bottom-small; delay: 200">
+	<div class="uk-section uk-section-default uk-padding-small uk-margin-large-top">
+		<hr />
+		<div class="uk-container uk-container-expand-right">
+			<div
+				class="uk-child-width-1-2@m uk-child-width-auto uk-align-center uk-flex uk-flex-center uk-margin-medium-top uk-margin-medium-bottom"
+				uk-grid
+				style="align-items: center"
+			>
+				<div class="uk-width-1-2 uk-flex-left">
+					<ul class="uk-flex uk-padding-remove" style="list-style: none">
+						<li>
+							<a
+								href="https://www.facebook.com/TeslaCompanion.iOS.WatchOS"
+								class="uk-icon-button"
+								uk-icon="icon: facebook; ratio: 2"></a>
+						</li>
+						<li class="uk-padding-large uk-padding-remove-vertical">
+							<a href="https://twitter.com/TeslaCompanion" class="uk-icon-button" uk-icon="icon: x; ratio: 2"
+							></a>
+						</li>
+					</ul>
+				</div>
+				<div class="uk-width-1-2 uk-flex-right">
+					<h5>About</h5>
+					<ul class="uk-list uk-list-large uk-list-collapse">
+						<li><a class="uk-link-heading" href="/">Developer</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr class="uk-divider-icon" />
+		<div class="uk-container uk-margin-small-top uk-margin-remove-bottom">
+			<div class="uk-flex uk-flex-row uk-flex-between">
+				<p class="uk-text-small">@ 2024 Sickenberg Romain.<br />All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<script>
+	import "../../scripts/tesla/common.ts";
+</script>
+</body>
+</html>

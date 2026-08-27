@@ -16,7 +16,8 @@
     "types": ["astro/client"],
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "allowImportingTsExtensions": true,
   },
   "include": ["src/**/*.ts*"],
   "exclude": ["node_modules", "dist", "lib"]

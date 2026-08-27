@@ -18,6 +18,13 @@ export default defineConfig({
             cssTarget: resolveToEsbuildTarget(browserslist(), {printUnknownTargets: false}),
             resolveToEsbuildTarget: resolveToEsbuildTarget(browserslist(), {printUnknownTargets: false}),
         },
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    silenceDeprecations: ['slash-div', 'import', 'global-builtin', 'color-functions'],
+                },
+            },
+        },
 		plugins: [tailwindcss()],
     },
     integrations: [

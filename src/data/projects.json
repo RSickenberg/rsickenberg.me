@@ -4,7 +4,7 @@
         "year": 2018,
         "eol": 2023,
         "name": "Companion for Tesla",
-        "url": null,
+        "url": "/project/teslacompagnon",
         "roles": ["Mobile Developer", "Designer"],
         "media": "/src/assets/projects/tesla/composer_black_bg.jpg",
         "accent": {"black": "#353133", "light": "#E7E6E4", "shadow_class": "shadow-[#353133] dark:shadow-[#E7E6E4]/50"},
