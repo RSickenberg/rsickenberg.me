@@ -42,6 +42,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@types/gsap": "^3.0.0",
     "@typescript-eslint/parser": "^8.68.0",
     "dotenv-cli": "^11.0.0",
     "esbuild-plugin-browserslist": "^4.0.0",
