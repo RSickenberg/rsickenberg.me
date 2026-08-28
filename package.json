@@ -14,7 +14,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "release": "dotenv release-it",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "fetch-resume": "node scripts/fetch-resume.mjs"
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.7",
