@@ -33,7 +33,7 @@
     }
 
     .project-image-float {
-        animation: project-image-breathe 8s ease-in-out infinite;
+        animation: project-image-breathe 6s ease-in-out infinite;
         transform-style: preserve-3d;
     }
 
