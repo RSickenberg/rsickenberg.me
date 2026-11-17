@@ -1,5 +1,18 @@
 [
     {
+        "id": 5,
+        "name": "Polaris",
+        "year": 2026,
+        "url": "https://github.com/RSickenberg/polaris",
+        "roles": ["Lead Developer", "Designer"],
+        "media": "/src/assets/projects/polaris/polaris_hero.png",
+        "accent": {"light": "#e3f0ff", "black": "#0a2540", "shadow_class": "shadow-[#0a2540] dark:shadow-[#e3f0ff]/50"},
+        "mediaSizes": {
+            "height": 1800,
+            "width": 2880
+        }
+    },
+    {
         "id": 0,
         "year": 2018,
         "eol": 2023,
