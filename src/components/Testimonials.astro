@@ -21,7 +21,7 @@ for await (const testimonial of testimonials) {
     {testimonials.map((testimonial, key) => (
             <figure class="max-w-screen w-[70%] text-pretty">
                 <blockquote>
-                    <p class="text-2xl italic leading-relaxed text-justify font-medium text-gray-900 dark:text-white" set:html={testimonial.text}></p>
+                    <p class="text-2xl italic leading-relaxed text-left font-medium text-gray-900 dark:text-white" set:html={testimonial.text}></p>
                 </blockquote>
                 <figcaption class="flex flex-col md:flex-row items-center justify-center mt-8 gap-3 md:gap-0 md:space-x-3">
                     <img class="w-10 h-10 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src={optimizedImages[key].src} srcset={optimizedImages[key].srcSet.attribute} alt="Author's Picture" inferSize={true} loading="lazy" decoding="async"/>
