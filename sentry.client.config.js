@@ -5,11 +5,4 @@ Sentry.init({
 
     release: 'rsickenberg-me@' + process.env.npm_package_version,
     sendDefaultPii: true,
-    autoInstrumentation: {
-        requestHandler: false,
-    },
-    sourceMapsUploadOptions: {
-        project: "rsickenberg-me",
-        authToken: process.env.SENTRY_AUTH_TOKEN,
-    },
 });
