@@ -13,11 +13,19 @@ import {Icon} from 'astro-icon/components'
 
 <script>
 	import {Tooltip} from "flowbite";
-	const tooltipTriggerEl: Element = document.querySelector(`[data-tooltip-target="${iconName}"]`);
-	new Tooltip(tooltipTriggerEl, {
-		placement: 'top',
-		triggerType: 'hover',
-		delay: 100,
-		offset: [0, 8],
+
+	// Client scripts are bundled once and cannot see the frontmatter props, so each card is found in the DOM.
+	document.querySelectorAll<HTMLElement>('[data-tooltip-target]').forEach((triggerEl) => {
+		const tooltipEl = document.getElementById(triggerEl.dataset.tooltipTarget ?? '');
+		if (!tooltipEl) {
+			return;
+		}
+
+		new Tooltip(tooltipEl, triggerEl, {
+			placement: 'top',
+			triggerType: 'hover',
+			delay: 100,
+			offset: [0, 8],
+		});
 	});
 </script>
