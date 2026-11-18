@@ -23,8 +23,17 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
+      - name: Read the version
+        id: version
+        run: echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
       - name: Install, build, and upload your site output
         uses: withastro/action@v6
+        # The Sentry bundler plugin reads these during the build: it creates the release and uploads the source maps.
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_RELEASE_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_URL: https://de.sentry.io
         with:
           # path: . # The root location of your Astro project inside the repository. (optional)
           # node-version: 24 # The specific version of Node that should be used to build your site. Defaults to 18. (optional)
@@ -35,8 +44,13 @@ jobs:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_RELEASE_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_URL: https://de.sentry.io
         with:
+          # Same name as `release` in sentry.client.config.js, so events match this release.
+          release: rsickenberg-me@${{ steps.version.outputs.version }}
           environment: production
+          set_commits: auto
+          finalize: true
 
   deploy:
     needs: build
