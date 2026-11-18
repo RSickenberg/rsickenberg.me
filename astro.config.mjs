@@ -10,10 +10,15 @@ import browserslist from "browserslist";
 import {resolveToEsbuildTarget} from "esbuild-plugin-browserslist";
 
 import sitemap from '@astrojs/sitemap';
+import sentry from '@sentry/astro';
+import pkg from './package.json' with {type: 'json'};
 
 // https://astro.build/config
 export default defineConfig({
     vite: {
+        define: {
+            __APP_VERSION__: JSON.stringify(pkg.version),
+        },
         build: {
             cssTarget: resolveToEsbuildTarget(browserslist(), {printUnknownTargets: false}),
             resolveToEsbuildTarget: resolveToEsbuildTarget(browserslist(), {printUnknownTargets: false}),
@@ -44,6 +49,13 @@ export default defineConfig({
         sitemap({
             changefreq: 'weekly',
             priority: 0.7
+        }),
+        sentry({
+            // Runtime options live in sentry.client.config.js; the integration is what bundles it.
+            org: process.env.SENTRY_ORG,
+            project: process.env.SENTRY_PROJECT,
+            authToken: process.env.SENTRY_AUTH_TOKEN,
+            release: {name: `rsickenberg-me@${pkg.version}`},
         }),
         // tailwindConfigViewer({
         //     configFile: 'tailwind.config.cjs'
