@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@types/gsap": "^3.0.0",
-    "@typescript-eslint/parser": "^8.72.2",
+    "@typescript-eslint/parser": "^8.73.0",
     "dotenv-cli": "^11.1.0",
     "esbuild-plugin-browserslist": "^4.0.0",
     "eslint": "^10.15.0",
@@ -51,7 +51,7 @@
     "globals": "^17.14.0",
     "release-it": "^21.1.2",
     "sass-embedded": "^1.108.2",
-    "typescript-eslint": "^8.72.2"
+    "typescript-eslint": "^8.73.0"
   },
   "browserslist": [
     "defaults, last 5 versions, not dead"
